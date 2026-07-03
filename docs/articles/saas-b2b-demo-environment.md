@@ -10,7 +10,6 @@ permalink: articles/saas-b2b-demo-environment.html
 # B2B SaaS Demo Environment: Map Acceptance in Prospect Regions
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -728,7 +727,6 @@ For **B2B SaaS Demo Environment**, the reliable approach is multi-node real acce
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

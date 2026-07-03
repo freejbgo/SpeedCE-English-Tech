@@ -1,7 +1,6 @@
 # Home Broadband vs Nationwide Nodes: Why Your Fast Ping Doesn't Mean Users Are Fast
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -721,7 +720,6 @@ For **Home Broadband vs Nationwide Nodes**, the reliable approach is multi-node 
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

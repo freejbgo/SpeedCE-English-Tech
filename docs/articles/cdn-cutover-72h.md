@@ -10,7 +10,6 @@ permalink: articles/cdn-cutover-72h.html
 # CDN Cutover 72-Hour Monitoring: Hour-by-Hour from T+0 to T+72
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **CDN Cutover 72-Hour Monitoring**, the reliable approach is multi-node real
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

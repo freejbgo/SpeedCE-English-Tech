@@ -10,7 +10,6 @@ permalink: articles/game-private-server-ping.html
 # Private Game Server Community: Building Trust with Nationwide PING Maps
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -728,7 +727,6 @@ For **Private Game Server Community**, the reliable approach is multi-node real 
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

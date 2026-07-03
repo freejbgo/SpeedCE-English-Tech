@@ -10,7 +10,6 @@ permalink: articles/edge-function-troubleshoot.html
 # Edge Functions/Workers Failures: Main Domain Green but Rules Not Applied
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **Edge Functions/Workers Failures**, the reliable approach is multi-node rea
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

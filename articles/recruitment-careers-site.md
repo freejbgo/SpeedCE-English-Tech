@@ -1,7 +1,6 @@
 # Recruitment Site Peak Acceptance: Pre-Campus-Season Nationwide Checkpoint
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -719,7 +718,6 @@ For **Recruitment Site Peak Acceptance**, the reliable approach is multi-node re
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

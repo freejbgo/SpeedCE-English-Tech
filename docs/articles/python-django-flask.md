@@ -10,7 +10,6 @@ permalink: articles/python-django-flask.html
 # Django/Flask Deploy Speed Tests: WSGI and Application Layer Division
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -728,7 +727,6 @@ For **Django/Flask Deploy Speed Tests**, the reliable approach is multi-node rea
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

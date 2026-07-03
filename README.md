@@ -1,19 +1,18 @@
 # SpeedCE Technical Documentation
 
 > [SpeedCE](https://www.speedce.com) — Multi-node website / IP speed test  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 Click any title below to open the Markdown article in this repository.
 
-Chinese knowledge base: [SpeedCE-Tech](https://github.com/freejbgo/SpeedCE-Tech) · [在线阅读](https://freejbgo.github.io/SpeedCE-Tech/)
+Chinese knowledge base: [SpeedCE-Tech](https://github.com/freejbgo/SpeedCE-Tech) · [Read in Chinese](https://freejbgo.github.io/SpeedCE-Tech/)
 
 ## Stats
 
 | Item | Count |
 |------|-------|
 | Articles in repo | 210 |
-| Avg length | ~30,912 characters |
+| Avg length | ~30,811 characters |
 
 ## Article index
 

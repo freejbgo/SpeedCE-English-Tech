@@ -10,7 +10,6 @@ permalink: articles/europe-vps-china-guide.html
 # Europe VPS Return Routes to China: Real Experience from DE/FR/NL DCs
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **Europe VPS Return Routes to China**, the reliable approach is multi-node r
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

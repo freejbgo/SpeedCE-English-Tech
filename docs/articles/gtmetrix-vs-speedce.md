@@ -10,7 +10,6 @@ permalink: articles/gtmetrix-vs-speedce.html
 # GTmetrix vs SpeedCE: Performance Testing vs Network Probing Division
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -728,7 +727,6 @@ For **GTmetrix vs SpeedCE**, the reliable approach is multi-node real access dra
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

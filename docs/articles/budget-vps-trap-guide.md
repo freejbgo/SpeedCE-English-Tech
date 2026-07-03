@@ -10,7 +10,6 @@ permalink: articles/budget-vps-trap-guide.html
 # Ultra-Low-Price VPS Traps: Six Danger Signals Visible on Maps
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **Ultra-Low-Price VPS Traps**, the reliable approach is multi-node real acce
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

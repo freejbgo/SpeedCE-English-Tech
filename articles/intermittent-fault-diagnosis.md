@@ -1,7 +1,6 @@
 # Intermittent Website Fault Diagnosis: Scientific Checkpointing for "Sometimes Slow, Sometimes Fine"
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -721,7 +720,6 @@ For **Intermittent Website Fault Diagnosis**, the reliable approach is multi-nod
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

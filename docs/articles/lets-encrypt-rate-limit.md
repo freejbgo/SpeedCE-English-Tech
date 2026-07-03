@@ -10,7 +10,6 @@ permalink: articles/lets-encrypt-rate-limit.html
 # Let's Encrypt Rate Limits and Renewal Failures: When HTTPS Suddenly Goes Red Nationwide
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **Let's Encrypt Rate Limits and Renewal Failures**, the reliable approach is
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

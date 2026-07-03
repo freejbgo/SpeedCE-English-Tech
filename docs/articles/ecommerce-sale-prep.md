@@ -10,7 +10,6 @@ permalink: articles/ecommerce-sale-prep.html
 # E-Commerce 618/Double-11 Prep: Multi-Node Speed Test Battle Plan
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -728,7 +727,6 @@ For **E-Commerce 618/Double-11 Prep**, the reliable approach is multi-node real 
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

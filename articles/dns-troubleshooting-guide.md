@@ -1,7 +1,6 @@
 # Complete DNS Troubleshooting Guide: When "Some Regions Can't Open" After Migration or CDN Switch
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -721,7 +720,6 @@ For **Complete DNS Troubleshooting Guide**, the reliable approach is multi-node 
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

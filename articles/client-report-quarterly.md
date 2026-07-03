@@ -1,7 +1,6 @@
 # Quarterly Client Reports with Maps: B2B Provider Speed Test Reporting Template
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -719,7 +718,6 @@ For **Quarterly Client Reports with Maps**, the reliable approach is multi-node 
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

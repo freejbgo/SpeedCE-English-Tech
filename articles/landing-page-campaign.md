@@ -1,7 +1,6 @@
 # Ad Landing Pages: 10-Minute Nationwide Checkpoint Before Campaign Launch
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -719,7 +718,6 @@ For **Ad Landing Pages**, the reliable approach is multi-node real access drawn 
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

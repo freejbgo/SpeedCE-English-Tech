@@ -10,7 +10,6 @@ permalink: articles/free-cdn-enough.html
 # Is Free CDN Enough? Personal Site Decisions with Nationwide Map Data
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **Is Free CDN Enough? Personal Site Decisions with Nationwide Map Data**, th
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

@@ -10,7 +10,6 @@ permalink: articles/overseas-live-streaming.html
 # Overseas Live Streaming and Video Conference Node Selection: Latency-Sensitive Map Standards
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **Overseas Live Streaming and Video Conference Node Selection**, the reliabl
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

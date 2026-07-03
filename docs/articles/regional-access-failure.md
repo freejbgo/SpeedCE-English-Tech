@@ -10,7 +10,6 @@ permalink: articles/regional-access-failure.html
 # Only Some Regions Can't Open? Use Maps to Pin Province, Carrier, and Next Steps
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **Only Some Regions Can't Open? Use Maps to Pin Province, Carrier, and Next 
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

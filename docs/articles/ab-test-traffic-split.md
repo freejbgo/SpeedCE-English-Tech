@@ -10,7 +10,6 @@ permalink: articles/ab-test-traffic-split.html
 # A/B Test Traffic Split Domains: Independent Map Acceptance per Experiment Arm
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -728,7 +727,6 @@ For **A/B Test Traffic Split Domains**, the reliable approach is multi-node real
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

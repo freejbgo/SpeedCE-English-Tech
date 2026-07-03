@@ -10,7 +10,6 @@ permalink: articles/dedicated-vs-vps-line.html
 # Dedicated Server vs VPS Route Acceptance: IP Segment, Neighbors, and Test Notes
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **Dedicated Server vs VPS Route Acceptance**, the reliable approach is multi
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

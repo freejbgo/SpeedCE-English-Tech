@@ -10,7 +10,6 @@ permalink: articles/k8s-ingress-troubleshoot.html
 # Kubernetes Ingress Failures: Cluster Internal OK, Public Domain Red
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **Kubernetes Ingress Failures**, the reliable approach is multi-node real ac
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

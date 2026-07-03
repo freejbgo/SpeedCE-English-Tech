@@ -1,7 +1,6 @@
 # US VPS Three-Carrier Return Route Guide: West Coast DC Verification and Mobile Users
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -721,7 +720,6 @@ For **US VPS Three-Carrier Return Route Guide**, the reliable approach is multi-
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   PING                                │

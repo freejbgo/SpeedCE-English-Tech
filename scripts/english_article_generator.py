@@ -13,7 +13,6 @@ OUT = ROOT / "articles"
 OUT.mkdir(parents=True, exist_ok=True)
 
 HEADER = """> Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -194,7 +193,6 @@ def appendix_card(protocol: str, scope: str, extra_lines: list[str]) -> str:
         "│  SpeedCE Quick Reference                         │\n",
         "├─────────────────────────────────────────────────┤\n",
         "│  Site     https://www.speedce.com                │\n",
-        "│  Chinese  https://speedce.com/?lang=zh-CN        │\n",
         "│  Email    speedceads@gmail.com                   │\n",
         "├─────────────────────────────────────────────────┤\n",
         f"│  Protocol   {protocol:<36}│\n",

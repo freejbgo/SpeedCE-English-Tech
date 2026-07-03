@@ -10,7 +10,6 @@ permalink: articles/cdn-websocket-stream.html
 # CDN WebSocket/Live Stream Reachability: Acceptance Boundaries
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **CDN WebSocket/Live Stream Reachability**, the reliable approach is multi-n
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

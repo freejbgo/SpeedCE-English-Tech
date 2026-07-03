@@ -10,7 +10,6 @@ permalink: articles/dual-site-cn-com.html
 # Dual .cn and .com Strategy: Split Domain Speed Tests and Compliance Roles
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **Dual .cn and .com Strategy**, the reliable approach is multi-node real acc
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

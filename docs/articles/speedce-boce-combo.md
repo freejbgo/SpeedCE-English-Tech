@@ -10,7 +10,6 @@ permalink: articles/speedce-boce-combo.html
 # SpeedCE + BOCE Collaboration: Compliance and Blocking After Network Layer Cleared
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -728,7 +727,6 @@ For **SpeedCE + BOCE Collaboration**, the reliable approach is multi-node real a
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

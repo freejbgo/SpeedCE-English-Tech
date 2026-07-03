@@ -10,7 +10,6 @@ permalink: articles/ipv6-troubleshooting.html
 # IPv6 Dual-Stack Acceptance: AAAA Records, Firewall, and CDN Complete Check
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **IPv6 Dual-Stack Acceptance**, the reliable approach is multi-node real acc
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

@@ -10,7 +10,6 @@ permalink: articles/tri-network-method.html
 # Three-Carrier Split Testing Complete Guide: Why Telecom, Unicom, Mobile Must Be Separate
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -728,7 +727,6 @@ For **Three-Carrier Split Testing Complete Guide**, the reliable approach is mul
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

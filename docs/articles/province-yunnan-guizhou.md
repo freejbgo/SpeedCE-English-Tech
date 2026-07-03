@@ -10,7 +10,6 @@ permalink: articles/province-yunnan-guizhou.html
 # Yunnan/Guizhou Access: Southwest Frontier Maps and Mobile Network
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -728,7 +727,6 @@ For **Yunnan/Guizhou Access**, the reliable approach is multi-node real access d
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

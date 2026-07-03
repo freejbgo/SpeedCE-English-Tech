@@ -10,7 +10,6 @@ permalink: articles/cmi-mobile-line-guide.html
 # CMI Mobile-Optimized Route Acceptance: Mobile Users Are Half Your Audience
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **CMI Mobile-Optimized Route Acceptance**, the reliable approach is multi-no
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

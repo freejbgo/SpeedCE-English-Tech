@@ -10,7 +10,6 @@ permalink: articles/new-domain-cold-start.html
 # New Domain Cold Start 72 Hours: Registration, DNS, Certs, and Map Acceptance Rhythm
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -728,7 +727,6 @@ For **New Domain Cold Start 72 Hours**, the reliable approach is multi-node real
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

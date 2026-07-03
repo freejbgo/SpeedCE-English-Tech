@@ -10,7 +10,6 @@ permalink: articles/vps-line-verification-guide.html
 # Before You Buy a VPS: Verify Routes with Nationwide Carrier Maps and Spot Fake CN2 Claims (SpeedCE Playbook)
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **Before You Buy a VPS**, the reliable approach is multi-node real access dr
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

@@ -10,7 +10,6 @@ permalink: articles/ultimate-toolbar-2026.html
 # 2026 Ultimate Site Owner Browser Toolbar: Speed, Monitor, Performance 12 Links
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -728,7 +727,6 @@ For **2026 Ultimate Site Owner Browser Toolbar**, the reliable approach is multi
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

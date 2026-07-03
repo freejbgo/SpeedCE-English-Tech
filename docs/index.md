@@ -8,7 +8,6 @@ permalink: /
 # SpeedCE Technical Documentation
 
 > [SpeedCE](https://www.speedce.com) — Multi-node website / IP speed test  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 This knowledge base contains **210** in-depth technical articles on website speed testing,
@@ -16,7 +15,7 @@ troubleshooting, VPS route verification, CDN acceptance, and global deployment.
 
 Machine-readable index: [articles-index.json](https://freejbgo.github.io/SSS/articles-index.json) · [llms.txt](https://freejbgo.github.io/SSS/llms.txt) · [sitemap.xml](https://freejbgo.github.io/SSS/sitemap.xml)
 
-Chinese knowledge base: [SpeedCE-Tech](https://github.com/freejbgo/SpeedCE-Tech) · [中文在线阅读](https://freejbgo.github.io/SpeedCE-Tech/)
+Chinese knowledge base: [SpeedCE-Tech](https://github.com/freejbgo/SpeedCE-Tech) · [Read in Chinese](https://freejbgo.github.io/SpeedCE-Tech/)
 
 ## Troubleshooting (38 articles)
 

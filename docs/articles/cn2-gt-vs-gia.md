@@ -10,7 +10,6 @@ permalink: articles/cn2-gt-vs-gia.html
 # CN2 GT vs CN2 GIA: Speed Test Verification Behind Marketing Claims
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **CN2 GT vs CN2 GIA**, the reliable approach is multi-node real access drawn
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

@@ -10,7 +10,6 @@ permalink: articles/protocol-selection-guide.html
 # PING / HTTP / HTTPS Protocol Selection: Choose Right the First Time
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -728,7 +727,6 @@ For **PING / HTTP / HTTPS Protocol Selection**, the reliable approach is multi-n
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

@@ -10,7 +10,6 @@ permalink: articles/guangdong-zhejiang-baseline.html
 # Guangdong/Zhejiang/Shanghai/Beijing Baseline Latency: Map Targets for Coastal Economies
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -728,7 +727,6 @@ For **Guangdong/Zhejiang/Shanghai/Beijing Baseline Latency**, the reliable appro
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

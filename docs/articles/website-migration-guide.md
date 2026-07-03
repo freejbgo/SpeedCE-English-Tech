@@ -10,7 +10,6 @@ permalink: articles/website-migration-guide.html
 # Complete Website Migration Handbook: 72-Hour Speed Test Acceptance for DNS, Origin, and CDN
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **Complete Website Migration Handbook**, the reliable approach is multi-node
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

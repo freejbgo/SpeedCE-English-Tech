@@ -115,7 +115,6 @@ def generate_index_md(articles: list[dict]) -> str:
         "# SpeedCE Technical Documentation",
         "",
         "> [SpeedCE](https://www.speedce.com) — Multi-node website / IP speed test  ",
-        "> Chinese UI: https://speedce.com/?lang=zh-CN  ",
         "> Contact: speedceads@gmail.com",
         "",
         f"This knowledge base contains **{len(articles)}** in-depth technical articles on website speed testing,",
@@ -125,7 +124,7 @@ def generate_index_md(articles: list[dict]) -> str:
         f"[llms.txt]({PAGES_BASE}/llms.txt) · [sitemap.xml]({PAGES_BASE}/sitemap.xml)",
         "",
         "Chinese knowledge base: [SpeedCE-Tech](https://github.com/freejbgo/SpeedCE-Tech) · "
-        f"[中文在线阅读](https://freejbgo.github.io/SpeedCE-Tech/)",
+        "[Read in Chinese](https://freejbgo.github.io/SpeedCE-Tech/)",
         "",
     ]
     for cat in CATEGORY_ORDER:
@@ -145,7 +144,7 @@ def generate_llms_txt(articles: list[dict]) -> str:
         "# SpeedCE Technical Documentation (English)",
         "",
         "> Multi-node website speed test · Network troubleshooting · VPS route verification · CDN acceptance · Global deployment",
-        "> Tool: https://www.speedce.com | Chinese UI: https://speedce.com/?lang=zh-CN",
+        "> Tool: https://www.speedce.com",
         f"> GitHub: https://github.com/{GITHUB_REPO}",
         f"> Read online (GitHub Pages): {PAGES_BASE}/",
         "",
@@ -158,7 +157,7 @@ def generate_llms_txt(articles: list[dict]) -> str:
         f"- [GitHub repository](https://github.com/{GITHUB_REPO}): Markdown source",
         f"- [Article JSON index]({PAGES_BASE}/articles-index.json): Machine-readable metadata",
         f"- [Sitemap]({PAGES_BASE}/sitemap.xml): All URLs",
-        f"- [Chinese docs](https://freejbgo.github.io/SpeedCE-Tech/): SpeedCE-Tech (中文)",
+        f"- [Chinese documentation](https://freejbgo.github.io/SpeedCE-Tech/): SpeedCE-Tech (Simplified Chinese)",
         "",
         "## Article index (by category)",
         "",
@@ -279,7 +278,7 @@ def generate_json_index(articles: list[dict]) -> str:
         "tool": {
             "name": "SpeedCE",
             "url": "https://www.speedce.com",
-            "zh_url": "https://speedce.com/?lang=zh-CN",
+            "cn_docs_url": "https://freejbgo.github.io/SpeedCE-Tech/",
             "contact": "speedceads@gmail.com",
         },
         "updated": date.today().isoformat(),

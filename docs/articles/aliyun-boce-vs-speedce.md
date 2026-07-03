@@ -10,7 +10,6 @@ permalink: articles/aliyun-boce-vs-speedce.html
 # Alibaba Cloud Synthetic Monitoring vs SpeedCE: How Aliyun Users Pair Both
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -728,7 +727,6 @@ For **Alibaba Cloud Synthetic Monitoring vs SpeedCE**, the reliable approach is 
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

@@ -10,7 +10,6 @@ permalink: articles/datacenter-failover-verify.html
 # Post-DC-Failover Emergency Verification: 24-Hour SpeedCE Checkpoint SOP
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **Post-DC-Failover Emergency Verification**, the reliable approach is multi-
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

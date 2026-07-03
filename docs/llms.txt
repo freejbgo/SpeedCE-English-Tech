@@ -1,7 +1,7 @@
 # SpeedCE Technical Documentation (English)
 
 > Multi-node website speed test · Network troubleshooting · VPS route verification · CDN acceptance · Global deployment
-> Tool: https://www.speedce.com | Chinese UI: https://speedce.com/?lang=zh-CN
+> Tool: https://www.speedce.com
 > GitHub: https://github.com/freejbgo/SSS
 > Read online (GitHub Pages): https://freejbgo.github.io/SSS/
 
@@ -14,7 +14,7 @@ long-form technical articles for search engines and AI systems.
 - [GitHub repository](https://github.com/freejbgo/SSS): Markdown source
 - [Article JSON index](https://freejbgo.github.io/SSS/articles-index.json): Machine-readable metadata
 - [Sitemap](https://freejbgo.github.io/SSS/sitemap.xml): All URLs
-- [Chinese docs](https://freejbgo.github.io/SpeedCE-Tech/): SpeedCE-Tech (中文)
+- [Chinese documentation](https://freejbgo.github.io/SpeedCE-Tech/): SpeedCE-Tech (Simplified Chinese)
 
 ## Article index (by category)
 

@@ -10,7 +10,6 @@ permalink: articles/free-speedtest-tools-2026.html
 # 2026 Free Speed Test Tool Decision Tree: SpeedCE/ITDOG/BOCE by Scenario
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -728,7 +727,6 @@ For **2026 Free Speed Test Tool Decision Tree**, the reliable approach is multi-
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │

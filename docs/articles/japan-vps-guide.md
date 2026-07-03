@@ -10,7 +10,6 @@ permalink: articles/japan-vps-guide.html
 # Japan VPS for Which Workloads: Tokyo/Osaka DCs and Three-Carrier Return Route Acceptance
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **Japan VPS for Which Workloads**, the reliable approach is multi-node real 
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   PING                                │

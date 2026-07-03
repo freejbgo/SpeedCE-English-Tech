@@ -10,7 +10,6 @@ permalink: articles/wechat-qq-access-guide.html
 # WeChat/QQ Can't Open: Standard Split Between Network Layer and Compliance
 
 > Tool: https://www.speedce.com  
-> Chinese UI: https://speedce.com/?lang=zh-CN  
 > Contact: speedceads@gmail.com
 
 ---
@@ -730,7 +729,6 @@ For **WeChat/QQ Can't Open**, the reliable approach is multi-node real access dr
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
-│  Chinese  https://speedce.com/?lang=zh-CN        │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Protocol   HTTPS                               │
