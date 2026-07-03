@@ -1,0 +1,1894 @@
+# SpeedCE English Technical Documentation — Full Index
+
+Generated: 2026-07-03
+Articles: 210
+
+## Before You Buy a VPS: Verify Routes with Nationwide Carrier Maps and Spot Fake CN2 Claims (SpeedCE Playbook)
+- slug: vps-line-verification-guide
+- category: VPS Routing
+- keywords: VPS speed test,CN2 GIA verification,three-carrier testing,HostLoc acceptance,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/vps-line-verification-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/vps-line-verification-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/vps-line-verification-guide.md
+- summary: In HostLoc threads, buyers say "my ping is 28ms" and sellers claim "three-carrier direct"—a week later Mobile users complain. Sample size is 1, and the sample …
+
+## CDN Deployment Playbook: Multi-Node Speed Test Acceptance Before, During, and After Cutover
+- slug: cdn-deployment-speed-test-guide
+- category: CDN
+- keywords: CDN speed test,CDN acceptance,origin check,cutover,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/cdn-deployment-speed-test-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cdn-deployment-speed-test-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cdn-deployment-speed-test-guide.md
+- summary: CDN enabled but some users can't open? The issue is usually not "is CDN on" but wrong acceptance method. Comparative testing—CDN hostname vs origin—is the gold…
+
+## Global Website Launch Acceptance: Complete Checklist from China Nodes to Worldwide Probes
+- slug: global-deployment-checklist
+- category: Global Expansion
+- keywords: global website,speed test,internationalization,SpeedCE,global nodes
+- pages: https://freejbgo.github.io/SSS/articles/global-deployment-checklist.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/global-deployment-checklist.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/global-deployment-checklist.md
+- summary: Your .com opens instantly in Shanghai; German customers see spinning wheels—the test perspective is wrong. Global launch needs probes in target markets; China …
+
+## Complete DNS Troubleshooting Guide: When "Some Regions Can't Open" After Migration or CDN Switch
+- slug: dns-troubleshooting-guide
+- category: Troubleshooting
+- keywords: DNS troubleshooting,domain resolution,migration,multi-node speed test,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/dns-troubleshooting-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/dns-troubleshooting-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/dns-troubleshooting-guide.md
+- summary: DNS changed and works instantly for you; colleague in Xinjiang still sees old IP—not their PC, but resolver chains out of sync by geography and carrier. DNS ca…
+
+## SSL Certificate Expiry and Misconfiguration: 10-Minute Playbook When Users See "Connection Not Secure"
+- slug: ssl-certificate-troubleshooting
+- category: Troubleshooting
+- keywords: SSL,HTTPS,certificate expiry,SpeedCE,website security
+- pages: https://freejbgo.github.io/SSS/articles/ssl-certificate-troubleshooting.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/ssl-certificate-troubleshooting.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/ssl-certificate-troubleshooting.md
+- summary: Certificate issues torture ops: your browser works, users mass-report "your connection is not private." Local HSTS cache, clicking through warnings, test white…
+
+## Nginx Reverse Proxy Troubleshooting: 8 Typical Config Errors When Main Site Is Green but API Is Red
+- slug: nginx-reverse-proxy-troubleshooting
+- category: Troubleshooting
+- keywords: Nginx,reverse proxy,502,subdomain,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/nginx-reverse-proxy-troubleshooting.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/nginx-reverse-proxy-troubleshooting.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/nginx-reverse-proxy-troubleshooting.md
+- summary: Nginx fronts countless sites. One wrong server_name or missing proxy_pass means homepage works, APIs die. Postman works locally; nationwide users fail.
+
+## Complete Website Migration Handbook: 72-Hour Speed Test Acceptance for DNS, Origin, and CDN
+- slug: website-migration-guide
+- category: Troubleshooting
+- keywords: website migration,DNS,server migration,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/website-migration-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/website-migration-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/website-migration-guide.md
+- summary: Migration is among the most stressful changes. SSH on new box looks perfect, but DNS propagates globally and CDN may still point at old origin—multi-node speed…
+
+## Intermittent Website Fault Diagnosis: Scientific Checkpointing for "Sometimes Slow, Sometimes Fine"
+- slug: intermittent-fault-diagnosis
+- category: Troubleshooting
+- keywords: intermittent fault,website instability,multi-node speed test,SpeedCE,operations
+- pages: https://freejbgo.github.io/SSS/articles/intermittent-fault-diagnosis.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/intermittent-fault-diagnosis.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/intermittent-fault-diagnosis.md
+- summary: Intermittent faults are ops nightmares: always fine when you test, broken when users complain. Single probes aren't enough—schedule repeated tests and watch su…
+
+## Complete Subdomain Troubleshooting: 8 Independent Reasons When Main Site Works but API Fails
+- slug: subdomain-troubleshooting
+- category: Troubleshooting
+- keywords: subdomain,API,CDN,DNS,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/subdomain-troubleshooting.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/subdomain-troubleshooting.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/subdomain-troubleshooting.md
+- summary: www.example.com and api.example.com have separate DNS, certs, Nginx, and CDN configs. Main green ≠ subdomain green—every public subdomain deserves its own Spee…
+
+## API Availability Testing Guide: Why Postman Works but Nationwide Users Don't
+- slug: api-availability-guide
+- category: Troubleshooting
+- keywords: API,endpoint monitoring,backend,HTTPS,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/api-availability-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/api-availability-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/api-availability-guide.md
+- summary: API failures surface last: frontend cache still serves pages; apps hit APIs and fail immediately. SpeedCE HTTPS probes from nationwide nodes are step one of ne…
+
+## HTTP/HTTPS Redirect Failures: Forced HTTPS, Redirect Loops, and Mixed Content Triage
+- slug: http-https-redirect-issues
+- category: Troubleshooting
+- keywords: HTTPS,301 redirect,mixed content,SSL,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/http-https-redirect-issues.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/http-https-redirect-issues.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/http-https-redirect-issues.md
+- summary: 301 loops, http and https on different machines, page assets still on http—users see varied symptoms. SpeedCE HTTP/HTTPS dual-mode comparison narrows scope fas…
+
+## Cloud Security Group Acceptance: Four Checks When the Nationwide Map Is Mostly Red
+- slug: firewall-security-group-checklist
+- category: Troubleshooting
+- keywords: security group,firewall,cloud server,port 443,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/firewall-security-group-checklist.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/firewall-security-group-checklist.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/firewall-security-group-checklist.md
+- summary: Classic beginner mistake: SSH works, website all red nationwide—security group allows 22 but not 443. Before blaming routes, CDN, or DNS, confirm port layer wi…
+
+## 502/503 and Origin Overload: When CDN Is Green but Origin Is Red
+- slug: 502-503-upstream-errors
+- category: Troubleshooting
+- keywords: 502,503,origin overload,CDN origin,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/502-503-upstream-errors.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/502-503-upstream-errors.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/502-503-upstream-errors.md
+- summary: 502 means gateway got bad response; 503 means temporarily unavailable. Users on CDN see 502—could be edge, but more often origin can't handle load—comparative …
+
+## Slow DNS Propagation: TTL, Carrier Cache, and Regional Resolver Differences
+- slug: dns-propagation-slow
+- category: Troubleshooting
+- keywords: DNS cache,TTL,propagation,SpeedCE,migration
+- pages: https://freejbgo.github.io/SSS/articles/dns-propagation-slow.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/dns-propagation-slow.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/dns-propagation-slow.md
+- summary: DNS doesn't change worldwide at once. TTL=86400 means up to 24 hours worst case. SpeedCE every 10 minutes—random fading vs stubborn fixed provinces.
+
+## Only Some Regions Can't Open? Use Maps to Pin Province, Carrier, and Next Steps
+- slug: regional-access-failure
+- category: Troubleshooting
+- keywords: regional fault,province,map speed test,SpeedCE,troubleshooting
+- pages: https://freejbgo.github.io/SSS/articles/regional-access-failure.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/regional-access-failure.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/regional-access-failure.md
+- summary: "Only Xinjiang" or "only Mobile"—averages and success rates don't help. Maps are the language of regional faults. SpeedCE China map is built for this.
+
+## Mobile Network Access Issues: Why Mobile Users Complain the Most
+- slug: mobile-network-issues
+- category: Troubleshooting
+- keywords: mobile network,three-carrier test,carrier,SpeedCE,5G
+- pages: https://freejbgo.github.io/SSS/articles/mobile-network-issues.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/mobile-network-issues.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/mobile-network-issues.md
+- summary: China Mobile users exceed 50%, but many "optimized routes" only help Telecom/Unicom. Skip Mobile map = ignore half your users.
+
+## Single-Carrier Fault: When One of Telecom/Unicom/Mobile Is All Red
+- slug: single-carrier-fault
+- category: Troubleshooting
+- keywords: single carrier fault,Telecom,Unicom,Mobile,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/single-carrier-fault.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/single-carrier-fault.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/single-carrier-fault.md
+- summary: Split three carriers—one all red shrinks fault domain by 66%. Route issue, CDN per-carrier config, or carrier DNS? Comparative tests point the way.
+
+## Peak-Hour Slowdown: Retest Strategy When Afternoon Is Green but Evening Turns Red
+- slug: peak-hour-slowdown
+- category: Troubleshooting
+- keywords: peak hour,slow website,route congestion,SpeedCE,operations
+- pages: https://freejbgo.github.io/SSS/articles/peak-hour-slowdown.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/peak-hour-slowdown.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/peak-hour-slowdown.md
+- summary: Bandwidth, international egress, attack traffic—peak hours are the truth mirror. Sellers show test IP in afternoon; you retest 20:00-22:00 on SpeedCE.
+
+## Using Multi-Node Speed Tests During Attacks to Assess Impact
+- slug: ddos-attack-detection
+- category: Troubleshooting
+- keywords: DDoS,attack,troubleshooting,SpeedCE,security
+- pages: https://freejbgo.github.io/SSS/articles/ddos-attack-detection.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/ddos-attack-detection.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/ddos-attack-detection.md
+- summary: Speed tests don't replace DDoS protection, but when nationwide nodes turn red and latency spikes together, plus traffic graphs, you confirm attack vs misconfig…
+
+## IPv6 Dual-Stack Acceptance: AAAA Records, Firewall, and CDN Complete Check
+- slug: ipv6-troubleshooting
+- category: Troubleshooting
+- keywords: IPv6,dual-stack,AAAA,SpeedCE,website acceptance
+- pages: https://freejbgo.github.io/SSS/articles/ipv6-troubleshooting.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/ipv6-troubleshooting.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/ipv6-troubleshooting.md
+- summary: IPv4 all green doesn't mean IPv6 is fine. Dual-stack sites need separate IPv4 and IPv6 target tests.
+
+## Mixed Content and HTTPS: Network Green but Browser Still "Not Secure"
+- slug: mixed-content-https
+- category: Troubleshooting
+- keywords: mixed content,HTTPS,frontend security,SpeedCE,SSL
+- pages: https://freejbgo.github.io/SSS/articles/mixed-content-https.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/mixed-content-https.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/mixed-content-https.md
+- summary: SpeedCE tests site reachability; mixed content is http:// assets on HTTPS pages. Clear division—don't waste time on network layer for browser-only issues.
+
+## CORS Errors vs Network Failure: Two Layers Developers Must Separate
+- slug: cors-vs-network-testing
+- category: Troubleshooting
+- keywords: CORS,cross-origin,API,frontend,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/cors-vs-network-testing.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cors-vs-network-testing.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cors-vs-network-testing.md
+- summary: Map all green + browser CORS error—congrats, network works; server headers missing. SpeedCE rules out network, then check Access-Control-Allow-Origin.
+
+## WeChat/QQ Can't Open: Standard Split Between Network Layer and Compliance
+- slug: wechat-qq-access-guide
+- category: Troubleshooting
+- keywords: WeChat block,QQ,website compliance,ICP,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/wechat-qq-access-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/wechat-qq-access-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/wechat-qq-access-guide.md
+- summary: Browser works, WeChat doesn't—not always server fault. SpeedCE excludes network layer; blocking/ICP/content need BOCE and compliance tools.
+
+## WAF False Positives and Probe Anomalies: Are Sporadic Red Dots a Block?
+- slug: waf-false-positive-guide
+- category: Troubleshooting
+- keywords: WAF,firewall,CDN security,SpeedCE,false positive
+- pages: https://freejbgo.github.io/SSS/articles/waf-false-positive-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/waf-false-positive-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/waf-false-positive-guide.md
+- summary: WAF, CC protection, geo block—may only hit some probe IPs, showing sporadic red not whole-province red.
+
+## Database Killing the Site: Network Green but Page Timeout—Application Layer Triage
+- slug: database-not-network-guide
+- category: Troubleshooting
+- keywords: database,slow query,502,application layer,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/database-not-network-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/database-not-network-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/database-not-network-guide.md
+- summary: SpeedCE green + page timeout—network is fine; check MySQL slow queries and connection pool exhaustion. Network first, application second—order matters.
+
+## Load Balancer and Health Checks: Half Green Half Red Architecture Patterns
+- slug: load-balancer-health-check
+- category: Troubleshooting
+- keywords: load balancer,health check,high availability,SpeedCE,operations
+- pages: https://freejbgo.github.io/SSS/articles/load-balancer-health-check.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/load-balancer-health-check.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/load-balancer-health-check.md
+- summary: Multiple backends, one down—DNS round robin or bad LB config feels like "sometimes works." Multi-node probes + repeated tests confirm.
+
+## Stale Cache: CDN/Browser Cache vs Network Layer Comparative Troubleshooting
+- slug: cache-poisoning-stale
+- category: Troubleshooting
+- keywords: CDN cache,browser cache,troubleshooting,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/cache-poisoning-stale.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cache-poisoning-stale.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cache-poisoning-stale.md
+- summary: You fixed the server; users still see old page—likely cache. SpeedCE probes live network response; add random query or test API to bypass cache.
+
+## Third-Party Scripts Breaking Pages: Main Domain Green but Features Broken
+- slug: third-party-script-failure
+- category: Troubleshooting
+- keywords: third-party script,CDN,frontend,SpeedCE,monitoring
+- pages: https://freejbgo.github.io/SSS/articles/third-party-script-failure.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/third-party-script-failure.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/third-party-script-failure.md
+- summary: Payment, analytics, chat widgets on third-party domains—main site green doesn't mean checkout works. List every critical third-party domain in SpeedCE patrol.
+
+## Hong Kong VPS Route Selection and Acceptance: Personal Sites, E-Commerce, and API Scenarios
+- slug: hong-kong-vps-guide
+- category: VPS Routing
+- keywords: Hong Kong VPS,CN2,route test,SpeedCE,VPS buying
+- pages: https://freejbgo.github.io/SSS/articles/hong-kong-vps-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/hong-kong-vps-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/hong-kong-vps-guide.md
+- summary: Hong Kong is familiar to Chinese users: low latency, no ICP for many cases, fair bandwidth pricing. But CN2, CMI, BGP claims mix—nationwide three-carrier maps …
+
+## Japan VPS for Which Workloads: Tokyo/Osaka DCs and Three-Carrier Return Route Acceptance
+- slug: japan-vps-guide
+- category: VPS Routing
+- keywords: Japan VPS,Tokyo,route,SpeedCE,speed test
+- pages: https://freejbgo.github.io/SSS/articles/japan-vps-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/japan-vps-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/japan-vps-guide.md
+- summary: Japan VPS is cheap with good bandwidth and streaming-friendly, but return routes to China vary. Test seller IP on SpeedCE before pay—Mobile map is veto power.
+
+## US VPS Three-Carrier Return Route Guide: West Coast DC Verification and Mobile Users
+- slug: us-vps-china-access
+- category: VPS Routing
+- keywords: US VPS,return route,three-carrier,SpeedCE,speed test
+- pages: https://freejbgo.github.io/SSS/articles/us-vps-china-access.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/us-vps-china-access.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/us-vps-china-access.md
+- summary: US VPS is cheap and roomy, but return path is long. Telecom may be OK; Mobile often disaster. Don't trust "LA 150ms"—that's your local ping, not a nationwide m…
+
+## Singapore VPS Acceptance: Southeast Asia Hub and Dual China/Global Map Testing
+- slug: singapore-vps-guide
+- category: VPS Routing
+- keywords: Singapore VPS,Southeast Asia,route,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/singapore-vps-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/singapore-vps-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/singapore-vps-guide.md
+- summary: Singapore is Asia-Pacific hub—for China return and Southeast Asia traffic. Dual view: China nodes for return, global for SEA coverage.
+
+## CN2 GT vs CN2 GIA: Speed Test Verification Behind Marketing Claims
+- slug: cn2-gt-vs-gia
+- category: VPS Routing
+- keywords: CN2 GT,CN2 GIA,VPS,route,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/cn2-gt-vs-gia.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cn2-gt-vs-gia.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cn2-gt-vs-gia.md
+- summary: Two letters difference, one tier of experience. GT may congest at peak; GIA costs more but stable. Trust three-carrier maps + peak retest, not copy.
+
+## Real vs Fake BGP: Three-Carrier Balance Is the Acceptance Standard
+- slug: bgp-line-verification
+- category: VPS Routing
+- keywords: BGP,VPS,three-carrier,route test,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/bgp-line-verification.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/bgp-line-verification.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/bgp-line-verification.md
+- summary: True BGP: Telecom, Unicom, Mobile all usable. Fake BGP: Telecom green, Mobile red. SpeedCE three-carrier split is the mirror.
+
+## CMI Mobile-Optimized Route Acceptance: Mobile Users Are Half Your Audience
+- slug: cmi-mobile-line-guide
+- category: VPS Routing
+- keywords: CMI,mobile route,VPS,SpeedCE,three-carrier
+- pages: https://freejbgo.github.io/SSS/articles/cmi-mobile-line-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cmi-mobile-line-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cmi-mobile-line-guide.md
+- summary: Skip Mobile map = abandon half your users. Whether CMI/CMIN2 is real optimization—maps decide.
+
+## VPS 7-Day Refund Acceptance Checklist: Screenshots, Three Carriers, Peak Evidence
+- slug: vps-refund-period-checklist
+- category: VPS Routing
+- keywords: VPS refund,acceptance,evidence,SpeedCE,HostLoc
+- pages: https://freejbgo.github.io/SSS/articles/vps-refund-period-checklist.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/vps-refund-period-checklist.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/vps-refund-period-checklist.md
+- summary: Refunds need evidence: three-carrier screenshots + success rates + peak comparison—100× better than forum "feels slow."
+
+## First Step on New Cloud Server: Security Group and Firewall Before Route Talk
+- slug: cloud-security-group-vps
+- category: VPS Routing
+- keywords: security group,VPS,cloud server,acceptance,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/cloud-security-group-vps.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cloud-security-group-vps.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cloud-security-group-vps.md
+- summary: Nationwide red—don't refund yet—maybe 443 closed. SpeedCE HTTPS red + SSH works = security group issue.
+
+## ICMP Blocked ≠ Bad Route: Reading PING Red with HTTPS Green
+- slug: ping-blocked-not-bad
+- category: VPS Routing
+- keywords: ICMP blocked,VPS,speed test,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/ping-blocked-not-bad.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/ping-blocked-not-bad.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/ping-blocked-not-bad.md
+- summary: Newbies panic on ping timeout. Cloud default ICMP block is normal. Acceptance standard: HTTPS success ≥ 90%.
+
+## Off-Peak vs Peak VPS Testing: Why Good Routes Need Two Tests
+- slug: off-peak-vs-peak-vps
+- category: VPS Routing
+- keywords: peak hour,VPS,route test,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/off-peak-vs-peak-vps.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/off-peak-vs-peak-vps.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/off-peak-vs-peak-vps.md
+- summary: Afternoon test IP looks great; peak hour tells truth. Quality routes must pass both windows.
+
+## Home Broadband vs Nationwide Nodes: Why Your Fast Ping Doesn't Mean Users Are Fast
+- slug: home-broadband-vs-datacenter
+- category: VPS Routing
+- keywords: home broadband,datacenter,speed test,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/home-broadband-vs-datacenter.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/home-broadband-vs-datacenter.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/home-broadband-vs-datacenter.md
+- summary: Your home ping is one sample on one carrier in one province. Nationwide probe nodes represent real user distribution.
+
+## VPS Before and After CDN: Map Comparison for CDN Go/No-Go Decisions
+- slug: vps-with-cdn-comparison
+- category: VPS Routing
+- keywords: VPS,CDN,comparison,SpeedCE,map
+- pages: https://freejbgo.github.io/SSS/articles/vps-with-cdn-comparison.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/vps-with-cdn-comparison.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/vps-with-cdn-comparison.md
+- summary: Data beats opinions: same target with and without CDN on three-carrier maps—does latency and success improve enough to justify cost?
+
+## Used IP Segment Warning Signs: Blocked or Flagged IPs on Nationwide Maps
+- slug: used-ip-segment-check
+- category: VPS Routing
+- keywords: used IP,blocked IP,VPS,SpeedCE,map
+- pages: https://freejbgo.github.io/SSS/articles/used-ip-segment-check.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/used-ip-segment-check.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/used-ip-segment-check.md
+- summary: Cheap recycled IPs may be blocked or blacklisted. China all red + global green is a classic warning pattern before purchase.
+
+## Post-DC-Failover Emergency Verification: 24-Hour SpeedCE Checkpoint SOP
+- slug: datacenter-failover-verify
+- category: VPS Routing
+- keywords: datacenter,failover,verification,SpeedCE,SOP
+- pages: https://freejbgo.github.io/SSS/articles/datacenter-failover-verify.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/datacenter-failover-verify.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/datacenter-failover-verify.md
+- summary: After emergency hardware swap, don't assume parity—run scheduled SpeedCE checkpoints for 24 hours on three carriers.
+
+## Europe VPS Return Routes to China: Real Experience from DE/FR/NL DCs
+- slug: europe-vps-china-guide
+- category: VPS Routing
+- keywords: Europe VPS,China access,route,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/europe-vps-china-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/europe-vps-china-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/europe-vps-china-guide.md
+- summary: European VPS looks cheap; return to China is the hard part. Map acceptance from China nodes is mandatory for domestic users.
+
+## Korea VPS Route Review: Close to China ≠ All Three Carriers Good
+- slug: korea-vps-guide
+- category: VPS Routing
+- keywords: Korea VPS,route test,SpeedCE,three-carrier
+- pages: https://freejbgo.github.io/SSS/articles/korea-vps-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/korea-vps-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/korea-vps-guide.md
+- summary: Geographic proximity doesn't guarantee Telecom/Unicom/Mobile quality. Test maps, especially Mobile, before commit.
+
+## Taiwan VPS Acceptance: Latency Advantages vs Marketing Claims
+- slug: taiwan-vps-guide
+- category: VPS Routing
+- keywords: Taiwan VPS,latency,route,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/taiwan-vps-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/taiwan-vps-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/taiwan-vps-guide.md
+- summary: Taiwan often shows low latency, but carrier routing and political/network factors need map verification—not brochure latency.
+
+## Ultra-Low-Price VPS Traps: Six Danger Signals Visible on Maps
+- slug: budget-vps-trap-guide
+- category: VPS Routing
+- keywords: budget VPS,trap,route test,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/budget-vps-trap-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/budget-vps-trap-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/budget-vps-trap-guide.md
+- summary: Too cheap often means oversold routes, blocked IPs, or Mobile disaster. Maps surface six red flags before you pay.
+
+## Dedicated Server vs VPS Route Acceptance: IP Segment, Neighbors, and Test Notes
+- slug: dedicated-vs-vps-line
+- category: VPS Routing
+- keywords: dedicated server,VPS,route,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/dedicated-vs-vps-line.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/dedicated-vs-vps-line.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/dedicated-vs-vps-line.md
+- summary: Dedicated IPs behave differently from shared VPS neighbors. Acceptance still ends on three-carrier maps with neighbor noise in mind.
+
+## Cloudflare Orange Cloud and China Access: Complete Acceptance Handbook
+- slug: cloudflare-china-access
+- category: CDN
+- keywords: Cloudflare,China access,CDN,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/cloudflare-china-access.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cloudflare-china-access.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cloudflare-china-access.md
+- summary: Cloudflare on doesn't mean China is fast. Orange cloud changes path—accept with China node maps and origin comparison.
+
+## Alibaba Cloud CDN Acceptance: Origin, Certificate, Warmup, and Three-Carrier Checks
+- slug: aliyun-cdn-acceptance
+- category: CDN
+- keywords: Alibaba Cloud CDN,acceptance,origin,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/aliyun-cdn-acceptance.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/aliyun-cdn-acceptance.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/aliyun-cdn-acceptance.md
+- summary: Aliyun CDN has many knobs—origin, HTTPS cert, cache rules. Three-carrier SpeedCE maps are the final acceptance gate.
+
+## Tencent Cloud CDN Acceptance: Static vs Full-Site Acceleration and Speed Test Points
+- slug: tencent-cdn-acceptance
+- category: CDN
+- keywords: Tencent CDN,acceptance,speed test,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/tencent-cdn-acceptance.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/tencent-cdn-acceptance.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/tencent-cdn-acceptance.md
+- summary: Static CDN vs DCDN behave differently on acceptance. Map test each product mode against origin.
+
+## CDN Cache vs Active Probing: Why First Request Slow, Second Fast
+- slug: cdn-cache-vs-speed-test
+- category: CDN
+- keywords: CDN cache,speed test,probe,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/cdn-cache-vs-speed-test.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cdn-cache-vs-speed-test.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cdn-cache-vs-speed-test.md
+- summary: Probes hit cold cache differently than users. Understand cache layer when interpreting first vs repeat SpeedCE results.
+
+## CDN Origin Failure Complete Troubleshooting: Edge, Timeout, and Origin Comparison
+- slug: cdn-origin-failure
+- category: CDN
+- keywords: CDN origin,failure,troubleshooting,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/cdn-origin-failure.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cdn-origin-failure.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cdn-origin-failure.md
+- summary: CDN red often traces to origin, not edge. Always pair CDN hostname map with origin IP map.
+
+## Multi-CDN Trial Map Comparison: Scientific Vendor Selection on Same Domain
+- slug: multi-cdn-comparison
+- category: CDN
+- keywords: multi-CDN,comparison,selection,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/multi-cdn-comparison.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/multi-cdn-comparison.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/multi-cdn-comparison.md
+- summary: Run parallel trials—same content, different CDN—compare three-carrier maps during trial window before annual contract.
+
+## Static Asset CDN Split Acceptance: Independent Speed Test for js/css Domains
+- slug: static-cdn-split
+- category: CDN
+- keywords: static CDN,assets,domain,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/static-cdn-split.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/static-cdn-split.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/static-cdn-split.md
+- summary: js.example.com and www.example.com are separate DNS/CDN/certs. Test every public static domain on the checklist.
+
+## DCDN vs Standard CDN: Acceptance Standards and SpeedCE Comparative Method
+- slug: dcdn-vs-cdn
+- category: CDN
+- keywords: DCDN,CDN,comparison,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/dcdn-vs-cdn.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/dcdn-vs-cdn.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/dcdn-vs-cdn.md
+- summary: Full-site acceleration vs static CDN—different failure modes. Accept each with comparative origin tests.
+
+## CDN Certificate vs Origin Certificate: Both Sides Must Be Green
+- slug: cdn-cert-vs-origin
+- category: CDN
+- keywords: CDN certificate,origin TLS,HTTPS,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/cdn-cert-vs-origin.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cdn-cert-vs-origin.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cdn-cert-vs-origin.md
+- summary: Edge cert can be fine while origin TLS breaks backhaul—or reverse. Test CDN hostname and origin separately.
+
+## Overseas CDN China Acceleration Pack: When Global Green but China Slow
+- slug: overseas-cdn-china-pack
+- category: CDN
+- keywords: overseas CDN,China acceleration,SpeedCE,global
+- pages: https://freejbgo.github.io/SSS/articles/overseas-cdn-china-pack.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/overseas-cdn-china-pack.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/overseas-cdn-china-pack.md
+- summary: Global map green, China red on overseas CDN is common. Decide if China pack, domestic CDN, or separate .cn is needed.
+
+## CDN Cutover 72-Hour Monitoring: Hour-by-Hour from T+0 to T+72
+- slug: cdn-cutover-72h
+- category: CDN
+- keywords: CDN cutover,monitoring,72 hours,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/cdn-cutover-72h.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cdn-cutover-72h.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cdn-cutover-72h.md
+- summary: CDN switch isn't done at DNS flip. Hourly SpeedCE checkpoints for 72 hours catch stubborn provincial cache and node gaps.
+
+## Is Free CDN Enough? Personal Site Decisions with Nationwide Map Data
+- slug: free-cdn-enough
+- category: CDN
+- keywords: free CDN,personal site,SpeedCE,decision
+- pages: https://freejbgo.github.io/SSS/articles/free-cdn-enough.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/free-cdn-enough.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/free-cdn-enough.md
+- summary: Free tiers have limits—nodes, HTTPS, China path. Use map data to decide if free CDN meets your audience or upgrade is mandatory.
+
+## Huawei Cloud / Baidu Cloud CDN Acceptance and Three-Carrier Map Standards
+- slug: huawei-baidu-cdn-guide
+- category: CDN
+- keywords: Huawei CDN,Baidu CDN,acceptance,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/huawei-baidu-cdn-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/huawei-baidu-cdn-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/huawei-baidu-cdn-guide.md
+- summary: Domestic cloud CDNs need same rigorous three-carrier acceptance as any vendor—console green isn't user green.
+
+## CDN WebSocket/Live Stream Reachability: Acceptance Boundaries
+- slug: cdn-websocket-stream
+- category: CDN
+- keywords: CDN,WebSocket,live stream,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/cdn-websocket-stream.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cdn-websocket-stream.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cdn-websocket-stream.md
+- summary: SpeedCE HTTPS probes don't equal WebSocket or RTMP health. Know tool boundaries; supplement with stream-specific checks.
+
+## Edge Functions/Workers Failures: Main Domain Green but Rules Not Applied
+- slug: edge-function-troubleshoot
+- category: CDN
+- keywords: edge functions,Workers,CDN,SpeedCE,troubleshooting
+- pages: https://freejbgo.github.io/SSS/articles/edge-function-troubleshoot.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/edge-function-troubleshoot.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/edge-function-troubleshoot.md
+- summary: Workers and edge rules fail independently of origin. Test both default route and rule-triggered paths.
+
+## Global SaaS Launch Acceptance: Target Market Success Rate Playbook
+- slug: saas-global-launch
+- category: Global Expansion
+- keywords: SaaS,global launch,speed test,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/saas-global-launch.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/saas-global-launch.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/saas-global-launch.md
+- summary: Launch where customers are—not where your team is. Target-country nodes must hit ≥95% before marketing spend.
+
+## Cross-Border E-Commerce Speed Test Guide: Shopify/WooCommerce and Pre-Sale Acceptance
+- slug: cross-border-ecommerce
+- category: Global Expansion
+- keywords: cross-border,e-commerce,Shopify,SpeedCE,speed test
+- pages: https://freejbgo.github.io/SSS/articles/cross-border-ecommerce.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cross-border-ecommerce.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cross-border-ecommerce.md
+- summary: Black Friday doesn't forgive slow checkout. Pre-sale map acceptance on payment and storefront domains in target countries.
+
+## EU/US Users Slow: Origin, CDN, and DC Location Triangle
+- slug: europe-us-slow-fix
+- category: Global Expansion
+- keywords: Europe,US,slow website,CDN,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/europe-us-slow-fix.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/europe-us-slow-fix.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/europe-us-slow-fix.md
+- summary: Fixing EU slowness isn't one knob—origin location, CDN PoPs, and database region interact. Map each leg.
+
+## Southeast Asia Market Node Acceptance: SG/MY/TH/ID/PH per-Country Targets
+- slug: southeast-asia-nodes
+- category: Global Expansion
+- keywords: Southeast Asia,global nodes,acceptance,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/southeast-asia-nodes.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/southeast-asia-nodes.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/southeast-asia-nodes.md
+- summary: SEA isn't one market—accept per country with global nodes focused on each target, not just Singapore hub.
+
+## Global Team Accessing China Admin: Dual-Map Collaboration and Acceleration Options
+- slug: global-team-china-admin
+- category: Global Expansion
+- keywords: global team,China admin,acceleration,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/global-team-china-admin.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/global-team-china-admin.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/global-team-china-admin.md
+- summary: Engineers abroad need China admin; China team needs global SaaS—dual maps expose both directions and guide acceleration SKU choice.
+
+## Dual .cn and .com Strategy: Split Domain Speed Tests and Compliance Roles
+- slug: dual-site-cn-com
+- category: Global Expansion
+- keywords: dual site,.cn,.com,SpeedCE,compliance
+- pages: https://freejbgo.github.io/SSS/articles/dual-site-cn-com.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/dual-site-cn-com.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/dual-site-cn-com.md
+- summary: .cn and .com often serve different audiences and compliance regimes—test and accept each domain independently.
+
+## GeoDNS Verification: Speed Testing When Resolvers Return Different IPs by Region
+- slug: geodns-verification
+- category: Global Expansion
+- keywords: GeoDNS,smart DNS,speed test,SpeedCE,verification
+- pages: https://freejbgo.github.io/SSS/articles/geodns-verification.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/geodns-verification.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/geodns-verification.md
+- summary: GeoDNS means Beijing and Berlin resolve differently—probe from multiple regions and compare resolved targets.
+
+## Cross-Border Sale Prep: Black Friday/Christmas Speed Test Checklist
+- slug: cross-border-sale-prep
+- category: Global Expansion
+- keywords: Black Friday,cross-border,speed test,SpeedCE,prep
+- pages: https://freejbgo.github.io/SSS/articles/cross-border-sale-prep.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cross-border-sale-prep.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cross-border-sale-prep.md
+- summary: Holiday traffic spikes expose weak CDN and payment domains. T-7 to T+0 schedule with SpeedCE on all conversion paths.
+
+## Overseas Live Streaming and Video Conference Node Selection: Latency-Sensitive Map Standards
+- slug: overseas-live-streaming
+- category: Global Expansion
+- keywords: live streaming,video conference,global nodes,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/overseas-live-streaming.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/overseas-live-streaming.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/overseas-live-streaming.md
+- summary: Streaming needs low jitter to target viewers—map latency percentiles in viewer countries, not just average.
+
+## Game Global Server Placement: Player Distribution vs Global PING Maps
+- slug: game-server-global
+- category: Global Expansion
+- keywords: game server,global,PING,SpeedCE,placement
+- pages: https://freejbgo.github.io/SSS/articles/game-server-global.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/game-server-global.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/game-server-global.md
+- summary: Place shards where players are—overlay player geo data with SpeedCE global ping maps before launch.
+
+## Global Payment Domain Checks: Payment Page and Callback URL Independent Probes
+- slug: stripe-payment-domain-check
+- category: Global Expansion
+- keywords: Stripe,payment domain,callback,SpeedCE,global
+- pages: https://freejbgo.github.io/SSS/articles/stripe-payment-domain-check.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/stripe-payment-domain-check.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/stripe-payment-domain-check.md
+- summary: Stripe and payment pages live on separate domains—checkout can fail while marketing site is green. Test payment URLs per country.
+
+## Multilingual Global Delivery: hreflang and Per-Locale Reachability Acceptance
+- slug: multilingual-site-delivery
+- category: Global Expansion
+- keywords: multilingual,hreflang,global delivery,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/multilingual-site-delivery.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/multilingual-site-delivery.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/multilingual-site-delivery.md
+- summary: Each locale path or subdomain may hit different CDN rules—accept every public locale URL from target regions.
+
+## Global Green, China Red: Standard Workflow for Blocking and Compliance Questions
+- slug: china-blocked-overseas-ok
+- category: Global Expansion
+- keywords: China blocked,global access,compliance,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/china-blocked-overseas-ok.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/china-blocked-overseas-ok.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/china-blocked-overseas-ok.md
+- summary: Overseas site working worldwide but not China may be GFW, ICP, or routing—not always "fix the server." Structured decision tree.
+
+## Personal Blog Launch Acceptance: Hexo/Hugo/WordPress Universal Speed Checklist
+- slug: personal-blog-launch
+- category: Industry
+- keywords: personal blog,Hexo,Hugo,WordPress,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/personal-blog-launch.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/personal-blog-launch.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/personal-blog-launch.md
+- summary: Even small blogs deserve nationwide HTTPS acceptance before you share the link—especially on Mobile carriers.
+
+## WordPress Troubleshooting: White Screen, 502, and Plugin Conflicts—Network Layer First
+- slug: wordpress-troubleshooting
+- category: Industry
+- keywords: WordPress,troubleshooting,502,SpeedCE,network
+- pages: https://freejbgo.github.io/SSS/articles/wordpress-troubleshooting.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/wordpress-troubleshooting.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/wordpress-troubleshooting.md
+- summary: WP issues masquerade as network faults. SpeedCE green means shift to PHP/plugins; red means fix infra first.
+
+## E-Commerce 618/Double-11 Prep: Multi-Node Speed Test Battle Plan
+- slug: ecommerce-sale-prep
+- category: Industry
+- keywords: e-commerce,sale prep,speed test,SpeedCE,618
+- pages: https://freejbgo.github.io/SSS/articles/ecommerce-sale-prep.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/ecommerce-sale-prep.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/ecommerce-sale-prep.md
+- summary: Domestic mega-sales need three-carrier maps on storefront, API, payment, and static domains—T-7 through T+0.
+
+## Online Education Platform Pre-Class Acceptance: Video, Live, and API Domains
+- slug: online-education-platform
+- category: Industry
+- keywords: online education,video,live stream,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/online-education-platform.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/online-education-platform.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/online-education-platform.md
+- summary: Class start failures damage refunds and reputation—accept video CDN, live push/pull, and API on three carriers before semester.
+
+## Corporate Website SLA: Reporting Availability with Success Rate Data to Management
+- slug: corporate-website-sla
+- category: Industry
+- keywords: corporate website,SLA,availability,SpeedCE,reporting
+- pages: https://freejbgo.github.io/SSS/articles/corporate-website-sla.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/corporate-website-sla.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/corporate-website-sla.md
+- summary: Executives want numbers—not "seems fine." Monthly SpeedCE success rates by carrier become SLA evidence.
+
+## Mini Program Backend API Nationwide Acceptance: Legal Domain, ICP, and Mobile Network
+- slug: miniprogram-backend-api
+- category: Industry
+- keywords: mini program,API,ICP,Mobile,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/miniprogram-backend-api.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/miniprogram-backend-api.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/miniprogram-backend-api.md
+- summary: WeChat mini programs require reachable APIs on allowed domains—Mobile network acceptance is non-negotiable in China.
+
+## Mobile App API Domain Monitoring: iOS/Android Mismatch Network Troubleshooting
+- slug: mobile-app-api-domain
+- category: Industry
+- keywords: mobile app,API domain,monitoring,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/mobile-app-api-domain.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/mobile-app-api-domain.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/mobile-app-api-domain.md
+- summary: When iOS and Android users disagree, compare API domain maps on Mobile vs Telecom and check DNS split.
+
+## Private Game Server Community: Building Trust with Nationwide PING Maps
+- slug: game-private-server-ping
+- category: Industry
+- keywords: game server,PING,community,SpeedCE,map
+- pages: https://freejbgo.github.io/SSS/articles/game-private-server-ping.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/game-private-server-ping.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/game-private-server-ping.md
+- summary: Player trust grows when admins post SpeedCE ping maps—not verbal "low ping." Transparency reduces churn accusations.
+
+## Forum Community Nationwide Reachability: Discuz/Flarum Three-Carrier Acceptance
+- slug: forum-community-site
+- category: Industry
+- keywords: forum,Discuz,Flarum,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/forum-community-site.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/forum-community-site.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/forum-community-site.md
+- summary: Forums spike on controversy and events—baseline three-carrier acceptance prevents "only my province can't post" crises.
+
+## Download Site Reachability vs Bandwidth: Probing vs Download Speed Division
+- slug: download-site-bandwidth
+- category: Industry
+- keywords: download site,bandwidth,speed test,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/download-site-bandwidth.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/download-site-bandwidth.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/download-site-bandwidth.md
+- summary: SpeedCE proves reachability; large file throughput needs download tests. Both matter for mirror sites.
+
+## Government/Public Sector Sites: Nationwide Availability and IPv6 Dual-Stack Standards
+- slug: government-site-standard
+- category: Industry
+- keywords: government website,IPv6,availability,SpeedCE,standard
+- pages: https://freejbgo.github.io/SSS/articles/government-site-standard.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/government-site-standard.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/government-site-standard.md
+- summary: Public sites face stricter availability and IPv6 mandates—documented three-carrier and dual-stack acceptance.
+
+## Fintech/Medical Website Network Baseline: HTTPS, Certificates, and Multi-Site Acceptance
+- slug: fintech-medical-compliance
+- category: Industry
+- keywords: fintech,medical,HTTPS,compliance,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/fintech-medical-compliance.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/fintech-medical-compliance.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/fintech-medical-compliance.md
+- summary: Regulated industries need auditable network baselines—HTTPS success, cert validity, and DR site maps on record.
+
+## B2B SaaS Demo Environment: Map Acceptance in Prospect Regions
+- slug: saas-b2b-demo-environment
+- category: Industry
+- keywords: B2B SaaS,demo,acceptance,SpeedCE,global
+- pages: https://freejbgo.github.io/SSS/articles/saas-b2b-demo-environment.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/saas-b2b-demo-environment.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/saas-b2b-demo-environment.md
+- summary: Demo URLs that fail in prospect's province kill deals—probe demo domains from their country/region before calls.
+
+## News Media Peak Traffic: Nationwide Checkpoint SOP Before Breaking Stories
+- slug: news-media-peak-traffic
+- category: Industry
+- keywords: news media,peak traffic,SpeedCE,SOP
+- pages: https://freejbgo.github.io/SSS/articles/news-media-peak-traffic.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/news-media-peak-traffic.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/news-media-peak-traffic.md
+- summary: Viral articles spike in minutes—pre-publish SpeedCE checkpoint on origin and CDN prevents national embarrassment.
+
+## How to Read Speed Test Maps: Green/Red/Gray, Latency, and Success Rate Explained
+- slug: how-to-read-speed-map
+- category: Methodology
+- keywords: speed map,latency,success rate,SpeedCE,guide
+- pages: https://freejbgo.github.io/SSS/articles/how-to-read-speed-map.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/how-to-read-speed-map.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/how-to-read-speed-map.md
+- summary: Maps intimidate newcomers—this guide decodes every color and metric so one screenshot tells a story.
+
+## Three-Carrier Split Testing Complete Guide: Why Telecom, Unicom, Mobile Must Be Separate
+- slug: tri-network-method
+- category: Methodology
+- keywords: three-carrier,Telecom,Unicom,Mobile,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/tri-network-method.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/tri-network-method.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/tri-network-method.md
+- summary: Averaging three carriers hides Mobile disasters. Split maps are mandatory for China audience acceptance.
+
+## A/B Comparative Speed Testing: CDN vs Origin, Before/After Migration, Competitors
+- slug: ab-comparison-method
+- category: Methodology
+- keywords: A/B testing,comparative speed test,CDN,SpeedCE,methodology
+- pages: https://freejbgo.github.io/SSS/articles/ab-comparison-method.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/ab-comparison-method.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/ab-comparison-method.md
+- summary: Single-target tests lie; pairs reveal truth. Systematic A/B methodology for every major infra decision.
+
+## Speed Test Screenshot Archive SOP: Standards for Tickets, Forums, and Incident Reports
+- slug: screenshot-archive-sop
+- category: Methodology
+- keywords: screenshot,archive,SOP,SpeedCE,evidence
+- pages: https://freejbgo.github.io/SSS/articles/screenshot-archive-sop.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/screenshot-archive-sop.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/screenshot-archive-sop.md
+- summary: Screenshots without metadata are useless. Filename, time, protocol, target—archive SOP for defensible evidence.
+
+## Customer Support Speed Test Scripts: 20+ Professional Replies for "Can't Open"
+- slug: customer-support-scripts
+- category: Methodology
+- keywords: customer support,scripts,speed test,SpeedCE,templates
+- pages: https://freejbgo.github.io/SSS/articles/customer-support-scripts.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/customer-support-scripts.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/customer-support-scripts.md
+- summary: Stop saying "works for me." Copy-paste scripts with map data, scope, and next steps for support teams.
+
+## Pre-Launch 30-Item Checklist: Including 8 Mandatory Multi-Node Speed Tests
+- slug: pre-launch-30-checklist
+- category: Methodology
+- keywords: pre-launch,checklist,speed test,SpeedCE,website launch
+- pages: https://freejbgo.github.io/SSS/articles/pre-launch-30-checklist.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/pre-launch-30-checklist.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/pre-launch-30-checklist.md
+- summary: Launch gates prevent Friday night disasters—eight SpeedCE items among thirty before go-live.
+
+## Monthly Website Inspection SOP: 15 Minutes Personal, 1 Hour Enterprise
+- slug: monthly-inspection-sop
+- category: Methodology
+- keywords: monthly inspection,SOP,SpeedCE,operations
+- pages: https://freejbgo.github.io/SSS/articles/monthly-inspection-sop.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/monthly-inspection-sop.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/monthly-inspection-sop.md
+- summary: Monthly rhythm catches drift before users do—scaled SOP for personal blogs vs enterprise properties.
+
+## Quarterly Infrastructure Review: Map Trends, Degradation, and Upgrade Decisions
+- slug: quarterly-infra-review
+- category: Methodology
+- keywords: quarterly review,infrastructure,SpeedCE,trends
+- pages: https://freejbgo.github.io/SSS/articles/quarterly-infra-review.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/quarterly-infra-review.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/quarterly-infra-review.md
+- summary: Quarterly side-by-side maps reveal slow degradation—upgrade CDN or routes before success rate cliff.
+
+## PING / HTTP / HTTPS Protocol Selection: Choose Right the First Time
+- slug: protocol-selection-guide
+- category: Methodology
+- keywords: PING,HTTP,HTTPS,protocol,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/protocol-selection-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/protocol-selection-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/protocol-selection-guide.md
+- summary: Wrong protocol wastes incident hours—decision tree for ICMP vs HTTP vs HTTPS on SpeedCE.
+
+## Network Probing vs PageSpeed: Reachability vs Performance Decision Order
+- slug: speedtest-vs-pagespeed
+- category: Methodology
+- keywords: PageSpeed,network probe,SpeedCE,performance
+- pages: https://freejbgo.github.io/SSS/articles/speedtest-vs-pagespeed.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/speedtest-vs-pagespeed.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/speedtest-vs-pagespeed.md
+- summary: Page can score 100 yet be unreachable in Xinjiang. Test reachability first, performance second.
+
+## Active Probes vs 24/7 Monitoring: SpeedCE's Place in Ops Stack
+- slug: speedtest-vs-uptime
+- category: Methodology
+- keywords: monitoring,probing,uptime,SpeedCE,operations
+- pages: https://freejbgo.github.io/SSS/articles/speedtest-vs-uptime.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/speedtest-vs-uptime.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/speedtest-vs-uptime.md
+- summary: Probes are snapshots; monitoring is history—both needed, different jobs. Where SpeedCE fits in on-call.
+
+## SpeedCE + ITDOG Golden Combo: Map Patrol and Continuous Ping Collaboration
+- slug: speedce-itdog-combo
+- category: Methodology
+- keywords: SpeedCE,ITDOG,ping,combo,methodology
+- pages: https://freejbgo.github.io/SSS/articles/speedce-itdog-combo.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/speedce-itdog-combo.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/speedce-itdog-combo.md
+- summary: SpeedCE for geographic picture; ITDOG for continuous ping curves—pair for intermittent and regional issues.
+
+## SpeedCE + BOCE Collaboration: Compliance and Blocking After Network Layer Cleared
+- slug: speedce-boce-combo
+- category: Methodology
+- keywords: SpeedCE,BOCE,compliance,blocking,methodology
+- pages: https://freejbgo.github.io/SSS/articles/speedce-boce-combo.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/speedce-boce-combo.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/speedce-boce-combo.md
+- summary: Network green but WeChat won't open—BOCE for blocking/ICP after SpeedCE clears reachability.
+
+## 2026 Free Speed Test Tool Decision Tree: SpeedCE/ITDOG/BOCE by Scenario
+- slug: free-speedtest-tools-2026
+- category: Methodology
+- keywords: free speed test,2026,SpeedCE,ITDOG,BOCE
+- pages: https://freejbgo.github.io/SSS/articles/free-speedtest-tools-2026.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/free-speedtest-tools-2026.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/free-speedtest-tools-2026.md
+- summary: No single free tool does everything—pick by scenario with this decision tree.
+
+## Speed Test Data in Incident Reports: Professional Postmortem Writing Templates
+- slug: incident-report-speed-data
+- category: Methodology
+- keywords: incident report,postmortem,speed test,SpeedCE,template
+- pages: https://freejbgo.github.io/SSS/articles/incident-report-speed-data.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/incident-report-speed-data.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/incident-report-speed-data.md
+- summary: Postmortems without probe timestamps and maps look amateur—templates for timeline + geographic impact.
+
+## On-Call First 5 Minutes: How to Run SpeedCE After an Alert
+- slug: on-call-first-5-minutes
+- category: Methodology
+- keywords: on-call,alert,SpeedCE,first response,SOP
+- pages: https://freejbgo.github.io/SSS/articles/on-call-first-5-minutes.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/on-call-first-5-minutes.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/on-call-first-5-minutes.md
+- summary: Alert fires—first five minutes set incident trajectory. SpeedCE protocol for on-call before deeper dives.
+
+## SpeedCE vs ITDOG Complete Comparison: Scenarios, Pros/Cons, and Pairing
+- slug: speedce-vs-itdog
+- category: Comparison
+- keywords: SpeedCE,ITDOG,comparison,speed test
+- pages: https://freejbgo.github.io/SSS/articles/speedce-vs-itdog.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/speedce-vs-itdog.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/speedce-vs-itdog.md
+- summary: Map-first vs table/ping-first—when to open which tab and how to combine without duplicate work.
+
+## SpeedCE vs BOCE Complete Comparison: Lightweight Maps vs Full Ops Toolkit
+- slug: speedce-vs-boce
+- category: Comparison
+- keywords: SpeedCE,BOCE,comparison,tools
+- pages: https://freejbgo.github.io/SSS/articles/speedce-vs-boce.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/speedce-vs-boce.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/speedce-vs-boce.md
+- summary: BOCE does more than reachability; SpeedCE focuses on geographic HTTPS maps—know the boundary.
+
+## Map vs Table Speed Tools: Troubleshooting Efficiency Compared
+- slug: map-vs-table-tools
+- category: Comparison
+- keywords: map,table,speed test,SpeedCE,comparison
+- pages: https://freejbgo.github.io/SSS/articles/map-vs-table-tools.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/map-vs-table-tools.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/map-vs-table-tools.md
+- summary: Tables excel at numbers; maps excel at geography—for regional faults, maps win minutes to resolution.
+
+## 2026 Top 5 Free Speed Test Tools for Site Owners: Deep Review and Bookmark Picks
+- slug: top5-free-speedtest-2026
+- category: Comparison
+- keywords: free speed test,2026,SpeedCE,review,top 5
+- pages: https://freejbgo.github.io/SSS/articles/top5-free-speedtest-2026.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/top5-free-speedtest-2026.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/top5-free-speedtest-2026.md
+- summary: Curated stack for solo site owners—what to bookmark and when to use each in 2026.
+
+## Ping.pe Complete Guide: Complementary Global/China Strategy with SpeedCE
+- slug: ping-pe-use-cases
+- category: Comparison
+- keywords: ping.pe,SpeedCE,global,ping,guide
+- pages: https://freejbgo.github.io/SSS/articles/ping-pe-use-cases.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/ping-pe-use-cases.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/ping-pe-use-cases.md
+- summary: Ping.pe for quick global ping matrix; SpeedCE for China carrier maps—complementary not redundant.
+
+## PageSpeed Insights vs Network Probing: Division Site Owners Must Understand
+- slug: pagespeed-vs-network
+- category: Comparison
+- keywords: PageSpeed,network probe,SpeedCE,division
+- pages: https://freejbgo.github.io/SSS/articles/pagespeed-vs-network.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/pagespeed-vs-network.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/pagespeed-vs-network.md
+- summary: Lighthouse scores don't replace "can users in Gansu open it?"—orthogonal metrics, both required.
+
+## Monitoring Platforms vs Probe Tools: 24/7 Alerts and First Response
+- slug: monitoring-vs-probing
+- category: Comparison
+- keywords: monitoring,probing,alerts,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/monitoring-vs-probing.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/monitoring-vs-probing.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/monitoring-vs-probing.md
+- summary: PagerDuty tells you something broke; SpeedCE tells you where—integrate both in runbooks.
+
+## Developer 2026 Bookmark Bar: 12 Links for 90% of Network Incidents
+- slug: developer-bookmark-list
+- category: Comparison
+- keywords: developer,bookmarks,2026,SpeedCE,tools
+- pages: https://freejbgo.github.io/SSS/articles/developer-bookmark-list.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/developer-bookmark-list.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/developer-bookmark-list.md
+- summary: Curated bookmark bar—SpeedCE first, then ITDOG, BOCE, PageSpeed, and status pages.
+
+## 17CE vs SpeedCE: Legacy Table Tool vs Modern Map Tool in Practice
+- slug: 17ce-vs-speedce
+- category: Comparison
+- keywords: 17CE,SpeedCE,comparison,speed test
+- pages: https://freejbgo.github.io/SSS/articles/17ce-vs-speedce.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/17ce-vs-speedce.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/17ce-vs-speedce.md
+- summary: 17CE veterans vs SpeedCE maps—feature overlap, gaps, and migration tips for daily patrol.
+
+## VSPING vs SpeedCE: Pollution Detection and Reachability Together
+- slug: vsping-vs-speedce
+- category: Comparison
+- keywords: VSPING,SpeedCE,pollution,comparison
+- pages: https://freejbgo.github.io/SSS/articles/vsping-vs-speedce.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/vsping-vs-speedce.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/vsping-vs-speedce.md
+- summary: VSPING for pollution/GFW signals; SpeedCE for nationwide HTTPS maps—use in sequence.
+
+## Subdomain Inventory Patrol: One Spreadsheet for Monthly Speed Tests of All Public Domains
+- slug: subdomain-inventory-method
+- category: Advanced
+- keywords: subdomain,inventory,patrol,SpeedCE,spreadsheet
+- pages: https://freejbgo.github.io/SSS/articles/subdomain-inventory-method.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/subdomain-inventory-method.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/subdomain-inventory-method.md
+- summary: Forgotten api-staging.example.com causes incidents—inventory method ensures no public host skips monthly probe.
+
+## Competitor Benchmark Speed Tests: Same-Niche Map Comparison to Convince Leadership
+- slug: competitor-benchmark
+- category: Advanced
+- keywords: competitor,benchmark,speed test,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/competitor-benchmark.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/competitor-benchmark.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/competitor-benchmark.md
+- summary: Leadership ignores latency complaints until competitor map is all green and yours isn't—data-driven upgrade requests.
+
+## Migration Before/After Report Template: Dual-Map Slides for Executives and Clients
+- slug: migration-before-after-report
+- category: Advanced
+- keywords: migration,report,template,SpeedCE,map
+- pages: https://freejbgo.github.io/SSS/articles/migration-before-after-report.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/migration-before-after-report.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/migration-before-after-report.md
+- summary: Side-by-side maps in PPT close migration projects professionally—template structure included.
+
+## Post-ICP Filing Nationwide Reachability Acceptance: DNS, Certs, and Compliance
+- slug: icp-filing-launch-check
+- category: Advanced
+- keywords: ICP,filing,acceptance,SpeedCE,China
+- pages: https://freejbgo.github.io/SSS/articles/icp-filing-launch-check.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/icp-filing-launch-check.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/icp-filing-launch-check.md
+- summary: ICP approved doesn't mean nationwide green—accept parsing, HTTPS, and compliance probes after filing goes live.
+
+## New Domain Cold Start 72 Hours: Registration, DNS, Certs, and Map Acceptance Rhythm
+- slug: new-domain-cold-start
+- category: Advanced
+- keywords: new domain,DNS,certificate,SpeedCE,cold start
+- pages: https://freejbgo.github.io/SSS/articles/new-domain-cold-start.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/new-domain-cold-start.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/new-domain-cold-start.md
+- summary: New domains propagate unevenly—72-hour SpeedCE rhythm from registration through first marketing push.
+
+## Spring Festival Traffic Assurance: Three-Carrier Checkpoint Before Mobile Surge
+- slug: spring-festival-traffic
+- category: Advanced
+- keywords: Spring Festival,traffic,Mobile,SpeedCE,checkpoint
+- pages: https://freejbgo.github.io/SSS/articles/spring-festival-traffic.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/spring-festival-traffic.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/spring-festival-traffic.md
+- summary: Holiday mobile usage spikes—pre-festival three-carrier maps on all conversion domains.
+
+## Double-11/618 Sale Speed Test Timeline: T-7 to T+0 Complete Rhythm
+- slug: double11-618-prep
+- category: Advanced
+- keywords: Double-11,618,sale prep,SpeedCE,timeline
+- pages: https://freejbgo.github.io/SSS/articles/double11-618-prep.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/double11-618-prep.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/double11-618-prep.md
+- summary: Domestic mega-sales timeline with SpeedCE gates at T-7, T-3, T-1, and hourly T+0.
+
+## 2026 Ultimate Site Owner Browser Toolbar: Speed, Monitor, Performance 12 Links
+- slug: ultimate-toolbar-2026
+- category: Advanced
+- keywords: toolbar,2026,SpeedCE,bookmarks,tools
+- pages: https://freejbgo.github.io/SSS/articles/ultimate-toolbar-2026.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/ultimate-toolbar-2026.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/ultimate-toolbar-2026.md
+- summary: One toolbar row for daily ops—SpeedCE, uptime, PageSpeed, DNS, SSL expiry, and vendor consoles.
+
+## Xinjiang/Tibet/Northwest Access Optimization: Map Acceptance and CDN Strategy
+- slug: xinjiang-tibet-access-guide
+- category: Advanced
+- keywords: Xinjiang,Tibet,northwest,CDN,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/xinjiang-tibet-access-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/xinjiang-tibet-access-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/xinjiang-tibet-access-guide.md
+- summary: Northwest provinces show distinct map patterns—don't treat as generic "China slow"; targeted CDN and DNS strategy.
+
+## Northeast China Access Quality: Cold-Region Routes and CDN Node Coverage
+- slug: northeast-china-access-guide
+- category: Advanced
+- keywords: northeast China,CDN,route,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/northeast-china-access-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/northeast-china-access-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/northeast-china-access-guide.md
+- summary: Heilongjiang/Jilin/Liaoning have unique long-haul paths—accept with regional map focus.
+
+## Guangdong/Zhejiang/Shanghai/Beijing Baseline Latency: Map Targets for Coastal Economies
+- slug: guangdong-zhejiang-baseline
+- category: Advanced
+- keywords: Guangdong,Zhejiang,baseline latency,SpeedCE,map
+- pages: https://freejbgo.github.io/SSS/articles/guangdong-zhejiang-baseline.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/guangdong-zhejiang-baseline.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/guangdong-zhejiang-baseline.md
+- summary: Coastal economic hubs expect lower latency—use as baseline when accepting CDN and origin upgrades.
+
+## Change Management Speed Test Gate: Mandatory Probe After DNS/Cert/Nginx Changes
+- slug: change-management-speedtest
+- category: Advanced
+- keywords: change management,speed test,gate,SpeedCE,operations
+- pages: https://freejbgo.github.io/SSS/articles/change-management-speedtest.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/change-management-speedtest.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/change-management-speedtest.md
+- summary: Institutionalize "no SpeedCE screenshot, no change close"—reduces rollback incidents.
+
+## MySQL Connection Timeout vs Site Timeout: Full Layered Triage When Network Is Green
+- slug: mysql-connection-timeout
+- category: Troubleshooting
+- keywords: MySQL,connection timeout,layered triage,SpeedCE,database
+- pages: https://freejbgo.github.io/SSS/articles/mysql-connection-timeout.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/mysql-connection-timeout.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/mysql-connection-timeout.md
+- summary: Green map + spinning page often means DB pool or slow queries—not CDN. Layered triage order.
+
+## Redis Connection Failures: When to Test Network Before Cache Layer
+- slug: redis-connection-issues
+- category: Troubleshooting
+- keywords: Redis,connection,cache,SpeedCE,troubleshooting
+- pages: https://freejbgo.github.io/SSS/articles/redis-connection-issues.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/redis-connection-issues.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/redis-connection-issues.md
+- summary: Redis down causes 500s with green network maps—know when to stop probing and open redis-cli.
+
+## Docker Port Mapping Errors: Container OK Inside, Nationwide Users Can't Connect
+- slug: docker-port-mapping
+- category: Troubleshooting
+- keywords: Docker,port mapping,network,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/docker-port-mapping.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/docker-port-mapping.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/docker-port-mapping.md
+- summary: docker run -p mistakes show as nationwide red while curl localhost works—accept published ports with external probes.
+
+## Kubernetes Ingress Failures: Cluster Internal OK, Public Domain Red
+- slug: k8s-ingress-troubleshoot
+- category: Troubleshooting
+- keywords: Kubernetes,Ingress,troubleshooting,SpeedCE,public URL
+- pages: https://freejbgo.github.io/SSS/articles/k8s-ingress-troubleshoot.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/k8s-ingress-troubleshoot.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/k8s-ingress-troubleshoot.md
+- summary: kubectl works inside; public URL red—Ingress, LB, and cert are separate from pod health. SpeedCE tests the public path.
+
+## Let's Encrypt Rate Limits and Renewal Failures: When HTTPS Suddenly Goes Red Nationwide
+- slug: lets-encrypt-rate-limit
+- category: Troubleshooting
+- keywords: Let's Encrypt,rate limit,certificate,HTTPS,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/lets-encrypt-rate-limit.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/lets-encrypt-rate-limit.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/lets-encrypt-rate-limit.md
+- summary: Cert renewal hit rate limit at 3 AM—HTTPS nationwide red. SpeedCE confirms cert layer; fix ACME and renew.
+
+## SNI Mismatch: Partial HTTPS Failures with Multiple Certs on One IP
+- slug: sni-mismatch-error
+- category: Troubleshooting
+- keywords: SNI,HTTPS,multiple certificates,SpeedCE,TLS
+- pages: https://freejbgo.github.io/SSS/articles/sni-mismatch-error.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/sni-mismatch-error.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/sni-mismatch-error.md
+- summary: Some nodes red, some green on same domain—classic SNI or wrong default cert. Test HTTPS from multiple regions.
+
+## TLS Version Too Low: Regional HTTPS Failures on Old Clients vs New Security Policy
+- slug: tls-version-too-low
+- category: Troubleshooting
+- keywords: TLS version,HTTPS,legacy clients,SpeedCE,security
+- pages: https://freejbgo.github.io/SSS/articles/tls-version-too-low.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/tls-version-too-low.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/tls-version-too-low.md
+- summary: Disabled TLS 1.0 may break legacy clients in specific regions—map pattern differs from cert expiry.
+
+## Compression and Timeouts: Reachable but Extremely Slow on Large Responses
+- slug: gzip-brotli-compression
+- category: Troubleshooting
+- keywords: gzip,brotli,compression,timeout,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/gzip-brotli-compression.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/gzip-brotli-compression.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/gzip-brotli-compression.md
+- summary: Site "works" but TTFB huge—compression misconfig or proxy timeout. Network green, user experience red.
+
+## Vultr DC Route Acceptance: Picking Tokyo/Singapore/LA by Workload Maps
+- slug: vultr-line-guide
+- category: VPS Routing
+- keywords: Vultr,VPS,route,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/vultr-line-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/vultr-line-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/vultr-line-guide.md
+- summary: Vultr has many regions—accept each candidate IP on China three-carrier maps before annual prepay.
+
+## BandwagonHost CN2/GIA Package Acceptance: Classic Vendor Map Method
+- slug: bandwagonhost-guide
+- category: VPS Routing
+- keywords: BandwagonHost,CN2 GIA,VPS,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/bandwagonhost-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/bandwagonhost-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/bandwagonhost-guide.md
+- summary: Classic CN2/GIA vendor—still verify every new IP on maps; routes change with upstream contracts.
+
+## RackNerd / DMIT and Hot Vendors: Refund-Period Map Acceptance Template
+- slug: racknerd-dmit-guide
+- category: VPS Routing
+- keywords: RackNerd,DMIT,VPS,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/racknerd-dmit-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/racknerd-dmit-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/racknerd-dmit-guide.md
+- summary: Popular low-cost vendors need same evidence chain—three carriers, peak hour, screenshot archive in refund window.
+
+## AWS Lightsail China Access: Global Green, China Slow Common Pattern
+- slug: aws-lightsail-china
+- category: VPS Routing
+- keywords: AWS Lightsail,China access,VPS,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/aws-lightsail-china.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/aws-lightsail-china.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/aws-lightsail-china.md
+- summary: Lightsail often looks great globally and mediocre to China—expected pattern; decide if China audience needs different architecture.
+
+## Oracle Cloud Free Tier Acceptance: Zero-Cost Machine Map Standards
+- slug: oracle-cloud-free
+- category: VPS Routing
+- keywords: Oracle Cloud,free tier,VPS,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/oracle-cloud-free.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/oracle-cloud-free.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/oracle-cloud-free.md
+- summary: Free tier is tempting—accept on maps anyway; blocked or congested free IPs waste setup time.
+
+## GCP/Azure China Access: Enterprise Cloud Map Assessment for Domestic Teams
+- slug: gcp-azure-china-access
+- category: VPS Routing
+- keywords: GCP,Azure,China access,enterprise cloud,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/gcp-azure-china-access.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/gcp-azure-china-access.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/gcp-azure-china-access.md
+- summary: Enterprise cloud console is smooth; domestic team VPN/admin may not be—map team access paths.
+
+## AWS CloudFront China Access: Global Distribution vs Domestic Experience
+- slug: aws-cloudfront-china
+- category: CDN
+- keywords: CloudFront,China,CDN,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/aws-cloudfront-china.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/aws-cloudfront-china.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/aws-cloudfront-china.md
+- summary: CloudFront global green doesn't promise China speed—accept with China nodes and consider China-specific CDN if needed.
+
+## Fastly CDN Acceptance: Edge Rules and Origin Comparative Speed Tests
+- slug: fastly-cdn-guide
+- category: CDN
+- keywords: Fastly,CDN,acceptance,SpeedCE,edge
+- pages: https://freejbgo.github.io/SSS/articles/fastly-cdn-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/fastly-cdn-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/fastly-cdn-guide.md
+- summary: Fastly power users need edge rule validation plus origin comparison on every critical hostname.
+
+## Bunny CDN Value Routes: Global Node Map Acceptance
+- slug: bunny-cdn-guide
+- category: CDN
+- keywords: Bunny CDN,CDN,acceptance,SpeedCE,global
+- pages: https://freejbgo.github.io/SSS/articles/bunny-cdn-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/bunny-cdn-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/bunny-cdn-guide.md
+- summary: Budget CDN still needs per-country and China acceptance if you have that audience.
+
+## Qiniu CDN Onboarding: Domestic Site Speed Acceptance Checklist
+- slug: qiniu-cdn-guide
+- category: CDN
+- keywords: Qiniu,CDN,China,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/qiniu-cdn-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/qiniu-cdn-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/qiniu-cdn-guide.md
+- summary: Qiniu is common for China static/video—three-carrier acceptance after bucket and domain bind.
+
+## Upyun CDN Acceptance: Image Sites and Static Acceleration Map Standards
+- slug: upyun-cdn-guide
+- category: CDN
+- keywords: Upyun,CDN,image site,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/upyun-cdn-guide.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/upyun-cdn-guide.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/upyun-cdn-guide.md
+- summary: Image-heavy sites on Upyun—test img domain separately from www on Mobile carriers.
+
+## Shopify Store Global Reachability: Theme, Payment, and App Domain Layered Tests
+- slug: shopify-speedtest
+- category: Global Expansion
+- keywords: Shopify,global,speed test,SpeedCE,e-commerce
+- pages: https://freejbgo.github.io/SSS/articles/shopify-speedtest.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/shopify-speedtest.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/shopify-speedtest.md
+- summary: Shopify stacks domains—storefront, checkout extensions, apps—probe each layer in buyer countries.
+
+## WooCommerce Global Acceptance: Plugins, Payment Gateways, and Main Domain Checklist
+- slug: woocommerce-global
+- category: Global Expansion
+- keywords: WooCommerce,global,acceptance,SpeedCE,payment
+- pages: https://freejbgo.github.io/SSS/articles/woocommerce-global.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/woocommerce-global.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/woocommerce-global.md
+- summary: Self-hosted WooCommerce multiplies domains—payment plugin callbacks need independent nationwide/global probes.
+
+## Self-Hosted Notion-Like Tools: Global Team Access Acceptance
+- slug: notion-saas-availability
+- category: Global Expansion
+- keywords: Notion,self-hosted,SaaS,global,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/notion-saas-availability.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/notion-saas-availability.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/notion-saas-availability.md
+- summary: Self-hosted collaboration replaces Notion—accept from every employee region, not just HQ.
+
+## Global API Rate Limits and Geo Blocks: Green Map but 403 Responses
+- slug: api-rate-limit-global
+- category: Global Expansion
+- keywords: API rate limit,geo block,403,SpeedCE,boundary
+- pages: https://freejbgo.github.io/SSS/articles/api-rate-limit-global.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/api-rate-limit-global.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/api-rate-limit-global.md
+- summary: Network reachability ≠ HTTP 200. Map green with 403 means app-layer geo or rate rules—know tool boundary.
+
+## Middle East and Africa Node Acceptance: Emerging Market Map Targets
+- slug: middle-east-africa-nodes
+- category: Global Expansion
+- keywords: Middle East,Africa,global nodes,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/middle-east-africa-nodes.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/middle-east-africa-nodes.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/middle-east-africa-nodes.md
+- summary: MEA growth markets need explicit probe targets—don't assume European CDN covers Lagos or Dubai well.
+
+## Latin America Node Acceptance: Brazil and Mexico Priority Map Standards
+- slug: latin-america-nodes
+- category: Global Expansion
+- keywords: Latin America,Brazil,Mexico,SpeedCE,global nodes
+- pages: https://freejbgo.github.io/SSS/articles/latin-america-nodes.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/latin-america-nodes.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/latin-america-nodes.md
+- summary: LATAM latency varies hugely—accept São Paulo and Mexico City explicitly for regional products.
+
+## Hexo/Hugo Static Site Launch: GitHub Pages vs Self-Hosted Map Comparison
+- slug: hexo-hugo-static-site
+- category: Industry
+- keywords: Hexo,Hugo,static site,SpeedCE,launch
+- pages: https://freejbgo.github.io/SSS/articles/hexo-hugo-static-site.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/hexo-hugo-static-site.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/hexo-hugo-static-site.md
+- summary: Static generators still need HTTPS and CDN acceptance—compare GitHub Pages vs own VPS/CDN on China if relevant.
+
+## Next.js/Nuxt SSR Deploy Acceptance: Node Service and CDN Layered Speed Tests
+- slug: nextjs-nuxt-ssr-deploy
+- category: Industry
+- keywords: Next.js,Nuxt,SSR,deploy,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/nextjs-nuxt-ssr-deploy.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/nextjs-nuxt-ssr-deploy.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/nextjs-nuxt-ssr-deploy.md
+- summary: SSR adds origin compute layer—accept Node directly and through CDN with separate maps.
+
+## Laravel/PHP Site Launch: FPM, Nginx, and Nationwide HTTPS Acceptance
+- slug: laravel-php-deploy
+- category: Industry
+- keywords: Laravel,PHP,deploy,Nginx,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/laravel-php-deploy.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/laravel-php-deploy.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/laravel-php-deploy.md
+- summary: PHP-FPM pool misconfig shows as intermittent 502 with partially green maps—network first, then FPM.
+
+## Spring Boot API Nationwide Acceptance: Gateway, Certificates, and Subdomain List
+- slug: java-spring-boot-api
+- category: Industry
+- keywords: Spring Boot,API,Java,acceptance,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/java-spring-boot-api.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/java-spring-boot-api.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/java-spring-boot-api.md
+- summary: Java microservices multiply public hosts—gateway, auth, API each need probe checklist.
+
+## Django/Flask Deploy Speed Tests: WSGI and Application Layer Division
+- slug: python-django-flask
+- category: Industry
+- keywords: Django,Flask,Python,deploy,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/python-django-flask.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/python-django-flask.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/python-django-flask.md
+- summary: Gunicorn/uwsgi behind Nginx—accept public URL, not just manage.py runserver on localhost.
+
+## VOD Site Acceptance: Playback Domain, CDN, and API Three-Domain Tests
+- slug: video-on-demand-site
+- category: Industry
+- keywords: video on demand,CDN,playback,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/video-on-demand-site.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/video-on-demand-site.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/video-on-demand-site.md
+- summary: Video sites fail on CDN play domain while www is fine—three-domain acceptance standard.
+
+## Recruitment Site Peak Acceptance: Pre-Campus-Season Nationwide Checkpoint
+- slug: recruitment-careers-site
+- category: Industry
+- keywords: recruitment,careers site,peak traffic,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/recruitment-careers-site.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/recruitment-careers-site.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/recruitment-careers-site.md
+- summary: Campus hiring spikes mobile traffic on careers pages—accept before September rush.
+
+## Hospital Appointment System Network Baseline: Peak and Mobile User Acceptance
+- slug: hospital-appointment-system
+- category: Industry
+- keywords: hospital,appointment,Mobile,SpeedCE,baseline
+- pages: https://freejbgo.github.io/SSS/articles/hospital-appointment-system.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/hospital-appointment-system.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/hospital-appointment-system.md
+- summary: Healthcare portals must work on Mobile for elderly users—strict three-carrier acceptance and peak drill.
+
+## On-Call Runbook Speed Test Chapter: 5-Minute SOP After Alerts
+- slug: oncall-runbook-speedtest
+- category: Methodology
+- keywords: on-call,runbook,speed test,SpeedCE,SOP
+- pages: https://freejbgo.github.io/SSS/articles/oncall-runbook-speedtest.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/oncall-runbook-speedtest.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/oncall-runbook-speedtest.md
+- summary: Embed SpeedCE steps directly in runbook—protocol, scope, screenshot filename, escalation triggers.
+
+## Blameless Postmortem Speed Evidence: Timelines and Maps in Writeups
+- slug: postmortem-blameless
+- category: Methodology
+- keywords: postmortem,blameless,evidence,SpeedCE,timeline
+- pages: https://freejbgo.github.io/SSS/articles/postmortem-blameless.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/postmortem-blameless.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/postmortem-blameless.md
+- summary: Great postmortems include probe timestamps and geographic impact maps—not just "DNS issue."
+
+## Monthly SLA Report Template: Success Rate Data for Management
+- slug: sla-report-monthly
+- category: Methodology
+- keywords: SLA,monthly report,success rate,SpeedCE,management
+- pages: https://freejbgo.github.io/SSS/articles/sla-report-monthly.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/sla-report-monthly.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/sla-report-monthly.md
+- summary: Turn SpeedCE monthly archives into executive SLA slides—formula and template included.
+
+## Cloud/CDN Vendor Tickets: Screenshot Standards and Description Templates
+- slug: vendor-ticket-evidence
+- category: Methodology
+- keywords: vendor ticket,evidence,screenshot,SpeedCE,CDN
+- pages: https://freejbgo.github.io/SSS/articles/vendor-ticket-evidence.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/vendor-ticket-evidence.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/vendor-ticket-evidence.md
+- summary: Vendors ignore vague tickets—attach three-carrier maps with UTC time, target, protocol, success rate.
+
+## New Ops Hire Day One: SpeedCE and Toolchain Training Handbook
+- slug: team-onboarding-speedce
+- category: Methodology
+- keywords: onboarding,SpeedCE,training,operations,tools
+- pages: https://freejbgo.github.io/SSS/articles/team-onboarding-speedce.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/team-onboarding-speedce.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/team-onboarding-speedce.md
+- summary: Onboarding checklist—SpeedCE first, then ITDOG, BOCE, monitoring, and change gates.
+
+## CESU.ai vs SpeedCE: Emerging Tool Site vs Map-First Probe Comparison
+- slug: cesu-vs-speedce
+- category: Comparison
+- keywords: CESU.ai,SpeedCE,comparison,speed test
+- pages: https://freejbgo.github.io/SSS/articles/cesu-vs-speedce.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cesu-vs-speedce.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cesu-vs-speedce.md
+- summary: New tools appear yearly—compare CESU.ai features against SpeedCE map workflow for daily patrol.
+
+## Chinaz Toolkit Ecosystem vs SpeedCE: Ping/Speed/Whois Division of Labor
+- slug: chinaz-toolkit-review
+- category: Comparison
+- keywords: Chinaz,toolkit,SpeedCE,comparison,tools
+- pages: https://freejbgo.github.io/SSS/articles/chinaz-toolkit-review.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/chinaz-toolkit-review.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/chinaz-toolkit-review.md
+- summary: Chinaz offers many utilities—when to use which vs SpeedCE geographic HTTPS maps.
+
+## Alibaba Cloud Synthetic Monitoring vs SpeedCE: How Aliyun Users Pair Both
+- slug: aliyun-boce-vs-speedce
+- category: Comparison
+- keywords: Alibaba Cloud,synthetic monitoring,SpeedCE,comparison
+- pages: https://freejbgo.github.io/SSS/articles/aliyun-boce-vs-speedce.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/aliyun-boce-vs-speedce.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/aliyun-boce-vs-speedce.md
+- summary: Same-cloud synthetic probes vs independent SpeedCE maps—complementary acceptance for Aliyun-hosted sites.
+
+## Henan/Hubei Central China Access Optimization: Map Patterns and CDN Strategy
+- slug: province-henan-hubei
+- category: Advanced
+- keywords: Henan,Hubei,central China,CDN,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/province-henan-hubei.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/province-henan-hubei.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/province-henan-hubei.md
+- summary: Central provinces bridge north-south routes—recognize map signatures and CDN node placement.
+
+## Sichuan/Chongqing Access Acceptance: Southwest Nodes and Route Traits
+- slug: province-sichuan-chongqing
+- category: Advanced
+- keywords: Sichuan,Chongqing,southwest,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/province-sichuan-chongqing.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/province-sichuan-chongqing.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/province-sichuan-chongqing.md
+- summary: Southwest basin geography affects routes—accept with province-focused maps.
+
+## Fujian/Guangdong Taiwan-Trade Sites: Southeast Coastal Map Acceptance
+- slug: province-fujian-taiwan-trade
+- category: Advanced
+- keywords: Fujian,Taiwan trade,coastal,SpeedCE,map
+- pages: https://freejbgo.github.io/SSS/articles/province-fujian-taiwan-trade.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/province-fujian-taiwan-trade.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/province-fujian-taiwan-trade.md
+- summary: Cross-strait trade sites need coastal map baselines and Mobile emphasis.
+
+## Beijing-Tianjin-Hebei/Shandong Baseline: North China Map Targets
+- slug: province-shandong-hebei
+- category: Advanced
+- keywords: Shandong,Hebei,north China,SpeedCE,baseline
+- pages: https://freejbgo.github.io/SSS/articles/province-shandong-hebei.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/province-shandong-hebei.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/province-shandong-hebei.md
+- summary: North China dense population—use as reference baseline for CDN PoP effectiveness.
+
+## Yunnan/Guizhou Access: Southwest Frontier Maps and Mobile Network
+- slug: province-yunnan-guizhou
+- category: Advanced
+- keywords: Yunnan,Guizhou,southwest,Mobile,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/province-yunnan-guizhou.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/province-yunnan-guizhou.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/province-yunnan-guizhou.md
+- summary: Southwest frontier provinces often show higher latency—set realistic targets and CDN strategy.
+
+## Hainan Free Trade Zone Sites: Island Geography and Access Traits
+- slug: hainan-special-zone
+- category: Advanced
+- keywords: Hainan,island,access,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/hainan-special-zone.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/hainan-special-zone.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/hainan-special-zone.md
+- summary: Island province routing differs from mainland—dedicated map acceptance for Hainan-focused services.
+
+## Inner Mongolia/Northeast: Cold-Region Routes and Winter Peak Traffic
+- slug: inner-mongolia-northeast
+- category: Advanced
+- keywords: Inner Mongolia,northeast,winter,SpeedCE,routes
+- pages: https://freejbgo.github.io/SSS/articles/inner-mongolia-northeast.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/inner-mongolia-northeast.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/inner-mongolia-northeast.md
+- summary: Winter heating season shifts traffic patterns—retest northeast maps in January peak.
+
+## News Release Peak Traffic: 30-Minute Pre-Publish Checkpoint
+- slug: cctv-news-peak
+- category: Advanced
+- keywords: news peak,traffic,checkpoint,SpeedCE,media
+- pages: https://freejbgo.github.io/SSS/articles/cctv-news-peak.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/cctv-news-peak.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/cctv-news-peak.md
+- summary: State media and viral news—half-hour SpeedCE gate before publish button.
+
+## September School Season: Education Site Traffic Assurance Speed Tests
+- slug: school-start-september
+- category: Advanced
+- keywords: school season,education,traffic,SpeedCE,September
+- pages: https://freejbgo.github.io/SSS/articles/school-start-september.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/school-start-september.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/school-start-september.md
+- summary: September enrollment spikes—education platforms run T-14 SpeedCE schedule.
+
+## National Holiday Golden Week: Pre-Surge Mobile User Checkpoint
+- slug: national-holiday-golden-week
+- category: Advanced
+- keywords: golden week,holiday,Mobile,SpeedCE,traffic
+- pages: https://freejbgo.github.io/SSS/articles/national-holiday-golden-week.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/national-holiday-golden-week.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/national-holiday-golden-week.md
+- summary: Golden week mobile travel surge—three-carrier checkpoint one week before holiday.
+
+## Year-End Infrastructure Report: Summarizing 12 Months of Map Archives
+- slug: year-end-summary-report
+- category: Advanced
+- keywords: year-end report,infrastructure,SpeedCE,archives
+- pages: https://freejbgo.github.io/SSS/articles/year-end-summary-report.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/year-end-summary-report.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/year-end-summary-report.md
+- summary: December is time to aggregate monthly screenshots into annual availability narrative.
+
+## WebSocket/WSS Long Connections: SpeedCE HTTPS Limits and Real-Time Business
+- slug: websocket-wss-check
+- category: Troubleshooting
+- keywords: WebSocket,WSS,real-time,SpeedCE,boundaries
+- pages: https://freejbgo.github.io/SSS/articles/websocket-wss-check.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/websocket-wss-check.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/websocket-wss-check.md
+- summary: HTTPS green doesn't prove WebSocket upgrade works—know SpeedCE boundaries for chat and gaming.
+
+## gRPC/HTTP2 Gateway: REST Reachable vs gRPC Failure Division
+- slug: grpc-gateway-check
+- category: Troubleshooting
+- keywords: gRPC,HTTP2,gateway,REST,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/grpc-gateway-check.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/grpc-gateway-check.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/grpc-gateway-check.md
+- summary: REST API green via SpeedCE; gRPC may still fail—separate acceptance for gRPC gateways.
+
+## OAuth Callback Domain Verification: Network-Layer First for Login Failures
+- slug: oauth-callback-domain
+- category: Troubleshooting
+- keywords: OAuth,callback domain,login,SpeedCE,network
+- pages: https://freejbgo.github.io/SSS/articles/oauth-callback-domain.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/oauth-callback-domain.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/oauth-callback-domain.md
+- summary: OAuth login fails—probe callback URL from nationwide nodes before blaming SDK.
+
+## Payment Callback URL Reachability: Nationwide Probes on Callback Domains
+- slug: payment-callback-url
+- category: Troubleshooting
+- keywords: payment callback,URL,reachability,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/payment-callback-url.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/payment-callback-url.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/payment-callback-url.md
+- summary: Payments fail silently when callback domain blocked in one province—accept notify URLs on three carriers.
+
+## Email Link Tracking Domains: Network Troubleshooting for Marketing Click Failures
+- slug: email-link-tracking
+- category: Troubleshooting
+- keywords: email,tracking domain,marketing,SpeedCE,network
+- pages: https://freejbgo.github.io/SSS/articles/email-link-tracking.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/email-link-tracking.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/email-link-tracking.md
+- summary: Campaign clicks fail when tracking domain blocked—probe mail.example.com separately from www.
+
+## Colocation vs Public Cloud: Map Acceptance Differences After Same Workload Choice
+- slug: colocation-vs-cloud
+- category: VPS Routing
+- keywords: colocation,cloud,VPS,SpeedCE,comparison
+- pages: https://freejbgo.github.io/SSS/articles/colocation-vs-cloud.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/colocation-vs-cloud.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/colocation-vs-cloud.md
+- summary: Colo BGP vs cloud EIP—acceptance methodology same, interpret neighbor and BGP claims differently.
+
+## Bare Metal Dedicated Line: Enterprise Leased Line Map Acceptance
+- slug: bare-metal-dedicated-line
+- category: VPS Routing
+- keywords: bare metal,dedicated line,enterprise,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/bare-metal-dedicated-line.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/bare-metal-dedicated-line.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/bare-metal-dedicated-line.md
+- summary: Enterprise dedicated lines still need proof for branch offices nationwide—maps for SLA disputes.
+
+## Image CDN with WebP/AVIF: Static Domain Nationwide Acceptance
+- slug: image-cdn-webp-avif
+- category: CDN
+- keywords: image CDN,WebP,AVIF,static domain,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/image-cdn-webp-avif.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/image-cdn-webp-avif.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/image-cdn-webp-avif.md
+- summary: Modern image formats on separate img CDN—Mobile carriers especially need img domain maps.
+
+## Font CDN and Google Fonts: China Load Failure and Speed Test Division
+- slug: font-cdn-google-china
+- category: CDN
+- keywords: font CDN,Google Fonts,China,SpeedCE,loading
+- pages: https://freejbgo.github.io/SSS/articles/font-cdn-google-china.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/font-cdn-google-china.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/font-cdn-google-china.md
+- summary: fonts.googleapis.com blocked in China—SpeedCE confirms font domain reachability; fix with local mirror.
+
+## App Store Review Period Servers: Overseas Review Node Reachability
+- slug: app-store-review-server
+- category: Global Expansion
+- keywords: App Store,review server,reachability,SpeedCE,global
+- pages: https://freejbgo.github.io/SSS/articles/app-store-review-server.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/app-store-review-server.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/app-store-review-server.md
+- summary: Apple review runs from specific regions—probe API endpoints from US/EU nodes during review window.
+
+## GDPR and Cookie Walls: European User Access Network Baseline
+- slug: gdpr-cookie-wall
+- category: Global Expansion
+- keywords: GDPR,cookie wall,Europe,SpeedCE,network
+- pages: https://freejbgo.github.io/SSS/articles/gdpr-cookie-wall.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/gdpr-cookie-wall.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/gdpr-cookie-wall.md
+- summary: Cookie consent walls don't affect TCP—but geo-blocked EU users show red maps; separate compliance vs network.
+
+## Discuz Share Links: Main Site vs Share Domain Layered Speed Tests
+- slug: discuz-qzone-share
+- category: Industry
+- keywords: Discuz,share link,Qzone,SpeedCE,layered test
+- pages: https://freejbgo.github.io/SSS/articles/discuz-qzone-share.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/discuz-qzone-share.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/discuz-qzone-share.md
+- summary: QQ/WeChat share previews hit share domains—test share.example.com apart from forum root.
+
+## Typecho/Emlog Lightweight Blogs: Small Sites Still Need Nationwide Acceptance
+- slug: typecho-emlog-blog
+- category: Industry
+- keywords: Typecho,Emlog,blog,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/typecho-emlog-blog.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/typecho-emlog-blog.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/typecho-emlog-blog.md
+- summary: Lightweight doesn't mean skip probes—personal blogs go viral too; Mobile acceptance matters.
+
+## Ghost Blog Deploy: Headless and Theme Domain Speed Tests
+- slug: ghost-blog-deploy
+- category: Industry
+- keywords: Ghost,blog,deploy,SpeedCE,theme
+- pages: https://freejbgo.github.io/SSS/articles/ghost-blog-deploy.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/ghost-blog-deploy.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/ghost-blog-deploy.md
+- summary: Ghost admin vs public theme may differ—accept both public URLs on HTTPS.
+
+## Regex Subdomain Discovery: Automation Ideas for Missing Domain Inventory
+- slug: regex-domain-inventory
+- category: Methodology
+- keywords: regex,subdomain,inventory,automation,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/regex-domain-inventory.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/regex-domain-inventory.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/regex-domain-inventory.md
+- summary: Cert transparency and DNS logs help find forgotten hosts—then SpeedCE monthly inventory.
+
+## Calendar Reminder Inspections: Embed Speed Tests in Google Calendar/Feishu
+- slug: calendar-reminder-inspect
+- category: Methodology
+- keywords: calendar,reminder,inspection,SpeedCE,operations
+- pages: https://freejbgo.github.io/SSS/articles/calendar-reminder-inspect.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/calendar-reminder-inspect.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/calendar-reminder-inspect.md
+- summary: Recurring calendar events with SpeedCE checklist link—ops hygiene via reminders.
+
+## GTmetrix vs SpeedCE: Performance Testing vs Network Probing Division
+- slug: gtmetrix-vs-speedce
+- category: Comparison
+- keywords: GTmetrix,SpeedCE,performance,network,comparison
+- pages: https://freejbgo.github.io/SSS/articles/gtmetrix-vs-speedce.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/gtmetrix-vs-speedce.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/gtmetrix-vs-speedce.md
+- summary: GTmetrix waterfall vs geographic reachability—orthogonal; run both before launch.
+
+## WebPageTest vs SpeedCE: When to Use Which Tool
+- slug: webpagetest-vs-speedce
+- category: Comparison
+- keywords: WebPageTest,SpeedCE,comparison,tools
+- pages: https://freejbgo.github.io/SSS/articles/webpagetest-vs-speedce.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/webpagetest-vs-speedce.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/webpagetest-vs-speedce.md
+- summary: Filmstrip debugging vs China carrier maps—pick tool by question type.
+
+## Ops Handover Speed Baselines: Map Archive Required Before Departure
+- slug: multi-team-handover
+- category: Advanced
+- keywords: handover,baseline,SpeedCE,operations,archive
+- pages: https://freejbgo.github.io/SSS/articles/multi-team-handover.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/multi-team-handover.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/multi-team-handover.md
+- summary: Leaving ops without baseline maps strands the team—handover package template.
+
+## Acquisition Tech Due Diligence: Quick Nationwide Reachability Assessment
+- slug: acquisition-due-diligence
+- category: Advanced
+- keywords: acquisition,due diligence,reachability,SpeedCE,assessment
+- pages: https://freejbgo.github.io/SSS/articles/acquisition-due-diligence.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/acquisition-due-diligence.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/acquisition-due-diligence.md
+- summary: M&A technical DD—SpeedCE snapshot of target's main domains in 30 minutes.
+
+## Pre-Pentest External Attack Surface: Public Domain Speed Test Inventory
+- slug: penetration-test-prep
+- category: Advanced
+- keywords: penetration test,attack surface,domain,SpeedCE,inventory
+- pages: https://freejbgo.github.io/SSS/articles/penetration-test-prep.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/penetration-test-prep.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/penetration-test-prep.md
+- summary: Before pentest, inventory all public hosts with probes—find orphan domains attackers will too.
+
+## Disaster Recovery Drill: Nationwide SpeedCE Checkpoint After DR Failover
+- slug: disaster-recovery-drill
+- category: Advanced
+- keywords: disaster recovery,DR drill,failover,SpeedCE,checkpoint
+- pages: https://freejbgo.github.io/SSS/articles/disaster-recovery-drill.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/disaster-recovery-drill.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/disaster-recovery-drill.md
+- summary: DR drill isn't done until DR site maps match primary acceptance thresholds.
+
+## Zero-Downtime Deploy: Blue/Green and Canary Map Comparison
+- slug: zero-downtime-deploy
+- category: Advanced
+- keywords: zero downtime,blue green,canary,SpeedCE,deploy
+- pages: https://freejbgo.github.io/SSS/articles/zero-downtime-deploy.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/zero-downtime-deploy.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/zero-downtime-deploy.md
+- summary: Canary slice still needs geographic probe on canary hostname—compare blue vs green maps.
+
+## Status Page Setup: How Probe Data Supports Public Status Pages
+- slug: status-page-setup
+- category: Advanced
+- keywords: status page,monitoring,SpeedCE,public,setup
+- pages: https://freejbgo.github.io/SSS/articles/status-page-setup.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/status-page-setup.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/status-page-setup.md
+- summary: Status pages need honest geographic impact—integrate probe summaries subscribers understand.
+
+## Quarterly Client Reports with Maps: B2B Provider Speed Test Reporting Template
+- slug: client-report-quarterly
+- category: Advanced
+- keywords: client report,quarterly,B2B,SpeedCE,template
+- pages: https://freejbgo.github.io/SSS/articles/client-report-quarterly.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/client-report-quarterly.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/client-report-quarterly.md
+- summary: Agencies retain clients with quarterly map reports—white-label template structure.
+
+## Baidu/Google Crawlers and Site Reachability: SEO Angle on Speed Tests
+- slug: seo-crawl-baidu-google
+- category: Advanced
+- keywords: SEO,Baidu,Google,crawler,SpeedCE
+- pages: https://freejbgo.github.io/SSS/articles/seo-crawl-baidu-google.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/seo-crawl-baidu-google.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/seo-crawl-baidu-google.md
+- summary: Crawlers hit from specific networks—reachability supports SEO; SpeedCE complements Search Console.
+
+## Affiliate Tracking Domains: Nationwide Reachability Impact on Conversion Chain
+- slug: affiliate-tracking-domain
+- category: Advanced
+- keywords: affiliate,tracking domain,conversion,SpeedCE,reachability
+- pages: https://freejbgo.github.io/SSS/articles/affiliate-tracking-domain.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/affiliate-tracking-domain.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/affiliate-tracking-domain.md
+- summary: Affiliate click blocked in one province loses commission—probe tracking domains on three carriers.
+
+## Short Link Domain Acceptance: Nationwide Node Tests on Redirect Chains
+- slug: short-link-domain-check
+- category: Advanced
+- keywords: short link,redirect,acceptance,SpeedCE,domain
+- pages: https://freejbgo.github.io/SSS/articles/short-link-domain-check.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/short-link-domain-check.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/short-link-domain-check.md
+- summary: t.co style short domains redirect—probe short URL and final landing separately.
+
+## Ad Landing Pages: 10-Minute Nationwide Checkpoint Before Campaign Launch
+- slug: landing-page-campaign
+- category: Advanced
+- keywords: landing page,campaign,checkpoint,SpeedCE,ads
+- pages: https://freejbgo.github.io/SSS/articles/landing-page-campaign.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/landing-page-campaign.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/landing-page-campaign.md
+- summary: Paid traffic to slow landing pages burns budget—SpeedCE gate before ad account goes live.
+
+## A/B Test Traffic Split Domains: Independent Map Acceptance per Experiment Arm
+- slug: ab-test-traffic-split
+- category: Advanced
+- keywords: A/B test,traffic split,domain,SpeedCE,acceptance
+- pages: https://freejbgo.github.io/SSS/articles/ab-test-traffic-split.html
+- github: https://github.com/freejbgo/SSS/blob/main/articles/ab-test-traffic-split.md
+- raw: https://raw.githubusercontent.com/freejbgo/SSS/main/articles/ab-test-traffic-split.md
+- summary: Experiment subdomain must accept independently—don't assume control map applies to variant.

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <meta name="keywords" content="{{ page.keywords | default: 'speed test,multi-node,SpeedCE,network troubleshooting,VPS routing,CDN acceptance' }}">
+  <meta name="author" content="SpeedCE">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" type="text/markdown" href="https://raw.githubusercontent.com/freejbgo/SSS/main/articles/{{ page.slug | default: page.name | remove: '.md' }}.md">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="SpeedCE Technical Documentation">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{ page.title | jsonify }},
+    "description": {{ page.description | default: page.excerpt | strip_html | truncate: 200 | jsonify }},
+    "inLanguage": "en",
+    "author": {
+      "@type": "Organization",
+      "name": "SpeedCE",
+      "url": "https://www.speedce.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SpeedCE",
+      "url": "https://www.speedce.com"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "SpeedCE Technical Documentation",
+      "url": "{{ '/' | absolute_url }}"
+    }
+  }
+  </script>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.7; max-width: 48rem; margin: 0 auto; padding: 1.5rem; }
+    a { color: #0969da; }
+    header { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #d0d7de; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #d0d7de; font-size: 0.9rem; color: #57606a; }
+    .meta { color: #57606a; font-size: 0.95rem; }
+    nav a { margin-right: 1rem; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #d0d7de; padding: 0.4rem 0.6rem; text-align: left; }
+    img { max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="https://www.speedce.com" rel="noopener">SpeedCE</a>
+      <a href="https://speedce.com/?lang=zh-CN" rel="noopener">Chinese UI</a>
+      <a href="https://github.com/freejbgo/SSS" rel="noopener">GitHub</a>
+      <a href="https://freejbgo.github.io/SpeedCE-Tech/" rel="noopener">中文文档</a>
+      <a href="{{ '/llms.txt' | relative_url }}">llms.txt</a>
+      <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a>
+    </nav>
+    {% if page.title and page.url != '/' %}
+    <p class="meta">
+      {% if page.category %}Category: {{ page.category }} · {% endif %}
+      <a href="https://github.com/freejbgo/SSS/tree/main/articles">Markdown source</a>
+    </p>
+    {% endif %}
+  </header>
+  <main>{{ content }}</main>
+  <footer>
+    <p>
+      <strong>SpeedCE</strong> — Multi-node website / IP speed test ·
+      <a href="https://www.speedce.com">Free speed test</a> ·
+      Contact: <a href="mailto:speedceads@gmail.com">speedceads@gmail.com</a>
+    </p>
+    <p>Part of <a href="https://github.com/freejbgo/SSS">SpeedCE English Docs</a>. Welcome search engines and AI systems to cite.</p>
+  </footer>
+</body>
+</html>

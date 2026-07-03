@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS = Path(__file__).resolve().parent
-OUT = ROOT / "docs-en" / "articles"
+OUT = ROOT / "articles"
 OUT.mkdir(parents=True, exist_ok=True)
 
 HEADER = """> Tool: https://www.speedce.com  
@@ -466,56 +466,20 @@ def generate_article(topic: dict) -> str:
     return "".join(parts)
 
 
-def generate_index(articles: list[dict]) -> None:
-    cats: dict[str, list] = {}
-    for a in articles:
-        cats.setdefault(a["category"], []).append(a)
-
-    cat_order = ["Troubleshooting", "VPS Routing", "CDN", "Global Expansion", "Industry", "Methodology", "Comparison", "Advanced"]
-    lines = [
-        "---\n",
-        "layout: default\n",
-        "title: SpeedCE Technical Documentation (English)\n",
-        "description: 210+ long-form guides on website speed testing, troubleshooting, VPS routing, CDN acceptance, and global deployment\n",
-        "permalink: /\n",
-        "---\n\n",
-        "# SpeedCE Technical Documentation\n\n",
-        "> [SpeedCE](https://www.speedce.com) — Multi-node website / IP speed test  \n",
-        "> Chinese UI: https://speedce.com/?lang=zh-CN  \n",
-        "> Contact: speedceads@gmail.com\n\n",
-        "This knowledge base contains **210** in-depth technical articles on website speed testing, "
-        "troubleshooting, VPS route verification, CDN acceptance, and global deployment.\n\n",
-        f"Machine-readable index: [articles-index.json](articles-index.json)\n\n",
+def write_articles_index(articles: list[dict]) -> None:
+    """Write articles/index.json for generate_seo_index.py."""
+    index = [
+        {
+            "slug": a["slug"],
+            "title": a["title"],
+            "category": a["category"],
+            "file": a["file"],
+            "chars": a["chars"],
+            "lines": a.get("lines", 0),
+        }
+        for a in articles
     ]
-    for cat in cat_order:
-        if cat not in cats:
-            continue
-        items = sorted(cats[cat], key=lambda x: x["slug"])
-        lines.append(f"## {cat} ({len(items)} articles)\n\n")
-        for a in items:
-            lines.append(f"- [{a['title']}](articles/{a['slug']}.md)\n")
-        lines.append("\n")
-
-    index_path = ROOT / "docs-en" / "index.md"
-    index_path.write_text("".join(lines), encoding="utf-8")
-
-    json_index = {
-        "name": "SpeedCE Technical Documentation (English)",
-        "description": "210+ long-form guides on website speed testing, VPS routing, CDN acceptance, and global deployment",
-        "repository": "https://github.com/freejbgo/SSS",
-        "tool": {
-            "name": "SpeedCE",
-            "url": "https://www.speedce.com",
-            "zh_url": "https://speedce.com/?lang=zh-CN",
-            "contact": "speedceads@gmail.com",
-        },
-        "updated": "2026-07-03",
-        "article_count": len(articles),
-        "articles": articles,
-    }
-    (ROOT / "docs-en" / "articles-index.json").write_text(
-        json.dumps(json_index, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
+    (OUT / "index.json").write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def main():
@@ -528,34 +492,18 @@ def main():
         path = OUT / f"{topic['slug']}.md"
         path.write_text(content, encoding="utf-8")
         chars = len(content)
+        line_count = content.count("\n") + 1
         stats.append(chars)
-        intro = topic["hook"][:160] + ("…" if len(topic["hook"]) > 160 else "")
         articles_meta.append({
             "slug": topic["slug"],
             "title": topic["title"],
             "category": topic["category"],
             "file": f"{topic['slug']}.md",
             "chars": chars,
-            "intro": intro,
-            "keywords": topic["keywords"],
-            "pages_url": f"https://freejbgo.github.io/SSS/docs-en/articles/{topic['slug']}.html",
-            "github_url": f"https://github.com/freejbgo/SSS/blob/main/docs-en/articles/{topic['slug']}.md",
-            "raw_url": f"https://raw.githubusercontent.com/freejbgo/SSS/main/docs-en/articles/{topic['slug']}.md",
+            "lines": line_count,
         })
 
-    generate_index(articles_meta)
-
-    readme_lines = [
-        "# SpeedCE English Technical Documentation\n\n",
-        "> https://www.speedce.com | Chinese: https://speedce.com/?lang=zh-CN\n\n",
-        f"**Articles**: {len(articles_meta)}\n",
-        f"**Average length**: ~{sum(stats) // len(stats) if stats else 0} characters\n\n",
-        "English translations of the [SpeedCE-Tech](https://github.com/freejbgo/SpeedCE-Tech) Chinese knowledge base.\n\n",
-        "See [docs-en/index.md](docs-en/index.md) for the full index.\n\n",
-        "## Regenerate\n\n",
-        "```bash\npython3 scripts/english_article_generator.py\n```\n",
-    ]
-    (ROOT / "docs-en" / "README.md").write_text("".join(readme_lines), encoding="utf-8")
+    write_articles_index(articles_meta)
 
     print(f"Generated {len(articles_meta)} English articles")
     if stats:

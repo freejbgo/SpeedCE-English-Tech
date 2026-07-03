@@ -1,0 +1,29 @@
+title: SpeedCE Technical Documentation
+description: >-
+  Multi-node website speed test · Network troubleshooting · 210+ long-form technical guides.
+  SpeedCE free online tool: https://www.speedce.com
+lang: en
+url: https://freejbgo.github.io
+baseurl: /SSS
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+defaults:
+  - scope:
+      path: "articles"
+      type: "pages"
+    values:
+      layout: default
+      permalink: articles/:name.html
+
+exclude:
+  - articles/README.md
