@@ -28,6 +28,19 @@ Chinese docs: [SpeedCE-Tech](https://freejbgo.github.io/SpeedCE-Tech/) · [GitHu
 - **Comparison** (15) — SpeedCE vs ITDOG, BOCE, PageSpeed
 - **Advanced** (35) — Regional optimization, DR, status pages
 
+## GitHub Pages setup
+
+This repo uses the same layout as [SpeedCE-Tech](https://github.com/freejbgo/SpeedCE-Tech): Jekyll site in `docs/`, served from the `main` branch.
+
+**One-time enable (repo owner):**
+
+1. Open https://github.com/freejbgo/SSS/settings/pages
+2. **Build and deployment** → Source: **Deploy from a branch**
+3. Branch: **main** · Folder: **/docs**
+4. Save — site will be live at **https://freejbgo.github.io/SSS/**
+
+After enabling, GitHub builds Jekyll automatically on each push to `main` (same as SpeedCE-Tech).
+
 ## Regenerate
 
 ```bash
