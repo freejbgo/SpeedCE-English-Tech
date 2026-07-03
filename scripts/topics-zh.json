@@ -1,0 +1,6512 @@
+[
+  {
+    "slug": "vps-line-verification-guide",
+    "title": "买 VPS 前必看：用全国三网地图验线路，识破 CN2 / 精品网宣传（SpeedCE 实操）",
+    "category": "VPS线路",
+    "keywords": "VPS测速,CN2 GIA验证,三网测速,HostLoc验机,SpeedCE",
+    "hook": "在 HostLoc 群里，买家说「我 ping 才 28ms」、卖家说「三网直连」——一周后移动用户开始骂街。样本量只有 1，且样本是你自己。全国三网地图才是验机的唯一靠谱标准。",
+    "terms": [
+      [
+        "CN2 GIA",
+        "电信精品网",
+        "电信地图必看"
+      ],
+      [
+        "CMI",
+        "移动优化",
+        "移动地图一票否决"
+      ],
+      [
+        "BGP",
+        "多线接入",
+        "三网应均衡"
+      ],
+      [
+        "禁 Ping",
+        "ICMP 被屏蔽",
+        "改 HTTPS 测"
+      ]
+    ],
+    "protocol": "HTTPS+PING",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "cdn-deployment-speed-test-guide",
+    "title": "CDN 接入全攻略：切量前、切量中、故障时，多节点测速验收怎么做",
+    "category": "CDN",
+    "keywords": "CDN测速,CDN验收,回源检测,切量,SpeedCE",
+    "hook": "上了 CDN 反而有人打不开？问题通常不在「CDN 有没有开」，而在验收方法不对。对照测速：CDN 域名 vs 源站，是 CDN 运维的黄金法则。",
+    "terms": [
+      [
+        "回源",
+        "边缘到源站",
+        "502 先查"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ],
+      [
+        "切量",
+        "DNS 变更",
+        "72h 点检"
+      ],
+      [
+        "证书",
+        "边缘证书",
+        "与源站分别验收"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "global-deployment-checklist",
+    "title": "网站出海测速验收手册：从中国节点到全球节点的完整检查流程",
+    "category": "出海",
+    "keywords": "网站出海,全球测速,国际化,SpeedCE,全球节点",
+    "hook": "你在上海打开 .com 秒开，德国客户说转圈——测速视角错了。出海要看目标市场所在地的远端节点，中国节点与全球节点双视图缺一不可。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点"
+      ],
+      [
+        "双视图",
+        "中国+全球",
+        "一页切换"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "优先于延迟"
+      ],
+      [
+        "跨境",
+        "回国链路",
+        "国内慢可能正常"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "dns-troubleshooting-guide",
+    "title": "DNS 解析故障完全指南：迁机、换 CDN 后「部分地区打不开」怎么查",
+    "category": "故障排查",
+    "keywords": "DNS故障,域名解析,迁机,多节点测速,SpeedCE",
+    "hook": "改完 DNS 你这边秒生效，新疆同事说还是旧 IP——这不是他电脑坏了，是解析链路在不同地理位置、不同运营商上不同步。DNS 问题占「部分地区打不开」工单的一半以上，却最容易被误判成「用户网络不好」。",
+    "terms": [
+      [
+        "A 记录",
+        "域名指向 IPv4",
+        "测域名而非臆测 IP"
+      ],
+      [
+        "CNAME",
+        "域名指向另一个域名",
+        "CDN 接入后必测 CNAME 链"
+      ],
+      [
+        "TTL",
+        "缓存存活时间",
+        "迁机前调低到 300s"
+      ],
+      [
+        "分线路解析",
+        "同一域名国内外不同 IP",
+        "中国/全球节点分别测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "ssl-certificate-troubleshooting",
+    "title": "SSL 证书过期与配置错误：用户报「连接不安全」时 10 分钟定位手册",
+    "category": "故障排查",
+    "keywords": "SSL,HTTPS,证书过期,SpeedCE,网站安全",
+    "hook": "证书问题最折磨人：你浏览器能开，用户大面积报「您的连接不是私密连接」。本地 HSTS 缓存、你刚点过的「继续访问」、测试环境白名单——都会骗过你。",
+    "terms": [
+      [
+        "SAN",
+        "证书覆盖的域名列表",
+        "api 子域是否在 SAN 内"
+      ],
+      [
+        "Let's Encrypt",
+        "免费 90 天证书",
+        "自动续签失败要告警"
+      ],
+      [
+        "SNI",
+        "多证书同 IP 时按域名选证",
+        "海外节点 SNI 错误会红"
+      ],
+      [
+        "证书链",
+        "中间证书缺失",
+        "HTTPS 红 HTTP 绿时优先查"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "nginx-reverse-proxy-troubleshooting",
+    "title": "Nginx 反向代理故障排查：主站绿、API 红的 8 种典型配置错误",
+    "category": "故障排查",
+    "keywords": "Nginx,反向代理,502,子域名,SpeedCE",
+    "hook": "Nginx 是无数站点的入口，一行 server_name 写错、一个 proxy_pass 漏配，表现就是「首页能开、接口全挂」。开发 Postman 本地通，全国用户不通。",
+    "terms": [
+      [
+        "server_name",
+        "匹配的域名",
+        "每个对外域名单独 server 块"
+      ],
+      [
+        "proxy_pass",
+        "反向代理上游",
+        "末尾斜杠影响 URI"
+      ],
+      [
+        "upstream",
+        "后端池",
+        "一台后端挂了可能拖全局"
+      ],
+      [
+        "ssl_certificate",
+        "证书路径",
+        "每个 HTTPS server 块都要配对"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "website-migration-guide",
+    "title": "网站迁机完整手册：DNS、源站、CDN 切换的 72 小时测速验收节奏",
+    "category": "故障排查",
+    "keywords": "网站迁机,DNS,服务器迁移,SpeedCE,验收",
+    "hook": "迁机是站长最紧张的变更之一。你 SSH 上新机器一切正常，但 DNS 全球生效要时间，CDN 可能还指着旧源站——多节点测速是迁机验收的「客观公证人」。",
+    "terms": [
+      [
+        "TTL",
+        "决定各地缓存多久",
+        "迁机前 48h 调到 300"
+      ],
+      [
+        "灰度切量",
+        "先切部分流量",
+        "异常节点应随时间减少"
+      ],
+      [
+        "回源",
+        "CDN 到源站",
+        "迁机后查 CDN 回源 IP"
+      ],
+      [
+        "双机并行",
+        "新旧同时跑",
+        "对照测两 IP"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "intermittent-fault-diagnosis",
+    "title": "间歇性网站故障排查：「有时慢有时好」的科学点检方法",
+    "category": "故障排查",
+    "keywords": "间歇故障,网站不稳定,多节点测速,SpeedCE,运维",
+    "hook": "间歇故障是运维的噩梦：你测的时候永远正常，用户投诉的时候你不在。单次测速不够，必须固定间隔多次测，看通畅率和延迟的波动曲线。",
+    "terms": [
+      [
+        "抖动",
+        "延迟不稳定",
+        "持续 Ping 补充观察"
+      ],
+      [
+        "负载峰值",
+        "晚高峰才暴露",
+        "20:00-22:00 必复测"
+      ],
+      [
+        "DDoS",
+        "攻击时段异常",
+        "全国同时红又恢复"
+      ],
+      [
+        "连接池",
+        "应用层间歇耗尽",
+        "网络绿但 502"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "subdomain-troubleshooting",
+    "title": "子域名故障排查完全指南：主站能开、接口挂了的 8 种独立原因",
+    "category": "故障排查",
+    "keywords": "子域名,API,cdn,DNS,SpeedCE",
+    "hook": "www.example.com 和 api.example.com 在 DNS、证书、Nginx、CDN 上是四份独立配置。主站绿不等于子域绿——每个对外子域都该有一张 SpeedCE 地图。",
+    "terms": [
+      [
+        "CNAME 链",
+        "子域指向",
+        "逐层 dig 核对"
+      ],
+      [
+        "通配符证书",
+        "*.example.com",
+        "不一定覆盖多级"
+      ],
+      [
+        "CDN 加速域",
+        "按域名单独添加",
+        "只配 www 是最常见坑"
+      ],
+      [
+        "备案",
+        "子域也需合规",
+        "未备案可能被拦"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "api-availability-guide",
+    "title": "API 接口可达性检测指南：Postman 能通、全国用户不通的真相",
+    "category": "故障排查",
+    "keywords": "API,接口监控,后端,HTTPS,SpeedCE",
+    "hook": "API 故障往往最后才被发现：前端页面缓存还在，App 直接打接口立刻挂。SpeedCE 从全国节点对 API 域名做 HTTPS 探测，是网络层验收的第一步。",
+    "terms": [
+      [
+        "可达性",
+        "TCP+TLS+HTTP 成功",
+        "SpeedCE 测这层"
+      ],
+      [
+        "CORS",
+        "浏览器跨域策略",
+        "网络绿仍可能 CORS 红"
+      ],
+      [
+        "鉴权",
+        "Token/签名",
+        "测速不带业务 Header"
+      ],
+      [
+        "Geo 限制",
+        "地域封禁",
+        "全球/中国对照看"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "http-https-redirect-issues",
+    "title": "HTTP 与 HTTPS 跳转故障：强制跳转、循环重定向、混合内容排查",
+    "category": "故障排查",
+    "keywords": "HTTPS,301跳转,混合内容,SSL,SpeedCE",
+    "hook": "301 配成循环、http 和 https 分别指向不同机器、页面资源仍走 http——用户看到的现象千差万别，但 SpeedCE 的 HTTP/HTTPS 双模式对照能快速缩小范围。",
+    "terms": [
+      [
+        "301/302",
+        "永久/临时跳转",
+        "两次测速对比"
+      ],
+      [
+        "HSTS",
+        "强制 HTTPS",
+        "浏览器缓存旧策略"
+      ],
+      [
+        "混合内容",
+        "HTTPS 页含 HTTP 资源",
+        "SpeedCE 不测，浏览器报"
+      ],
+      [
+        "跳转链",
+        "多次 301",
+        "可能超时"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "firewall-security-group-checklist",
+    "title": "云服务器安全组验收：全国地图大面积红时先查这四项",
+    "category": "故障排查",
+    "keywords": "安全组,防火墙,云服务器,443端口,SpeedCE",
+    "hook": "新手装机最常见：SSH 能登，网站全国红——安全组只放了 22 没放 443。在怀疑线路、CDN、DNS 之前，先用 SpeedCE 确认端口层到底通不通。",
+    "terms": [
+      [
+        "入站规则",
+        "外部访问端口",
+        "80/443 必放"
+      ],
+      [
+        "出站规则",
+        "服务器外连",
+        "Let's Encrypt 需出站 443"
+      ],
+      [
+        "CDN 回源白名单",
+        "只允许 CDN IP",
+        "漏加则 CDN 红"
+      ],
+      [
+        "iptables",
+        "系统防火墙",
+        "与安全组双重检查"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "502-503-upstream-errors",
+    "title": "502/503 与源站过载：CDN 绿、源站红时的判断与修复路径",
+    "category": "故障排查",
+    "keywords": "502,503,源站过载,CDN回源,SpeedCE",
+    "hook": "502 是「网关收到了坏响应」，503 是「服务暂时不可用」。用户走 CDN 看到 502，可能是边缘问题，更常见是源站扛不住——对照测一锤定音。",
+    "terms": [
+      [
+        "502 Bad Gateway",
+        "上游无效响应",
+        "查 PHP-FPM/Nginx upstream"
+      ],
+      [
+        "503 Service Unavailable",
+        "服务过载或维护",
+        "查连接池/限流"
+      ],
+      [
+        "回源超时",
+        "CDN 等源站太久",
+        "调大 timeout 或扩容"
+      ],
+      [
+        "健康检查",
+        "负载均衡探活",
+        "探活路径也要绿"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "dns-propagation-slow",
+    "title": "域名解析生效慢怎么判断：TTL、运营商缓存与区域 DNS 差异",
+    "category": "故障排查",
+    "keywords": "DNS缓存,TTL,解析生效,SpeedCE,迁机",
+    "hook": "改 DNS 不是全世界同时变。TTL=86400 时，最坏情况要等 24 小时。SpeedCE 隔 10 分钟测一次，看异常点是随机消散还是固定省份顽固。",
+    "terms": [
+      [
+        "递归缓存",
+        "运营商本地缓存",
+        "固定省红→缓存"
+      ],
+      [
+        "权威 DNS",
+        "你的 DNS 服务商",
+        "控制台先确认记录对"
+      ],
+      [
+        "DNSSEC",
+        "签名验证",
+        "配置错误导致部分解析失败"
+      ],
+      [
+        "分线路",
+        "国内海外不同记录",
+        "两范围对照"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "regional-access-failure",
+    "title": "仅部分地区打不开？用地图精确定位省份、运营商与下一步动作",
+    "category": "故障排查",
+    "keywords": "区域故障,省份,地图测速,SpeedCE,排查",
+    "hook": "「就新疆不行」「就移动不行」——平均延迟和通畅率帮不上忙，地图才是区域故障的语言。SpeedCE 中国地图就是为这个问题设计的。",
+    "terms": [
+      [
+        "省级粒度",
+        "各省独立节点",
+        "定位到省"
+      ],
+      [
+        "运营商",
+        "电信/联通/移动",
+        "三网分离"
+      ],
+      [
+        "CDN 节点",
+        "边缘覆盖",
+        "某省无节点"
+      ],
+      [
+        "长途路由",
+        "跨省链路",
+        "西北华南差异"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "mobile-network-issues",
+    "title": "移动网络用户访问异常专项：为什么移动投诉往往最多",
+    "category": "故障排查",
+    "keywords": "移动网络,三网测速,运营商,SpeedCE,5G",
+    "hook": "中国移动用户占比超 50%，但很多「优化线路」只优化电信联通。不单独测移动地图，等于忽略一半用户。",
+    "terms": [
+      [
+        "CMI",
+        "移动国际出口",
+        "回国线路"
+      ],
+      [
+        "4G/5G",
+        "无线接入",
+        "与家宽不同"
+      ],
+      [
+        "DNS",
+        "移动 DNS 服务器",
+        "可能与电信不同"
+      ],
+      [
+        "WAP 网关",
+        "老移动网络",
+        "少数场景仍影响"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "single-carrier-fault",
+    "title": "电信/联通/移动单网故障：一张网全红时的缩小范围排查法",
+    "category": "故障排查",
+    "keywords": "单网故障,电信,联通,移动,SpeedCE",
+    "hook": "三网分离后只有一张网红——故障范围立刻缩小 66%。是线路问题、CDN 分网配置、还是运营商 DNS？对照测给出方向。",
+    "terms": [
+      [
+        "单线机房",
+        "只优化一家",
+        "典型单网红"
+      ],
+      [
+        "DNS 分线路",
+        "按运营商不同 IP",
+        "可能配错一条"
+      ],
+      [
+        "CDN 分网",
+        "运营商定制",
+        "控制台核对"
+      ],
+      [
+        "用户样本",
+        "投诉运营商",
+        "与地图互证"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "peak-hour-slowdown",
+    "title": "晚高峰网站变慢：下午测正常、晚上测变红的复测策略",
+    "category": "故障排查",
+    "keywords": "晚高峰,网站变慢,线路拥堵,SpeedCE,运维",
+    "hook": "带宽、国际出口、攻击流量——晚高峰才是照妖镜。商家挑下午给你看测试 IP，你要在 20:00-22:00 用 SpeedCE 复测。",
+    "terms": [
+      [
+        "国际出口",
+        "晚高峰拥堵",
+        "跨境尤其明显"
+      ],
+      [
+        "带宽打满",
+        "单机带宽上限",
+        "通畅率仍高但延迟升"
+      ],
+      [
+        "CC 攻击",
+        "恶意请求",
+        "源站 CPU 升"
+      ],
+      [
+        "CDN 热点",
+        "缓存击穿",
+        "回源飙升"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "ddos-attack-detection",
+    "title": "被攻击期间如何用多节点测速辅助判断影响面",
+    "category": "故障排查",
+    "keywords": "DDoS,攻击,故障排查,SpeedCE,安全",
+    "hook": "测速不能替代 DDoS 防护，但当全国节点同时变红、延迟飙升，配合流量图能快速确认是攻击而非配置改错。",
+    "terms": [
+      [
+        "流量型",
+        "带宽打满",
+        "全国延迟升"
+      ],
+      [
+        "CC 型",
+        "应用层",
+        "可能仍部分绿"
+      ],
+      [
+        "反射",
+        "放大攻击",
+        "源站带宽"
+      ],
+      [
+        "恢复验证",
+        "攻击结束",
+        "SpeedCE 复测确认"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "ipv6-troubleshooting",
+    "title": "IPv6 双栈站点验收：AAAA 记录、防火墙与 CDN 的完整检查",
+    "category": "故障排查",
+    "keywords": "IPv6,双栈,AAAA,SpeedCE,网站验收",
+    "hook": "IPv4 全绿不代表 IPv6 正常。双栈站点应对 IPv4、IPv6 目标分别测速。",
+    "terms": [
+      [
+        "AAAA",
+        "IPv6 解析记录",
+        "与 A 记录同步改"
+      ],
+      [
+        "双栈监听",
+        "Nginx listen [::]:443",
+        "漏配则无 IPv6"
+      ],
+      [
+        "CDN IPv6",
+        "边缘双栈",
+        "控制台开启"
+      ],
+      [
+        "防火墙",
+        "ip6tables",
+        "单独放行"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "mixed-content-https",
+    "title": "混合内容与 HTTPS：网络层全绿、浏览器仍报不安全的分工排查",
+    "category": "故障排查",
+    "keywords": "混合内容,HTTPS,前端安全,SpeedCE,SSL",
+    "hook": "SpeedCE 测站点可达性；混合内容是页面里引用了 http:// 资源。两者分工明确，别在网络层浪费时间。",
+    "terms": [
+      [
+        "主动混合",
+        "script/img http",
+        "浏览器控制台查"
+      ],
+      [
+        "被动混合",
+        "css 中 url",
+        "较难发现"
+      ],
+      [
+        "升级策略",
+        "upgrade-insecure-requests",
+        "Header 修复"
+      ],
+      [
+        "第三方",
+        "统计/广告脚本",
+        "常是元凶"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "cors-vs-network-testing",
+    "title": "CORS 报错与网络不通：开发者必分的两层问题",
+    "category": "故障排查",
+    "keywords": "CORS,跨域,API,前端,SpeedCE",
+    "hook": "地图全绿 + 浏览器报 CORS——恭喜，网络通了，是服务端 Header 没配。先 SpeedCE 排除网络，再查 Access-Control-Allow-Origin。",
+    "terms": [
+      [
+        "预检 OPTIONS",
+        "复杂请求先发",
+        "可能 OPTIONS 未配"
+      ],
+      [
+        "Credentials",
+        "带 Cookie 跨域",
+        "规则更严"
+      ],
+      [
+        "通配符",
+        "* 与凭证冲突",
+        "需指定源"
+      ],
+      [
+        "代理",
+        "开发环境 proxy",
+        "生产无 proxy 才暴露"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "wechat-qq-access-guide",
+    "title": "微信/QQ 打不开先测什么：网络层与合规层的标准分工",
+    "category": "故障排查",
+    "keywords": "微信拦截,QQ,网站合规,备案,SpeedCE",
+    "hook": "浏览器能开、微信不能开——不一定是服务器问题。SpeedCE 先排除网络层；拦截/备案/内容用 BOCE 等专项工具。",
+    "terms": [
+      [
+        "网络层",
+        "HTTP/HTTPS 可达",
+        "SpeedCE 负责"
+      ],
+      [
+        "拦截层",
+        "微信 UA 策略",
+        "专项工具"
+      ],
+      [
+        "备案",
+        "ICP 未备",
+        "合规问题"
+      ],
+      [
+        "内容",
+        "违规被标记",
+        "与测速无关"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "waf-false-positive-guide",
+    "title": "WAF 误拦与测速异常：全国 sporadic 红点是不是被封了",
+    "category": "故障排查",
+    "keywords": "WAF,防火墙,CDN安全,SpeedCE,误拦",
+    "hook": "WAF、CC 防护、地域封禁——可能只拦部分拨测节点 IP，表现为地图 sporadic 红而非全省红。",
+    "terms": [
+      [
+        "IP 信誉",
+        "拨测 IP 被误拦",
+        "换时段复测"
+      ],
+      [
+        "地域规则",
+        "海外封禁",
+        "全球对照"
+      ],
+      [
+        "UA 规则",
+        "非浏览器 UA",
+        "可能触发"
+      ],
+      [
+        "频率限制",
+        "短频请求",
+        "表现为间歇红"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "database-not-network-guide",
+    "title": "数据库拖垮网站：网络全绿但页面超时的应用层排查",
+    "category": "故障排查",
+    "keywords": "数据库,慢查询,502,应用层,SpeedCE",
+    "hook": "SpeedCE 绿 + 页面超时——网络没问题，查 MySQL 慢查询、连接池耗尽。先网络后应用，顺序不能反。",
+    "terms": [
+      [
+        "连接池",
+        "max_connections",
+        "耗尽则 502"
+      ],
+      [
+        "慢查询",
+        "SQL 拖时间",
+        "TTFB 极高"
+      ],
+      [
+        "锁等待",
+        "事务阻塞",
+        "间歇超时"
+      ],
+      [
+        "只读副本",
+        "延迟",
+        "写后读不一致"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "load-balancer-health-check",
+    "title": "负载均衡与健康检查：一半节点绿一半红的典型架构问题",
+    "category": "故障排查",
+    "keywords": "负载均衡,健康检查,高可用,SpeedCE,运维",
+    "hook": "多台后端一台挂——若 DNS 轮询或 LB 配置不当，用户感受是「有时能开有时不能」。多节点测速 + 多次复测能印证。",
+    "terms": [
+      [
+        "健康检查",
+        "探活路径",
+        "/health 也要 200"
+      ],
+      [
+        "权重",
+        "流量分配",
+        "坏节点应自动摘除"
+      ],
+      [
+        "会话保持",
+        "粘性会话",
+        "打到坏节点更惨"
+      ],
+      [
+        "DNS 轮询",
+        "多 A 记录",
+        "单 IP 挂则 sporadic 红"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "cache-poisoning-stale",
+    "title": "缓存脏了怎么办：CDN/浏览器缓存与网络层对照排查",
+    "category": "故障排查",
+    "keywords": "CDN缓存,浏览器缓存,故障排查,SpeedCE",
+    "hook": "你刚修好服务器，用户还说旧页面——可能是缓存。SpeedCE 测的是实时网络响应，可带随机 query 或测 API 避缓存。",
+    "terms": [
+      [
+        "CDN 缓存",
+        "边缘旧内容",
+        "刷新缓存后复测"
+      ],
+      [
+        "浏览器",
+        "强缓存",
+        "与用户沟通清缓存"
+      ],
+      [
+        "反向代理",
+        "Nginx proxy_cache",
+        "清缓存"
+      ],
+      [
+        "版本号",
+        "静态资源 hash",
+        "根治方案"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "third-party-script-failure",
+    "title": "第三方脚本拖垮页面：主域绿、功能仍异常的边界说明",
+    "category": "故障排查",
+    "keywords": "第三方脚本,CDN,前端,SpeedCE,监控",
+    "hook": "支付、统计、客服插件走第三方域——主站绿不代表支付能调起。每个关键第三方域名单独列入 SpeedCE 巡检清单。",
+    "terms": [
+      [
+        "支付网关",
+        "独立域名",
+        "单独测"
+      ],
+      [
+        "统计",
+        "google/analytics",
+        "可能被墙"
+      ],
+      [
+        "客服插件",
+        "外部 JS",
+        "加载失败"
+      ],
+      [
+        "字体 CDN",
+        "fonts 域",
+        "常忽略"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "hong-kong-vps-guide",
+    "title": "香港 VPS 线路选购与验收完全手册：个人站、电商、API 场景怎么选",
+    "category": "VPS线路",
+    "keywords": "香港VPS,CN2,线路测速,SpeedCE,选购",
+    "hook": "香港是国人最熟悉的机房：延迟低、免备案、带宽价格适中。但 CN2、CMI、BGP 混杂，商家文案天花乱坠——全国三网地图是唯一靠谱的验货方式。",
+    "terms": [
+      [
+        "CN2 GIA",
+        "电信精品",
+        "电信地图必看"
+      ],
+      [
+        "CMI",
+        "移动优化",
+        "移动地图必看"
+      ],
+      [
+        "HKIX",
+        "本地交换",
+        "影响国际"
+      ],
+      [
+        "被墙风险",
+        "IP 历史",
+        "中国红全球绿要警惕"
+      ]
+    ],
+    "protocol": "HTTPS+PING",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "japan-vps-guide",
+    "title": "日本 VPS 适合什么业务：东京大阪机房与三网回国实测验收",
+    "category": "VPS线路",
+    "keywords": "日本VPS,东京,线路,SpeedCE,测速",
+    "hook": "日本机便宜、带宽足、流媒体友好，但回国线路质量参差。付款前用 SpeedCE 测商家 IP，移动地图是一票否决项。",
+    "terms": [
+      [
+        "NTT",
+        "日本骨干",
+        "国际段"
+      ],
+      [
+        "软银",
+        "另一骨干",
+        "路由不同"
+      ],
+      [
+        "回国优化",
+        "商家自称",
+        "用地图验证"
+      ],
+      [
+        "晚高峰",
+        "国际拥堵",
+        "必复测"
+      ]
+    ],
+    "protocol": "PING+HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "us-vps-china-access",
+    "title": "美国 VPS 三网回国测评完全手册：西海岸机房怎么验、移动用户怎么办",
+    "category": "VPS线路",
+    "keywords": "美国VPS,回国线路,三网,SpeedCE,测速",
+    "hook": "美国机头便宜大碗，但回国链路长。电信可能尚可，移动常常是灾难。不要信「洛杉矶 150ms」——那是你本地 ping，不是全国地图。",
+    "terms": [
+      [
+        "西海岸",
+        "LA/SJ",
+        "离中国最近"
+      ],
+      [
+        "东海岸",
+        "NY",
+        "回国更绕"
+      ],
+      [
+        "CN2 GIA",
+        "稀有且贵",
+        "地图验证"
+      ],
+      [
+        "被墙",
+        "IP 污染",
+        "中国全红警惕"
+      ]
+    ],
+    "protocol": "PING+HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "singapore-vps-guide",
+    "title": "新加坡 VPS 验收指南：东南亚枢纽与回国双视角测速",
+    "category": "VPS线路",
+    "keywords": "新加坡VPS,东南亚,线路,SpeedCE",
+    "hook": "新加坡是亚太枢纽，回国、走东南亚都绕这里。双视图测速：中国节点看回国，全球节点看东南亚覆盖。",
+    "terms": [
+      [
+        "SGIX",
+        "本地交换",
+        "东南亚互联"
+      ],
+      [
+        "回国",
+        "中继质量",
+        "中国地图"
+      ],
+      [
+        "带宽",
+        "国际便宜",
+        "注意流量价"
+      ],
+      [
+        "流媒体",
+        "解锁",
+        "SpeedCE 不测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "cn2-gt-vs-gia",
+    "title": "CN2 GT 与 CN2 GIA 完全对比：商家话术背后的测速验证法",
+    "category": "VPS线路",
+    "keywords": "CN2 GT,CN2 GIA,VPS,线路,SpeedCE",
+    "hook": "差两个字母，体验差一个档次。GT 晚高峰可能堵，GIA 贵但稳。别信文案，信三网地图 + 晚高峰复测。",
+    "terms": [
+      [
+        "GT",
+        "普通 CN2",
+        "性价比"
+      ],
+      [
+        "GIA",
+        "精品 CN2",
+        "延迟稳"
+      ],
+      [
+        "163",
+        "电信普通骨干",
+        "对比基线"
+      ],
+      [
+        "移动",
+        "往往都不优化",
+        "移动地图决定"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "bgp-line-verification",
+    "title": "BGP 线路真假辨别：三网均衡才是真 BGP 的验收标准",
+    "category": "VPS线路",
+    "keywords": "BGP,VPS,三网,线路测速,SpeedCE",
+    "hook": "真 BGP：电信、联通、移动都能用。假 BGP：电信绿、移动红。SpeedCE 三网分离是照妖镜。",
+    "terms": [
+      [
+        "多线接入",
+        "机房能力",
+        "非文案"
+      ],
+      [
+        "均衡",
+        "三网延迟差小",
+        "验收标准"
+      ],
+      [
+        "绕路",
+        "假 BGP",
+        "某网全红"
+      ],
+      [
+        "价格",
+        "真 BGP 更贵",
+        "便宜要警惕"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "cmi-mobile-line-guide",
+    "title": "移动优化 CMI 线路验收：移动用户占比过半时代的一票否决项",
+    "category": "VPS线路",
+    "keywords": "CMI,移动线路,VPS,SpeedCE,三网",
+    "hook": "不单独看移动地图，等于放弃一半用户。CMI、CMIN2 是否真优化，地图说了算。",
+    "terms": [
+      [
+        "CMI",
+        "移动国际",
+        "移动筛选"
+      ],
+      [
+        "西北",
+        "移动弱区",
+        "重点看"
+      ],
+      [
+        "5G",
+        "无线用户",
+        "与家宽不同"
+      ],
+      [
+        "对比",
+        "电信联通",
+        "均衡才理想"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "vps-refund-period-checklist",
+    "title": "VPS 7 天退款期验机完全清单：截图、三网、晚高峰证据链",
+    "category": "VPS线路",
+    "keywords": "VPS退款,验机,证据,SpeedCE,HostLoc",
+    "hook": "退款要有证据：三网截图 + 通畅率数字 + 晚高峰对比。比论坛吵架「我觉得慢」强一百倍。",
+    "terms": [
+      [
+        "测试 IP",
+        "商家提供",
+        "到账后对比"
+      ],
+      [
+        "缩水",
+        "正式 IP 变差",
+        "对照测"
+      ],
+      [
+        "带宽",
+        "虚标",
+        "测速不测带宽"
+      ],
+      [
+        "丢包",
+        "晚高峰",
+        "多次测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "cloud-security-group-vps",
+    "title": "云服务器到手第一步：安全组与防火墙验收再谈线路",
+    "category": "VPS线路",
+    "keywords": "安全组,VPS,云服务器,验收,SpeedCE",
+    "hook": "全国红先别退机——可能是 443 没开。SpeedCE HTTPS 红 + SSH 能登 = 安全组问题。",
+    "terms": [
+      [
+        "轻量云",
+        "默认规则",
+        "各厂商不同"
+      ],
+      [
+        "ICMP",
+        "禁 Ping",
+        "改 HTTPS 测"
+      ],
+      [
+        "IPv6",
+        "第二套规则",
+        "别漏"
+      ],
+      [
+        "CDN 回源",
+        "源站白名单",
+        "迁 CDN 后查"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "ping-blocked-not-bad",
+    "title": "禁 Ping 不等于线路差：PING 红 HTTPS 绿的正确解读与验机调整",
+    "category": "VPS线路",
+    "keywords": "禁Ping,ICMP,VPS,测速,SpeedCE",
+    "hook": "新手见 Ping 超时就慌。云厂商默认禁 ICMP 是常态。验机标准改成 HTTPS 通畅率 ≥ 90%。",
+    "terms": [
+      [
+        "ICMP",
+        "网络层",
+        "可被禁"
+      ],
+      [
+        "TCP 443",
+        "Web 层",
+        "真实建站"
+      ],
+      [
+        "误导",
+        "Ping 判断线路",
+        "常见误区"
+      ],
+      [
+        "商家",
+        "用 Ping 宣传",
+        "要求 HTTPS 数据"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "off-peak-vs-peak-vps",
+    "title": "VPS 下午测与晚高峰测：为什么优质线路必须测两次",
+    "category": "VPS线路",
+    "keywords": "晚高峰,VPS,线路,复测,SpeedCE",
+    "hook": "商家测试 IP 在下午往往最美。你要在晚高峰复测，看通畅率和延迟是否大幅恶化。",
+    "terms": [
+      [
+        "国际出口",
+        "拥堵时段",
+        "20-22点"
+      ],
+      [
+        "GT",
+        "晚高峰劣化",
+        "尤其明显"
+      ],
+      [
+        "GIA",
+        "相对稳定",
+        "也要复测"
+      ],
+      [
+        "记录",
+        "两次截图",
+        "对比发帖"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "home-broadband-vs-datacenter",
+    "title": "家宽测速 vs 全国节点：为什么你 Ping 快不代表用户快",
+    "category": "VPS线路",
+    "keywords": "测速偏见,家宽,VPS,SpeedCE,方法论",
+    "hook": "同城家宽 ping 同机房 VPS，延迟虚低。全国节点才是用户视角——这是测速方法论第一课。",
+    "terms": [
+      [
+        "地理偏见",
+        "单点样本",
+        "多节点解决"
+      ],
+      [
+        "家宽运营商",
+        "仅一家",
+        "不代表全国"
+      ],
+      [
+        "机房内",
+        "curl localhost",
+        "无意义"
+      ],
+      [
+        "正确姿势",
+        "SpeedCE 中国",
+        "全国地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "vps-with-cdn-comparison",
+    "title": "VPS 套 CDN 前后地图对比：该不该上 CDN 的数据决策",
+    "category": "VPS线路",
+    "keywords": "VPS,CDN,对比,加速,SpeedCE",
+    "hook": "源站地图与 CDN 地图并排：加速有没有用、移动有没有改善，一张对比图说服自己。",
+    "terms": [
+      [
+        "源站",
+        "真实质量",
+        "先测"
+      ],
+      [
+        "CDN",
+        "边缘加速",
+        "后测"
+      ],
+      [
+        "移动",
+        "改善最大",
+        "常是 CDN 价值"
+      ],
+      [
+        "回源",
+        "带宽成本",
+        "别忽视"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "used-ip-segment-check",
+    "title": "二手 IP 段购买前避雷：被墙、被标记 IP 的全国地图特征",
+    "category": "VPS线路",
+    "keywords": "IP被墙,二手IP,VPS,SpeedCE,避雷",
+    "hook": "便宜 IP 可能有前科。典型特征：全球绿、中国红。付款前 SpeedCE 中国节点测一遍。",
+    "terms": [
+      [
+        "被墙",
+        "GFW",
+        "中国红"
+      ],
+      [
+        "黑名单",
+        "邮件/SEO",
+        "需另查"
+      ],
+      [
+        "段内差异",
+        "同段不同命",
+        "测你的 IP"
+      ],
+      [
+        "换 IP",
+        "商家政策",
+        "不满意就换"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "datacenter-failover-verify",
+    "title": "机房故障换机后应急验证：24 小时 SpeedCE 点检 SOP",
+    "category": "VPS线路",
+    "keywords": "机房故障,迁移,应急,SpeedCE,验证",
+    "hook": "故障迁移争分夺秒，但上线前 5 分钟全国点检能避免二次事故。",
+    "terms": [
+      [
+        "新 IP",
+        "立即测",
+        "全国通畅"
+      ],
+      [
+        "DNS",
+        "同步改",
+        "72h 复测"
+      ],
+      [
+        "通知",
+        "用户/客户",
+        "附地图"
+      ],
+      [
+        "回滚",
+        "预案",
+        "旧机保留"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "europe-vps-china-guide",
+    "title": "欧洲 VPS 回国线路验收：德法荷机房对国内用户的真实体验",
+    "category": "VPS线路",
+    "keywords": "欧洲VPS,回国,线路,SpeedCE,测速",
+    "hook": "欧洲机对欧美用户友好，回国往往绕路。若国内团队要访问，中国地图必看。",
+    "terms": [
+      [
+        "法兰克福",
+        "欧洲枢纽",
+        "回国路由"
+      ],
+      [
+        "绕美",
+        "常见路径",
+        "延迟高"
+      ],
+      [
+        "外贸",
+        "客户在欧洲",
+        "全球绿即可"
+      ],
+      [
+        "双用途",
+        "欧+中团队",
+        "两地图都要"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "korea-vps-guide",
+    "title": "韩国 VPS 线路测评：离中国近不等于三网都好",
+    "category": "VPS线路",
+    "keywords": "韩国VPS,线路,测速,SpeedCE",
+    "hook": "韩国物理距离近，但线路质量取决于出口优化。移动地图仍是关键。",
+    "terms": [
+      [
+        "SK/KT",
+        "韩国运营商",
+        "国际出口"
+      ],
+      [
+        "游戏",
+        "低延迟需求",
+        "PING 为主"
+      ],
+      [
+        "移动",
+        "回国",
+        "单独看"
+      ],
+      [
+        "晚高峰",
+        "复测",
+        "必做"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "taiwan-vps-guide",
+    "title": "台湾 VPS 验收要点：延迟优势与线路宣传核实",
+    "category": "VPS线路",
+    "keywords": "台湾VPS,线路,SpeedCE,测速",
+    "hook": "台湾延迟有优势，但「直连」二字要地图验证。",
+    "terms": [
+      [
+        "海峡路由",
+        "运营商差异",
+        "三网分离"
+      ],
+      [
+        "带宽",
+        "价格",
+        "注意流量"
+      ],
+      [
+        "合规",
+        "用途",
+        "自行把握"
+      ],
+      [
+        "解锁",
+        "流媒体",
+        "另测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "budget-vps-trap-guide",
+    "title": "超低价 VPS 陷阱：地图验收能看出的 6 个危险信号",
+    "category": "VPS线路",
+    "keywords": "低价VPS,陷阱,验机,SpeedCE,避雷",
+    "hook": "年付几十块的机器，不是不能用，但要靠地图知道代价在哪。",
+    "terms": [
+      [
+        "超售",
+        "邻居吵",
+        "延迟抖动"
+      ],
+      [
+        "线路",
+        "无优化",
+        "移动大红"
+      ],
+      [
+        "IP",
+        "被墙",
+        "中国红"
+      ],
+      [
+        "带宽",
+        "峰值虚标",
+        "晚高峰劣化"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "dedicated-vs-vps-line",
+    "title": "独立服务器与 VPS 线路验收差异：IP 段、邻居与测速注意点",
+    "category": "VPS线路",
+    "keywords": "独立服务器,VPS,线路,SpeedCE,测速",
+    "hook": "独服 IP 干净、无邻居干扰，但线路仍取决于机房上游。验收流程与 VPS 相同：三网地图。",
+    "terms": [
+      [
+        "独服",
+        "资源独占",
+        "稳定性"
+      ],
+      [
+        "IP 段",
+        "更干净",
+        "仍要测墙"
+      ],
+      [
+        "线路",
+        "同机房同线",
+        "与 VPS 可比"
+      ],
+      [
+        "价格",
+        "更高",
+        "验收更严"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "cloudflare-china-access",
+    "title": "Cloudflare 橙云开启后国内访问完整验收手册",
+    "category": "CDN",
+    "keywords": "Cloudflare,CDN,国内,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「Cloudflare 橙云开启后国内访问完整验收手册」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "aliyun-cdn-acceptance",
+    "title": "阿里云 CDN 接入验收完全指南：回源、证书、预热与三网",
+    "category": "CDN",
+    "keywords": "阿里云CDN,验收,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「阿里云 CDN 接入验收完全指南」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "tencent-cdn-acceptance",
+    "title": "腾讯云 CDN 接入验收：静态加速与全站加速差异及测速要点",
+    "category": "CDN",
+    "keywords": "腾讯云CDN,全站加速,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「腾讯云 CDN 接入验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "cdn-cache-vs-speed-test",
+    "title": "CDN 缓存与拨测的关系：为什么第一次慢、刷新后又快",
+    "category": "CDN",
+    "keywords": "CDN缓存,测速,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「CDN 缓存与拨测的关系」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "cdn-origin-failure",
+    "title": "CDN 回源失败完全排查：边缘节点、超时与源站对照",
+    "category": "CDN",
+    "keywords": "CDN回源,502,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「CDN 回源失败完全排查」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "multi-cdn-comparison",
+    "title": "多家 CDN 试用期地图对比选型：同域不同商的科学方法",
+    "category": "CDN",
+    "keywords": "CDN对比,选型,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「多家 CDN 试用期地图对比选型」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "static-cdn-split",
+    "title": "静态资源 CDN 分离验收：js/css 域与主站的独立测速清单",
+    "category": "CDN",
+    "keywords": "静态CDN,前端,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「静态资源 CDN 分离验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "dcdn-vs-cdn",
+    "title": "全站加速 DCDN 与普通 CDN：验收标准与 SpeedCE 对照测法",
+    "category": "CDN",
+    "keywords": "DCDN,CDN,动态加速,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「全站加速 DCDN 与普通 CDN」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "cdn-cert-vs-origin",
+    "title": "CDN 证书与源站证书：两边都要绿的完整验收流程",
+    "category": "CDN",
+    "keywords": "CDN证书,SSL,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「CDN 证书与源站证书」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "overseas-cdn-china-pack",
+    "title": "海外 CDN 中国加速包验收：全球绿、国内慢时怎么办",
+    "category": "CDN",
+    "keywords": "海外CDN,中国加速,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「海外 CDN 中国加速包验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "cdn-cutover-72h",
+    "title": "CDN 切量 72 小时监控手册：从 T+0 到 T+72 每小时做什么",
+    "category": "CDN",
+    "keywords": "CDN切量,DNS,监控,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「CDN 切量 72 小时监控手册」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "free-cdn-enough",
+    "title": "免费 CDN 够用吗：用全国地图数据做个人站决策",
+    "category": "CDN",
+    "keywords": "免费CDN,Cloudflare,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「免费 CDN 够用吗」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "huawei-baidu-cdn-guide",
+    "title": "华为云/百度云 CDN 验收要点与三网地图标准",
+    "category": "CDN",
+    "keywords": "华为云,百度云,CDN,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「华为云/百度云 CDN 验收要点与三网地图标准」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "cdn-websocket-stream",
+    "title": "CDN 加速 WebSocket/直播流的可达性验收边界",
+    "category": "CDN",
+    "keywords": "WebSocket,直播,CDN,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「CDN 加速 WebSocket/直播流的可达性验收边界」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "edge-function-troubleshoot",
+    "title": "边缘函数/Workers 故障：主域绿、规则不生效的排查",
+    "category": "CDN",
+    "keywords": "边缘计算,CDN,Cloudflare,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「边缘函数/Workers 故障」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "saas-global-launch",
+    "title": "出海 SaaS 全球上线验收：目标市场通畅率达标完全手册",
+    "category": "出海",
+    "keywords": "出海SaaS,全球测速,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「出海 SaaS 全球上线验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "cross-border-ecommerce",
+    "title": "外贸独立站测速完全指南：Shopify/WooCommerce 与大促前验收",
+    "category": "出海",
+    "keywords": "外贸,独立站,跨境电商,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「外贸独立站测速完全指南」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "europe-us-slow-fix",
+    "title": "欧美用户访问慢完全对策：源站、CDN、机房选址三角决策",
+    "category": "出海",
+    "keywords": "欧美,出海,CDN,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「欧美用户访问慢完全对策」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "southeast-asia-nodes",
+    "title": "东南亚市场节点验收手册：新马泰印尼菲逐国达标线",
+    "category": "出海",
+    "keywords": "东南亚,出海,节点,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「东南亚市场节点验收手册」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "global-team-china-admin",
+    "title": "全球团队访问国内后台：双地图协作与加速方案选型",
+    "category": "出海",
+    "keywords": "全球团队,国内后台,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「全球团队访问国内后台」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "dual-site-cn-com",
+    "title": "双站点 .cn 与 .com 策略：分域名测速与合规分工",
+    "category": "出海",
+    "keywords": "双站点,域名,备案,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「双站点 .cn 与 .com 策略」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "geodns-verification",
+    "title": "GeoDNS 智能解析验证：各地解析到不同 IP 的测速方法",
+    "category": "出海",
+    "keywords": "GeoDNS,智能解析,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「GeoDNS 智能解析验证」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "cross-border-sale-prep",
+    "title": "跨境电商黑五/圣诞大促前测速备战完全清单",
+    "category": "出海",
+    "keywords": "黑五,跨境电商,大促,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「跨境电商黑五/圣诞大促前测速备战完全清单」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "overseas-live-streaming",
+    "title": "海外直播与视频会议节点选型：延迟敏感业务的地图标准",
+    "category": "出海",
+    "keywords": "直播,视频会议,出海,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「海外直播与视频会议节点选型」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "game-server-global",
+    "title": "游戏出海服务器选址：玩家分布与全球 PING 地图对照",
+    "category": "出海",
+    "keywords": "游戏出海,服务器,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「游戏出海服务器选址」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "stripe-payment-domain-check",
+    "title": "出海支付域名校验：支付页、回调 URL 的独立测速",
+    "category": "出海",
+    "keywords": "支付,Stripe,出海,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「出海支付域名校验」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "multilingual-site-delivery",
+    "title": "多语言站点全球分发：hreflang 与各地可达性验收",
+    "category": "出海",
+    "keywords": "多语言,出海,SEO,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「多语言站点全球分发」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "china-blocked-overseas-ok",
+    "title": "全球绿、中国红：被墙/合规问题的标准判断流程",
+    "category": "出海",
+    "keywords": "被墙,出海,合规,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「全球绿、中国红」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "personal-blog-launch",
+    "title": "个人博客上线完全验收：Hexo/Hugo/WordPress 通用测速清单",
+    "category": "行业",
+    "keywords": "个人博客,上线,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「个人博客上线完全验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "wordpress-troubleshooting",
+    "title": "WordPress 站点故障排查手册：白屏、502 与插件冲突的网络层先行",
+    "category": "行业",
+    "keywords": "WordPress,博客,故障,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「WordPress 站点故障排查手册」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "ecommerce-sale-prep",
+    "title": "电商 618/双11 大促前多节点测速备战完全手册",
+    "category": "行业",
+    "keywords": "电商,双11,618,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「电商 618/双11 大促前多节点测速备战完全手册」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "online-education-platform",
+    "title": "在线教育平台开课前三网验收：视频域、直播与 API 清单",
+    "category": "行业",
+    "keywords": "在线教育,直播,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「在线教育平台开课前三网验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "corporate-website-sla",
+    "title": "企业官网可用性 SLA：用通畅率数据向管理层汇报",
+    "category": "行业",
+    "keywords": "企业官网,SLA,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「企业官网可用性 SLA」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "miniprogram-backend-api",
+    "title": "小程序后端 API 全国验收：合法域、备案与移动网络",
+    "category": "行业",
+    "keywords": "小程序,微信,API,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「小程序后端 API 全国验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "mobile-app-api-domain",
+    "title": "App 接口域名监控：iOS/Android 反馈不一致的网络层排查",
+    "category": "行业",
+    "keywords": "App,API,移动,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「App 接口域名监控」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "game-private-server-ping",
+    "title": "游戏联机服务器社群运营：用全国 PING 地图建立信任",
+    "category": "行业",
+    "keywords": "游戏服务器,联机,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「游戏联机服务器社群运营」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "forum-community-site",
+    "title": "论坛社区全国可达性：Discuz/Flarum 三网验收",
+    "category": "行业",
+    "keywords": "论坛,社区,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「论坛社区全国可达性」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "download-site-bandwidth",
+    "title": "下载站可达性与带宽：拨测与下载测速的分工",
+    "category": "行业",
+    "keywords": "下载站,带宽,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「下载站可达性与带宽」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "government-site-standard",
+    "title": "政府/事业单位网站：全国通畅与 IPv6 双栈验收标准",
+    "category": "行业",
+    "keywords": "政府网站,IPv6,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「政府/事业单位网站」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "fintech-medical-compliance",
+    "title": "金融/医疗网站网络层基线：HTTPS、证书与多活验收",
+    "category": "行业",
+    "keywords": "金融,医疗,合规,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「金融/医疗网站网络层基线」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "saas-b2b-demo-environment",
+    "title": "B2B SaaS 演示环境：潜在客户地域的地图验收",
+    "category": "行业",
+    "keywords": "B2B,SaaS,演示,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「B2B SaaS 演示环境」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "news-media-peak-traffic",
+    "title": "新闻媒体流量峰值：突发报道前的全国点检 SOP",
+    "category": "行业",
+    "keywords": "媒体,流量,峰值,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「新闻媒体流量峰值」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "how-to-read-speed-map",
+    "title": "如何读懂测速地图：绿/红/灰、延迟、通畅率的完全解读",
+    "category": "方法论",
+    "keywords": "测速地图,教程,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「如何读懂测速地图」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "tri-network-method",
+    "title": "三网分离检测法完全手册：电信、联通、移动为何必须分开测",
+    "category": "方法论",
+    "keywords": "三网测速,电信,联通,移动,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「三网分离检测法完全手册」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "ab-comparison-method",
+    "title": "A/B 对照测速法：CDN vs 源站、迁机前后、竞品的系统方法",
+    "category": "方法论",
+    "keywords": "对照测速,方法论,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「A/B 对照测速法」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "screenshot-archive-sop",
+    "title": "测速截图存档规范：工单、论坛、事故报告的配图标准",
+    "category": "方法论",
+    "keywords": "截图,运维文档,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「测速截图存档规范」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "customer-support-scripts",
+    "title": "客服工单测速话术大全：20+ 专业回复「打不开」模板",
+    "category": "方法论",
+    "keywords": "客服话术,工单,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「客服工单测速话术大全」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "pre-launch-30-checklist",
+    "title": "网站上线前 30 项检查清单：含 8 项多节点测速必做项",
+    "category": "方法论",
+    "keywords": "上线清单,验收,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「网站上线前 30 项检查清单」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "monthly-inspection-sop",
+    "title": "月度网站巡检 SOP：个人站 15 分钟、企业站 1 小时版",
+    "category": "方法论",
+    "keywords": "月度巡检,SOP,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「月度网站巡检 SOP」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "quarterly-infra-review",
+    "title": "季度基础设施体检：地图对比、趋势退化与升级决策",
+    "category": "方法论",
+    "keywords": "季度体检,基础设施,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「季度基础设施体检」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "protocol-selection-guide",
+    "title": "PING / HTTP / HTTPS 协议选择完全指南：一次选对少绕弯路",
+    "category": "方法论",
+    "keywords": "PING,HTTPS,协议,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「PING / HTTP / HTTPS 协议选择完全指南」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "speedtest-vs-pagespeed",
+    "title": "网络拨测与 PageSpeed 分工：通不通 vs 快不快的决策顺序",
+    "category": "方法论",
+    "keywords": "PageSpeed,网络测速,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「网络拨测与 PageSpeed 分工」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "speedtest-vs-uptime",
+    "title": "拨测快照 vs 7×24 监控：SpeedCE 在运维体系中的位置",
+    "category": "方法论",
+    "keywords": "Uptime,监控,拨测,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「拨测快照 vs 7×24 监控」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "speedce-itdog-combo",
+    "title": "SpeedCE + ITDOG 黄金组合：地图巡检与持续 Ping 的协作手册",
+    "category": "方法论",
+    "keywords": "SpeedCE,ITDOG,工具组合",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「SpeedCE + ITDOG 黄金组合」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "speedce-boce-combo",
+    "title": "SpeedCE + BOCE 协作：网络层排除后的合规与拦截检测",
+    "category": "方法论",
+    "keywords": "SpeedCE,BOCE,工具组合",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「SpeedCE + BOCE 协作」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "free-speedtest-tools-2026",
+    "title": "2026 免费测速工具决策树：按场景选 SpeedCE/ITDOG/BOCE",
+    "category": "方法论",
+    "keywords": "免费测速,工具推荐,2026",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「2026 免费测速工具决策树」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "incident-report-speed-data",
+    "title": "事故报告中的测速数据：运维复盘的专业写法与模板",
+    "category": "方法论",
+    "keywords": "事故报告,复盘,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「事故报告中的测速数据」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "on-call-first-5-minutes",
+    "title": "On-Call 前 5 分钟：收到告警后 SpeedCE 怎么测",
+    "category": "方法论",
+    "keywords": "OnCall,告警,应急,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「On-Call 前 5 分钟」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "speedce-vs-itdog",
+    "title": "SpeedCE vs ITDOG 完全对比：场景、优缺点与搭配策略",
+    "category": "对比",
+    "keywords": "SpeedCE,ITDOG,对比",
+    "hook": "没有最好的工具，只有最合适的场景。客观对比帮你建立个人工具栏。 本文围绕「SpeedCE vs ITDOG 完全对比」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "speedce-vs-boce",
+    "title": "SpeedCE vs BOCE 完全对比：轻量地图与全能运维的边界",
+    "category": "对比",
+    "keywords": "SpeedCE,BOCE,对比",
+    "hook": "没有最好的工具，只有最合适的场景。客观对比帮你建立个人工具栏。 本文围绕「SpeedCE vs BOCE 完全对比」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "map-vs-table-tools",
+    "title": "地图派 vs 表格派测速工具：排障效率的实测对比",
+    "category": "对比",
+    "keywords": "测速工具,地图,对比",
+    "hook": "没有最好的工具，只有最合适的场景。客观对比帮你建立个人工具栏。 本文围绕「地图派 vs 表格派测速工具」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "top5-free-speedtest-2026",
+    "title": "2026 个人站长免费测速 TOP5 深度评测与收藏建议",
+    "category": "对比",
+    "keywords": "免费测速,TOP5,2026,SpeedCE",
+    "hook": "没有最好的工具，只有最合适的场景。客观对比帮你建立个人工具栏。 本文围绕「2026 个人站长免费测速 TOP5 深度评测与收藏建议」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "ping-pe-use-cases",
+    "title": "Ping.pe 完全使用手册：与 SpeedCE 的全球/中国互补策略",
+    "category": "对比",
+    "keywords": "Ping.pe,全球Ping,SpeedCE",
+    "hook": "没有最好的工具，只有最合适的场景。客观对比帮你建立个人工具栏。 本文围绕「Ping.pe 完全使用手册」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "pagespeed-vs-network",
+    "title": "PageSpeed Insights 与网络拨测：站长必须弄清的分工边界",
+    "category": "对比",
+    "keywords": "PageSpeed,网络测速",
+    "hook": "没有最好的工具，只有最合适的场景。客观对比帮你建立个人工具栏。 本文围绕「PageSpeed Insights 与网络拨测」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "monitoring-vs-probing",
+    "title": "监控平台 vs 拨测工具：7×24 告警与第一现场的关系",
+    "category": "对比",
+    "keywords": "监控,拨测,运维",
+    "hook": "没有最好的工具，只有最合适的场景。客观对比帮你建立个人工具栏。 本文围绕「监控平台 vs 拨测工具」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "developer-bookmark-list",
+    "title": "开发者 2026 检测书签栏：12 个链接应对 90% 网络故障",
+    "category": "对比",
+    "keywords": "开发者,书签,工具,SpeedCE",
+    "hook": "没有最好的工具，只有最合适的场景。客观对比帮你建立个人工具栏。 本文围绕「开发者 2026 检测书签栏」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "17ce-vs-speedce",
+    "title": "17CE vs SpeedCE：老牌表格派与新锐地图派实战对比",
+    "category": "对比",
+    "keywords": "17CE,SpeedCE,对比",
+    "hook": "没有最好的工具，只有最合适的场景。客观对比帮你建立个人工具栏。 本文围绕「17CE vs SpeedCE」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "vsping-vs-speedce",
+    "title": "VSPING vs SpeedCE：污染检测与网络可达性的配合",
+    "category": "对比",
+    "keywords": "VSPING,SpeedCE,对比",
+    "hook": "没有最好的工具，只有最合适的场景。客观对比帮你建立个人工具栏。 本文围绕「VSPING vs SpeedCE」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "subdomain-inventory-method",
+    "title": "多子域清单巡检法：一张表管理所有对外域名的月度测速",
+    "category": "进阶",
+    "keywords": "子域名,巡检,清单,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「多子域清单巡检法」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "competitor-benchmark",
+    "title": "竞品站点对标测速：同赛道地图对比说服管理层升级",
+    "category": "进阶",
+    "keywords": "竞品,对标,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「竞品站点对标测速」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "migration-before-after-report",
+    "title": "迁机前后对比汇报模板：给老板和客户看的双地图 PPT",
+    "category": "进阶",
+    "keywords": "迁机,汇报,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「迁机前后对比汇报模板」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "icp-filing-launch-check",
+    "title": "ICP 备案通过后全国可达性验收：解析、证书与合规",
+    "category": "进阶",
+    "keywords": "ICP备案,上线,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「ICP 备案通过后全国可达性验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "new-domain-cold-start",
+    "title": "新域名冷启动 72 小时：注册、解析、证书与地图验收节奏",
+    "category": "进阶",
+    "keywords": "新域名,DNS,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「新域名冷启动 72 小时」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "spring-festival-traffic",
+    "title": "春节流量保障：移动暴增前的全国三网点检手册",
+    "category": "进阶",
+    "keywords": "春节,流量,移动,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「春节流量保障」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "double11-618-prep",
+    "title": "双11/618 大促测速时间表：T-7 到 T+0 的完整节奏",
+    "category": "进阶",
+    "keywords": "双11,618,大促,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「双11/618 大促测速时间表」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "ultimate-toolbar-2026",
+    "title": "2026 站长浏览器工具栏终极配置：测速/监控/性能 12 链接",
+    "category": "进阶",
+    "keywords": "站长工具,收藏夹,2026,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「2026 站长浏览器工具栏终极配置」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "xinjiang-tibet-access-guide",
+    "title": "新疆/西藏/西北片区访问优化：地图验收与 CDN 策略",
+    "category": "进阶",
+    "keywords": "新疆,西北,区域优化,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「新疆/西藏/西北片区访问优化」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "northeast-china-access-guide",
+    "title": "东北三省访问质量验收：寒区线路与 CDN 节点覆盖",
+    "category": "进阶",
+    "keywords": "东北,区域,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「东北三省访问质量验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "guangdong-zhejiang-baseline",
+    "title": "粤浙沪京基准延迟：经济发达省份的地图达标参考线",
+    "category": "进阶",
+    "keywords": "广东,浙江,延迟,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「粤浙沪京基准延迟」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "change-management-speedtest",
+    "title": "变更管理中的测速门禁：改 DNS/证书/Nginx 必测制度",
+    "category": "进阶",
+    "keywords": "变更管理,测速,运维,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「变更管理中的测速门禁」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "mysql-connection-timeout",
+    "title": "数据库连接超时与网站超时：网络绿、页面仍慢的完整分层排查",
+    "category": "故障排查",
+    "keywords": "MySQL,数据库,超时,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「数据库连接超时与网站超时」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "redis-connection-issues",
+    "title": "Redis 连接失败对网站的影响：何时该先测网络再查缓存",
+    "category": "故障排查",
+    "keywords": "Redis,缓存,故障,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「Redis 连接失败对网站的影响」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "docker-port-mapping",
+    "title": "Docker 端口映射错误：容器内正常、全国用户打不开的验收",
+    "category": "故障排查",
+    "keywords": "Docker,端口,容器,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「Docker 端口映射错误」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "k8s-ingress-troubleshoot",
+    "title": "Kubernetes Ingress 故障：集群内正常、公网域名红的排查",
+    "category": "故障排查",
+    "keywords": "Kubernetes,Ingress,K8s,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「Kubernetes Ingress 故障」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "lets-encrypt-rate-limit",
+    "title": "Let's Encrypt 限流与续签失败：HTTPS 突然全国红的证书向排查",
+    "category": "故障排查",
+    "keywords": "Let's Encrypt,证书,HTTPS,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「Let's Encrypt 限流与续签失败」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "sni-mismatch-error",
+    "title": "SNI 不匹配错误：多证书同 IP 时部分节点 HTTPS 异常",
+    "category": "故障排查",
+    "keywords": "SNI,SSL,HTTPS,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「SNI 不匹配错误」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "tls-version-too-low",
+    "title": "TLS 版本过低：老客户端与新安全策略导致的区域性 HTTPS 失败",
+    "category": "故障排查",
+    "keywords": "TLS,HTTPS,安全,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「TLS 版本过低」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "gzip-brotli-compression",
+    "title": "压缩配置与超时：大响应体导致的「能通但极慢」",
+    "category": "故障排查",
+    "keywords": "Gzip,Brotli,Nginx,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「压缩配置与超时」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "vultr-line-guide",
+    "title": "Vultr 各机房线路验收：按业务选东京/新加坡/洛杉矶",
+    "category": "VPS线路",
+    "keywords": "Vultr,VPS,线路,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「Vultr 各机房线路验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "bandwagonhost-guide",
+    "title": "搬瓦工 CN2/GIA 套餐验机：经典商家地图验收法",
+    "category": "VPS线路",
+    "keywords": "搬瓦工,BandwagonHost,CN2,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「搬瓦工 CN2/GIA 套餐验机」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "racknerd-dmit-guide",
+    "title": "RackNerd / DMIT 等热门商家：退款期地图验机模板",
+    "category": "VPS线路",
+    "keywords": "RackNerd,DMIT,VPS,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「RackNerd / DMIT 等热门商家」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "aws-lightsail-china",
+    "title": "AWS Lightsail 对国内访问：全球绿、中国慢的常见形态",
+    "category": "VPS线路",
+    "keywords": "AWS,Lightsail,云服务器,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「AWS Lightsail 对国内访问」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "oracle-cloud-free",
+    "title": "甲骨文云免费 tier 验收：零成本机器的地图标准",
+    "category": "VPS线路",
+    "keywords": "Oracle Cloud,免费VPS,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「甲骨文云免费 tier 验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "gcp-azure-china-access",
+    "title": "GCP / Azure 回国访问：企业云对国内团队的地图评估",
+    "category": "VPS线路",
+    "keywords": "GCP,Azure,云,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「GCP / Azure 回国访问」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "aws-cloudfront-china",
+    "title": "AWS CloudFront 中国访问：全球分发与国内体验双验收",
+    "category": "CDN",
+    "keywords": "CloudFront,AWS,CDN,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「AWS CloudFront 中国访问」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "fastly-cdn-guide",
+    "title": "Fastly CDN 验收：边缘规则与源站对照测速",
+    "category": "CDN",
+    "keywords": "Fastly,CDN,边缘,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「Fastly CDN 验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "bunny-cdn-guide",
+    "title": "Bunny CDN 性价比线路：全球节点地图验收",
+    "category": "CDN",
+    "keywords": "BunnyCDN,CDN,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「Bunny CDN 性价比线路」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "qiniu-cdn-guide",
+    "title": "七牛云 CDN 接入：国内站长常用方案的测速验收",
+    "category": "CDN",
+    "keywords": "七牛云,CDN,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「七牛云 CDN 接入」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "upyun-cdn-guide",
+    "title": "又拍云 CDN 验收：图片站与静态加速地图标准",
+    "category": "CDN",
+    "keywords": "又拍云,CDN,图片站,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「又拍云 CDN 验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "shopify-speedtest",
+    "title": "Shopify 店铺全球可达性：主题、支付与应用域的分层测速",
+    "category": "出海",
+    "keywords": "Shopify,外贸,独立站,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「Shopify 店铺全球可达性」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "woocommerce-global",
+    "title": "WooCommerce 出海验收：插件、支付网关与主域地图清单",
+    "category": "出海",
+    "keywords": "WooCommerce,WordPress,出海,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「WooCommerce 出海验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "notion-saas-availability",
+    "title": "Notion 类协作工具自托管：全球团队访问验收",
+    "category": "出海",
+    "keywords": "SaaS,协作,自托管,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「Notion 类协作工具自托管」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "api-rate-limit-global",
+    "title": "全球 API 限流与 Geo 封禁：地图绿但仍 403 的边界",
+    "category": "出海",
+    "keywords": "API,限流,出海,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「全球 API 限流与 Geo 封禁」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "middle-east-africa-nodes",
+    "title": "中东与非洲节点验收：新兴市场的地图达标策略",
+    "category": "出海",
+    "keywords": "中东,非洲,出海,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「中东与非洲节点验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "latin-america-nodes",
+    "title": "拉美节点验收：巴西、墨西哥重点市场地图标准",
+    "category": "出海",
+    "keywords": "拉美,巴西,出海,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「拉美节点验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "hexo-hugo-static-site",
+    "title": "Hexo / Hugo 静态站上线路验收：GitHub Pages 与自建对比",
+    "category": "行业",
+    "keywords": "Hexo,Hugo,静态站,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「Hexo / Hugo 静态站上线路验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "nextjs-nuxt-ssr-deploy",
+    "title": "Next.js / Nuxt SSR 部署验收：Node 服务与 CDN 分层测速",
+    "category": "行业",
+    "keywords": "Next.js,Nuxt,SSR,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「Next.js / Nuxt SSR 部署验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "laravel-php-deploy",
+    "title": "Laravel / PHP 站点上线：FPM、Nginx 与全国 HTTPS 验收",
+    "category": "行业",
+    "keywords": "Laravel,PHP,上线,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「Laravel / PHP 站点上线」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "java-spring-boot-api",
+    "title": "Spring Boot API 全国验收：网关、证书与子域清单",
+    "category": "行业",
+    "keywords": "Spring Boot,Java,API,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「Spring Boot API 全国验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "python-django-flask",
+    "title": "Django / Flask 部署测速：WSGI 与应用层分工",
+    "category": "行业",
+    "keywords": "Django,Flask,Python,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「Django / Flask 部署测速」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "video-on-demand-site",
+    "title": "点播视频站验收：播放域、CDN 与 API 三域测速",
+    "category": "行业",
+    "keywords": "视频,点播,CDN,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「点播视频站验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "recruitment-careers-site",
+    "title": "招聘官网高峰验收：校招季前的全国点检",
+    "category": "行业",
+    "keywords": "招聘,企业官网,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「招聘官网高峰验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "hospital-appointment-system",
+    "title": "医院预约系统网络基线：高峰与移动用户验收",
+    "category": "行业",
+    "keywords": "医疗,预约,移动,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「医院预约系统网络基线」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "oncall-runbook-speedtest",
+    "title": "On-Call Runbook 中的测速章节：告警后 5 分钟 SOP",
+    "category": "方法论",
+    "keywords": "OnCall,Runbook,应急,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「On-Call Runbook 中的测速章节」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "postmortem-blameless",
+    "title": "无责复盘中的测速证据：时间线与地图如何写进 Postmortem",
+    "category": "方法论",
+    "keywords": "Postmortem,复盘,运维,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「无责复盘中的测速证据」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "sla-report-monthly",
+    "title": "月度 SLA 报告模板：用通畅率数据汇报老板",
+    "category": "方法论",
+    "keywords": "SLA,报告,运维,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「月度 SLA 报告模板」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "vendor-ticket-evidence",
+    "title": "给云厂商/CDN 工单附证据：截图规范与描述模板",
+    "category": "方法论",
+    "keywords": "工单,云厂商,CDN,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「给云厂商/CDN 工单附证据」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "team-onboarding-speedce",
+    "title": "新运维入职第一天：SpeedCE 与工具链培训手册",
+    "category": "方法论",
+    "keywords": "入职,培训,运维,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「新运维入职第一天」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "cesu-vs-speedce",
+    "title": "CESU.ai vs SpeedCE：新兴工具站与地图派实测对比",
+    "category": "对比",
+    "keywords": "CESU,SpeedCE,对比",
+    "hook": "没有最好的工具，只有最合适的场景。客观对比帮你建立个人工具栏。 本文围绕「CESU.ai vs SpeedCE」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "chinaz-toolkit-review",
+    "title": "站长之家工具生态 vs SpeedCE：Ping/测速/Whois 分工",
+    "category": "对比",
+    "keywords": "站长之家,工具,SpeedCE",
+    "hook": "没有最好的工具，只有最合适的场景。客观对比帮你建立个人工具栏。 本文围绕「站长之家工具生态 vs SpeedCE」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "aliyun-boce-vs-speedce",
+    "title": "阿里云云拨测 vs SpeedCE：同云用户如何搭配",
+    "category": "对比",
+    "keywords": "阿里云,拨测,SpeedCE",
+    "hook": "没有最好的工具，只有最合适的场景。客观对比帮你建立个人工具栏。 本文围绕「阿里云云拨测 vs SpeedCE」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "province-henan-hubei",
+    "title": "河南/湖北中部省份访问优化：地图特征与 CDN 策略",
+    "category": "进阶",
+    "keywords": "河南,湖北,区域,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「河南/湖北中部省份访问优化」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "province-sichuan-chongqing",
+    "title": "川渝地区访问验收：西南节点与线路特征",
+    "category": "进阶",
+    "keywords": "四川,重庆,西南,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「川渝地区访问验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "province-fujian-taiwan-trade",
+    "title": "闽粤台贸相关站点：东南沿海地图验收要点",
+    "category": "进阶",
+    "keywords": "福建,广东,东南,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「闽粤台贸相关站点」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "province-shandong-hebei",
+    "title": "京津冀鲁访问基线：华北片区地图达标参考",
+    "category": "进阶",
+    "keywords": "山东,河北,华北,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「京津冀鲁访问基线」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "province-yunnan-guizhou",
+    "title": "云贵地区访问：西南边陲地图与移动网络",
+    "category": "进阶",
+    "keywords": "云南,贵州,西南,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「云贵地区访问」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "hainan-special-zone",
+    "title": "海南自贸相关站点：岛屿地理与访问特征验收",
+    "category": "进阶",
+    "keywords": "海南,区域,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「海南自贸相关站点」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "inner-mongolia-northeast",
+    "title": "内蒙古/东北三省：高寒地区线路与冬季高峰",
+    "category": "进阶",
+    "keywords": "内蒙古,东北,区域,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「内蒙古/东北三省」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "cctv-news-peak",
+    "title": "新闻发布与热点峰值：突发流量前的 30 分钟点检",
+    "category": "进阶",
+    "keywords": "新闻,峰值,流量,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「新闻发布与热点峰值」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "school-start-september",
+    "title": "九月开学季：教育类站点流量保障测速",
+    "category": "进阶",
+    "keywords": "开学季,教育,流量,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「九月开学季」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "national-holiday-golden-week",
+    "title": "国庆黄金周流量：全国移动用户暴增前点检",
+    "category": "进阶",
+    "keywords": "国庆,黄金周,流量,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「国庆黄金周流量」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "year-end-summary-report",
+    "title": "年终基础设施报告：12 个月地图存档如何汇总",
+    "category": "进阶",
+    "keywords": "年终,报告,运维,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「年终基础设施报告」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "websocket-wss-check",
+    "title": "WebSocket / WSS 长连接：SpeedCE HTTPS 与实时业务边界",
+    "category": "故障排查",
+    "keywords": "WebSocket,WSS,实时,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「WebSocket / WSS 长连接」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "grpc-gateway-check",
+    "title": "gRPC / HTTP2 网关：REST 可达与 gRPC 故障分工",
+    "category": "故障排查",
+    "keywords": "gRPC,HTTP2,API,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「gRPC / HTTP2 网关」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "oauth-callback-domain",
+    "title": "OAuth 回调域名校验：登录失败的网络层先行排查",
+    "category": "故障排查",
+    "keywords": "OAuth,登录,回调,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「OAuth 回调域名校验」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "payment-callback-url",
+    "title": "支付回调 URL 可达性：全国节点对回调域的验收",
+    "category": "故障排查",
+    "keywords": "支付,回调,电商,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「支付回调 URL 可达性」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "email-link-tracking",
+    "title": "邮件内链接追踪域：营销邮件点击失败的网络排查",
+    "category": "故障排查",
+    "keywords": "邮件,营销,域名,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「邮件内链接追踪域」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "colocation-vs-cloud",
+    "title": "托管机房 vs 公有云：同一业务选型后的地图验收差异",
+    "category": "VPS线路",
+    "keywords": "托管,公有云,选型,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「托管机房 vs 公有云」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "bare-metal-dedicated-line",
+    "title": "物理机专线接入：企业专线用户的地图验收",
+    "category": "VPS线路",
+    "keywords": "专线,物理机,企业,SpeedCE",
+    "hook": "多节点测速是现代站长必备技能。 本文围绕「物理机专线接入」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "image-cdn-webp-avif",
+    "title": "图片 CDN 与 WebP/AVIF：静态域全国验收",
+    "category": "CDN",
+    "keywords": "图片CDN,WebP,前端,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「图片 CDN 与 WebP/AVIF」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "font-cdn-google-china",
+    "title": "字体 CDN 与 Google Fonts：国内加载失败的测速分工",
+    "category": "CDN",
+    "keywords": "字体,Google Fonts,CDN,SpeedCE",
+    "hook": "CDN 让网站更快，也让排障更复杂——源站、边缘、证书、缓存四层交织。对照测速是 CDN 运维的基本功。 本文围绕「字体 CDN 与 Google Fonts」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "app-store-review-server",
+    "title": "App Store 审核期间服务器：海外审核节点可达性",
+    "category": "出海",
+    "keywords": "App Store,审核,出海,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「App Store 审核期间服务器」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "gdpr-cookie-wall",
+    "title": "GDPR 与 Cookie 墙：欧洲用户访问的网络层基线",
+    "category": "出海",
+    "keywords": "GDPR,欧洲,合规,SpeedCE",
+    "hook": "全球化不是加一个英文版就完事。目标市场的通畅率，决定了你能不能在那里做生意。 本文围绕「GDPR 与 Cookie 墙」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点+全球节点"
+  },
+  {
+    "slug": "discuz-qzone-share",
+    "title": "Discuz 论坛分享链：主站与分享域的分层测速",
+    "category": "行业",
+    "keywords": "Discuz,论坛,分享,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「Discuz 论坛分享链」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "typecho-emlog-blog",
+    "title": "Typecho / Emlog 轻量博客：小站也要做的全国验收",
+    "category": "行业",
+    "keywords": "Typecho,Emlog,博客,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「Typecho / Emlog 轻量博客」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "ghost-blog-deploy",
+    "title": "Ghost 博客部署：Headless 与主题域测速",
+    "category": "行业",
+    "keywords": "Ghost,博客,部署,SpeedCE",
+    "hook": "不同行业的可用性标准不同，但网络层验收是共性——先保证各地能访问，再谈体验优化。 本文围绕「Ghost 博客部署」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "regex-domain-inventory",
+    "title": "正则匹配子域发现：漏测域名的自动化清单思路",
+    "category": "方法论",
+    "keywords": "子域,清单,自动化,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「正则匹配子域发现」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "calendar-reminder-inspect",
+    "title": "日历提醒巡检：把测速写进 Google Calendar / 飞书",
+    "category": "方法论",
+    "keywords": "日历,提醒,巡检,SpeedCE",
+    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「日历提醒巡检」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "gtmetrix-vs-speedce",
+    "title": "GTmetrix vs SpeedCE：性能测试与网络拨测分工",
+    "category": "对比",
+    "keywords": "GTmetrix,测速,对比",
+    "hook": "没有最好的工具，只有最合适的场景。客观对比帮你建立个人工具栏。 本文围绕「GTmetrix vs SpeedCE」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "webpagetest-vs-speedce",
+    "title": "WebPageTest vs SpeedCE：何时用哪个",
+    "category": "对比",
+    "keywords": "WebPageTest,测速,对比",
+    "hook": "没有最好的工具，只有最合适的场景。客观对比帮你建立个人工具栏。 本文围绕「WebPageTest vs SpeedCE」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "multi-team-handover",
+    "title": "运维交接文档中的测速基线：离职前必须留下的地图包",
+    "category": "进阶",
+    "keywords": "交接,文档,运维,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「运维交接文档中的测速基线」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "acquisition-due-diligence",
+    "title": "收购技术尽调：目标站点全国可达性快速评估",
+    "category": "进阶",
+    "keywords": "尽调,收购,评估,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「收购技术尽调」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "penetration-test-prep",
+    "title": "渗透测试前网络暴露面：对外域名测速清单",
+    "category": "进阶",
+    "keywords": "安全,渗透,域名,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「渗透测试前网络暴露面」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "disaster-recovery-drill",
+    "title": "灾备演练：切换 DR 站点后的全国 SpeedCE 点检",
+    "category": "进阶",
+    "keywords": "灾备,演练,DR,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「灾备演练」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "zero-downtime-deploy",
+    "title": "零停机发布：蓝绿/金丝雀发布中的地图对照",
+    "category": "进阶",
+    "keywords": "蓝绿,金丝雀,发布,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「零停机发布」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "status-page-setup",
+    "title": "Status Page 搭建：测速数据如何支撑公开状态页",
+    "category": "进阶",
+    "keywords": "Status Page,监控,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「Status Page 搭建」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "client-report-quarterly",
+    "title": "给客户季报附地图：B2B 服务商的测速汇报模板",
+    "category": "进阶",
+    "keywords": "客户报告,B2B,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「给客户季报附地图」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "seo-crawl-baidu-google",
+    "title": "百度/Google 爬虫与站长可达性：SEO 视角的测速",
+    "category": "进阶",
+    "keywords": "SEO,爬虫,收录,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「百度/Google 爬虫与站长可达性」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "affiliate-tracking-domain",
+    "title": "联盟营销追踪域：全国可达对转化链的影响",
+    "category": "进阶",
+    "keywords": "联盟营销,追踪,域名,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「联盟营销追踪域」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "short-link-domain-check",
+    "title": "短链域名验收：跳转链路的全国节点测试",
+    "category": "进阶",
+    "keywords": "短链,跳转,域名,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「短链域名验收」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "landing-page-campaign",
+    "title": "投放落地页：广告上线前 10 分钟全国点检",
+    "category": "进阶",
+    "keywords": "落地页,投放,广告,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「投放落地页」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  },
+  {
+    "slug": "ab-test-traffic-split",
+    "title": "A/B 测试分流域：实验组域名的独立地图验收",
+    "category": "进阶",
+    "keywords": "AB测试,分流,SpeedCE",
+    "hook": "进阶技巧不是炫技，是减少重复踩坑——把测速嵌入变更、巡检、大促、汇报全流程。 本文围绕「A/B 测试分流域」展开，以 SpeedCE 为实操示例。",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ],
+    "protocol": "HTTPS",
+    "scope": "中国节点"
+  }
+]

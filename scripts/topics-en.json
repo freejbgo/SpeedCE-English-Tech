@@ -1,0 +1,5672 @@
+{
+  "vps-line-verification-guide": {
+    "title": "Before You Buy a VPS: Verify Routes with Nationwide Carrier Maps and Spot Fake CN2 Claims (SpeedCE Playbook)",
+    "hook": "In HostLoc threads, buyers say \"my ping is 28ms\" and sellers claim \"three-carrier direct\"—a week later Mobile users complain. Sample size is 1, and the sample is you. Nationwide three-carrier maps are the only reliable acceptance standard.",
+    "keywords": "VPS speed test,CN2 GIA verification,three-carrier testing,HostLoc acceptance,SpeedCE",
+    "terms": [
+      [
+        "CN2 GIA",
+        "China Telecom premium route",
+        "Check Telecom map"
+      ],
+      [
+        "CMI",
+        "China Mobile international",
+        "Mobile map is veto power"
+      ],
+      [
+        "BGP",
+        "Multi-carrier access",
+        "Three carriers should balance"
+      ],
+      [
+        "ICMP blocked",
+        "Ping disabled",
+        "Use HTTPS instead"
+      ]
+    ]
+  },
+  "cdn-deployment-speed-test-guide": {
+    "title": "CDN Deployment Playbook: Multi-Node Speed Test Acceptance Before, During, and After Cutover",
+    "hook": "CDN enabled but some users can't open? The issue is usually not \"is CDN on\" but wrong acceptance method. Comparative testing—CDN hostname vs origin—is the golden rule of CDN ops.",
+    "keywords": "CDN speed test,CDN acceptance,origin check,cutover,SpeedCE",
+    "terms": [
+      [
+        "Origin fetch",
+        "Edge to origin",
+        "Check on 502 first"
+      ],
+      [
+        "Cache",
+        "Edge storage",
+        "Retest after purge"
+      ],
+      [
+        "Cutover",
+        "DNS change",
+        "72h checkpoint"
+      ],
+      [
+        "Certificate",
+        "Edge cert",
+        "Accept separately from origin"
+      ]
+    ]
+  },
+  "global-deployment-checklist": {
+    "title": "Global Website Launch Acceptance: Complete Checklist from China Nodes to Worldwide Probes",
+    "hook": "Your .com opens instantly in Shanghai; German customers see spinning wheels—the test perspective is wrong. Global launch needs probes in target markets; China and global views are both mandatory.",
+    "keywords": "global website,speed test,internationalization,SpeedCE,global nodes",
+    "terms": [
+      [
+        "Target market",
+        "User country",
+        "Focus global nodes"
+      ],
+      [
+        "Dual view",
+        "China + global",
+        "Switch in one page"
+      ],
+      [
+        "Success rate",
+        "Probe success ratio",
+        "Prioritize over latency"
+      ],
+      [
+        "Cross-border",
+        "Return route to China",
+        "China slow may be normal"
+      ]
+    ]
+  },
+  "dns-troubleshooting-guide": {
+    "title": "Complete DNS Troubleshooting Guide: When \"Some Regions Can't Open\" After Migration or CDN Switch",
+    "hook": "DNS changed and works instantly for you; colleague in Xinjiang still sees old IP—not their PC, but resolver chains out of sync by geography and carrier. DNS causes half of \"regional access\" tickets yet gets blamed on \"user network.\"",
+    "keywords": "DNS troubleshooting,domain resolution,migration,multi-node speed test,SpeedCE",
+    "terms": [
+      [
+        "A record",
+        "Domain to IPv4",
+        "Test domain not guessed IP"
+      ],
+      [
+        "CNAME",
+        "Domain to domain",
+        "Test CNAME chain after CDN"
+      ],
+      [
+        "TTL",
+        "Cache lifetime",
+        "Lower to 300s before migration"
+      ],
+      [
+        "Geo DNS",
+        "Different IP by region",
+        "Test China and global separately"
+      ]
+    ]
+  },
+  "ssl-certificate-troubleshooting": {
+    "title": "SSL Certificate Expiry and Misconfiguration: 10-Minute Playbook When Users See \"Connection Not Secure\"",
+    "hook": "Certificate issues torture ops: your browser works, users mass-report \"your connection is not private.\" Local HSTS cache, clicking through warnings, test whitelists—all fool you.",
+    "keywords": "SSL,HTTPS,certificate expiry,SpeedCE,website security",
+    "terms": [
+      [
+        "SAN",
+        "Domains on certificate",
+        "Is api subdomain included"
+      ],
+      [
+        "Let's Encrypt",
+        "Free 90-day certs",
+        "Alert on renewal failure"
+      ],
+      [
+        "SNI",
+        "Multi-cert same IP",
+        "SNI errors redden overseas nodes"
+      ],
+      [
+        "Cert chain",
+        "Missing intermediate",
+        "HTTPS red HTTP green—check first"
+      ]
+    ]
+  },
+  "nginx-reverse-proxy-troubleshooting": {
+    "title": "Nginx Reverse Proxy Troubleshooting: 8 Typical Config Errors When Main Site Is Green but API Is Red",
+    "hook": "Nginx fronts countless sites. One wrong server_name or missing proxy_pass means homepage works, APIs die. Postman works locally; nationwide users fail.",
+    "keywords": "Nginx,reverse proxy,502,subdomain,SpeedCE",
+    "terms": [
+      [
+        "server_name",
+        "Matched hostnames",
+        "Separate server block per public domain"
+      ],
+      [
+        "proxy_pass",
+        "Upstream URL",
+        "Trailing slash affects URI"
+      ],
+      [
+        "upstream",
+        "Backend pool",
+        "One dead backend can drag all"
+      ],
+      [
+        "ssl_certificate",
+        "Cert path",
+        "Every HTTPS server block needs pair"
+      ]
+    ]
+  },
+  "website-migration-guide": {
+    "title": "Complete Website Migration Handbook: 72-Hour Speed Test Acceptance for DNS, Origin, and CDN",
+    "hook": "Migration is among the most stressful changes. SSH on new box looks perfect, but DNS propagates globally and CDN may still point at old origin—multi-node speed tests are the objective witness.",
+    "keywords": "website migration,DNS,server migration,SpeedCE,acceptance",
+    "terms": [
+      [
+        "TTL",
+        "How long resolvers cache",
+        "Lower to 300 48h before"
+      ],
+      [
+        "Gradual cutover",
+        "Partial traffic first",
+        "Anomalies should fade"
+      ],
+      [
+        "Origin fetch",
+        "CDN to origin",
+        "Check CDN origin IP after move"
+      ],
+      [
+        "Parallel run",
+        "Old and new live",
+        "Compare both IPs"
+      ]
+    ]
+  },
+  "intermittent-fault-diagnosis": {
+    "title": "Intermittent Website Fault Diagnosis: Scientific Checkpointing for \"Sometimes Slow, Sometimes Fine\"",
+    "hook": "Intermittent faults are ops nightmares: always fine when you test, broken when users complain. Single probes aren't enough—schedule repeated tests and watch success rate and latency curves.",
+    "keywords": "intermittent fault,website instability,multi-node speed test,SpeedCE,operations",
+    "terms": [
+      [
+        "Jitter",
+        "Unstable latency",
+        "Supplement with continuous ping"
+      ],
+      [
+        "Peak load",
+        "Evening peak exposes",
+        "Retest 20:00-22:00"
+      ],
+      [
+        "DDoS",
+        "Attack windows",
+        "Nationwide red then recovery"
+      ],
+      [
+        "Connection pool",
+        "App layer exhaustion",
+        "Network green but 502"
+      ]
+    ]
+  },
+  "subdomain-troubleshooting": {
+    "title": "Complete Subdomain Troubleshooting: 8 Independent Reasons When Main Site Works but API Fails",
+    "hook": "www.example.com and api.example.com have separate DNS, certs, Nginx, and CDN configs. Main green ≠ subdomain green—every public subdomain deserves its own SpeedCE map.",
+    "keywords": "subdomain,API,CDN,DNS,SpeedCE",
+    "terms": [
+      [
+        "CNAME chain",
+        "Subdomain target",
+        "dig each layer"
+      ],
+      [
+        "Wildcard cert",
+        "*.example.com",
+        "May not cover multi-level"
+      ],
+      [
+        "CDN hostname",
+        "Per-domain in CDN",
+        "Only www configured is common pitfall"
+      ],
+      [
+        "ICP filing",
+        "Subdomains need compliance",
+        "Unfiled may be blocked"
+      ]
+    ]
+  },
+  "api-availability-guide": {
+    "title": "API Availability Testing Guide: Why Postman Works but Nationwide Users Don't",
+    "hook": "API failures surface last: frontend cache still serves pages; apps hit APIs and fail immediately. SpeedCE HTTPS probes from nationwide nodes are step one of network acceptance.",
+    "keywords": "API,endpoint monitoring,backend,HTTPS,SpeedCE",
+    "terms": [
+      [
+        "Reachability",
+        "TCP+TLS+HTTP success",
+        "SpeedCE tests this layer"
+      ],
+      [
+        "CORS",
+        "Browser cross-origin policy",
+        "Network green can still CORS fail"
+      ],
+      [
+        "Auth",
+        "Token/signature",
+        "Probes don't send business headers"
+      ],
+      [
+        "Geo block",
+        "Region ban",
+        "Compare global vs China"
+      ]
+    ]
+  },
+  "http-https-redirect-issues": {
+    "title": "HTTP/HTTPS Redirect Failures: Forced HTTPS, Redirect Loops, and Mixed Content Triage",
+    "hook": "301 loops, http and https on different machines, page assets still on http—users see varied symptoms. SpeedCE HTTP/HTTPS dual-mode comparison narrows scope fast.",
+    "keywords": "HTTPS,301 redirect,mixed content,SSL,SpeedCE",
+    "terms": [
+      [
+        "301/302",
+        "Permanent/temporary redirect",
+        "Compare two probe modes"
+      ],
+      [
+        "HSTS",
+        "Force HTTPS",
+        "Browser caches old policy"
+      ],
+      [
+        "Mixed content",
+        "HTTPS page with HTTP assets",
+        "SpeedCE won't catch—browser will"
+      ],
+      [
+        "Redirect chain",
+        "Multiple 301s",
+        "May timeout"
+      ]
+    ]
+  },
+  "firewall-security-group-checklist": {
+    "title": "Cloud Security Group Acceptance: Four Checks When the Nationwide Map Is Mostly Red",
+    "hook": "Classic beginner mistake: SSH works, website all red nationwide—security group allows 22 but not 443. Before blaming routes, CDN, or DNS, confirm port layer with SpeedCE.",
+    "keywords": "security group,firewall,cloud server,port 443,SpeedCE",
+    "terms": [
+      [
+        "Inbound rules",
+        "External access ports",
+        "Must allow 80/443"
+      ],
+      [
+        "Outbound rules",
+        "Server egress",
+        "Let's Encrypt needs outbound 443"
+      ],
+      [
+        "CDN origin whitelist",
+        "Only CDN IPs",
+        "Missing entry reddens CDN"
+      ],
+      [
+        "iptables",
+        "OS firewall",
+        "Check with security group"
+      ]
+    ]
+  },
+  "502-503-upstream-errors": {
+    "title": "502/503 and Origin Overload: When CDN Is Green but Origin Is Red",
+    "hook": "502 means gateway got bad response; 503 means temporarily unavailable. Users on CDN see 502—could be edge, but more often origin can't handle load—comparative test decides.",
+    "keywords": "502,503,origin overload,CDN origin,SpeedCE",
+    "terms": [
+      [
+        "502 Bad Gateway",
+        "Invalid upstream response",
+        "Check PHP-FPM/Nginx upstream"
+      ],
+      [
+        "503 Service Unavailable",
+        "Overload or maintenance",
+        "Check pool/rate limit"
+      ],
+      [
+        "Origin timeout",
+        "CDN waits too long",
+        "Increase timeout or scale"
+      ],
+      [
+        "Health check",
+        "LB probe path",
+        "Probe URL must be green"
+      ]
+    ]
+  },
+  "dns-propagation-slow": {
+    "title": "Slow DNS Propagation: TTL, Carrier Cache, and Regional Resolver Differences",
+    "hook": "DNS doesn't change worldwide at once. TTL=86400 means up to 24 hours worst case. SpeedCE every 10 minutes—random fading vs stubborn fixed provinces.",
+    "keywords": "DNS cache,TTL,propagation,SpeedCE,migration",
+    "terms": [
+      [
+        "Recursive cache",
+        "ISP local cache",
+        "Fixed province red → cache"
+      ],
+      [
+        "Authoritative DNS",
+        "Your DNS provider",
+        "Confirm records in console"
+      ],
+      [
+        "DNSSEC",
+        "Signed DNS",
+        "Misconfig breaks some resolvers"
+      ],
+      [
+        "Geo split",
+        "Different records domestic/overseas",
+        "Test both scopes"
+      ]
+    ]
+  },
+  "regional-access-failure": {
+    "title": "Only Some Regions Can't Open? Use Maps to Pin Province, Carrier, and Next Steps",
+    "hook": "\"Only Xinjiang\" or \"only Mobile\"—averages and success rates don't help. Maps are the language of regional faults. SpeedCE China map is built for this.",
+    "keywords": "regional fault,province,map speed test,SpeedCE,troubleshooting",
+    "terms": [
+      [
+        "Province granularity",
+        "Per-province nodes",
+        "Pin to province"
+      ],
+      [
+        "Carrier",
+        "Telecom/Unicom/Mobile",
+        "Split three ways"
+      ],
+      [
+        "CDN node",
+        "Edge coverage",
+        "Province may lack node"
+      ],
+      [
+        "Long-haul route",
+        "Cross-province link",
+        "NW vs south differences"
+      ]
+    ]
+  },
+  "mobile-network-issues": {
+    "title": "Mobile Network Access Issues: Why Mobile Users Complain the Most",
+    "hook": "China Mobile users exceed 50%, but many \"optimized routes\" only help Telecom/Unicom. Skip Mobile map = ignore half your users.",
+    "keywords": "mobile network,three-carrier test,carrier,SpeedCE,5G",
+    "terms": [
+      [
+        "CMI",
+        "Mobile international egress",
+        "Return route to China"
+      ],
+      [
+        "4G/5G",
+        "Wireless access",
+        "Differs from home broadband"
+      ],
+      [
+        "DNS",
+        "Mobile DNS servers",
+        "May differ from Telecom"
+      ],
+      [
+        "WAP gateway",
+        "Legacy mobile",
+        "Rare edge cases"
+      ]
+    ]
+  },
+  "single-carrier-fault": {
+    "title": "Single-Carrier Fault: When One of Telecom/Unicom/Mobile Is All Red",
+    "hook": "Split three carriers—one all red shrinks fault domain by 66%. Route issue, CDN per-carrier config, or carrier DNS? Comparative tests point the way.",
+    "keywords": "single carrier fault,Telecom,Unicom,Mobile,SpeedCE",
+    "terms": [
+      [
+        "Single-homed DC",
+        "Optimizes one carrier",
+        "Typical single-carrier red"
+      ],
+      [
+        "DNS split",
+        "Different IP per carrier",
+        "One line may be wrong"
+      ],
+      [
+        "CDN per-carrier",
+        "Carrier-specific CDN",
+        "Verify in console"
+      ],
+      [
+        "User sample",
+        "Complaint carrier",
+        "Cross-check with map"
+      ]
+    ]
+  },
+  "peak-hour-slowdown": {
+    "title": "Peak-Hour Slowdown: Retest Strategy When Afternoon Is Green but Evening Turns Red",
+    "hook": "Bandwidth, international egress, attack traffic—peak hours are the truth mirror. Sellers show test IP in afternoon; you retest 20:00-22:00 on SpeedCE.",
+    "keywords": "peak hour,slow website,route congestion,SpeedCE,operations",
+    "terms": [
+      [
+        "International egress",
+        "Peak congestion",
+        "Cross-border especially"
+      ],
+      [
+        "Bandwidth saturation",
+        "Link cap hit",
+        "Success OK but latency up"
+      ],
+      [
+        "CC attack",
+        "Malicious requests",
+        "Origin CPU spikes"
+      ],
+      [
+        "CDN hot miss",
+        "Cache miss storm",
+        "Origin surge"
+      ]
+    ]
+  },
+  "ddos-attack-detection": {
+    "title": "Using Multi-Node Speed Tests During Attacks to Assess Impact",
+    "hook": "Speed tests don't replace DDoS protection, but when nationwide nodes turn red and latency spikes together, plus traffic graphs, you confirm attack vs misconfiguration faster.",
+    "keywords": "DDoS,attack,troubleshooting,SpeedCE,security",
+    "terms": [
+      [
+        "Volumetric",
+        "Bandwidth flood",
+        "Nationwide latency up"
+      ],
+      [
+        "CC",
+        "Application layer",
+        "May stay partially green"
+      ],
+      [
+        "Reflection",
+        "Amplification",
+        "Origin bandwidth"
+      ],
+      [
+        "Recovery verify",
+        "After attack ends",
+        "SpeedCE retest confirms"
+      ]
+    ]
+  },
+  "ipv6-troubleshooting": {
+    "title": "IPv6 Dual-Stack Acceptance: AAAA Records, Firewall, and CDN Complete Check",
+    "hook": "IPv4 all green doesn't mean IPv6 is fine. Dual-stack sites need separate IPv4 and IPv6 target tests.",
+    "keywords": "IPv6,dual-stack,AAAA,SpeedCE,website acceptance",
+    "terms": [
+      [
+        "AAAA",
+        "IPv6 DNS record",
+        "Update with A record"
+      ],
+      [
+        "Dual-stack listen",
+        "Nginx listen [::]:443",
+        "Missing = no IPv6"
+      ],
+      [
+        "CDN IPv6",
+        "Edge dual-stack",
+        "Enable in console"
+      ],
+      [
+        "Firewall",
+        "ip6tables",
+        "Separate rules"
+      ]
+    ]
+  },
+  "mixed-content-https": {
+    "title": "Mixed Content and HTTPS: Network Green but Browser Still \"Not Secure\"",
+    "hook": "SpeedCE tests site reachability; mixed content is http:// assets on HTTPS pages. Clear division—don't waste time on network layer for browser-only issues.",
+    "keywords": "mixed content,HTTPS,frontend security,SpeedCE,SSL",
+    "terms": [
+      [
+        "Active mixed",
+        "script/img http",
+        "Browser console"
+      ],
+      [
+        "Passive mixed",
+        "css url()",
+        "Harder to spot"
+      ],
+      [
+        "Upgrade policy",
+        "upgrade-insecure-requests",
+        "Header fix"
+      ],
+      [
+        "Third party",
+        "Analytics/ad scripts",
+        "Common culprit"
+      ]
+    ]
+  },
+  "cors-vs-network-testing": {
+    "title": "CORS Errors vs Network Failure: Two Layers Developers Must Separate",
+    "hook": "Map all green + browser CORS error—congrats, network works; server headers missing. SpeedCE rules out network, then check Access-Control-Allow-Origin.",
+    "keywords": "CORS,cross-origin,API,frontend,SpeedCE",
+    "terms": [
+      [
+        "OPTIONS preflight",
+        "Complex requests",
+        "OPTIONS may be unconfigured"
+      ],
+      [
+        "Credentials",
+        "Cookie cross-origin",
+        "Stricter rules"
+      ],
+      [
+        "Wildcard",
+        "* conflicts with credentials",
+        "Must specify origin"
+      ],
+      [
+        "Dev proxy",
+        "Local proxy hides issue",
+        "Production exposes it"
+      ]
+    ]
+  },
+  "wechat-qq-access-guide": {
+    "title": "WeChat/QQ Can't Open: Standard Split Between Network Layer and Compliance",
+    "hook": "Browser works, WeChat doesn't—not always server fault. SpeedCE excludes network layer; blocking/ICP/content need BOCE and compliance tools.",
+    "keywords": "WeChat block,QQ,website compliance,ICP,SpeedCE",
+    "terms": [
+      [
+        "Network layer",
+        "HTTP/HTTPS reachability",
+        "SpeedCE handles"
+      ],
+      [
+        "Block layer",
+        "WeChat UA policy",
+        "Specialized tools"
+      ],
+      [
+        "ICP filing",
+        "Unfiled site",
+        "Compliance issue"
+      ],
+      [
+        "Content",
+        "Violation flags",
+        "Not speed test"
+      ]
+    ]
+  },
+  "waf-false-positive-guide": {
+    "title": "WAF False Positives and Probe Anomalies: Are Sporadic Red Dots a Block?",
+    "hook": "WAF, CC protection, geo block—may only hit some probe IPs, showing sporadic red not whole-province red.",
+    "keywords": "WAF,firewall,CDN security,SpeedCE,false positive",
+    "terms": [
+      [
+        "IP reputation",
+        "Probe IP blocked",
+        "Retest different time"
+      ],
+      [
+        "Geo rules",
+        "Overseas block",
+        "Global compare"
+      ],
+      [
+        "UA rules",
+        "Non-browser UA",
+        "May trigger"
+      ],
+      [
+        "Rate limit",
+        "Short burst",
+        "Intermittent red"
+      ]
+    ]
+  },
+  "database-not-network-guide": {
+    "title": "Database Killing the Site: Network Green but Page Timeout—Application Layer Triage",
+    "hook": "SpeedCE green + page timeout—network is fine; check MySQL slow queries and connection pool exhaustion. Network first, application second—order matters.",
+    "keywords": "database,slow query,502,application layer,SpeedCE",
+    "terms": [
+      [
+        "Connection pool",
+        "max_connections",
+        "Exhaustion → 502"
+      ],
+      [
+        "Slow query",
+        "SQL drag",
+        "Very high TTFB"
+      ],
+      [
+        "Lock wait",
+        "Transaction block",
+        "Intermittent timeout"
+      ],
+      [
+        "Read replica",
+        "Replication lag",
+        "Stale reads"
+      ]
+    ]
+  },
+  "load-balancer-health-check": {
+    "title": "Load Balancer and Health Checks: Half Green Half Red Architecture Patterns",
+    "hook": "Multiple backends, one down—DNS round robin or bad LB config feels like \"sometimes works.\" Multi-node probes + repeated tests confirm.",
+    "keywords": "load balancer,health check,high availability,SpeedCE,operations",
+    "terms": [
+      [
+        "Health check",
+        "Probe path",
+        "/health must return 200"
+      ],
+      [
+        "Weight",
+        "Traffic split",
+        "Bad node should drop"
+      ],
+      [
+        "Session stickiness",
+        "Sticky sessions",
+        "Hit bad node worse"
+      ],
+      [
+        "DNS round robin",
+        "Multiple A records",
+        "One bad IP → sporadic red"
+      ]
+    ]
+  },
+  "cache-poisoning-stale": {
+    "title": "Stale Cache: CDN/Browser Cache vs Network Layer Comparative Troubleshooting",
+    "hook": "You fixed the server; users still see old page—likely cache. SpeedCE probes live network response; add random query or test API to bypass cache.",
+    "keywords": "CDN cache,browser cache,troubleshooting,SpeedCE",
+    "terms": [
+      [
+        "CDN cache",
+        "Stale edge content",
+        "Purge then retest"
+      ],
+      [
+        "Browser",
+        "Strong cache",
+        "Ask users to clear"
+      ],
+      [
+        "Reverse proxy",
+        "Nginx proxy_cache",
+        "Purge cache"
+      ],
+      [
+        "Version hash",
+        "Static asset hash",
+        "Long-term fix"
+      ]
+    ]
+  },
+  "third-party-script-failure": {
+    "title": "Third-Party Scripts Breaking Pages: Main Domain Green but Features Broken",
+    "hook": "Payment, analytics, chat widgets on third-party domains—main site green doesn't mean checkout works. List every critical third-party domain in SpeedCE patrol.",
+    "keywords": "third-party script,CDN,frontend,SpeedCE,monitoring",
+    "terms": [
+      [
+        "Payment gateway",
+        "Separate domain",
+        "Test alone"
+      ],
+      [
+        "Analytics",
+        "google/analytics",
+        "May be blocked in China"
+      ],
+      [
+        "Chat widget",
+        "External JS",
+        "Load failure"
+      ],
+      [
+        "Font CDN",
+        "fonts domain",
+        "Often overlooked"
+      ]
+    ]
+  },
+  "hong-kong-vps-guide": {
+    "title": "Hong Kong VPS Route Selection and Acceptance: Personal Sites, E-Commerce, and API Scenarios",
+    "hook": "Hong Kong is familiar to Chinese users: low latency, no ICP for many cases, fair bandwidth pricing. But CN2, CMI, BGP claims mix—nationwide three-carrier maps are the only honest acceptance.",
+    "keywords": "Hong Kong VPS,CN2,route test,SpeedCE,VPS buying",
+    "terms": [
+      [
+        "CN2 GIA",
+        "电信精品",
+        "电信地图必看"
+      ],
+      [
+        "CMI",
+        "移动优化",
+        "移动地图必看"
+      ],
+      [
+        "HKIX",
+        "本地交换",
+        "影响国际"
+      ],
+      [
+        "被墙风险",
+        "IP 历史",
+        "中国红全球绿要警惕"
+      ]
+    ]
+  },
+  "japan-vps-guide": {
+    "title": "Japan VPS for Which Workloads: Tokyo/Osaka DCs and Three-Carrier Return Route Acceptance",
+    "hook": "Japan VPS is cheap with good bandwidth and streaming-friendly, but return routes to China vary. Test seller IP on SpeedCE before pay—Mobile map is veto power.",
+    "keywords": "Japan VPS,Tokyo,route,SpeedCE,speed test",
+    "terms": [
+      [
+        "NTT",
+        "日本骨干",
+        "国际段"
+      ],
+      [
+        "软银",
+        "另一骨干",
+        "路由不同"
+      ],
+      [
+        "回国优化",
+        "商家自称",
+        "用地图验证"
+      ],
+      [
+        "晚高峰",
+        "国际拥堵",
+        "必复测"
+      ]
+    ]
+  },
+  "us-vps-china-access": {
+    "title": "US VPS Three-Carrier Return Route Guide: West Coast DC Verification and Mobile Users",
+    "hook": "US VPS is cheap and roomy, but return path is long. Telecom may be OK; Mobile often disaster. Don't trust \"LA 150ms\"—that's your local ping, not a nationwide map.",
+    "keywords": "US VPS,return route,three-carrier,SpeedCE,speed test",
+    "terms": [
+      [
+        "西海岸",
+        "LA/SJ",
+        "离中国最近"
+      ],
+      [
+        "东海岸",
+        "NY",
+        "回国更绕"
+      ],
+      [
+        "CN2 GIA",
+        "稀有且贵",
+        "地图验证"
+      ],
+      [
+        "被墙",
+        "IP 污染",
+        "中国全红警惕"
+      ]
+    ]
+  },
+  "singapore-vps-guide": {
+    "title": "Singapore VPS Acceptance: Southeast Asia Hub and Dual China/Global Map Testing",
+    "hook": "Singapore is Asia-Pacific hub—for China return and Southeast Asia traffic. Dual view: China nodes for return, global for SEA coverage.",
+    "keywords": "Singapore VPS,Southeast Asia,route,SpeedCE",
+    "terms": [
+      [
+        "SGIX",
+        "本地交换",
+        "东南亚互联"
+      ],
+      [
+        "回国",
+        "中继质量",
+        "中国地图"
+      ],
+      [
+        "带宽",
+        "国际便宜",
+        "注意流量价"
+      ],
+      [
+        "流媒体",
+        "解锁",
+        "SpeedCE 不测"
+      ]
+    ]
+  },
+  "cn2-gt-vs-gia": {
+    "title": "CN2 GT vs CN2 GIA: Speed Test Verification Behind Marketing Claims",
+    "hook": "Two letters difference, one tier of experience. GT may congest at peak; GIA costs more but stable. Trust three-carrier maps + peak retest, not copy.",
+    "keywords": "CN2 GT,CN2 GIA,VPS,route,SpeedCE",
+    "terms": [
+      [
+        "GT",
+        "普通 CN2",
+        "性价比"
+      ],
+      [
+        "GIA",
+        "精品 CN2",
+        "延迟稳"
+      ],
+      [
+        "163",
+        "电信普通骨干",
+        "对比基线"
+      ],
+      [
+        "移动",
+        "往往都不优化",
+        "移动地图决定"
+      ]
+    ]
+  },
+  "bgp-line-verification": {
+    "title": "Real vs Fake BGP: Three-Carrier Balance Is the Acceptance Standard",
+    "hook": "True BGP: Telecom, Unicom, Mobile all usable. Fake BGP: Telecom green, Mobile red. SpeedCE three-carrier split is the mirror.",
+    "keywords": "BGP,VPS,three-carrier,route test,SpeedCE",
+    "terms": [
+      [
+        "多线接入",
+        "机房能力",
+        "非文案"
+      ],
+      [
+        "均衡",
+        "三网延迟差小",
+        "验收标准"
+      ],
+      [
+        "绕路",
+        "假 BGP",
+        "某网全红"
+      ],
+      [
+        "价格",
+        "真 BGP 更贵",
+        "便宜要警惕"
+      ]
+    ]
+  },
+  "cmi-mobile-line-guide": {
+    "title": "CMI Mobile-Optimized Route Acceptance: Mobile Users Are Half Your Audience",
+    "hook": "Skip Mobile map = abandon half your users. Whether CMI/CMIN2 is real optimization—maps decide.",
+    "keywords": "CMI,mobile route,VPS,SpeedCE,three-carrier",
+    "terms": [
+      [
+        "CMI",
+        "移动国际",
+        "移动筛选"
+      ],
+      [
+        "西北",
+        "移动弱区",
+        "重点看"
+      ],
+      [
+        "5G",
+        "无线用户",
+        "与家宽不同"
+      ],
+      [
+        "对比",
+        "电信联通",
+        "均衡才理想"
+      ]
+    ]
+  },
+  "vps-refund-period-checklist": {
+    "title": "VPS 7-Day Refund Acceptance Checklist: Screenshots, Three Carriers, Peak Evidence",
+    "hook": "Refunds need evidence: three-carrier screenshots + success rates + peak comparison—100× better than forum \"feels slow.\"",
+    "keywords": "VPS refund,acceptance,evidence,SpeedCE,HostLoc",
+    "terms": [
+      [
+        "测试 IP",
+        "商家提供",
+        "到账后对比"
+      ],
+      [
+        "缩水",
+        "正式 IP 变差",
+        "对照测"
+      ],
+      [
+        "带宽",
+        "虚标",
+        "测速不测带宽"
+      ],
+      [
+        "丢包",
+        "晚高峰",
+        "多次测"
+      ]
+    ]
+  },
+  "cloud-security-group-vps": {
+    "title": "First Step on New Cloud Server: Security Group and Firewall Before Route Talk",
+    "hook": "Nationwide red—don't refund yet—maybe 443 closed. SpeedCE HTTPS red + SSH works = security group issue.",
+    "keywords": "security group,VPS,cloud server,acceptance,SpeedCE",
+    "terms": [
+      [
+        "轻量云",
+        "默认规则",
+        "各厂商不同"
+      ],
+      [
+        "ICMP",
+        "禁 Ping",
+        "改 HTTPS 测"
+      ],
+      [
+        "IPv6",
+        "第二套规则",
+        "别漏"
+      ],
+      [
+        "CDN 回源",
+        "源站白名单",
+        "迁 CDN 后查"
+      ]
+    ]
+  },
+  "ping-blocked-not-bad": {
+    "title": "ICMP Blocked ≠ Bad Route: Reading PING Red with HTTPS Green",
+    "hook": "Newbies panic on ping timeout. Cloud default ICMP block is normal. Acceptance standard: HTTPS success ≥ 90%.",
+    "keywords": "ICMP blocked,VPS,speed test,SpeedCE",
+    "terms": [
+      [
+        "ICMP",
+        "网络层",
+        "可被禁"
+      ],
+      [
+        "TCP 443",
+        "Web 层",
+        "真实建站"
+      ],
+      [
+        "误导",
+        "Ping 判断线路",
+        "常见误区"
+      ],
+      [
+        "商家",
+        "用 Ping 宣传",
+        "要求 HTTPS 数据"
+      ]
+    ]
+  },
+  "off-peak-vs-peak-vps": {
+    "title": "Off-Peak vs Peak VPS Testing: Why Good Routes Need Two Tests",
+    "hook": "Afternoon test IP looks great; peak hour tells truth. Quality routes must pass both windows.",
+    "keywords": "peak hour,VPS,route test,SpeedCE",
+    "terms": [
+      [
+        "国际出口",
+        "拥堵时段",
+        "20-22点"
+      ],
+      [
+        "GT",
+        "晚高峰劣化",
+        "尤其明显"
+      ],
+      [
+        "GIA",
+        "相对稳定",
+        "也要复测"
+      ],
+      [
+        "记录",
+        "两次截图",
+        "对比发帖"
+      ]
+    ]
+  },
+  "home-broadband-vs-datacenter": {
+    "title": "Home Broadband vs Nationwide Nodes: Why Your Fast Ping Doesn't Mean Users Are Fast",
+    "hook": "Your home ping is one sample on one carrier in one province. Nationwide probe nodes represent real user distribution.",
+    "keywords": "home broadband,datacenter,speed test,SpeedCE",
+    "terms": [
+      [
+        "地理偏见",
+        "单点样本",
+        "多节点解决"
+      ],
+      [
+        "家宽运营商",
+        "仅一家",
+        "不代表全国"
+      ],
+      [
+        "机房内",
+        "curl localhost",
+        "无意义"
+      ],
+      [
+        "正确姿势",
+        "SpeedCE 中国",
+        "全国地图"
+      ]
+    ]
+  },
+  "vps-with-cdn-comparison": {
+    "title": "VPS Before and After CDN: Map Comparison for CDN Go/No-Go Decisions",
+    "hook": "Data beats opinions: same target with and without CDN on three-carrier maps—does latency and success improve enough to justify cost?",
+    "keywords": "VPS,CDN,comparison,SpeedCE,map",
+    "terms": [
+      [
+        "源站",
+        "真实质量",
+        "先测"
+      ],
+      [
+        "CDN",
+        "边缘加速",
+        "后测"
+      ],
+      [
+        "移动",
+        "改善最大",
+        "常是 CDN 价值"
+      ],
+      [
+        "回源",
+        "带宽成本",
+        "别忽视"
+      ]
+    ]
+  },
+  "used-ip-segment-check": {
+    "title": "Used IP Segment Warning Signs: Blocked or Flagged IPs on Nationwide Maps",
+    "hook": "Cheap recycled IPs may be blocked or blacklisted. China all red + global green is a classic warning pattern before purchase.",
+    "keywords": "used IP,blocked IP,VPS,SpeedCE,map",
+    "terms": [
+      [
+        "被墙",
+        "GFW",
+        "中国红"
+      ],
+      [
+        "黑名单",
+        "邮件/SEO",
+        "需另查"
+      ],
+      [
+        "段内差异",
+        "同段不同命",
+        "测你的 IP"
+      ],
+      [
+        "换 IP",
+        "商家政策",
+        "不满意就换"
+      ]
+    ]
+  },
+  "datacenter-failover-verify": {
+    "title": "Post-DC-Failover Emergency Verification: 24-Hour SpeedCE Checkpoint SOP",
+    "hook": "After emergency hardware swap, don't assume parity—run scheduled SpeedCE checkpoints for 24 hours on three carriers.",
+    "keywords": "datacenter,failover,verification,SpeedCE,SOP",
+    "terms": [
+      [
+        "新 IP",
+        "立即测",
+        "全国通畅"
+      ],
+      [
+        "DNS",
+        "同步改",
+        "72h 复测"
+      ],
+      [
+        "通知",
+        "用户/客户",
+        "附地图"
+      ],
+      [
+        "回滚",
+        "预案",
+        "旧机保留"
+      ]
+    ]
+  },
+  "europe-vps-china-guide": {
+    "title": "Europe VPS Return Routes to China: Real Experience from DE/FR/NL DCs",
+    "hook": "European VPS looks cheap; return to China is the hard part. Map acceptance from China nodes is mandatory for domestic users.",
+    "keywords": "Europe VPS,China access,route,SpeedCE",
+    "terms": [
+      [
+        "法兰克福",
+        "欧洲枢纽",
+        "回国路由"
+      ],
+      [
+        "绕美",
+        "常见路径",
+        "延迟高"
+      ],
+      [
+        "外贸",
+        "客户在欧洲",
+        "全球绿即可"
+      ],
+      [
+        "双用途",
+        "欧+中团队",
+        "两地图都要"
+      ]
+    ]
+  },
+  "korea-vps-guide": {
+    "title": "Korea VPS Route Review: Close to China ≠ All Three Carriers Good",
+    "hook": "Geographic proximity doesn't guarantee Telecom/Unicom/Mobile quality. Test maps, especially Mobile, before commit.",
+    "keywords": "Korea VPS,route test,SpeedCE,three-carrier",
+    "terms": [
+      [
+        "SK/KT",
+        "韩国运营商",
+        "国际出口"
+      ],
+      [
+        "游戏",
+        "低延迟需求",
+        "PING 为主"
+      ],
+      [
+        "移动",
+        "回国",
+        "单独看"
+      ],
+      [
+        "晚高峰",
+        "复测",
+        "必做"
+      ]
+    ]
+  },
+  "taiwan-vps-guide": {
+    "title": "Taiwan VPS Acceptance: Latency Advantages vs Marketing Claims",
+    "hook": "Taiwan often shows low latency, but carrier routing and political/network factors need map verification—not brochure latency.",
+    "keywords": "Taiwan VPS,latency,route,SpeedCE",
+    "terms": [
+      [
+        "海峡路由",
+        "运营商差异",
+        "三网分离"
+      ],
+      [
+        "带宽",
+        "价格",
+        "注意流量"
+      ],
+      [
+        "合规",
+        "用途",
+        "自行把握"
+      ],
+      [
+        "解锁",
+        "流媒体",
+        "另测"
+      ]
+    ]
+  },
+  "budget-vps-trap-guide": {
+    "title": "Ultra-Low-Price VPS Traps: Six Danger Signals Visible on Maps",
+    "hook": "Too cheap often means oversold routes, blocked IPs, or Mobile disaster. Maps surface six red flags before you pay.",
+    "keywords": "budget VPS,trap,route test,SpeedCE",
+    "terms": [
+      [
+        "超售",
+        "邻居吵",
+        "延迟抖动"
+      ],
+      [
+        "线路",
+        "无优化",
+        "移动大红"
+      ],
+      [
+        "IP",
+        "被墙",
+        "中国红"
+      ],
+      [
+        "带宽",
+        "峰值虚标",
+        "晚高峰劣化"
+      ]
+    ]
+  },
+  "dedicated-vs-vps-line": {
+    "title": "Dedicated Server vs VPS Route Acceptance: IP Segment, Neighbors, and Test Notes",
+    "hook": "Dedicated IPs behave differently from shared VPS neighbors. Acceptance still ends on three-carrier maps with neighbor noise in mind.",
+    "keywords": "dedicated server,VPS,route,SpeedCE",
+    "terms": [
+      [
+        "独服",
+        "资源独占",
+        "稳定性"
+      ],
+      [
+        "IP 段",
+        "更干净",
+        "仍要测墙"
+      ],
+      [
+        "线路",
+        "同机房同线",
+        "与 VPS 可比"
+      ],
+      [
+        "价格",
+        "更高",
+        "验收更严"
+      ]
+    ]
+  },
+  "cloudflare-china-access": {
+    "title": "Cloudflare Orange Cloud and China Access: Complete Acceptance Handbook",
+    "hook": "Cloudflare on doesn't mean China is fast. Orange cloud changes path—accept with China node maps and origin comparison.",
+    "keywords": "Cloudflare,China access,CDN,SpeedCE,acceptance",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "aliyun-cdn-acceptance": {
+    "title": "Alibaba Cloud CDN Acceptance: Origin, Certificate, Warmup, and Three-Carrier Checks",
+    "hook": "Aliyun CDN has many knobs—origin, HTTPS cert, cache rules. Three-carrier SpeedCE maps are the final acceptance gate.",
+    "keywords": "Alibaba Cloud CDN,acceptance,origin,SpeedCE",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "tencent-cdn-acceptance": {
+    "title": "Tencent Cloud CDN Acceptance: Static vs Full-Site Acceleration and Speed Test Points",
+    "hook": "Static CDN vs DCDN behave differently on acceptance. Map test each product mode against origin.",
+    "keywords": "Tencent CDN,acceptance,speed test,SpeedCE",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "cdn-cache-vs-speed-test": {
+    "title": "CDN Cache vs Active Probing: Why First Request Slow, Second Fast",
+    "hook": "Probes hit cold cache differently than users. Understand cache layer when interpreting first vs repeat SpeedCE results.",
+    "keywords": "CDN cache,speed test,probe,SpeedCE",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "cdn-origin-failure": {
+    "title": "CDN Origin Failure Complete Troubleshooting: Edge, Timeout, and Origin Comparison",
+    "hook": "CDN red often traces to origin, not edge. Always pair CDN hostname map with origin IP map.",
+    "keywords": "CDN origin,failure,troubleshooting,SpeedCE",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "multi-cdn-comparison": {
+    "title": "Multi-CDN Trial Map Comparison: Scientific Vendor Selection on Same Domain",
+    "hook": "Run parallel trials—same content, different CDN—compare three-carrier maps during trial window before annual contract.",
+    "keywords": "multi-CDN,comparison,selection,SpeedCE",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "static-cdn-split": {
+    "title": "Static Asset CDN Split Acceptance: Independent Speed Test for js/css Domains",
+    "hook": "js.example.com and www.example.com are separate DNS/CDN/certs. Test every public static domain on the checklist.",
+    "keywords": "static CDN,assets,domain,SpeedCE,acceptance",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "dcdn-vs-cdn": {
+    "title": "DCDN vs Standard CDN: Acceptance Standards and SpeedCE Comparative Method",
+    "hook": "Full-site acceleration vs static CDN—different failure modes. Accept each with comparative origin tests.",
+    "keywords": "DCDN,CDN,comparison,SpeedCE,acceptance",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "cdn-cert-vs-origin": {
+    "title": "CDN Certificate vs Origin Certificate: Both Sides Must Be Green",
+    "hook": "Edge cert can be fine while origin TLS breaks backhaul—or reverse. Test CDN hostname and origin separately.",
+    "keywords": "CDN certificate,origin TLS,HTTPS,SpeedCE",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "overseas-cdn-china-pack": {
+    "title": "Overseas CDN China Acceleration Pack: When Global Green but China Slow",
+    "hook": "Global map green, China red on overseas CDN is common. Decide if China pack, domestic CDN, or separate .cn is needed.",
+    "keywords": "overseas CDN,China acceleration,SpeedCE,global",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "cdn-cutover-72h": {
+    "title": "CDN Cutover 72-Hour Monitoring: Hour-by-Hour from T+0 to T+72",
+    "hook": "CDN switch isn't done at DNS flip. Hourly SpeedCE checkpoints for 72 hours catch stubborn provincial cache and node gaps.",
+    "keywords": "CDN cutover,monitoring,72 hours,SpeedCE",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "free-cdn-enough": {
+    "title": "Is Free CDN Enough? Personal Site Decisions with Nationwide Map Data",
+    "hook": "Free tiers have limits—nodes, HTTPS, China path. Use map data to decide if free CDN meets your audience or upgrade is mandatory.",
+    "keywords": "free CDN,personal site,SpeedCE,decision",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "huawei-baidu-cdn-guide": {
+    "title": "Huawei Cloud / Baidu Cloud CDN Acceptance and Three-Carrier Map Standards",
+    "hook": "Domestic cloud CDNs need same rigorous three-carrier acceptance as any vendor—console green isn't user green.",
+    "keywords": "Huawei CDN,Baidu CDN,acceptance,SpeedCE",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "cdn-websocket-stream": {
+    "title": "CDN WebSocket/Live Stream Reachability: Acceptance Boundaries",
+    "hook": "SpeedCE HTTPS probes don't equal WebSocket or RTMP health. Know tool boundaries; supplement with stream-specific checks.",
+    "keywords": "CDN,WebSocket,live stream,SpeedCE,acceptance",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "edge-function-troubleshoot": {
+    "title": "Edge Functions/Workers Failures: Main Domain Green but Rules Not Applied",
+    "hook": "Workers and edge rules fail independently of origin. Test both default route and rule-triggered paths.",
+    "keywords": "edge functions,Workers,CDN,SpeedCE,troubleshooting",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "saas-global-launch": {
+    "title": "Global SaaS Launch Acceptance: Target Market Success Rate Playbook",
+    "hook": "Launch where customers are—not where your team is. Target-country nodes must hit ≥95% before marketing spend.",
+    "keywords": "SaaS,global launch,speed test,SpeedCE,acceptance",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "cross-border-ecommerce": {
+    "title": "Cross-Border E-Commerce Speed Test Guide: Shopify/WooCommerce and Pre-Sale Acceptance",
+    "hook": "Black Friday doesn't forgive slow checkout. Pre-sale map acceptance on payment and storefront domains in target countries.",
+    "keywords": "cross-border,e-commerce,Shopify,SpeedCE,speed test",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "europe-us-slow-fix": {
+    "title": "EU/US Users Slow: Origin, CDN, and DC Location Triangle",
+    "hook": "Fixing EU slowness isn't one knob—origin location, CDN PoPs, and database region interact. Map each leg.",
+    "keywords": "Europe,US,slow website,CDN,SpeedCE",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "southeast-asia-nodes": {
+    "title": "Southeast Asia Market Node Acceptance: SG/MY/TH/ID/PH per-Country Targets",
+    "hook": "SEA isn't one market—accept per country with global nodes focused on each target, not just Singapore hub.",
+    "keywords": "Southeast Asia,global nodes,acceptance,SpeedCE",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "global-team-china-admin": {
+    "title": "Global Team Accessing China Admin: Dual-Map Collaboration and Acceleration Options",
+    "hook": "Engineers abroad need China admin; China team needs global SaaS—dual maps expose both directions and guide acceleration SKU choice.",
+    "keywords": "global team,China admin,acceleration,SpeedCE",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "dual-site-cn-com": {
+    "title": "Dual .cn and .com Strategy: Split Domain Speed Tests and Compliance Roles",
+    "hook": ".cn and .com often serve different audiences and compliance regimes—test and accept each domain independently.",
+    "keywords": "dual site,.cn,.com,SpeedCE,compliance",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "geodns-verification": {
+    "title": "GeoDNS Verification: Speed Testing When Resolvers Return Different IPs by Region",
+    "hook": "GeoDNS means Beijing and Berlin resolve differently—probe from multiple regions and compare resolved targets.",
+    "keywords": "GeoDNS,smart DNS,speed test,SpeedCE,verification",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "cross-border-sale-prep": {
+    "title": "Cross-Border Sale Prep: Black Friday/Christmas Speed Test Checklist",
+    "hook": "Holiday traffic spikes expose weak CDN and payment domains. T-7 to T+0 schedule with SpeedCE on all conversion paths.",
+    "keywords": "Black Friday,cross-border,speed test,SpeedCE,prep",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "overseas-live-streaming": {
+    "title": "Overseas Live Streaming and Video Conference Node Selection: Latency-Sensitive Map Standards",
+    "hook": "Streaming needs low jitter to target viewers—map latency percentiles in viewer countries, not just average.",
+    "keywords": "live streaming,video conference,global nodes,SpeedCE",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "game-server-global": {
+    "title": "Game Global Server Placement: Player Distribution vs Global PING Maps",
+    "hook": "Place shards where players are—overlay player geo data with SpeedCE global ping maps before launch.",
+    "keywords": "game server,global,PING,SpeedCE,placement",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "stripe-payment-domain-check": {
+    "title": "Global Payment Domain Checks: Payment Page and Callback URL Independent Probes",
+    "hook": "Stripe and payment pages live on separate domains—checkout can fail while marketing site is green. Test payment URLs per country.",
+    "keywords": "Stripe,payment domain,callback,SpeedCE,global",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "multilingual-site-delivery": {
+    "title": "Multilingual Global Delivery: hreflang and Per-Locale Reachability Acceptance",
+    "hook": "Each locale path or subdomain may hit different CDN rules—accept every public locale URL from target regions.",
+    "keywords": "multilingual,hreflang,global delivery,SpeedCE",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "china-blocked-overseas-ok": {
+    "title": "Global Green, China Red: Standard Workflow for Blocking and Compliance Questions",
+    "hook": "Overseas site working worldwide but not China may be GFW, ICP, or routing—not always \"fix the server.\" Structured decision tree.",
+    "keywords": "China blocked,global access,compliance,SpeedCE",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "personal-blog-launch": {
+    "title": "Personal Blog Launch Acceptance: Hexo/Hugo/WordPress Universal Speed Checklist",
+    "hook": "Even small blogs deserve nationwide HTTPS acceptance before you share the link—especially on Mobile carriers.",
+    "keywords": "personal blog,Hexo,Hugo,WordPress,SpeedCE",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "wordpress-troubleshooting": {
+    "title": "WordPress Troubleshooting: White Screen, 502, and Plugin Conflicts—Network Layer First",
+    "hook": "WP issues masquerade as network faults. SpeedCE green means shift to PHP/plugins; red means fix infra first.",
+    "keywords": "WordPress,troubleshooting,502,SpeedCE,network",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "ecommerce-sale-prep": {
+    "title": "E-Commerce 618/Double-11 Prep: Multi-Node Speed Test Battle Plan",
+    "hook": "Domestic mega-sales need three-carrier maps on storefront, API, payment, and static domains—T-7 through T+0.",
+    "keywords": "e-commerce,sale prep,speed test,SpeedCE,618",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "online-education-platform": {
+    "title": "Online Education Platform Pre-Class Acceptance: Video, Live, and API Domains",
+    "hook": "Class start failures damage refunds and reputation—accept video CDN, live push/pull, and API on three carriers before semester.",
+    "keywords": "online education,video,live stream,SpeedCE,acceptance",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "corporate-website-sla": {
+    "title": "Corporate Website SLA: Reporting Availability with Success Rate Data to Management",
+    "hook": "Executives want numbers—not \"seems fine.\" Monthly SpeedCE success rates by carrier become SLA evidence.",
+    "keywords": "corporate website,SLA,availability,SpeedCE,reporting",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "miniprogram-backend-api": {
+    "title": "Mini Program Backend API Nationwide Acceptance: Legal Domain, ICP, and Mobile Network",
+    "hook": "WeChat mini programs require reachable APIs on allowed domains—Mobile network acceptance is non-negotiable in China.",
+    "keywords": "mini program,API,ICP,Mobile,SpeedCE",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "mobile-app-api-domain": {
+    "title": "Mobile App API Domain Monitoring: iOS/Android Mismatch Network Troubleshooting",
+    "hook": "When iOS and Android users disagree, compare API domain maps on Mobile vs Telecom and check DNS split.",
+    "keywords": "mobile app,API domain,monitoring,SpeedCE",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "game-private-server-ping": {
+    "title": "Private Game Server Community: Building Trust with Nationwide PING Maps",
+    "hook": "Player trust grows when admins post SpeedCE ping maps—not verbal \"low ping.\" Transparency reduces churn accusations.",
+    "keywords": "game server,PING,community,SpeedCE,map",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "forum-community-site": {
+    "title": "Forum Community Nationwide Reachability: Discuz/Flarum Three-Carrier Acceptance",
+    "hook": "Forums spike on controversy and events—baseline three-carrier acceptance prevents \"only my province can't post\" crises.",
+    "keywords": "forum,Discuz,Flarum,SpeedCE,acceptance",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "download-site-bandwidth": {
+    "title": "Download Site Reachability vs Bandwidth: Probing vs Download Speed Division",
+    "hook": "SpeedCE proves reachability; large file throughput needs download tests. Both matter for mirror sites.",
+    "keywords": "download site,bandwidth,speed test,SpeedCE",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "government-site-standard": {
+    "title": "Government/Public Sector Sites: Nationwide Availability and IPv6 Dual-Stack Standards",
+    "hook": "Public sites face stricter availability and IPv6 mandates—documented three-carrier and dual-stack acceptance.",
+    "keywords": "government website,IPv6,availability,SpeedCE,standard",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "fintech-medical-compliance": {
+    "title": "Fintech/Medical Website Network Baseline: HTTPS, Certificates, and Multi-Site Acceptance",
+    "hook": "Regulated industries need auditable network baselines—HTTPS success, cert validity, and DR site maps on record.",
+    "keywords": "fintech,medical,HTTPS,compliance,SpeedCE",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "saas-b2b-demo-environment": {
+    "title": "B2B SaaS Demo Environment: Map Acceptance in Prospect Regions",
+    "hook": "Demo URLs that fail in prospect's province kill deals—probe demo domains from their country/region before calls.",
+    "keywords": "B2B SaaS,demo,acceptance,SpeedCE,global",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "news-media-peak-traffic": {
+    "title": "News Media Peak Traffic: Nationwide Checkpoint SOP Before Breaking Stories",
+    "hook": "Viral articles spike in minutes—pre-publish SpeedCE checkpoint on origin and CDN prevents national embarrassment.",
+    "keywords": "news media,peak traffic,SpeedCE,SOP",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "how-to-read-speed-map": {
+    "title": "How to Read Speed Test Maps: Green/Red/Gray, Latency, and Success Rate Explained",
+    "hook": "Maps intimidate newcomers—this guide decodes every color and metric so one screenshot tells a story.",
+    "keywords": "speed map,latency,success rate,SpeedCE,guide",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "tri-network-method": {
+    "title": "Three-Carrier Split Testing Complete Guide: Why Telecom, Unicom, Mobile Must Be Separate",
+    "hook": "Averaging three carriers hides Mobile disasters. Split maps are mandatory for China audience acceptance.",
+    "keywords": "three-carrier,Telecom,Unicom,Mobile,SpeedCE",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "ab-comparison-method": {
+    "title": "A/B Comparative Speed Testing: CDN vs Origin, Before/After Migration, Competitors",
+    "hook": "Single-target tests lie; pairs reveal truth. Systematic A/B methodology for every major infra decision.",
+    "keywords": "A/B testing,comparative speed test,CDN,SpeedCE,methodology",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "screenshot-archive-sop": {
+    "title": "Speed Test Screenshot Archive SOP: Standards for Tickets, Forums, and Incident Reports",
+    "hook": "Screenshots without metadata are useless. Filename, time, protocol, target—archive SOP for defensible evidence.",
+    "keywords": "screenshot,archive,SOP,SpeedCE,evidence",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "customer-support-scripts": {
+    "title": "Customer Support Speed Test Scripts: 20+ Professional Replies for \"Can't Open\"",
+    "hook": "Stop saying \"works for me.\" Copy-paste scripts with map data, scope, and next steps for support teams.",
+    "keywords": "customer support,scripts,speed test,SpeedCE,templates",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "pre-launch-30-checklist": {
+    "title": "Pre-Launch 30-Item Checklist: Including 8 Mandatory Multi-Node Speed Tests",
+    "hook": "Launch gates prevent Friday night disasters—eight SpeedCE items among thirty before go-live.",
+    "keywords": "pre-launch,checklist,speed test,SpeedCE,website launch",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "monthly-inspection-sop": {
+    "title": "Monthly Website Inspection SOP: 15 Minutes Personal, 1 Hour Enterprise",
+    "hook": "Monthly rhythm catches drift before users do—scaled SOP for personal blogs vs enterprise properties.",
+    "keywords": "monthly inspection,SOP,SpeedCE,operations",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "quarterly-infra-review": {
+    "title": "Quarterly Infrastructure Review: Map Trends, Degradation, and Upgrade Decisions",
+    "hook": "Quarterly side-by-side maps reveal slow degradation—upgrade CDN or routes before success rate cliff.",
+    "keywords": "quarterly review,infrastructure,SpeedCE,trends",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "protocol-selection-guide": {
+    "title": "PING / HTTP / HTTPS Protocol Selection: Choose Right the First Time",
+    "hook": "Wrong protocol wastes incident hours—decision tree for ICMP vs HTTP vs HTTPS on SpeedCE.",
+    "keywords": "PING,HTTP,HTTPS,protocol,SpeedCE",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "speedtest-vs-pagespeed": {
+    "title": "Network Probing vs PageSpeed: Reachability vs Performance Decision Order",
+    "hook": "Page can score 100 yet be unreachable in Xinjiang. Test reachability first, performance second.",
+    "keywords": "PageSpeed,network probe,SpeedCE,performance",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "speedtest-vs-uptime": {
+    "title": "Active Probes vs 24/7 Monitoring: SpeedCE's Place in Ops Stack",
+    "hook": "Probes are snapshots; monitoring is history—both needed, different jobs. Where SpeedCE fits in on-call.",
+    "keywords": "monitoring,probing,uptime,SpeedCE,operations",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "speedce-itdog-combo": {
+    "title": "SpeedCE + ITDOG Golden Combo: Map Patrol and Continuous Ping Collaboration",
+    "hook": "SpeedCE for geographic picture; ITDOG for continuous ping curves—pair for intermittent and regional issues.",
+    "keywords": "SpeedCE,ITDOG,ping,combo,methodology",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "speedce-boce-combo": {
+    "title": "SpeedCE + BOCE Collaboration: Compliance and Blocking After Network Layer Cleared",
+    "hook": "Network green but WeChat won't open—BOCE for blocking/ICP after SpeedCE clears reachability.",
+    "keywords": "SpeedCE,BOCE,compliance,blocking,methodology",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "free-speedtest-tools-2026": {
+    "title": "2026 Free Speed Test Tool Decision Tree: SpeedCE/ITDOG/BOCE by Scenario",
+    "hook": "No single free tool does everything—pick by scenario with this decision tree.",
+    "keywords": "free speed test,2026,SpeedCE,ITDOG,BOCE",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "incident-report-speed-data": {
+    "title": "Speed Test Data in Incident Reports: Professional Postmortem Writing Templates",
+    "hook": "Postmortems without probe timestamps and maps look amateur—templates for timeline + geographic impact.",
+    "keywords": "incident report,postmortem,speed test,SpeedCE,template",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "on-call-first-5-minutes": {
+    "title": "On-Call First 5 Minutes: How to Run SpeedCE After an Alert",
+    "hook": "Alert fires—first five minutes set incident trajectory. SpeedCE protocol for on-call before deeper dives.",
+    "keywords": "on-call,alert,SpeedCE,first response,SOP",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "speedce-vs-itdog": {
+    "title": "SpeedCE vs ITDOG Complete Comparison: Scenarios, Pros/Cons, and Pairing",
+    "hook": "Map-first vs table/ping-first—when to open which tab and how to combine without duplicate work.",
+    "keywords": "SpeedCE,ITDOG,comparison,speed test",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ]
+  },
+  "speedce-vs-boce": {
+    "title": "SpeedCE vs BOCE Complete Comparison: Lightweight Maps vs Full Ops Toolkit",
+    "hook": "BOCE does more than reachability; SpeedCE focuses on geographic HTTPS maps—know the boundary.",
+    "keywords": "SpeedCE,BOCE,comparison,tools",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ]
+  },
+  "map-vs-table-tools": {
+    "title": "Map vs Table Speed Tools: Troubleshooting Efficiency Compared",
+    "hook": "Tables excel at numbers; maps excel at geography—for regional faults, maps win minutes to resolution.",
+    "keywords": "map,table,speed test,SpeedCE,comparison",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ]
+  },
+  "top5-free-speedtest-2026": {
+    "title": "2026 Top 5 Free Speed Test Tools for Site Owners: Deep Review and Bookmark Picks",
+    "hook": "Curated stack for solo site owners—what to bookmark and when to use each in 2026.",
+    "keywords": "free speed test,2026,SpeedCE,review,top 5",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ]
+  },
+  "ping-pe-use-cases": {
+    "title": "Ping.pe Complete Guide: Complementary Global/China Strategy with SpeedCE",
+    "hook": "Ping.pe for quick global ping matrix; SpeedCE for China carrier maps—complementary not redundant.",
+    "keywords": "ping.pe,SpeedCE,global,ping,guide",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ]
+  },
+  "pagespeed-vs-network": {
+    "title": "PageSpeed Insights vs Network Probing: Division Site Owners Must Understand",
+    "hook": "Lighthouse scores don't replace \"can users in Gansu open it?\"—orthogonal metrics, both required.",
+    "keywords": "PageSpeed,network probe,SpeedCE,division",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ]
+  },
+  "monitoring-vs-probing": {
+    "title": "Monitoring Platforms vs Probe Tools: 24/7 Alerts and First Response",
+    "hook": "PagerDuty tells you something broke; SpeedCE tells you where—integrate both in runbooks.",
+    "keywords": "monitoring,probing,alerts,SpeedCE",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ]
+  },
+  "developer-bookmark-list": {
+    "title": "Developer 2026 Bookmark Bar: 12 Links for 90% of Network Incidents",
+    "hook": "Curated bookmark bar—SpeedCE first, then ITDOG, BOCE, PageSpeed, and status pages.",
+    "keywords": "developer,bookmarks,2026,SpeedCE,tools",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ]
+  },
+  "17ce-vs-speedce": {
+    "title": "17CE vs SpeedCE: Legacy Table Tool vs Modern Map Tool in Practice",
+    "hook": "17CE veterans vs SpeedCE maps—feature overlap, gaps, and migration tips for daily patrol.",
+    "keywords": "17CE,SpeedCE,comparison,speed test",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ]
+  },
+  "vsping-vs-speedce": {
+    "title": "VSPING vs SpeedCE: Pollution Detection and Reachability Together",
+    "hook": "VSPING for pollution/GFW signals; SpeedCE for nationwide HTTPS maps—use in sequence.",
+    "keywords": "VSPING,SpeedCE,pollution,comparison",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ]
+  },
+  "subdomain-inventory-method": {
+    "title": "Subdomain Inventory Patrol: One Spreadsheet for Monthly Speed Tests of All Public Domains",
+    "hook": "Forgotten api-staging.example.com causes incidents—inventory method ensures no public host skips monthly probe.",
+    "keywords": "subdomain,inventory,patrol,SpeedCE,spreadsheet",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "competitor-benchmark": {
+    "title": "Competitor Benchmark Speed Tests: Same-Niche Map Comparison to Convince Leadership",
+    "hook": "Leadership ignores latency complaints until competitor map is all green and yours isn't—data-driven upgrade requests.",
+    "keywords": "competitor,benchmark,speed test,SpeedCE",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "migration-before-after-report": {
+    "title": "Migration Before/After Report Template: Dual-Map Slides for Executives and Clients",
+    "hook": "Side-by-side maps in PPT close migration projects professionally—template structure included.",
+    "keywords": "migration,report,template,SpeedCE,map",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "icp-filing-launch-check": {
+    "title": "Post-ICP Filing Nationwide Reachability Acceptance: DNS, Certs, and Compliance",
+    "hook": "ICP approved doesn't mean nationwide green—accept parsing, HTTPS, and compliance probes after filing goes live.",
+    "keywords": "ICP,filing,acceptance,SpeedCE,China",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "new-domain-cold-start": {
+    "title": "New Domain Cold Start 72 Hours: Registration, DNS, Certs, and Map Acceptance Rhythm",
+    "hook": "New domains propagate unevenly—72-hour SpeedCE rhythm from registration through first marketing push.",
+    "keywords": "new domain,DNS,certificate,SpeedCE,cold start",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "spring-festival-traffic": {
+    "title": "Spring Festival Traffic Assurance: Three-Carrier Checkpoint Before Mobile Surge",
+    "hook": "Holiday mobile usage spikes—pre-festival three-carrier maps on all conversion domains.",
+    "keywords": "Spring Festival,traffic,Mobile,SpeedCE,checkpoint",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "double11-618-prep": {
+    "title": "Double-11/618 Sale Speed Test Timeline: T-7 to T+0 Complete Rhythm",
+    "hook": "Domestic mega-sales timeline with SpeedCE gates at T-7, T-3, T-1, and hourly T+0.",
+    "keywords": "Double-11,618,sale prep,SpeedCE,timeline",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "ultimate-toolbar-2026": {
+    "title": "2026 Ultimate Site Owner Browser Toolbar: Speed, Monitor, Performance 12 Links",
+    "hook": "One toolbar row for daily ops—SpeedCE, uptime, PageSpeed, DNS, SSL expiry, and vendor consoles.",
+    "keywords": "toolbar,2026,SpeedCE,bookmarks,tools",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "xinjiang-tibet-access-guide": {
+    "title": "Xinjiang/Tibet/Northwest Access Optimization: Map Acceptance and CDN Strategy",
+    "hook": "Northwest provinces show distinct map patterns—don't treat as generic \"China slow\"; targeted CDN and DNS strategy.",
+    "keywords": "Xinjiang,Tibet,northwest,CDN,SpeedCE",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "northeast-china-access-guide": {
+    "title": "Northeast China Access Quality: Cold-Region Routes and CDN Node Coverage",
+    "hook": "Heilongjiang/Jilin/Liaoning have unique long-haul paths—accept with regional map focus.",
+    "keywords": "northeast China,CDN,route,SpeedCE",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "guangdong-zhejiang-baseline": {
+    "title": "Guangdong/Zhejiang/Shanghai/Beijing Baseline Latency: Map Targets for Coastal Economies",
+    "hook": "Coastal economic hubs expect lower latency—use as baseline when accepting CDN and origin upgrades.",
+    "keywords": "Guangdong,Zhejiang,baseline latency,SpeedCE,map",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "change-management-speedtest": {
+    "title": "Change Management Speed Test Gate: Mandatory Probe After DNS/Cert/Nginx Changes",
+    "hook": "Institutionalize \"no SpeedCE screenshot, no change close\"—reduces rollback incidents.",
+    "keywords": "change management,speed test,gate,SpeedCE,operations",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "mysql-connection-timeout": {
+    "title": "MySQL Connection Timeout vs Site Timeout: Full Layered Triage When Network Is Green",
+    "hook": "Green map + spinning page often means DB pool or slow queries—not CDN. Layered triage order.",
+    "keywords": "MySQL,connection timeout,layered triage,SpeedCE,database",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "redis-connection-issues": {
+    "title": "Redis Connection Failures: When to Test Network Before Cache Layer",
+    "hook": "Redis down causes 500s with green network maps—know when to stop probing and open redis-cli.",
+    "keywords": "Redis,connection,cache,SpeedCE,troubleshooting",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "docker-port-mapping": {
+    "title": "Docker Port Mapping Errors: Container OK Inside, Nationwide Users Can't Connect",
+    "hook": "docker run -p mistakes show as nationwide red while curl localhost works—accept published ports with external probes.",
+    "keywords": "Docker,port mapping,network,SpeedCE,acceptance",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "k8s-ingress-troubleshoot": {
+    "title": "Kubernetes Ingress Failures: Cluster Internal OK, Public Domain Red",
+    "hook": "kubectl works inside; public URL red—Ingress, LB, and cert are separate from pod health. SpeedCE tests the public path.",
+    "keywords": "Kubernetes,Ingress,troubleshooting,SpeedCE,public URL",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "lets-encrypt-rate-limit": {
+    "title": "Let's Encrypt Rate Limits and Renewal Failures: When HTTPS Suddenly Goes Red Nationwide",
+    "hook": "Cert renewal hit rate limit at 3 AM—HTTPS nationwide red. SpeedCE confirms cert layer; fix ACME and renew.",
+    "keywords": "Let's Encrypt,rate limit,certificate,HTTPS,SpeedCE",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "sni-mismatch-error": {
+    "title": "SNI Mismatch: Partial HTTPS Failures with Multiple Certs on One IP",
+    "hook": "Some nodes red, some green on same domain—classic SNI or wrong default cert. Test HTTPS from multiple regions.",
+    "keywords": "SNI,HTTPS,multiple certificates,SpeedCE,TLS",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "tls-version-too-low": {
+    "title": "TLS Version Too Low: Regional HTTPS Failures on Old Clients vs New Security Policy",
+    "hook": "Disabled TLS 1.0 may break legacy clients in specific regions—map pattern differs from cert expiry.",
+    "keywords": "TLS version,HTTPS,legacy clients,SpeedCE,security",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "gzip-brotli-compression": {
+    "title": "Compression and Timeouts: Reachable but Extremely Slow on Large Responses",
+    "hook": "Site \"works\" but TTFB huge—compression misconfig or proxy timeout. Network green, user experience red.",
+    "keywords": "gzip,brotli,compression,timeout,SpeedCE",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "vultr-line-guide": {
+    "title": "Vultr DC Route Acceptance: Picking Tokyo/Singapore/LA by Workload Maps",
+    "hook": "Vultr has many regions—accept each candidate IP on China three-carrier maps before annual prepay.",
+    "keywords": "Vultr,VPS,route,SpeedCE,acceptance",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "bandwagonhost-guide": {
+    "title": "BandwagonHost CN2/GIA Package Acceptance: Classic Vendor Map Method",
+    "hook": "Classic CN2/GIA vendor—still verify every new IP on maps; routes change with upstream contracts.",
+    "keywords": "BandwagonHost,CN2 GIA,VPS,SpeedCE,acceptance",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "racknerd-dmit-guide": {
+    "title": "RackNerd / DMIT and Hot Vendors: Refund-Period Map Acceptance Template",
+    "hook": "Popular low-cost vendors need same evidence chain—three carriers, peak hour, screenshot archive in refund window.",
+    "keywords": "RackNerd,DMIT,VPS,SpeedCE,acceptance",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "aws-lightsail-china": {
+    "title": "AWS Lightsail China Access: Global Green, China Slow Common Pattern",
+    "hook": "Lightsail often looks great globally and mediocre to China—expected pattern; decide if China audience needs different architecture.",
+    "keywords": "AWS Lightsail,China access,VPS,SpeedCE",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "oracle-cloud-free": {
+    "title": "Oracle Cloud Free Tier Acceptance: Zero-Cost Machine Map Standards",
+    "hook": "Free tier is tempting—accept on maps anyway; blocked or congested free IPs waste setup time.",
+    "keywords": "Oracle Cloud,free tier,VPS,SpeedCE,acceptance",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "gcp-azure-china-access": {
+    "title": "GCP/Azure China Access: Enterprise Cloud Map Assessment for Domestic Teams",
+    "hook": "Enterprise cloud console is smooth; domestic team VPN/admin may not be—map team access paths.",
+    "keywords": "GCP,Azure,China access,enterprise cloud,SpeedCE",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "aws-cloudfront-china": {
+    "title": "AWS CloudFront China Access: Global Distribution vs Domestic Experience",
+    "hook": "CloudFront global green doesn't promise China speed—accept with China nodes and consider China-specific CDN if needed.",
+    "keywords": "CloudFront,China,CDN,SpeedCE,acceptance",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "fastly-cdn-guide": {
+    "title": "Fastly CDN Acceptance: Edge Rules and Origin Comparative Speed Tests",
+    "hook": "Fastly power users need edge rule validation plus origin comparison on every critical hostname.",
+    "keywords": "Fastly,CDN,acceptance,SpeedCE,edge",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "bunny-cdn-guide": {
+    "title": "Bunny CDN Value Routes: Global Node Map Acceptance",
+    "hook": "Budget CDN still needs per-country and China acceptance if you have that audience.",
+    "keywords": "Bunny CDN,CDN,acceptance,SpeedCE,global",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "qiniu-cdn-guide": {
+    "title": "Qiniu CDN Onboarding: Domestic Site Speed Acceptance Checklist",
+    "hook": "Qiniu is common for China static/video—three-carrier acceptance after bucket and domain bind.",
+    "keywords": "Qiniu,CDN,China,SpeedCE,acceptance",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "upyun-cdn-guide": {
+    "title": "Upyun CDN Acceptance: Image Sites and Static Acceleration Map Standards",
+    "hook": "Image-heavy sites on Upyun—test img domain separately from www on Mobile carriers.",
+    "keywords": "Upyun,CDN,image site,SpeedCE,acceptance",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "shopify-speedtest": {
+    "title": "Shopify Store Global Reachability: Theme, Payment, and App Domain Layered Tests",
+    "hook": "Shopify stacks domains—storefront, checkout extensions, apps—probe each layer in buyer countries.",
+    "keywords": "Shopify,global,speed test,SpeedCE,e-commerce",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "woocommerce-global": {
+    "title": "WooCommerce Global Acceptance: Plugins, Payment Gateways, and Main Domain Checklist",
+    "hook": "Self-hosted WooCommerce multiplies domains—payment plugin callbacks need independent nationwide/global probes.",
+    "keywords": "WooCommerce,global,acceptance,SpeedCE,payment",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "notion-saas-availability": {
+    "title": "Self-Hosted Notion-Like Tools: Global Team Access Acceptance",
+    "hook": "Self-hosted collaboration replaces Notion—accept from every employee region, not just HQ.",
+    "keywords": "Notion,self-hosted,SaaS,global,SpeedCE",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "api-rate-limit-global": {
+    "title": "Global API Rate Limits and Geo Blocks: Green Map but 403 Responses",
+    "hook": "Network reachability ≠ HTTP 200. Map green with 403 means app-layer geo or rate rules—know tool boundary.",
+    "keywords": "API rate limit,geo block,403,SpeedCE,boundary",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "middle-east-africa-nodes": {
+    "title": "Middle East and Africa Node Acceptance: Emerging Market Map Targets",
+    "hook": "MEA growth markets need explicit probe targets—don't assume European CDN covers Lagos or Dubai well.",
+    "keywords": "Middle East,Africa,global nodes,SpeedCE,acceptance",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "latin-america-nodes": {
+    "title": "Latin America Node Acceptance: Brazil and Mexico Priority Map Standards",
+    "hook": "LATAM latency varies hugely—accept São Paulo and Mexico City explicitly for regional products.",
+    "keywords": "Latin America,Brazil,Mexico,SpeedCE,global nodes",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "hexo-hugo-static-site": {
+    "title": "Hexo/Hugo Static Site Launch: GitHub Pages vs Self-Hosted Map Comparison",
+    "hook": "Static generators still need HTTPS and CDN acceptance—compare GitHub Pages vs own VPS/CDN on China if relevant.",
+    "keywords": "Hexo,Hugo,static site,SpeedCE,launch",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "nextjs-nuxt-ssr-deploy": {
+    "title": "Next.js/Nuxt SSR Deploy Acceptance: Node Service and CDN Layered Speed Tests",
+    "hook": "SSR adds origin compute layer—accept Node directly and through CDN with separate maps.",
+    "keywords": "Next.js,Nuxt,SSR,deploy,SpeedCE",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "laravel-php-deploy": {
+    "title": "Laravel/PHP Site Launch: FPM, Nginx, and Nationwide HTTPS Acceptance",
+    "hook": "PHP-FPM pool misconfig shows as intermittent 502 with partially green maps—network first, then FPM.",
+    "keywords": "Laravel,PHP,deploy,Nginx,SpeedCE",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "java-spring-boot-api": {
+    "title": "Spring Boot API Nationwide Acceptance: Gateway, Certificates, and Subdomain List",
+    "hook": "Java microservices multiply public hosts—gateway, auth, API each need probe checklist.",
+    "keywords": "Spring Boot,API,Java,acceptance,SpeedCE",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "python-django-flask": {
+    "title": "Django/Flask Deploy Speed Tests: WSGI and Application Layer Division",
+    "hook": "Gunicorn/uwsgi behind Nginx—accept public URL, not just manage.py runserver on localhost.",
+    "keywords": "Django,Flask,Python,deploy,SpeedCE",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "video-on-demand-site": {
+    "title": "VOD Site Acceptance: Playback Domain, CDN, and API Three-Domain Tests",
+    "hook": "Video sites fail on CDN play domain while www is fine—three-domain acceptance standard.",
+    "keywords": "video on demand,CDN,playback,SpeedCE,acceptance",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "recruitment-careers-site": {
+    "title": "Recruitment Site Peak Acceptance: Pre-Campus-Season Nationwide Checkpoint",
+    "hook": "Campus hiring spikes mobile traffic on careers pages—accept before September rush.",
+    "keywords": "recruitment,careers site,peak traffic,SpeedCE",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "hospital-appointment-system": {
+    "title": "Hospital Appointment System Network Baseline: Peak and Mobile User Acceptance",
+    "hook": "Healthcare portals must work on Mobile for elderly users—strict three-carrier acceptance and peak drill.",
+    "keywords": "hospital,appointment,Mobile,SpeedCE,baseline",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "oncall-runbook-speedtest": {
+    "title": "On-Call Runbook Speed Test Chapter: 5-Minute SOP After Alerts",
+    "hook": "Embed SpeedCE steps directly in runbook—protocol, scope, screenshot filename, escalation triggers.",
+    "keywords": "on-call,runbook,speed test,SpeedCE,SOP",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "postmortem-blameless": {
+    "title": "Blameless Postmortem Speed Evidence: Timelines and Maps in Writeups",
+    "hook": "Great postmortems include probe timestamps and geographic impact maps—not just \"DNS issue.\"",
+    "keywords": "postmortem,blameless,evidence,SpeedCE,timeline",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "sla-report-monthly": {
+    "title": "Monthly SLA Report Template: Success Rate Data for Management",
+    "hook": "Turn SpeedCE monthly archives into executive SLA slides—formula and template included.",
+    "keywords": "SLA,monthly report,success rate,SpeedCE,management",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "vendor-ticket-evidence": {
+    "title": "Cloud/CDN Vendor Tickets: Screenshot Standards and Description Templates",
+    "hook": "Vendors ignore vague tickets—attach three-carrier maps with UTC time, target, protocol, success rate.",
+    "keywords": "vendor ticket,evidence,screenshot,SpeedCE,CDN",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "team-onboarding-speedce": {
+    "title": "New Ops Hire Day One: SpeedCE and Toolchain Training Handbook",
+    "hook": "Onboarding checklist—SpeedCE first, then ITDOG, BOCE, monitoring, and change gates.",
+    "keywords": "onboarding,SpeedCE,training,operations,tools",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "cesu-vs-speedce": {
+    "title": "CESU.ai vs SpeedCE: Emerging Tool Site vs Map-First Probe Comparison",
+    "hook": "New tools appear yearly—compare CESU.ai features against SpeedCE map workflow for daily patrol.",
+    "keywords": "CESU.ai,SpeedCE,comparison,speed test",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ]
+  },
+  "chinaz-toolkit-review": {
+    "title": "Chinaz Toolkit Ecosystem vs SpeedCE: Ping/Speed/Whois Division of Labor",
+    "hook": "Chinaz offers many utilities—when to use which vs SpeedCE geographic HTTPS maps.",
+    "keywords": "Chinaz,toolkit,SpeedCE,comparison,tools",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ]
+  },
+  "aliyun-boce-vs-speedce": {
+    "title": "Alibaba Cloud Synthetic Monitoring vs SpeedCE: How Aliyun Users Pair Both",
+    "hook": "Same-cloud synthetic probes vs independent SpeedCE maps—complementary acceptance for Aliyun-hosted sites.",
+    "keywords": "Alibaba Cloud,synthetic monitoring,SpeedCE,comparison",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ]
+  },
+  "province-henan-hubei": {
+    "title": "Henan/Hubei Central China Access Optimization: Map Patterns and CDN Strategy",
+    "hook": "Central provinces bridge north-south routes—recognize map signatures and CDN node placement.",
+    "keywords": "Henan,Hubei,central China,CDN,SpeedCE",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "province-sichuan-chongqing": {
+    "title": "Sichuan/Chongqing Access Acceptance: Southwest Nodes and Route Traits",
+    "hook": "Southwest basin geography affects routes—accept with province-focused maps.",
+    "keywords": "Sichuan,Chongqing,southwest,SpeedCE,acceptance",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "province-fujian-taiwan-trade": {
+    "title": "Fujian/Guangdong Taiwan-Trade Sites: Southeast Coastal Map Acceptance",
+    "hook": "Cross-strait trade sites need coastal map baselines and Mobile emphasis.",
+    "keywords": "Fujian,Taiwan trade,coastal,SpeedCE,map",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "province-shandong-hebei": {
+    "title": "Beijing-Tianjin-Hebei/Shandong Baseline: North China Map Targets",
+    "hook": "North China dense population—use as reference baseline for CDN PoP effectiveness.",
+    "keywords": "Shandong,Hebei,north China,SpeedCE,baseline",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "province-yunnan-guizhou": {
+    "title": "Yunnan/Guizhou Access: Southwest Frontier Maps and Mobile Network",
+    "hook": "Southwest frontier provinces often show higher latency—set realistic targets and CDN strategy.",
+    "keywords": "Yunnan,Guizhou,southwest,Mobile,SpeedCE",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "hainan-special-zone": {
+    "title": "Hainan Free Trade Zone Sites: Island Geography and Access Traits",
+    "hook": "Island province routing differs from mainland—dedicated map acceptance for Hainan-focused services.",
+    "keywords": "Hainan,island,access,SpeedCE,acceptance",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "inner-mongolia-northeast": {
+    "title": "Inner Mongolia/Northeast: Cold-Region Routes and Winter Peak Traffic",
+    "hook": "Winter heating season shifts traffic patterns—retest northeast maps in January peak.",
+    "keywords": "Inner Mongolia,northeast,winter,SpeedCE,routes",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "cctv-news-peak": {
+    "title": "News Release Peak Traffic: 30-Minute Pre-Publish Checkpoint",
+    "hook": "State media and viral news—half-hour SpeedCE gate before publish button.",
+    "keywords": "news peak,traffic,checkpoint,SpeedCE,media",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "school-start-september": {
+    "title": "September School Season: Education Site Traffic Assurance Speed Tests",
+    "hook": "September enrollment spikes—education platforms run T-14 SpeedCE schedule.",
+    "keywords": "school season,education,traffic,SpeedCE,September",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "national-holiday-golden-week": {
+    "title": "National Holiday Golden Week: Pre-Surge Mobile User Checkpoint",
+    "hook": "Golden week mobile travel surge—three-carrier checkpoint one week before holiday.",
+    "keywords": "golden week,holiday,Mobile,SpeedCE,traffic",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "year-end-summary-report": {
+    "title": "Year-End Infrastructure Report: Summarizing 12 Months of Map Archives",
+    "hook": "December is time to aggregate monthly screenshots into annual availability narrative.",
+    "keywords": "year-end report,infrastructure,SpeedCE,archives",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "websocket-wss-check": {
+    "title": "WebSocket/WSS Long Connections: SpeedCE HTTPS Limits and Real-Time Business",
+    "hook": "HTTPS green doesn't prove WebSocket upgrade works—know SpeedCE boundaries for chat and gaming.",
+    "keywords": "WebSocket,WSS,real-time,SpeedCE,boundaries",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "grpc-gateway-check": {
+    "title": "gRPC/HTTP2 Gateway: REST Reachable vs gRPC Failure Division",
+    "hook": "REST API green via SpeedCE; gRPC may still fail—separate acceptance for gRPC gateways.",
+    "keywords": "gRPC,HTTP2,gateway,REST,SpeedCE",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "oauth-callback-domain": {
+    "title": "OAuth Callback Domain Verification: Network-Layer First for Login Failures",
+    "hook": "OAuth login fails—probe callback URL from nationwide nodes before blaming SDK.",
+    "keywords": "OAuth,callback domain,login,SpeedCE,network",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "payment-callback-url": {
+    "title": "Payment Callback URL Reachability: Nationwide Probes on Callback Domains",
+    "hook": "Payments fail silently when callback domain blocked in one province—accept notify URLs on three carriers.",
+    "keywords": "payment callback,URL,reachability,SpeedCE,acceptance",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "email-link-tracking": {
+    "title": "Email Link Tracking Domains: Network Troubleshooting for Marketing Click Failures",
+    "hook": "Campaign clicks fail when tracking domain blocked—probe mail.example.com separately from www.",
+    "keywords": "email,tracking domain,marketing,SpeedCE,network",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "colocation-vs-cloud": {
+    "title": "Colocation vs Public Cloud: Map Acceptance Differences After Same Workload Choice",
+    "hook": "Colo BGP vs cloud EIP—acceptance methodology same, interpret neighbor and BGP claims differently.",
+    "keywords": "colocation,cloud,VPS,SpeedCE,comparison",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "bare-metal-dedicated-line": {
+    "title": "Bare Metal Dedicated Line: Enterprise Leased Line Map Acceptance",
+    "hook": "Enterprise dedicated lines still need proof for branch offices nationwide—maps for SLA disputes.",
+    "keywords": "bare metal,dedicated line,enterprise,SpeedCE,acceptance",
+    "terms": [
+      [
+        "多节点",
+        "全国各地探测",
+        "SpeedCE"
+      ],
+      [
+        "地图",
+        "红绿分布",
+        "看区域"
+      ],
+      [
+        "通畅率",
+        "成功比例",
+        "≥95%"
+      ],
+      [
+        "对照",
+        "两目标对比",
+        "A/B 测"
+      ]
+    ]
+  },
+  "image-cdn-webp-avif": {
+    "title": "Image CDN with WebP/AVIF: Static Domain Nationwide Acceptance",
+    "hook": "Modern image formats on separate img CDN—Mobile carriers especially need img domain maps.",
+    "keywords": "image CDN,WebP,AVIF,static domain,SpeedCE",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "font-cdn-google-china": {
+    "title": "Font CDN and Google Fonts: China Load Failure and Speed Test Division",
+    "hook": "fonts.googleapis.com blocked in China—SpeedCE confirms font domain reachability; fix with local mirror.",
+    "keywords": "font CDN,Google Fonts,China,SpeedCE,loading",
+    "terms": [
+      [
+        "源站",
+        "你的真实服务器",
+        "先测源站"
+      ],
+      [
+        "边缘",
+        "CDN 节点",
+        "再测加速域"
+      ],
+      [
+        "回源",
+        "边缘到源站",
+        "502 查回源"
+      ],
+      [
+        "缓存",
+        "边缘存储",
+        "刷新后复测"
+      ]
+    ]
+  },
+  "app-store-review-server": {
+    "title": "App Store Review Period Servers: Overseas Review Node Reachability",
+    "hook": "Apple review runs from specific regions—probe API endpoints from US/EU nodes during review window.",
+    "keywords": "App Store,review server,reachability,SpeedCE,global",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "gdpr-cookie-wall": {
+    "title": "GDPR and Cookie Walls: European User Access Network Baseline",
+    "hook": "Cookie consent walls don't affect TCP—but geo-blocked EU users show red maps; separate compliance vs network.",
+    "keywords": "GDPR,cookie wall,Europe,SpeedCE,network",
+    "terms": [
+      [
+        "目标市场",
+        "用户所在国",
+        "全球节点重点看"
+      ],
+      [
+        "跨境",
+        "跨国链路",
+        "延迟常高"
+      ],
+      [
+        "合规",
+        "备案/隐私",
+        "与测速分工"
+      ],
+      [
+        "双栈",
+        "国内+海外",
+        "两地图"
+      ]
+    ]
+  },
+  "discuz-qzone-share": {
+    "title": "Discuz Share Links: Main Site vs Share Domain Layered Speed Tests",
+    "hook": "QQ/WeChat share previews hit share domains—test share.example.com apart from forum root.",
+    "keywords": "Discuz,share link,Qzone,SpeedCE,layered test",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "typecho-emlog-blog": {
+    "title": "Typecho/Emlog Lightweight Blogs: Small Sites Still Need Nationwide Acceptance",
+    "hook": "Lightweight doesn't mean skip probes—personal blogs go viral too; Mobile acceptance matters.",
+    "keywords": "Typecho,Emlog,blog,SpeedCE,acceptance",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "ghost-blog-deploy": {
+    "title": "Ghost Blog Deploy: Headless and Theme Domain Speed Tests",
+    "hook": "Ghost admin vs public theme may differ—accept both public URLs on HTTPS.",
+    "keywords": "Ghost,blog,deploy,SpeedCE,theme",
+    "terms": [
+      [
+        "主域",
+        "用户入口",
+        "HTTPS 必测"
+      ],
+      [
+        "API 域",
+        "业务接口",
+        "单独测"
+      ],
+      [
+        "静态域",
+        "js/css",
+        "CDN 域"
+      ],
+      [
+        "监控",
+        "7×24",
+        "与拨测互补"
+      ]
+    ]
+  },
+  "regex-domain-inventory": {
+    "title": "Regex Subdomain Discovery: Automation Ideas for Missing Domain Inventory",
+    "hook": "Cert transparency and DNS logs help find forgotten hosts—then SpeedCE monthly inventory.",
+    "keywords": "regex,subdomain,inventory,automation,SpeedCE",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "calendar-reminder-inspect": {
+    "title": "Calendar Reminder Inspections: Embed Speed Tests in Google Calendar/Feishu",
+    "hook": "Recurring calendar events with SpeedCE checklist link—ops hygiene via reminders.",
+    "keywords": "calendar,reminder,inspection,SpeedCE,operations",
+    "terms": [
+      [
+        "对照",
+        "A/B 两图",
+        "排障第一原则"
+      ],
+      [
+        "三网",
+        "电信联通移动",
+        "分开测"
+      ],
+      [
+        "快照",
+        "单次拨测",
+        "变更后必做"
+      ],
+      [
+        "趋势",
+        "多次对比",
+        "月度巡检"
+      ]
+    ]
+  },
+  "gtmetrix-vs-speedce": {
+    "title": "GTmetrix vs SpeedCE: Performance Testing vs Network Probing Division",
+    "hook": "GTmetrix waterfall vs geographic reachability—orthogonal; run both before launch.",
+    "keywords": "GTmetrix,SpeedCE,performance,network,comparison",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ]
+  },
+  "webpagetest-vs-speedce": {
+    "title": "WebPageTest vs SpeedCE: When to Use Which Tool",
+    "hook": "Filmstrip debugging vs China carrier maps—pick tool by question type.",
+    "keywords": "WebPageTest,SpeedCE,comparison,tools",
+    "terms": [
+      [
+        "地图派",
+        "区域直观",
+        "SpeedCE"
+      ],
+      [
+        "表格派",
+        "数字精确",
+        "ITDOG 等"
+      ],
+      [
+        "全能派",
+        "功能多",
+        "BOCE"
+      ],
+      [
+        "性能派",
+        "页面评分",
+        "PageSpeed"
+      ]
+    ]
+  },
+  "multi-team-handover": {
+    "title": "Ops Handover Speed Baselines: Map Archive Required Before Departure",
+    "hook": "Leaving ops without baseline maps strands the team—handover package template.",
+    "keywords": "handover,baseline,SpeedCE,operations,archive",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "acquisition-due-diligence": {
+    "title": "Acquisition Tech Due Diligence: Quick Nationwide Reachability Assessment",
+    "hook": "M&A technical DD—SpeedCE snapshot of target's main domains in 30 minutes.",
+    "keywords": "acquisition,due diligence,reachability,SpeedCE,assessment",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "penetration-test-prep": {
+    "title": "Pre-Pentest External Attack Surface: Public Domain Speed Test Inventory",
+    "hook": "Before pentest, inventory all public hosts with probes—find orphan domains attackers will too.",
+    "keywords": "penetration test,attack surface,domain,SpeedCE,inventory",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "disaster-recovery-drill": {
+    "title": "Disaster Recovery Drill: Nationwide SpeedCE Checkpoint After DR Failover",
+    "hook": "DR drill isn't done until DR site maps match primary acceptance thresholds.",
+    "keywords": "disaster recovery,DR drill,failover,SpeedCE,checkpoint",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "zero-downtime-deploy": {
+    "title": "Zero-Downtime Deploy: Blue/Green and Canary Map Comparison",
+    "hook": "Canary slice still needs geographic probe on canary hostname—compare blue vs green maps.",
+    "keywords": "zero downtime,blue green,canary,SpeedCE,deploy",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "status-page-setup": {
+    "title": "Status Page Setup: How Probe Data Supports Public Status Pages",
+    "hook": "Status pages need honest geographic impact—integrate probe summaries subscribers understand.",
+    "keywords": "status page,monitoring,SpeedCE,public,setup",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "client-report-quarterly": {
+    "title": "Quarterly Client Reports with Maps: B2B Provider Speed Test Reporting Template",
+    "hook": "Agencies retain clients with quarterly map reports—white-label template structure.",
+    "keywords": "client report,quarterly,B2B,SpeedCE,template",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "seo-crawl-baidu-google": {
+    "title": "Baidu/Google Crawlers and Site Reachability: SEO Angle on Speed Tests",
+    "hook": "Crawlers hit from specific networks—reachability supports SEO; SpeedCE complements Search Console.",
+    "keywords": "SEO,Baidu,Google,crawler,SpeedCE",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "affiliate-tracking-domain": {
+    "title": "Affiliate Tracking Domains: Nationwide Reachability Impact on Conversion Chain",
+    "hook": "Affiliate click blocked in one province loses commission—probe tracking domains on three carriers.",
+    "keywords": "affiliate,tracking domain,conversion,SpeedCE,reachability",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "short-link-domain-check": {
+    "title": "Short Link Domain Acceptance: Nationwide Node Tests on Redirect Chains",
+    "hook": "t.co style short domains redirect—probe short URL and final landing separately.",
+    "keywords": "short link,redirect,acceptance,SpeedCE,domain",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "landing-page-campaign": {
+    "title": "Ad Landing Pages: 10-Minute Nationwide Checkpoint Before Campaign Launch",
+    "hook": "Paid traffic to slow landing pages burns budget—SpeedCE gate before ad account goes live.",
+    "keywords": "landing page,campaign,checkpoint,SpeedCE,ads",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  },
+  "ab-test-traffic-split": {
+    "title": "A/B Test Traffic Split Domains: Independent Map Acceptance per Experiment Arm",
+    "hook": "Experiment subdomain must accept independently—don't assume control map applies to variant.",
+    "keywords": "A/B test,traffic split,domain,SpeedCE,acceptance",
+    "terms": [
+      [
+        "清单",
+        "子域列表",
+        "逐项打勾"
+      ],
+      [
+        "存档",
+        "截图命名",
+        "可回溯"
+      ],
+      [
+        "门禁",
+        "变更必测",
+        "流程化"
+      ],
+      [
+        "对标",
+        "竞品地图",
+        "说服升级"
+      ]
+    ]
+  }
+}
