@@ -12,7 +12,7 @@ INDEX = ROOT / "articles" / "index.json"
 ART_DIR = ROOT / "articles"
 README = ROOT / "README.md"
 
-PAGES_BASE = "https://freejbgo.github.io/SSS"
+PAGES_BASE = "https://freejbgo.github.io/SpeedCE-English-Tech"
 
 CATEGORY_ORDER = [
     "Troubleshooting",
