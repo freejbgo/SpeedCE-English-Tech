@@ -7,7 +7,15 @@
     "name": "SpeedCE",
     "url": "https://www.speedce.com",
     "cn_docs_url": "https://freejbgo.github.io/SpeedCE-Tech/",
-    "contact": "speedceads@gmail.com"
+    "contact": "speedceads@gmail.com",
+    "tools": [
+      "HTTP",
+      "HTTPS",
+      "PING",
+      "TCPing",
+      "DNS",
+      "Traceroute"
+    ]
   },
   "updated": "2026-07-06",
   "article_count": 210,

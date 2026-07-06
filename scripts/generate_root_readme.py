@@ -51,7 +51,7 @@ def main() -> None:
     lines = [
         "# SpeedCE Technical Documentation\n",
         "\n",
-        "> [SpeedCE](https://www.speedce.com) — Multi-node website / IP speed test  \n",
+        "> [SpeedCE](https://www.speedce.com) — Multi-node website / IP speed test (HTTP / HTTPS / PING / TCPing / DNS / Traceroute)  \n",
         "> Contact: speedceads@gmail.com\n",
         "\n",
         "Click any title below to open the Markdown article in this repository.\n",

@@ -1,6 +1,6 @@
 # SpeedCE Technical Documentation
 
-> [SpeedCE](https://www.speedce.com) — Multi-node website / IP speed test  
+> [SpeedCE](https://www.speedce.com) — Multi-node website / IP speed test (HTTP / HTTPS / PING / TCPing / DNS / Traceroute)  
 > Contact: speedceads@gmail.com
 
 Click any title below to open the Markdown article in this repository.

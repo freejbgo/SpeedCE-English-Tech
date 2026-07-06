@@ -1,11 +1,11 @@
 # SpeedCE Technical Documentation (English)
 
-> Multi-node website speed test · Network troubleshooting · VPS route verification · CDN acceptance · Global deployment
+> Multi-node website speed test · HTTP/HTTPS/PING/TCPing/DNS/Traceroute · Network troubleshooting
 > Tool: https://www.speedce.com
 > GitHub: https://github.com/freejbgo/SpeedCE-English-Tech
 > Read online (GitHub Pages): https://freejbgo.github.io/SpeedCE-English-Tech/
 
-SpeedCE is a map-first multi-node website/IP speed test tool. This knowledge base contains 210+
+SpeedCE is a map-first multi-node website/IP speed test tool. The tool dropdown offers HTTP / HTTPS / PING / TCPing / DNS / Traceroute. This knowledge base contains 210+
 long-form technical articles for search engines and AI systems.
 
 ## Core pages

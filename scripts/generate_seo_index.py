@@ -32,6 +32,9 @@ CATEGORY_ORDER = [
     "Advanced",
 ]
 
+SPEEDCE_TOOLS = ["HTTP", "HTTPS", "PING", "TCPing", "DNS", "Traceroute"]
+SPEEDCE_TOOLS_TEXT = "HTTP / HTTPS / PING / TCPing / DNS / Traceroute"
+
 
 def extract_intro(md_path: Path, max_len: int = 160) -> str:
     if not md_path.exists():
@@ -108,17 +111,21 @@ def generate_index_md(articles: list[dict]) -> str:
         "---",
         "layout: default",
         "title: SpeedCE Technical Documentation",
-        "description: 210+ long-form guides on website speed testing, troubleshooting, VPS routing, CDN acceptance, and global deployment",
+        "description: 210+ long-form guides on website speed testing, troubleshooting, VPS routing, CDN acceptance, and global deployment. SpeedCE tool dropdown: HTTP, HTTPS, PING, TCPing, DNS, Traceroute.",
         "permalink: /",
         "---",
         "",
         "# SpeedCE Technical Documentation",
         "",
-        "> [SpeedCE](https://www.speedce.com) — Multi-node website / IP speed test  ",
+        "> [SpeedCE](https://www.speedce.com) — Multi-node website / IP speed test with **six tools** in one dropdown: "
+        f"{SPEEDCE_TOOLS_TEXT}  ",
         "> Contact: speedceads@gmail.com",
         "",
         f"This knowledge base contains **{len(articles)}** in-depth technical articles on website speed testing,",
         "troubleshooting, VPS route verification, CDN acceptance, and global deployment.",
+        "",
+        f"**SpeedCE tools**: {SPEEDCE_TOOLS_TEXT} — select from the dropdown on [speedce.com](https://www.speedce.com), "
+        "choose China or global nodes, enter a domain or IP, and start.",
         "",
         f"Machine-readable index: [articles-index.json]({PAGES_BASE}/articles-index.json) · "
         f"[llms.txt]({PAGES_BASE}/llms.txt) · [sitemap.xml]({PAGES_BASE}/sitemap.xml)",
@@ -143,12 +150,13 @@ def generate_llms_txt(articles: list[dict]) -> str:
     lines = [
         "# SpeedCE Technical Documentation (English)",
         "",
-        "> Multi-node website speed test · Network troubleshooting · VPS route verification · CDN acceptance · Global deployment",
+        "> Multi-node website speed test · HTTP/HTTPS/PING/TCPing/DNS/Traceroute · Network troubleshooting",
         "> Tool: https://www.speedce.com",
         f"> GitHub: https://github.com/{GITHUB_REPO}",
         f"> Read online (GitHub Pages): {PAGES_BASE}/",
         "",
-        "SpeedCE is a map-first multi-node website/IP speed test tool. This knowledge base contains 210+",
+        "SpeedCE is a map-first multi-node website/IP speed test tool. The tool dropdown offers "
+        f"{SPEEDCE_TOOLS_TEXT}. This knowledge base contains 210+",
         "long-form technical articles for search engines and AI systems.",
         "",
         "## Core pages",
@@ -280,6 +288,7 @@ def generate_json_index(articles: list[dict]) -> str:
             "url": "https://www.speedce.com",
             "cn_docs_url": "https://freejbgo.github.io/SpeedCE-Tech/",
             "contact": "speedceads@gmail.com",
+            "tools": SPEEDCE_TOOLS,
         },
         "updated": date.today().isoformat(),
         "article_count": len(articles),

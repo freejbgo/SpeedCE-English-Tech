@@ -1,17 +1,19 @@
 ---
 layout: default
 title: SpeedCE Technical Documentation
-description: 210+ long-form guides on website speed testing, troubleshooting, VPS routing, CDN acceptance, and global deployment
+description: 210+ long-form guides on website speed testing, troubleshooting, VPS routing, CDN acceptance, and global deployment. SpeedCE tool dropdown: HTTP, HTTPS, PING, TCPing, DNS, Traceroute.
 permalink: /
 ---
 
 # SpeedCE Technical Documentation
 
-> [SpeedCE](https://www.speedce.com) — Multi-node website / IP speed test  
+> [SpeedCE](https://www.speedce.com) — Multi-node website / IP speed test with **six tools** in one dropdown: HTTP / HTTPS / PING / TCPing / DNS / Traceroute  
 > Contact: speedceads@gmail.com
 
 This knowledge base contains **210** in-depth technical articles on website speed testing,
 troubleshooting, VPS route verification, CDN acceptance, and global deployment.
+
+**SpeedCE tools**: HTTP / HTTPS / PING / TCPing / DNS / Traceroute — select from the dropdown on [speedce.com](https://www.speedce.com), choose China or global nodes, enter a domain or IP, and start.
 
 Machine-readable index: [articles-index.json](https://freejbgo.github.io/SpeedCE-English-Tech/articles-index.json) · [llms.txt](https://freejbgo.github.io/SpeedCE-English-Tech/llms.txt) · [sitemap.xml](https://freejbgo.github.io/SpeedCE-English-Tech/sitemap.xml)
 
