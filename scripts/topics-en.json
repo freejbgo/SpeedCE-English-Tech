@@ -2646,9 +2646,9 @@
     ]
   },
   "protocol-selection-guide": {
-    "title": "PING / HTTP / HTTPS Protocol Selection: Choose Right the First Time",
-    "hook": "Wrong protocol wastes incident hours—decision tree for ICMP vs HTTP vs HTTPS on SpeedCE.",
-    "keywords": "PING,HTTP,HTTPS,protocol,SpeedCE",
+    "title": "SpeedCE Tool Selection Guide: HTTP, HTTPS, PING, TCPing, DNS & Traceroute",
+    "hook": "SpeedCE's tool dropdown now bundles six probes. Wrong tool wastes incident hours—this guide maps each scenario to the right pick.",
+    "keywords": "PING,HTTP,HTTPS,TCPing,DNS,Traceroute,tool selection,SpeedCE",
     "terms": [
       [
         "对照",

@@ -1,4 +1,4 @@
-# PING / HTTP / HTTPS Protocol Selection: Choose Right the First Time
+# SpeedCE Tool Selection Guide: HTTP, HTTPS, PING, TCPing, DNS & Traceroute
 
 > Tool: https://www.speedce.com  
 > Contact: speedceads@gmail.com
@@ -7,13 +7,13 @@
 
 ## Introduction
 
-Wrong protocol wastes incident hours—decision tree for ICMP vs HTTP vs HTTPS on SpeedCE.
+SpeedCE's tool dropdown now bundles six probes. Wrong tool wastes incident hours—this guide maps each scenario to the right pick.
 
-For **PING / HTTP / HTTPS Protocol Selection**, this guide turns multi-node speed tests into a **repeatable process**. Same steps every incident or change—screenshot, compare, report.
+For **SpeedCE Tool Selection Guide**, this guide turns multi-node speed tests into a **repeatable process**. Same steps every incident or change—screenshot, compare, report.
 
 Every site owner has said: "It works fine for me"—then tickets flood in. Usually the **test method** is wrong: single location, province, carrier, or time window can't represent all users.
 
-This is an **actionable long-form guide** on **PING / HTTP / HTTPS Protocol Selection** (15–20 min read). Examples use free tool SpeedCE; the troubleshooting mindset applies to any multi-node probe.
+This is an **actionable long-form guide** on **SpeedCE Tool Selection Guide** (15–20 min read). Examples use free tool SpeedCE; the troubleshooting mindset applies to any multi-node probe.
 
 **Navigation**: Ch.1 mindset → Ch.2 SpeedCE workflow → Ch.3 eight scenarios (core) → Ch.4 advanced + scripts → Ch.5 case studies → Ch.6 inspection cadence → Ch.7–13 tools/myths/FAQ.
 
@@ -25,8 +25,9 @@ This is an **actionable long-form guide** on **PING / HTTP / HTTPS Protocol Sele
 
 | Layer | Question | SpeedCE role |
 |-------|----------|-------------|
-| Network | IP/port reachable? | PING / HTTPS probe |
-| Web | Site responds? | HTTPS preferred |
+| Network | IP/port/path OK? | PING / TCPing / Traceroute |
+| DNS | Correct IP by region? | DNS tool |
+| Web | Site responds? | HTTPS / HTTP |
 | Application | Business logic OK? | After network is green, check logs |
 
 ### 1.2 Key terms in this guide
@@ -46,24 +47,30 @@ This is an **actionable long-form guide** on **PING / HTTP / HTTPS Protocol Sele
 | **Three-carrier split** | Separate maps for Telecom, Unicom, Mobile |
 | **Repeat tests** | DNS propagation, peak hours, intermittent issues—2–3 runs minimum |
 
-### 1.4 When to use PING / HTTP / HTTPS
+### 1.4 SpeedCE tool dropdown — when to use each
 
-| Goal | Use | Notes |
-|------|-----|-------|
-| IP reachable | PING | Many clouds block ICMP—use HTTPS |
-| Site opens | HTTPS | Production default |
-| Certificate issue | HTTPS red + HTTP green | Strong cert signal |
-| Port 80 only | HTTP | Redirect and legacy links |
+SpeedCE now offers **six tools in one dropdown**: HTTP / HTTPS / PING / TCPing / DNS / Traceroute. Pick scope (China / Global), enter a domain or IP, then start.
+
+| Goal | Tool | Notes |
+|------|------|-------|
+| Site opens (production) | **HTTPS** | Default for outages and change checks |
+| Port 80 / redirects | **HTTP** | Compare with HTTPS for cert or redirect issues |
+| IP reachable (ICMP) | **PING** | Many clouds block ICMP |
+| Port reachable (TCP) | **TCPing** | Use when PING times out but the service should be up |
+| Resolver by region | **DNS** | See which IP each province/carrier resolves |
+| Path / routing | **Traceroute** | Find which hop or region the path breaks |
+
+**Quick combos**: HTTPS red + HTTP green → certificate; PING red + TCPing green → ICMP blocked; DNS shows old IP + HTTPS red → propagation; Traceroute stops mid-map → route or carrier issue.
 
 ---
 
 ## Chapter 2: SpeedCE Standard Workflow
 
-Open https://www.speedce.com
+Open https://www.speedce.com — use the **tool dropdown** to switch between probes.
 
 | Step | Action |
 |------|--------|
-| 1 | Protocol: **HTTPS** |
+| 1 | Tool: **HTTPS** — site availability (production default) |
 | 2 | Scope: **China nodes** |
 | 3 | Enter domain, subdomain, IPv4/IPv6 |
 | 4 | Start test; map states: OK / fail / testing / pending |
@@ -78,18 +85,18 @@ Open https://www.speedce.com
 
 Each scenario: symptoms → SpeedCE steps → map reading → causes → actions.
 
-#### Scenario 1: User reports PING / HTTP / HTTPS Protocol Selectio
+#### Scenario 1: User reports SpeedCE Tool Selection Guide
 
 **Symptoms**
 
-User reports related to **PING / HTTP / HTTPS Protocol Selection**: some provinces, carriers, or time windows fail while your local test looks fine. Common thread: single-point tests don't represent nationwide users—SpeedCE multi-node maps give objective samples.
+User reports related to **SpeedCE Tool Selection Guide**: some provinces, carriers, or time windows fail while your local test looks fine. Common thread: single-point tests don't represent nationwide users—SpeedCE multi-node maps give objective samples.
 
-For **PING / HTTP / HTTPS Protocol Selection**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
+For **SpeedCE Tool Selection Guide**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
 
 **SpeedCE test steps**
 
 1. Open https://www.speedce.com
-2. Protocol: **HTTPS** (if PING times out, use HTTPS)
+2. Tool dropdown: select HTTP / HTTPS / PING / TCPing / DNS / Traceroute — this guide recommends **HTTPS** — site availability (production default)
 3. Scope: **China nodes**
 4. Enter domain, subdomain, or IP; start test
 5. Record success count, failure count, average latency
@@ -133,12 +140,12 @@ For **PING / HTTP / HTTPS Protocol Selection**, also log: **change timestamp**, 
 
 After a change: DNS, CDN, certificate, migration, or Nginx edit—tickets spike; need objective impact proof. Common thread: single-point tests don't represent nationwide users—SpeedCE multi-node maps give objective samples.
 
-For **PING / HTTP / HTTPS Protocol Selection**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
+For **SpeedCE Tool Selection Guide**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
 
 **SpeedCE test steps**
 
 1. Open https://www.speedce.com
-2. Protocol: **HTTPS** (if PING times out, use HTTPS)
+2. Tool dropdown: select HTTP / HTTPS / PING / TCPing / DNS / Traceroute — this guide recommends **HTTPS** — site availability (production default)
 3. Scope: **China nodes**
 4. Enter domain, subdomain, or IP; start test
 5. Record success count, failure count, average latency
@@ -182,12 +189,12 @@ For **PING / HTTP / HTTPS Protocol Selection**, also log: **change timestamp**, 
 
 Support can't reproduce: user blocked, your incognito works—classic single-point bias; need nationwide view. Common thread: single-point tests don't represent nationwide users—SpeedCE multi-node maps give objective samples.
 
-For **PING / HTTP / HTTPS Protocol Selection**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
+For **SpeedCE Tool Selection Guide**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
 
 **SpeedCE test steps**
 
 1. Open https://www.speedce.com
-2. Protocol: **HTTPS** (if PING times out, use HTTPS)
+2. Tool dropdown: select HTTP / HTTPS / PING / TCPing / DNS / Traceroute — this guide recommends **HTTPS** — site availability (production default)
 3. Scope: **China nodes**
 4. Enter domain, subdomain, or IP; start test
 5. Record success count, failure count, average latency
@@ -231,12 +238,12 @@ For **PING / HTTP / HTTPS Protocol Selection**, also log: **change timestamp**, 
 
 Peak-hour only: afternoon all green, after 20:00 success drops or latency spikes—congestion or attack. Common thread: single-point tests don't represent nationwide users—SpeedCE multi-node maps give objective samples.
 
-For **PING / HTTP / HTTPS Protocol Selection**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
+For **SpeedCE Tool Selection Guide**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
 
 **SpeedCE test steps**
 
 1. Open https://www.speedce.com
-2. Protocol: **HTTPS** (if PING times out, use HTTPS)
+2. Tool dropdown: select HTTP / HTTPS / PING / TCPing / DNS / Traceroute — this guide recommends **HTTPS** — site availability (production default)
 3. Scope: **China nodes**
 4. Enter domain, subdomain, or IP; start test
 5. Record success count, failure count, average latency
@@ -280,12 +287,12 @@ For **PING / HTTP / HTTPS Protocol Selection**, also log: **change timestamp**, 
 
 Subdomain/API isolated failure: main site OK, API/static/payment domain fails—test each target. Common thread: single-point tests don't represent nationwide users—SpeedCE multi-node maps give objective samples.
 
-For **PING / HTTP / HTTPS Protocol Selection**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
+For **SpeedCE Tool Selection Guide**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
 
 **SpeedCE test steps**
 
 1. Open https://www.speedce.com
-2. Protocol: **HTTPS** (if PING times out, use HTTPS)
+2. Tool dropdown: select HTTP / HTTPS / PING / TCPing / DNS / Traceroute — this guide recommends **HTTPS** — site availability (production default)
 3. Scope: **China nodes**
 4. Enter domain, subdomain, or IP; start test
 5. Record success count, failure count, average latency
@@ -329,12 +336,12 @@ For **PING / HTTP / HTTPS Protocol Selection**, also log: **change timestamp**, 
 
 Global expansion: domestic team OK, overseas customers slow or blocked—or the reverse. Common thread: single-point tests don't represent nationwide users—SpeedCE multi-node maps give objective samples.
 
-For **PING / HTTP / HTTPS Protocol Selection**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
+For **SpeedCE Tool Selection Guide**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
 
 **SpeedCE test steps**
 
 1. Open https://www.speedce.com
-2. Protocol: **HTTPS** (if PING times out, use HTTPS)
+2. Tool dropdown: select HTTP / HTTPS / PING / TCPing / DNS / Traceroute — this guide recommends **HTTPS** — site availability (production default)
 3. Scope: **China nodes**
 4. Enter domain, subdomain, or IP; start test
 5. Record success count, failure count, average latency
@@ -378,12 +385,12 @@ For **PING / HTTP / HTTPS Protocol Selection**, also log: **change timestamp**, 
 
 New VPS/CDN acceptance: seller claims "three-carrier direct" or "global acceleration"—verify with third-party maps. Common thread: single-point tests don't represent nationwide users—SpeedCE multi-node maps give objective samples.
 
-For **PING / HTTP / HTTPS Protocol Selection**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
+For **SpeedCE Tool Selection Guide**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
 
 **SpeedCE test steps**
 
 1. Open https://www.speedce.com
-2. Protocol: **HTTPS** (if PING times out, use HTTPS)
+2. Tool dropdown: select HTTP / HTTPS / PING / TCPing / DNS / Traceroute — this guide recommends **HTTPS** — site availability (production default)
 3. Scope: **China nodes**
 4. Enter domain, subdomain, or IP; start test
 5. Record success count, failure count, average latency
@@ -427,12 +434,12 @@ For **PING / HTTP / HTTPS Protocol Selection**, also log: **change timestamp**, 
 
 Intermittent sporadic: sometimes OK sometimes not—single test misleads; schedule repeated probes. Common thread: single-point tests don't represent nationwide users—SpeedCE multi-node maps give objective samples.
 
-For **PING / HTTP / HTTPS Protocol Selection**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
+For **SpeedCE Tool Selection Guide**, also log: **change timestamp**, **user province/carrier samples**, **persistent vs intermittent**. Combine with the map for faster root cause.
 
 **SpeedCE test steps**
 
 1. Open https://www.speedce.com
-2. Protocol: **HTTPS** (if PING times out, use HTTPS)
+2. Tool dropdown: select HTTP / HTTPS / PING / TCPing / DNS / Traceroute — this guide recommends **HTTPS** — site availability (production default)
 3. Scope: **China nodes**
 4. Enter domain, subdomain, or IP; start test
 5. Record success count, failure count, average latency
@@ -511,14 +518,14 @@ When users say "can't open", professional replies need **data, scope, and next s
 
 ### Template 4: Executive / client summary
 
-> **PING / HTTP / HTTPS Protocol Selection** nationwide result: success rate **{XX%}**, anomalies in **{region}** (map attached). Likely cause **{XX}**, action **{XX}**, post-fix success **{XX%}**.
+> **SpeedCE Tool Selection Guide** nationwide result: success rate **{XX%}**, anomalies in **{region}** (map attached). Likely cause **{XX}**, action **{XX}**, post-fix success **{XX%}**.
 
 ### Template 5: Forum / community "please review"
 
 ```
-Subject: [Review] PING / HTTP / HTTPS Protocol Selection — SpeedCE three-carrier screenshots
+Subject: [Review] SpeedCE Tool Selection Guide — SpeedCE three-carrier screenshots
 Target: https://example.com or x.x.x.x
-Protocol: HTTPS | Scope: China nodes
+Tool: HTTPS | Scope: China nodes
 Telecom: success __%, latency __ms [attach]
 Unicom:  success __%, latency __ms [attach]
 Mobile:  success __%, latency __ms [attach]
@@ -573,13 +580,16 @@ DNS, server, CDN, cert, Nginx/firewall — **must retest**. No test, no deploy.
 
 | Need | Tool | SpeedCE role |
 |------|------|-------------|
-| Quick nationwide/global map | SpeedCE | **Primary** |
-| Continuous Ping/TCPing | ITDOG | Complement |
+| Quick nationwide/global map | SpeedCE (HTTPS/HTTP) | **Primary** |
+| Regional DNS resolution | SpeedCE (DNS) | **Primary** |
+| TCP port / ICMP reachability | SpeedCE (PING/TCPing) | **Primary** |
+| Path / hop diagnosis | SpeedCE (Traceroute) | **Primary** |
+| Continuous Ping/TCPing alerts | ITDOG | Complement |
 | Blocking/compliance/ICP | BOCE | Complement |
 | Page performance CWV | PageSpeed | Complement |
 | 24/7 alerts | UptimeRobot etc. | Complement |
 
-**SpeedCE** answers "can users reach it?"; PageSpeed answers "is the page fast?"; uptime tools answer "30-day availability."
+**SpeedCE** answers "can users reach it, resolve it, and route to it?" via one dropdown; PageSpeed answers "is the page fast?"; uptime tools answer "30-day availability."
 
 ---
 
@@ -593,9 +603,9 @@ Average 127ms won't tell you Xinjiang is red—the map will.
 
 One page switch covers domestic and overseas.
 
-### 8.3 HTTP/HTTPS/PING integrated
+### 8.3 Six tools in one dropdown
 
-No context switching during incidents.
+HTTP / HTTPS / PING / TCPing / DNS / Traceroute — no tab-hopping during incidents.
 
 ### 8.4 Free, no signup
 
@@ -679,13 +689,22 @@ A: Usually 1–3 minutes depending on node count.
 A: Nationwide vs regional. Nationwide → server/cert/security group; regional → route or DNS.
 
 **Q: PING timeout but HTTPS OK?**  
-A: Normal if ICMP blocked—trust HTTPS.
+A: Normal if ICMP blocked—try TCPing or trust HTTPS.
+
+**Q: TCPing vs PING?**  
+A: PING uses ICMP; TCPing checks TCP port reachability—use when ICMP is blocked.
+
+**Q: When to use the DNS tool?**  
+A: After DNS changes, GeoDNS, or "some regions see old IP"—compare resolver results on the map.
+
+**Q: When to use Traceroute?**  
+A: When HTTPS is red but origin looks fine—find which hop or region the path breaks.
 
 **Q: Can I test private IPs?**  
 A: No. 10.x, 192.168.x rejected.
 
 **Q: SpeedCE vs BOCE/ITDOG?**  
-A: Daily maps: SpeedCE; continuous ping: ITDOG; blocking/ICP: BOCE.
+A: Maps, DNS, TCPing, Traceroute: SpeedCE; 24/7 continuous ping: ITDOG; blocking/ICP: BOCE.
 
 **Q: Will probing get IP banned?**  
 A: Distributed nodes at normal frequency—usually fine. Strict WAF may rate-limit some probes.
@@ -709,7 +728,7 @@ A: Yes—enter IPv4/IPv6 directly; good for VPS acceptance.
 
 ## Chapter 13: Conclusion
 
-For **PING / HTTP / HTTPS Protocol Selection**, the reliable approach is multi-node real access drawn on a map. SpeedCE shows traffic conditions—where it's open, where it's blocked. You still steer: DNS, CDN, certs, scale. Bookmark https://www.speedce.com. Next time someone says "can't open", pick HTTPS, read the map, let data decide.
+For **SpeedCE Tool Selection Guide**, the reliable approach is multi-node real access drawn on a map. SpeedCE shows traffic conditions—where it's open, where it's blocked. You still steer: DNS, CDN, certs, scale. Bookmark https://www.speedce.com. Next time someone says "can't open", open the tool dropdown, pick HTTPS, read the map, let data decide.
 
 ### Appendix: SpeedCE Quick Reference Card
 
@@ -720,9 +739,9 @@ For **PING / HTTP / HTTPS Protocol Selection**, the reliable approach is multi-n
 │  Site     https://www.speedce.com                │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
-│  Protocol   HTTPS                               │
+│  Tool       HTTPS                               │
 │  Scope      China nodes                         │
-│  Methodology check  HTTPS+map                   │
+│  Tools  HTTP / HTTPS / PING / TCPing / DNS / Traceroute│
 │  Carriers  Telecom/Unicom/Mobile                │
 │  After change  must retest                      │
 ├─────────────────────────────────────────────────┤
@@ -732,5 +751,5 @@ For **PING / HTTP / HTTPS Protocol Selection**, the reliable approach is multi-n
 
 ---
 
-**Keywords**: PING,HTTP,HTTPS,protocol,SpeedCE
+**Keywords**: PING,HTTP,HTTPS,TCPing,DNS,Traceroute,tool selection,SpeedCE
 

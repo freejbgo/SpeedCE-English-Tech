@@ -885,14 +885,14 @@ Articles: 210
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-English-Tech/main/articles/quarterly-infra-review.md
 - summary: Quarterly side-by-side maps reveal slow degradation—upgrade CDN or routes before success rate cliff.
 
-## PING / HTTP / HTTPS Protocol Selection: Choose Right the First Time
+## SpeedCE Tool Selection Guide: HTTP, HTTPS, PING, TCPing, DNS & Traceroute
 - slug: protocol-selection-guide
 - category: Methodology
-- keywords: PING,HTTP,HTTPS,protocol,SpeedCE
+- keywords: PING,HTTP,HTTPS,TCPing,DNS,Traceroute,tool selection,SpeedCE
 - pages: https://freejbgo.github.io/SpeedCE-English-Tech/articles/protocol-selection-guide.html
 - github: https://github.com/freejbgo/SpeedCE-English-Tech/blob/main/articles/protocol-selection-guide.md
 - raw: https://raw.githubusercontent.com/freejbgo/SpeedCE-English-Tech/main/articles/protocol-selection-guide.md
-- summary: Wrong protocol wastes incident hours—decision tree for ICMP vs HTTP vs HTTPS on SpeedCE.
+- summary: SpeedCE's tool dropdown now bundles six probes. Wrong tool wastes incident hours—this guide maps each scenario to the right pick.
 
 ## Network Probing vs PageSpeed: Reachability vs Performance Decision Order
 - slug: speedtest-vs-pagespeed

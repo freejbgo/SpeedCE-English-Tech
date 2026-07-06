@@ -12,7 +12,7 @@ Chinese knowledge base: [SpeedCE-Tech](https://github.com/freejbgo/SpeedCE-Tech)
 | Item | Count |
 |------|-------|
 | Articles in repo | 210 |
-| Avg length | ~30,811 characters |
+| Avg length | ~33,053 characters |
 
 ## Article index
 
@@ -627,8 +627,8 @@ Chinese knowledge base: [SpeedCE-Tech](https://github.com/freejbgo/SpeedCE-Tech)
   Launch gates prevent Friday night disasters—eight SpeedCE items among thirty before go-live.  
   🌐 [Read online](https://freejbgo.github.io/SpeedCE-English-Tech/articles/pre-launch-30-checklist.html)
 
-- [**PING / HTTP / HTTPS Protocol Selection: Choose Right the First Time**](articles/protocol-selection-guide.md)  
-  Wrong protocol wastes incident hours—decision tree for ICMP vs HTTP vs HTTPS on SpeedCE.  
+- [**SpeedCE Tool Selection Guide: HTTP, HTTPS, PING, TCPing, DNS & Traceroute**](articles/protocol-selection-guide.md)  
+  SpeedCE's tool dropdown now bundles six probes. Wrong tool wastes incident hours—this guide maps each scenario to the r…  
   🌐 [Read online](https://freejbgo.github.io/SpeedCE-English-Tech/articles/protocol-selection-guide.html)
 
 - [**Quarterly Infrastructure Review: Map Trends, Degradation, and Upgrade Decisions**](articles/quarterly-infra-review.md)  

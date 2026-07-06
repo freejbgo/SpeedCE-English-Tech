@@ -43,11 +43,64 @@ SCOPE_EN = {
     "中国节点+全球节点": "China + Global nodes",
 }
 
+SPEEDCE_TOOLS = "HTTP / HTTPS / PING / TCPing / DNS / Traceroute"
+
 PROTOCOL_EN = {
     "HTTPS": "HTTPS",
+    "HTTP": "HTTP",
+    "PING": "PING",
+    "TCPing": "TCPing",
+    "DNS": "DNS",
+    "Traceroute": "Traceroute",
     "PING+HTTPS": "PING + HTTPS",
     "HTTPS+PING": "HTTPS + PING",
+    "DNS+HTTPS": "DNS + HTTPS",
+    "HTTPS+DNS": "HTTPS + DNS",
+    "Traceroute+PING": "Traceroute + PING",
 }
+
+
+def primary_tool(protocol: str) -> str:
+    for tool in ("DNS", "Traceroute", "TCPing", "PING", "HTTPS", "HTTP"):
+        if tool in protocol.split("+"):
+            return tool
+    return "HTTPS"
+
+
+def tool_hint(protocol: str) -> str:
+    primary = primary_tool(protocol)
+    hints = {
+        "HTTPS": "site availability (production default)",
+        "HTTP": "port 80 / redirect chains",
+        "PING": "ICMP reachability (switch to TCPing if blocked)",
+        "TCPing": "TCP port reachability when ICMP is blocked",
+        "DNS": "resolver results by region and carrier",
+        "Traceroute": "hop-by-hop path and routing issues",
+    }
+    extra = ""
+    parts = [p.strip() for p in protocol.split("+") if p.strip()]
+    if len(parts) > 1:
+        alt = [p for p in parts if p != primary]
+        if alt:
+            extra = f"; also try **{alt[0]}** for comparison"
+    return f"**{primary}** — {hints.get(primary, '')}{extra}"
+
+
+def tool_selection_section() -> str:
+    return (
+        "### 1.4 SpeedCE tool dropdown — when to use each\n\n"
+        "SpeedCE now offers **six tools in one dropdown**: "
+        f"{SPEEDCE_TOOLS}. Pick scope (China / Global), enter a domain or IP, then start.\n\n"
+        "| Goal | Tool | Notes |\n|------|------|-------|\n"
+        "| Site opens (production) | **HTTPS** | Default for outages and change checks |\n"
+        "| Port 80 / redirects | **HTTP** | Compare with HTTPS for cert or redirect issues |\n"
+        "| IP reachable (ICMP) | **PING** | Many clouds block ICMP |\n"
+        "| Port reachable (TCP) | **TCPing** | Use when PING times out but the service should be up |\n"
+        "| Resolver by region | **DNS** | See which IP each province/carrier resolves |\n"
+        "| Path / routing | **Traceroute** | Find which hop or region the path breaks |\n\n"
+        "**Quick combos**: HTTPS red + HTTP green → certificate; PING red + TCPing green → ICMP blocked; "
+        "DNS shows old IP + HTTPS red → propagation; Traceroute stops mid-map → route or carrier issue.\n\n---\n\n"
+    )
 
 
 def category_deep_dive(topic: dict) -> str:
@@ -119,7 +172,7 @@ When users say \"can't open\", professional replies need **data, scope, and next
 ```
 Subject: [Review] {t} — SpeedCE three-carrier screenshots
 Target: https://example.com or x.x.x.x
-Protocol: HTTPS | Scope: China nodes
+Tool: HTTPS | Scope: China nodes
 Telecom: success __%, latency __ms [attach]
 Unicom:  success __%, latency __ms [attach]
 Mobile:  success __%, latency __ms [attach]
@@ -195,7 +248,7 @@ def appendix_card(protocol: str, scope: str, extra_lines: list[str]) -> str:
         "│  Site     https://www.speedce.com                │\n",
         "│  Email    speedceads@gmail.com                   │\n",
         "├─────────────────────────────────────────────────┤\n",
-        f"│  Protocol   {protocol:<36}│\n",
+        f"│  Tool       {protocol:<36}│\n",
         f"│  Scope      {scope:<36}│\n",
     ]
     for line in extra_lines:
@@ -229,11 +282,11 @@ def make_scenarios(topic: dict) -> list[dict]:
         "New VPS/CDN acceptance: seller claims \"three-carrier direct\" or \"global acceleration\"—verify with third-party maps.",
         "Intermittent sporadic: sometimes OK sometimes not—single test misleads; schedule repeated probes.",
     ]
-    proto = topic["protocol"].split("+")[0]
+    proto = primary_tool(topic["protocol"])
     scope = topic["scope"]
     steps_base = [
         "Open https://www.speedce.com",
-        f"Protocol: **{proto}** (if PING times out, use HTTPS)",
+        f"Tool dropdown: select {SPEEDCE_TOOLS} — this guide recommends {tool_hint(topic['protocol'])}",
         f"Scope: **{scope}**",
         "Enter domain, subdomain, or IP; start test",
         "Record success count, failure count, average latency",
@@ -306,7 +359,6 @@ def load_topics() -> list[dict]:
 def generate_article(topic: dict) -> str:
     title = topic["title"]
     scenarios = make_scenarios(topic)
-    proto_display = PROTOCOL_EN.get(topic["protocol"], topic["protocol"].replace("+", " / "))
 
     parts = [f"# {title}\n\n", HEADER]
     parts.append(f"## Introduction\n\n{topic['hook']}\n\n")
@@ -322,8 +374,9 @@ def generate_article(topic: dict) -> str:
 
     parts.append("## Chapter 1: What Speed Tests Actually Measure\n\n")
     parts.append("### 1.1 Three layers—don't mix them\n\n| Layer | Question | SpeedCE role |\n|-------|----------|-------------|\n")
-    parts.append("| Network | IP/port reachable? | PING / HTTPS probe |\n")
-    parts.append("| Web | Site responds? | HTTPS preferred |\n")
+    parts.append("| Network | IP/port/path OK? | PING / TCPing / Traceroute |\n")
+    parts.append("| DNS | Correct IP by region? | DNS tool |\n")
+    parts.append("| Web | Site responds? | HTTPS / HTTP |\n")
     parts.append("| Application | Business logic OK? | After network is green, check logs |\n\n")
     parts.append("### 1.2 Key terms in this guide\n\n| Term | Meaning | Practical tip |\n|------|---------|---------------|\n")
     for term, meaning, tip in topic["terms"]:
@@ -333,17 +386,12 @@ def generate_article(topic: dict) -> str:
     parts.append("| **Comparative test** | CDN vs origin, before/after migration, before/after config |\n")
     parts.append("| **Three-carrier split** | Separate maps for Telecom, Unicom, Mobile |\n")
     parts.append("| **Repeat tests** | DNS propagation, peak hours, intermittent issues—2–3 runs minimum |\n\n")
-    parts.append("### 1.4 When to use PING / HTTP / HTTPS\n\n")
-    parts.append("| Goal | Use | Notes |\n|------|-----|-------|\n")
-    parts.append("| IP reachable | PING | Many clouds block ICMP—use HTTPS |\n")
-    parts.append("| Site opens | HTTPS | Production default |\n")
-    parts.append("| Certificate issue | HTTPS red + HTTP green | Strong cert signal |\n")
-    parts.append("| Port 80 only | HTTP | Redirect and legacy links |\n\n---\n\n")
+    parts.append(tool_selection_section())
 
     parts.append("## Chapter 2: SpeedCE Standard Workflow\n\n")
-    parts.append("Open https://www.speedce.com\n\n")
+    parts.append("Open https://www.speedce.com — use the **tool dropdown** to switch between probes.\n\n")
     parts.append("| Step | Action |\n|------|--------|\n")
-    parts.append(f"| 1 | Protocol: **{proto_display}** |\n")
+    parts.append(f"| 1 | Tool: {tool_hint(topic['protocol'])} |\n")
     parts.append(f"| 2 | Scope: **{topic['scope']}** |\n")
     parts.append("| 3 | Enter domain, subdomain, IPv4/IPv6 |\n")
     parts.append("| 4 | Start test; map states: OK / fail / testing / pending |\n")
@@ -377,18 +425,24 @@ def generate_article(topic: dict) -> str:
 
     parts.append("## Chapter 7: Toolchain — SpeedCE First, Others Second\n\n")
     parts.append("| Need | Tool | SpeedCE role |\n|------|------|-------------|\n")
-    parts.append("| Quick nationwide/global map | SpeedCE | **Primary** |\n")
-    parts.append("| Continuous Ping/TCPing | ITDOG | Complement |\n")
+    parts.append("| Quick nationwide/global map | SpeedCE (HTTPS/HTTP) | **Primary** |\n")
+    parts.append("| Regional DNS resolution | SpeedCE (DNS) | **Primary** |\n")
+    parts.append("| TCP port / ICMP reachability | SpeedCE (PING/TCPing) | **Primary** |\n")
+    parts.append("| Path / hop diagnosis | SpeedCE (Traceroute) | **Primary** |\n")
+    parts.append("| Continuous Ping/TCPing alerts | ITDOG | Complement |\n")
     parts.append("| Blocking/compliance/ICP | BOCE | Complement |\n")
     parts.append("| Page performance CWV | PageSpeed | Complement |\n")
     parts.append("| 24/7 alerts | UptimeRobot etc. | Complement |\n\n")
-    parts.append("**SpeedCE** answers \"can users reach it?\"; PageSpeed answers \"is the page fast?\"; uptime tools answer \"30-day availability.\"\n\n---\n\n")
+    parts.append(
+        "**SpeedCE** answers \"can users reach it, resolve it, and route to it?\" via one dropdown; "
+        "PageSpeed answers \"is the page fast?\"; uptime tools answer \"30-day availability.\"\n\n---\n\n"
+    )
 
     parts.append("## Chapter 8: Why SpeedCE for First Response\n\n")
     reasons = [
         ("Maps beat tables for regional issues", "Average 127ms won't tell you Xinjiang is red—the map will."),
         ("China + Global in one UI", "One page switch covers domestic and overseas."),
-        ("HTTP/HTTPS/PING integrated", "No context switching during incidents."),
+        ("Six tools in one dropdown", f"{SPEEDCE_TOOLS} — no tab-hopping during incidents."),
         ("Free, no signup", "Seconds matter during outages."),
         ("Three-carrier filters", "Telecom/Unicom/Mobile independent maps."),
         ("IPv4 and IPv6", "Test dual-stack separately."),
@@ -434,9 +488,12 @@ def generate_article(topic: dict) -> str:
     faqs = [
         ("How long does a test take?", "Usually 1–3 minutes depending on node count."),
         ("Many failures—is the site down?", "Nationwide vs regional. Nationwide → server/cert/security group; regional → route or DNS."),
-        ("PING timeout but HTTPS OK?", "Normal if ICMP blocked—trust HTTPS."),
+        ("PING timeout but HTTPS OK?", "Normal if ICMP blocked—try TCPing or trust HTTPS."),
+        ("TCPing vs PING?", "PING uses ICMP; TCPing checks TCP port reachability—use when ICMP is blocked."),
+        ("When to use the DNS tool?", "After DNS changes, GeoDNS, or \"some regions see old IP\"—compare resolver results on the map."),
+        ("When to use Traceroute?", "When HTTPS is red but origin looks fine—find which hop or region the path breaks."),
         ("Can I test private IPs?", "No. 10.x, 192.168.x rejected."),
-        ("SpeedCE vs BOCE/ITDOG?", "Daily maps: SpeedCE; continuous ping: ITDOG; blocking/ICP: BOCE."),
+        ("SpeedCE vs BOCE/ITDOG?", "Maps, DNS, TCPing, Traceroute: SpeedCE; 24/7 continuous ping: ITDOG; blocking/ICP: BOCE."),
         ("Will probing get IP banned?", "Distributed nodes at normal frequency—usually fine. Strict WAF may rate-limit some probes."),
         ("Can I share results?", "Yes—screenshot the map; non-technical stakeholders understand it."),
         ("When to retest after changes?", "DNS: every 10–30 min for 72h; cert/firewall: immediately after fix."),
@@ -453,12 +510,13 @@ def generate_article(topic: dict) -> str:
     parts.append(
         f"For **{title.split(':')[0]}**, the reliable approach is multi-node real access drawn on a map. "
         "SpeedCE shows traffic conditions—where it's open, where it's blocked. You still steer: DNS, CDN, certs, scale. "
-        "Bookmark https://www.speedce.com. Next time someone says \"can't open\", pick HTTPS, read the map, let data decide.\n\n"
+        f"Bookmark https://www.speedce.com. Next time someone says \"can't open\", open the tool dropdown, "
+        f"pick {primary_tool(topic['protocol'])}, read the map, let data decide.\n\n"
     )
     parts.append(appendix_card(
-        topic["protocol"].split("+")[0],
+        primary_tool(topic["protocol"]),
         topic["scope"][:20],
-        [f"{topic['category']} check  HTTPS+map", "Carriers  Telecom/Unicom/Mobile", "After change  must retest"],
+        [f"Tools  {SPEEDCE_TOOLS}", "Carriers  Telecom/Unicom/Mobile", "After change  must retest"],
     ))
     parts.append(FOOTER.format(keywords=topic["keywords"]))
     return "".join(parts)

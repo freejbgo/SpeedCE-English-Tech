@@ -4,1679 +4,1679 @@
     "title": "Before You Buy a VPS: Verify Routes with Nationwide Carrier Maps and Spot Fake CN2 Claims (SpeedCE Playbook)",
     "category": "VPS Routing",
     "file": "vps-line-verification-guide.md",
-    "chars": 31087,
-    "lines": 739
+    "chars": 33696,
+    "lines": 758
   },
   {
     "slug": "cdn-deployment-speed-test-guide",
     "title": "CDN Deployment Playbook: Multi-Node Speed Test Acceptance Before, During, and After Cutover",
     "category": "CDN",
     "file": "cdn-deployment-speed-test-guide.md",
-    "chars": 30946,
-    "lines": 739
+    "chars": 33176,
+    "lines": 758
   },
   {
     "slug": "global-deployment-checklist",
     "title": "Global Website Launch Acceptance: Complete Checklist from China Nodes to Worldwide Probes",
     "category": "Global Expansion",
     "file": "global-deployment-checklist.md",
-    "chars": 31237,
-    "lines": 739
+    "chars": 33467,
+    "lines": 758
   },
   {
     "slug": "dns-troubleshooting-guide",
     "title": "Complete DNS Troubleshooting Guide: When \"Some Regions Can't Open\" After Migration or CDN Switch",
     "category": "Troubleshooting",
     "file": "dns-troubleshooting-guide.md",
-    "chars": 31561,
-    "lines": 739
+    "chars": 34086,
+    "lines": 758
   },
   {
     "slug": "ssl-certificate-troubleshooting",
     "title": "SSL Certificate Expiry and Misconfiguration: 10-Minute Playbook When Users See \"Connection Not Secure\"",
     "category": "Troubleshooting",
     "file": "ssl-certificate-troubleshooting.md",
-    "chars": 31634,
-    "lines": 739
+    "chars": 33864,
+    "lines": 758
   },
   {
     "slug": "nginx-reverse-proxy-troubleshooting",
     "title": "Nginx Reverse Proxy Troubleshooting: 8 Typical Config Errors When Main Site Is Green but API Is Red",
     "category": "Troubleshooting",
     "file": "nginx-reverse-proxy-troubleshooting.md",
-    "chars": 31482,
-    "lines": 739
+    "chars": 33712,
+    "lines": 758
   },
   {
     "slug": "website-migration-guide",
     "title": "Complete Website Migration Handbook: 72-Hour Speed Test Acceptance for DNS, Origin, and CDN",
     "category": "Troubleshooting",
     "file": "website-migration-guide.md",
-    "chars": 31514,
-    "lines": 739
+    "chars": 33744,
+    "lines": 758
   },
   {
     "slug": "intermittent-fault-diagnosis",
     "title": "Intermittent Website Fault Diagnosis: Scientific Checkpointing for \"Sometimes Slow, Sometimes Fine\"",
     "category": "Troubleshooting",
     "file": "intermittent-fault-diagnosis.md",
-    "chars": 31552,
-    "lines": 739
+    "chars": 33782,
+    "lines": 758
   },
   {
     "slug": "subdomain-troubleshooting",
     "title": "Complete Subdomain Troubleshooting: 8 Independent Reasons When Main Site Works but API Fails",
     "category": "Troubleshooting",
     "file": "subdomain-troubleshooting.md",
-    "chars": 31457,
-    "lines": 739
+    "chars": 33687,
+    "lines": 758
   },
   {
     "slug": "api-availability-guide",
     "title": "API Availability Testing Guide: Why Postman Works but Nationwide Users Don't",
     "category": "Troubleshooting",
     "file": "api-availability-guide.md",
-    "chars": 31405,
-    "lines": 739
+    "chars": 33635,
+    "lines": 758
   },
   {
     "slug": "http-https-redirect-issues",
     "title": "HTTP/HTTPS Redirect Failures: Forced HTTPS, Redirect Loops, and Mixed Content Triage",
     "category": "Troubleshooting",
     "file": "http-https-redirect-issues.md",
-    "chars": 31360,
-    "lines": 739
+    "chars": 33590,
+    "lines": 758
   },
   {
     "slug": "firewall-security-group-checklist",
     "title": "Cloud Security Group Acceptance: Four Checks When the Nationwide Map Is Mostly Red",
     "category": "Troubleshooting",
     "file": "firewall-security-group-checklist.md",
-    "chars": 31424,
-    "lines": 739
+    "chars": 33654,
+    "lines": 758
   },
   {
     "slug": "502-503-upstream-errors",
     "title": "502/503 and Origin Overload: When CDN Is Green but Origin Is Red",
     "category": "Troubleshooting",
     "file": "502-503-upstream-errors.md",
-    "chars": 31366,
-    "lines": 739
+    "chars": 33596,
+    "lines": 758
   },
   {
     "slug": "dns-propagation-slow",
     "title": "Slow DNS Propagation: TTL, Carrier Cache, and Regional Resolver Differences",
     "category": "Troubleshooting",
     "file": "dns-propagation-slow.md",
-    "chars": 31232,
-    "lines": 739
+    "chars": 33757,
+    "lines": 758
   },
   {
     "slug": "regional-access-failure",
     "title": "Only Some Regions Can't Open? Use Maps to Pin Province, Carrier, and Next Steps",
     "category": "Troubleshooting",
     "file": "regional-access-failure.md",
-    "chars": 32074,
-    "lines": 739
+    "chars": 34304,
+    "lines": 758
   },
   {
     "slug": "mobile-network-issues",
     "title": "Mobile Network Access Issues: Why Mobile Users Complain the Most",
     "category": "Troubleshooting",
     "file": "mobile-network-issues.md",
-    "chars": 31286,
-    "lines": 739
+    "chars": 33516,
+    "lines": 758
   },
   {
     "slug": "single-carrier-fault",
     "title": "Single-Carrier Fault: When One of Telecom/Unicom/Mobile Is All Red",
     "category": "Troubleshooting",
     "file": "single-carrier-fault.md",
-    "chars": 31222,
-    "lines": 739
+    "chars": 33452,
+    "lines": 758
   },
   {
     "slug": "peak-hour-slowdown",
     "title": "Peak-Hour Slowdown: Retest Strategy When Afternoon Is Green but Evening Turns Red",
     "category": "Troubleshooting",
     "file": "peak-hour-slowdown.md",
-    "chars": 31201,
-    "lines": 739
+    "chars": 33431,
+    "lines": 758
   },
   {
     "slug": "ddos-attack-detection",
     "title": "Using Multi-Node Speed Tests During Attacks to Assess Impact",
     "category": "Troubleshooting",
     "file": "ddos-attack-detection.md",
-    "chars": 31781,
-    "lines": 739
+    "chars": 34011,
+    "lines": 758
   },
   {
     "slug": "ipv6-troubleshooting",
     "title": "IPv6 Dual-Stack Acceptance: AAAA Records, Firewall, and CDN Complete Check",
     "category": "Troubleshooting",
     "file": "ipv6-troubleshooting.md",
-    "chars": 31219,
-    "lines": 739
+    "chars": 33449,
+    "lines": 758
   },
   {
     "slug": "mixed-content-https",
     "title": "Mixed Content and HTTPS: Network Green but Browser Still \"Not Secure\"",
     "category": "Troubleshooting",
     "file": "mixed-content-https.md",
-    "chars": 31232,
-    "lines": 739
+    "chars": 33462,
+    "lines": 758
   },
   {
     "slug": "cors-vs-network-testing",
     "title": "CORS Errors vs Network Failure: Two Layers Developers Must Separate",
     "category": "Troubleshooting",
     "file": "cors-vs-network-testing.md",
-    "chars": 31360,
-    "lines": 739
+    "chars": 33590,
+    "lines": 758
   },
   {
     "slug": "wechat-qq-access-guide",
     "title": "WeChat/QQ Can't Open: Standard Split Between Network Layer and Compliance",
     "category": "Troubleshooting",
     "file": "wechat-qq-access-guide.md",
-    "chars": 31170,
-    "lines": 739
+    "chars": 33400,
+    "lines": 758
   },
   {
     "slug": "waf-false-positive-guide",
     "title": "WAF False Positives and Probe Anomalies: Are Sporadic Red Dots a Block?",
     "category": "Troubleshooting",
     "file": "waf-false-positive-guide.md",
-    "chars": 31405,
-    "lines": 739
+    "chars": 33635,
+    "lines": 758
   },
   {
     "slug": "database-not-network-guide",
     "title": "Database Killing the Site: Network Green but Page Timeout—Application Layer Triage",
     "category": "Troubleshooting",
     "file": "database-not-network-guide.md",
-    "chars": 31262,
-    "lines": 739
+    "chars": 33492,
+    "lines": 758
   },
   {
     "slug": "load-balancer-health-check",
     "title": "Load Balancer and Health Checks: Half Green Half Red Architecture Patterns",
     "category": "Troubleshooting",
     "file": "load-balancer-health-check.md",
-    "chars": 31372,
-    "lines": 739
+    "chars": 33602,
+    "lines": 758
   },
   {
     "slug": "cache-poisoning-stale",
     "title": "Stale Cache: CDN/Browser Cache vs Network Layer Comparative Troubleshooting",
     "category": "Troubleshooting",
     "file": "cache-poisoning-stale.md",
-    "chars": 31038,
-    "lines": 739
+    "chars": 33268,
+    "lines": 758
   },
   {
     "slug": "third-party-script-failure",
     "title": "Third-Party Scripts Breaking Pages: Main Domain Green but Features Broken",
     "category": "Troubleshooting",
     "file": "third-party-script-failure.md",
-    "chars": 31392,
-    "lines": 739
+    "chars": 33622,
+    "lines": 758
   },
   {
     "slug": "hong-kong-vps-guide",
     "title": "Hong Kong VPS Route Selection and Acceptance: Personal Sites, E-Commerce, and API Scenarios",
     "category": "VPS Routing",
     "file": "hong-kong-vps-guide.md",
-    "chars": 31280,
-    "lines": 739
+    "chars": 33889,
+    "lines": 758
   },
   {
     "slug": "japan-vps-guide",
     "title": "Japan VPS for Which Workloads: Tokyo/Osaka DCs and Three-Carrier Return Route Acceptance",
     "category": "VPS Routing",
     "file": "japan-vps-guide.md",
-    "chars": 30914,
-    "lines": 739
+    "chars": 33531,
+    "lines": 758
   },
   {
     "slug": "us-vps-china-access",
     "title": "US VPS Three-Carrier Return Route Guide: West Coast DC Verification and Mobile Users",
     "category": "VPS Routing",
     "file": "us-vps-china-access.md",
-    "chars": 31162,
-    "lines": 739
+    "chars": 33779,
+    "lines": 758
   },
   {
     "slug": "singapore-vps-guide",
     "title": "Singapore VPS Acceptance: Southeast Asia Hub and Dual China/Global Map Testing",
     "category": "VPS Routing",
     "file": "singapore-vps-guide.md",
-    "chars": 30814,
-    "lines": 739
+    "chars": 33044,
+    "lines": 758
   },
   {
     "slug": "cn2-gt-vs-gia",
     "title": "CN2 GT vs CN2 GIA: Speed Test Verification Behind Marketing Claims",
     "category": "VPS Routing",
     "file": "cn2-gt-vs-gia.md",
-    "chars": 30702,
-    "lines": 739
+    "chars": 32932,
+    "lines": 758
   },
   {
     "slug": "bgp-line-verification",
     "title": "Real vs Fake BGP: Three-Carrier Balance Is the Acceptance Standard",
     "category": "VPS Routing",
     "file": "bgp-line-verification.md",
-    "chars": 30671,
-    "lines": 739
+    "chars": 32901,
+    "lines": 758
   },
   {
     "slug": "cmi-mobile-line-guide",
     "title": "CMI Mobile-Optimized Route Acceptance: Mobile Users Are Half Your Audience",
     "category": "VPS Routing",
     "file": "cmi-mobile-line-guide.md",
-    "chars": 30958,
-    "lines": 739
+    "chars": 33188,
+    "lines": 758
   },
   {
     "slug": "vps-refund-period-checklist",
     "title": "VPS 7-Day Refund Acceptance Checklist: Screenshots, Three Carriers, Peak Evidence",
     "category": "VPS Routing",
     "file": "vps-refund-period-checklist.md",
-    "chars": 30997,
-    "lines": 739
+    "chars": 33227,
+    "lines": 758
   },
   {
     "slug": "cloud-security-group-vps",
     "title": "First Step on New Cloud Server: Security Group and Firewall Before Route Talk",
     "category": "VPS Routing",
     "file": "cloud-security-group-vps.md",
-    "chars": 30892,
-    "lines": 739
+    "chars": 33122,
+    "lines": 758
   },
   {
     "slug": "ping-blocked-not-bad",
     "title": "ICMP Blocked ≠ Bad Route: Reading PING Red with HTTPS Green",
     "category": "VPS Routing",
     "file": "ping-blocked-not-bad.md",
-    "chars": 30776,
-    "lines": 739
+    "chars": 33006,
+    "lines": 758
   },
   {
     "slug": "off-peak-vs-peak-vps",
     "title": "Off-Peak vs Peak VPS Testing: Why Good Routes Need Two Tests",
     "category": "VPS Routing",
     "file": "off-peak-vs-peak-vps.md",
-    "chars": 30801,
-    "lines": 739
+    "chars": 33031,
+    "lines": 758
   },
   {
     "slug": "home-broadband-vs-datacenter",
     "title": "Home Broadband vs Nationwide Nodes: Why Your Fast Ping Doesn't Mean Users Are Fast",
     "category": "VPS Routing",
     "file": "home-broadband-vs-datacenter.md",
-    "chars": 30968,
-    "lines": 739
+    "chars": 33198,
+    "lines": 758
   },
   {
     "slug": "vps-with-cdn-comparison",
     "title": "VPS Before and After CDN: Map Comparison for CDN Go/No-Go Decisions",
     "category": "VPS Routing",
     "file": "vps-with-cdn-comparison.md",
-    "chars": 30781,
-    "lines": 739
+    "chars": 33011,
+    "lines": 758
   },
   {
     "slug": "used-ip-segment-check",
     "title": "Used IP Segment Warning Signs: Blocked or Flagged IPs on Nationwide Maps",
     "category": "VPS Routing",
     "file": "used-ip-segment-check.md",
-    "chars": 30864,
-    "lines": 739
+    "chars": 33094,
+    "lines": 758
   },
   {
     "slug": "datacenter-failover-verify",
     "title": "Post-DC-Failover Emergency Verification: 24-Hour SpeedCE Checkpoint SOP",
     "category": "VPS Routing",
     "file": "datacenter-failover-verify.md",
-    "chars": 31006,
-    "lines": 739
+    "chars": 33236,
+    "lines": 758
   },
   {
     "slug": "europe-vps-china-guide",
     "title": "Europe VPS Return Routes to China: Real Experience from DE/FR/NL DCs",
     "category": "VPS Routing",
     "file": "europe-vps-china-guide.md",
-    "chars": 30921,
-    "lines": 739
+    "chars": 33151,
+    "lines": 758
   },
   {
     "slug": "korea-vps-guide",
     "title": "Korea VPS Route Review: Close to China ≠ All Three Carriers Good",
     "category": "VPS Routing",
     "file": "korea-vps-guide.md",
-    "chars": 30743,
-    "lines": 739
+    "chars": 32973,
+    "lines": 758
   },
   {
     "slug": "taiwan-vps-guide",
     "title": "Taiwan VPS Acceptance: Latency Advantages vs Marketing Claims",
     "category": "VPS Routing",
     "file": "taiwan-vps-guide.md",
-    "chars": 30720,
-    "lines": 739
+    "chars": 32950,
+    "lines": 758
   },
   {
     "slug": "budget-vps-trap-guide",
     "title": "Ultra-Low-Price VPS Traps: Six Danger Signals Visible on Maps",
     "category": "VPS Routing",
     "file": "budget-vps-trap-guide.md",
-    "chars": 30771,
-    "lines": 739
+    "chars": 33001,
+    "lines": 758
   },
   {
     "slug": "dedicated-vs-vps-line",
     "title": "Dedicated Server vs VPS Route Acceptance: IP Segment, Neighbors, and Test Notes",
     "category": "VPS Routing",
     "file": "dedicated-vs-vps-line.md",
-    "chars": 31036,
-    "lines": 739
+    "chars": 33266,
+    "lines": 758
   },
   {
     "slug": "cloudflare-china-access",
     "title": "Cloudflare Orange Cloud and China Access: Complete Acceptance Handbook",
     "category": "CDN",
     "file": "cloudflare-china-access.md",
-    "chars": 30997,
-    "lines": 739
+    "chars": 33227,
+    "lines": 758
   },
   {
     "slug": "aliyun-cdn-acceptance",
     "title": "Alibaba Cloud CDN Acceptance: Origin, Certificate, Warmup, and Three-Carrier Checks",
     "category": "CDN",
     "file": "aliyun-cdn-acceptance.md",
-    "chars": 30828,
-    "lines": 739
+    "chars": 33058,
+    "lines": 758
   },
   {
     "slug": "tencent-cdn-acceptance",
     "title": "Tencent Cloud CDN Acceptance: Static vs Full-Site Acceleration and Speed Test Points",
     "category": "CDN",
     "file": "tencent-cdn-acceptance.md",
-    "chars": 30806,
-    "lines": 739
+    "chars": 33036,
+    "lines": 758
   },
   {
     "slug": "cdn-cache-vs-speed-test",
     "title": "CDN Cache vs Active Probing: Why First Request Slow, Second Fast",
     "category": "CDN",
     "file": "cdn-cache-vs-speed-test.md",
-    "chars": 30788,
-    "lines": 739
+    "chars": 33018,
+    "lines": 758
   },
   {
     "slug": "cdn-origin-failure",
     "title": "CDN Origin Failure Complete Troubleshooting: Edge, Timeout, and Origin Comparison",
     "category": "CDN",
     "file": "cdn-origin-failure.md",
-    "chars": 31018,
-    "lines": 739
+    "chars": 33248,
+    "lines": 758
   },
   {
     "slug": "multi-cdn-comparison",
     "title": "Multi-CDN Trial Map Comparison: Scientific Vendor Selection on Same Domain",
     "category": "CDN",
     "file": "multi-cdn-comparison.md",
-    "chars": 30846,
-    "lines": 739
+    "chars": 33076,
+    "lines": 758
   },
   {
     "slug": "static-cdn-split",
     "title": "Static Asset CDN Split Acceptance: Independent Speed Test for js/css Domains",
     "category": "CDN",
     "file": "static-cdn-split.md",
-    "chars": 30892,
-    "lines": 739
+    "chars": 33122,
+    "lines": 758
   },
   {
     "slug": "dcdn-vs-cdn",
     "title": "DCDN vs Standard CDN: Acceptance Standards and SpeedCE Comparative Method",
     "category": "CDN",
     "file": "dcdn-vs-cdn.md",
-    "chars": 30681,
-    "lines": 739
+    "chars": 32911,
+    "lines": 758
   },
   {
     "slug": "cdn-cert-vs-origin",
     "title": "CDN Certificate vs Origin Certificate: Both Sides Must Be Green",
     "category": "CDN",
     "file": "cdn-cert-vs-origin.md",
-    "chars": 30931,
-    "lines": 739
+    "chars": 33161,
+    "lines": 758
   },
   {
     "slug": "overseas-cdn-china-pack",
     "title": "Overseas CDN China Acceleration Pack: When Global Green but China Slow",
     "category": "CDN",
     "file": "overseas-cdn-china-pack.md",
-    "chars": 30939,
-    "lines": 739
+    "chars": 33169,
+    "lines": 758
   },
   {
     "slug": "cdn-cutover-72h",
     "title": "CDN Cutover 72-Hour Monitoring: Hour-by-Hour from T+0 to T+72",
     "category": "CDN",
     "file": "cdn-cutover-72h.md",
-    "chars": 30837,
-    "lines": 739
+    "chars": 33067,
+    "lines": 758
   },
   {
     "slug": "free-cdn-enough",
     "title": "Is Free CDN Enough? Personal Site Decisions with Nationwide Map Data",
     "category": "CDN",
     "file": "free-cdn-enough.md",
-    "chars": 31390,
-    "lines": 739
+    "chars": 33620,
+    "lines": 758
   },
   {
     "slug": "huawei-baidu-cdn-guide",
     "title": "Huawei Cloud / Baidu Cloud CDN Acceptance and Three-Carrier Map Standards",
     "category": "CDN",
     "file": "huawei-baidu-cdn-guide.md",
-    "chars": 31446,
-    "lines": 739
+    "chars": 33676,
+    "lines": 758
   },
   {
     "slug": "cdn-websocket-stream",
     "title": "CDN WebSocket/Live Stream Reachability: Acceptance Boundaries",
     "category": "CDN",
     "file": "cdn-websocket-stream.md",
-    "chars": 30960,
-    "lines": 739
+    "chars": 33190,
+    "lines": 758
   },
   {
     "slug": "edge-function-troubleshoot",
     "title": "Edge Functions/Workers Failures: Main Domain Green but Rules Not Applied",
     "category": "CDN",
     "file": "edge-function-troubleshoot.md",
-    "chars": 30855,
-    "lines": 739
+    "chars": 33085,
+    "lines": 758
   },
   {
     "slug": "saas-global-launch",
     "title": "Global SaaS Launch Acceptance: Target Market Success Rate Playbook",
     "category": "Global Expansion",
     "file": "saas-global-launch.md",
-    "chars": 30917,
-    "lines": 739
+    "chars": 33147,
+    "lines": 758
   },
   {
     "slug": "cross-border-ecommerce",
     "title": "Cross-Border E-Commerce Speed Test Guide: Shopify/WooCommerce and Pre-Sale Acceptance",
     "category": "Global Expansion",
     "file": "cross-border-ecommerce.md",
-    "chars": 31113,
-    "lines": 739
+    "chars": 33343,
+    "lines": 758
   },
   {
     "slug": "europe-us-slow-fix",
     "title": "EU/US Users Slow: Origin, CDN, and DC Location Triangle",
     "category": "Global Expansion",
     "file": "europe-us-slow-fix.md",
-    "chars": 30692,
-    "lines": 739
+    "chars": 32922,
+    "lines": 758
   },
   {
     "slug": "southeast-asia-nodes",
     "title": "Southeast Asia Market Node Acceptance: SG/MY/TH/ID/PH per-Country Targets",
     "category": "Global Expansion",
     "file": "southeast-asia-nodes.md",
-    "chars": 31038,
-    "lines": 739
+    "chars": 33268,
+    "lines": 758
   },
   {
     "slug": "global-team-china-admin",
     "title": "Global Team Accessing China Admin: Dual-Map Collaboration and Acceleration Options",
     "category": "Global Expansion",
     "file": "global-team-china-admin.md",
-    "chars": 31011,
-    "lines": 739
+    "chars": 33241,
+    "lines": 758
   },
   {
     "slug": "dual-site-cn-com",
     "title": "Dual .cn and .com Strategy: Split Domain Speed Tests and Compliance Roles",
     "category": "Global Expansion",
     "file": "dual-site-cn-com.md",
-    "chars": 30869,
-    "lines": 739
+    "chars": 33099,
+    "lines": 758
   },
   {
     "slug": "geodns-verification",
     "title": "GeoDNS Verification: Speed Testing When Resolvers Return Different IPs by Region",
     "category": "Global Expansion",
     "file": "geodns-verification.md",
-    "chars": 30781,
-    "lines": 739
+    "chars": 33306,
+    "lines": 758
   },
   {
     "slug": "cross-border-sale-prep",
     "title": "Cross-Border Sale Prep: Black Friday/Christmas Speed Test Checklist",
     "category": "Global Expansion",
     "file": "cross-border-sale-prep.md",
-    "chars": 30822,
-    "lines": 739
+    "chars": 33052,
+    "lines": 758
   },
   {
     "slug": "overseas-live-streaming",
     "title": "Overseas Live Streaming and Video Conference Node Selection: Latency-Sensitive Map Standards",
     "category": "Global Expansion",
     "file": "overseas-live-streaming.md",
-    "chars": 31373,
-    "lines": 739
+    "chars": 33603,
+    "lines": 758
   },
   {
     "slug": "game-server-global",
     "title": "Game Global Server Placement: Player Distribution vs Global PING Maps",
     "category": "Global Expansion",
     "file": "game-server-global.md",
-    "chars": 30888,
-    "lines": 739
+    "chars": 33118,
+    "lines": 758
   },
   {
     "slug": "stripe-payment-domain-check",
     "title": "Global Payment Domain Checks: Payment Page and Callback URL Independent Probes",
     "category": "Global Expansion",
     "file": "stripe-payment-domain-check.md",
-    "chars": 30931,
-    "lines": 739
+    "chars": 33161,
+    "lines": 758
   },
   {
     "slug": "multilingual-site-delivery",
     "title": "Multilingual Global Delivery: hreflang and Per-Locale Reachability Acceptance",
     "category": "Global Expansion",
     "file": "multilingual-site-delivery.md",
-    "chars": 30910,
-    "lines": 739
+    "chars": 33140,
+    "lines": 758
   },
   {
     "slug": "china-blocked-overseas-ok",
     "title": "Global Green, China Red: Standard Workflow for Blocking and Compliance Questions",
     "category": "Global Expansion",
     "file": "china-blocked-overseas-ok.md",
-    "chars": 30858,
-    "lines": 739
+    "chars": 33088,
+    "lines": 758
   },
   {
     "slug": "personal-blog-launch",
     "title": "Personal Blog Launch Acceptance: Hexo/Hugo/WordPress Universal Speed Checklist",
     "category": "Industry",
     "file": "personal-blog-launch.md",
-    "chars": 30573,
-    "lines": 737
+    "chars": 32803,
+    "lines": 756
   },
   {
     "slug": "wordpress-troubleshooting",
     "title": "WordPress Troubleshooting: White Screen, 502, and Plugin Conflicts—Network Layer First",
     "category": "Industry",
     "file": "wordpress-troubleshooting.md",
-    "chars": 30494,
-    "lines": 737
+    "chars": 32724,
+    "lines": 756
   },
   {
     "slug": "ecommerce-sale-prep",
     "title": "E-Commerce 618/Double-11 Prep: Multi-Node Speed Test Battle Plan",
     "category": "Industry",
     "file": "ecommerce-sale-prep.md",
-    "chars": 30530,
-    "lines": 737
+    "chars": 32760,
+    "lines": 756
   },
   {
     "slug": "online-education-platform",
     "title": "Online Education Platform Pre-Class Acceptance: Video, Live, and API Domains",
     "category": "Industry",
     "file": "online-education-platform.md",
-    "chars": 30817,
-    "lines": 737
+    "chars": 33047,
+    "lines": 756
   },
   {
     "slug": "corporate-website-sla",
     "title": "Corporate Website SLA: Reporting Availability with Success Rate Data to Management",
     "category": "Industry",
     "file": "corporate-website-sla.md",
-    "chars": 30432,
-    "lines": 737
+    "chars": 32662,
+    "lines": 756
   },
   {
     "slug": "miniprogram-backend-api",
     "title": "Mini Program Backend API Nationwide Acceptance: Legal Domain, ICP, and Mobile Network",
     "category": "Industry",
     "file": "miniprogram-backend-api.md",
-    "chars": 30797,
-    "lines": 737
+    "chars": 33027,
+    "lines": 756
   },
   {
     "slug": "mobile-app-api-domain",
     "title": "Mobile App API Domain Monitoring: iOS/Android Mismatch Network Troubleshooting",
     "category": "Industry",
     "file": "mobile-app-api-domain.md",
-    "chars": 30580,
-    "lines": 737
+    "chars": 32810,
+    "lines": 756
   },
   {
     "slug": "game-private-server-ping",
     "title": "Private Game Server Community: Building Trust with Nationwide PING Maps",
     "category": "Industry",
     "file": "game-private-server-ping.md",
-    "chars": 30540,
-    "lines": 737
+    "chars": 32770,
+    "lines": 756
   },
   {
     "slug": "forum-community-site",
     "title": "Forum Community Nationwide Reachability: Discuz/Flarum Three-Carrier Acceptance",
     "category": "Industry",
     "file": "forum-community-site.md",
-    "chars": 30699,
-    "lines": 737
+    "chars": 32929,
+    "lines": 756
   },
   {
     "slug": "download-site-bandwidth",
     "title": "Download Site Reachability vs Bandwidth: Probing vs Download Speed Division",
     "category": "Industry",
     "file": "download-site-bandwidth.md",
-    "chars": 30682,
-    "lines": 737
+    "chars": 32912,
+    "lines": 756
   },
   {
     "slug": "government-site-standard",
     "title": "Government/Public Sector Sites: Nationwide Availability and IPv6 Dual-Stack Standards",
     "category": "Industry",
     "file": "government-site-standard.md",
-    "chars": 30577,
-    "lines": 737
+    "chars": 32807,
+    "lines": 756
   },
   {
     "slug": "fintech-medical-compliance",
     "title": "Fintech/Medical Website Network Baseline: HTTPS, Certificates, and Multi-Site Acceptance",
     "category": "Industry",
     "file": "fintech-medical-compliance.md",
-    "chars": 30716,
-    "lines": 737
+    "chars": 32946,
+    "lines": 756
   },
   {
     "slug": "saas-b2b-demo-environment",
     "title": "B2B SaaS Demo Environment: Map Acceptance in Prospect Regions",
     "category": "Industry",
     "file": "saas-b2b-demo-environment.md",
-    "chars": 30467,
-    "lines": 737
+    "chars": 32697,
+    "lines": 756
   },
   {
     "slug": "news-media-peak-traffic",
     "title": "News Media Peak Traffic: Nationwide Checkpoint SOP Before Breaking Stories",
     "category": "Industry",
     "file": "news-media-peak-traffic.md",
-    "chars": 30447,
-    "lines": 737
+    "chars": 32677,
+    "lines": 756
   },
   {
     "slug": "how-to-read-speed-map",
     "title": "How to Read Speed Test Maps: Green/Red/Gray, Latency, and Success Rate Explained",
     "category": "Methodology",
     "file": "how-to-read-speed-map.md",
-    "chars": 30531,
-    "lines": 737
+    "chars": 32761,
+    "lines": 756
   },
   {
     "slug": "tri-network-method",
     "title": "Three-Carrier Split Testing Complete Guide: Why Telecom, Unicom, Mobile Must Be Separate",
     "category": "Methodology",
     "file": "tri-network-method.md",
-    "chars": 30762,
-    "lines": 737
+    "chars": 32992,
+    "lines": 756
   },
   {
     "slug": "ab-comparison-method",
     "title": "A/B Comparative Speed Testing: CDN vs Origin, Before/After Migration, Competitors",
     "category": "Methodology",
     "file": "ab-comparison-method.md",
-    "chars": 30579,
-    "lines": 737
+    "chars": 32809,
+    "lines": 756
   },
   {
     "slug": "screenshot-archive-sop",
     "title": "Speed Test Screenshot Archive SOP: Standards for Tickets, Forums, and Incident Reports",
     "category": "Methodology",
     "file": "screenshot-archive-sop.md",
-    "chars": 30633,
-    "lines": 737
+    "chars": 32863,
+    "lines": 756
   },
   {
     "slug": "customer-support-scripts",
     "title": "Customer Support Speed Test Scripts: 20+ Professional Replies for \"Can't Open\"",
     "category": "Methodology",
     "file": "customer-support-scripts.md",
-    "chars": 30660,
-    "lines": 737
+    "chars": 32890,
+    "lines": 756
   },
   {
     "slug": "pre-launch-30-checklist",
     "title": "Pre-Launch 30-Item Checklist: Including 8 Mandatory Multi-Node Speed Tests",
     "category": "Methodology",
     "file": "pre-launch-30-checklist.md",
-    "chars": 30542,
-    "lines": 737
+    "chars": 32772,
+    "lines": 756
   },
   {
     "slug": "monthly-inspection-sop",
     "title": "Monthly Website Inspection SOP: 15 Minutes Personal, 1 Hour Enterprise",
     "category": "Methodology",
     "file": "monthly-inspection-sop.md",
-    "chars": 30563,
-    "lines": 737
+    "chars": 32793,
+    "lines": 756
   },
   {
     "slug": "quarterly-infra-review",
     "title": "Quarterly Infrastructure Review: Map Trends, Degradation, and Upgrade Decisions",
     "category": "Methodology",
     "file": "quarterly-infra-review.md",
-    "chars": 30592,
-    "lines": 737
+    "chars": 32822,
+    "lines": 756
   },
   {
     "slug": "protocol-selection-guide",
-    "title": "PING / HTTP / HTTPS Protocol Selection: Choose Right the First Time",
+    "title": "SpeedCE Tool Selection Guide: HTTP, HTTPS, PING, TCPing, DNS & Traceroute",
     "category": "Methodology",
     "file": "protocol-selection-guide.md",
-    "chars": 30658,
-    "lines": 737
+    "chars": 32814,
+    "lines": 756
   },
   {
     "slug": "speedtest-vs-pagespeed",
     "title": "Network Probing vs PageSpeed: Reachability vs Performance Decision Order",
     "category": "Methodology",
     "file": "speedtest-vs-pagespeed.md",
-    "chars": 30532,
-    "lines": 737
+    "chars": 32762,
+    "lines": 756
   },
   {
     "slug": "speedtest-vs-uptime",
     "title": "Active Probes vs 24/7 Monitoring: SpeedCE's Place in Ops Stack",
     "category": "Methodology",
     "file": "speedtest-vs-uptime.md",
-    "chars": 30591,
-    "lines": 737
+    "chars": 32821,
+    "lines": 756
   },
   {
     "slug": "speedce-itdog-combo",
     "title": "SpeedCE + ITDOG Golden Combo: Map Patrol and Continuous Ping Collaboration",
     "category": "Methodology",
     "file": "speedce-itdog-combo.md",
-    "chars": 30539,
-    "lines": 737
+    "chars": 32769,
+    "lines": 756
   },
   {
     "slug": "speedce-boce-combo",
     "title": "SpeedCE + BOCE Collaboration: Compliance and Blocking After Network Layer Cleared",
     "category": "Methodology",
     "file": "speedce-boce-combo.md",
-    "chars": 30539,
-    "lines": 737
+    "chars": 32769,
+    "lines": 756
   },
   {
     "slug": "free-speedtest-tools-2026",
     "title": "2026 Free Speed Test Tool Decision Tree: SpeedCE/ITDOG/BOCE by Scenario",
     "category": "Methodology",
     "file": "free-speedtest-tools-2026.md",
-    "chars": 30672,
-    "lines": 737
+    "chars": 32902,
+    "lines": 756
   },
   {
     "slug": "incident-report-speed-data",
     "title": "Speed Test Data in Incident Reports: Professional Postmortem Writing Templates",
     "category": "Methodology",
     "file": "incident-report-speed-data.md",
-    "chars": 30661,
-    "lines": 737
+    "chars": 32891,
+    "lines": 756
   },
   {
     "slug": "on-call-first-5-minutes",
     "title": "On-Call First 5 Minutes: How to Run SpeedCE After an Alert",
     "category": "Methodology",
     "file": "on-call-first-5-minutes.md",
-    "chars": 30450,
-    "lines": 737
+    "chars": 32680,
+    "lines": 756
   },
   {
     "slug": "speedce-vs-itdog",
     "title": "SpeedCE vs ITDOG Complete Comparison: Scenarios, Pros/Cons, and Pairing",
     "category": "Comparison",
     "file": "speedce-vs-itdog.md",
-    "chars": 30642,
-    "lines": 737
+    "chars": 32872,
+    "lines": 756
   },
   {
     "slug": "speedce-vs-boce",
     "title": "SpeedCE vs BOCE Complete Comparison: Lightweight Maps vs Full Ops Toolkit",
     "category": "Comparison",
     "file": "speedce-vs-boce.md",
-    "chars": 30621,
-    "lines": 737
+    "chars": 32851,
+    "lines": 756
   },
   {
     "slug": "map-vs-table-tools",
     "title": "Map vs Table Speed Tools: Troubleshooting Efficiency Compared",
     "category": "Comparison",
     "file": "map-vs-table-tools.md",
-    "chars": 30462,
-    "lines": 737
+    "chars": 32692,
+    "lines": 756
   },
   {
     "slug": "top5-free-speedtest-2026",
     "title": "2026 Top 5 Free Speed Test Tools for Site Owners: Deep Review and Bookmark Picks",
     "category": "Comparison",
     "file": "top5-free-speedtest-2026.md",
-    "chars": 30812,
-    "lines": 737
+    "chars": 33042,
+    "lines": 756
   },
   {
     "slug": "ping-pe-use-cases",
     "title": "Ping.pe Complete Guide: Complementary Global/China Strategy with SpeedCE",
     "category": "Comparison",
     "file": "ping-pe-use-cases.md",
-    "chars": 30433,
-    "lines": 737
+    "chars": 32983,
+    "lines": 756
   },
   {
     "slug": "pagespeed-vs-network",
     "title": "PageSpeed Insights vs Network Probing: Division Site Owners Must Understand",
     "category": "Comparison",
     "file": "pagespeed-vs-network.md",
-    "chars": 30667,
-    "lines": 737
+    "chars": 32897,
+    "lines": 756
   },
   {
     "slug": "monitoring-vs-probing",
     "title": "Monitoring Platforms vs Probe Tools: 24/7 Alerts and First Response",
     "category": "Comparison",
     "file": "monitoring-vs-probing.md",
-    "chars": 30614,
-    "lines": 737
+    "chars": 32844,
+    "lines": 756
   },
   {
     "slug": "developer-bookmark-list",
     "title": "Developer 2026 Bookmark Bar: 12 Links for 90% of Network Incidents",
     "category": "Comparison",
     "file": "developer-bookmark-list.md",
-    "chars": 30492,
-    "lines": 737
+    "chars": 32722,
+    "lines": 756
   },
   {
     "slug": "17ce-vs-speedce",
     "title": "17CE vs SpeedCE: Legacy Table Tool vs Modern Map Tool in Practice",
     "category": "Comparison",
     "file": "17ce-vs-speedce.md",
-    "chars": 30314,
-    "lines": 737
+    "chars": 32544,
+    "lines": 756
   },
   {
     "slug": "vsping-vs-speedce",
     "title": "VSPING vs SpeedCE: Pollution Detection and Reachability Together",
     "category": "Comparison",
     "file": "vsping-vs-speedce.md",
-    "chars": 30339,
-    "lines": 737
+    "chars": 32569,
+    "lines": 756
   },
   {
     "slug": "subdomain-inventory-method",
     "title": "Subdomain Inventory Patrol: One Spreadsheet for Monthly Speed Tests of All Public Domains",
     "category": "Advanced",
     "file": "subdomain-inventory-method.md",
-    "chars": 30503,
-    "lines": 737
+    "chars": 32733,
+    "lines": 756
   },
   {
     "slug": "competitor-benchmark",
     "title": "Competitor Benchmark Speed Tests: Same-Niche Map Comparison to Convince Leadership",
     "category": "Advanced",
     "file": "competitor-benchmark.md",
-    "chars": 30585,
-    "lines": 737
+    "chars": 32815,
+    "lines": 756
   },
   {
     "slug": "migration-before-after-report",
     "title": "Migration Before/After Report Template: Dual-Map Slides for Executives and Clients",
     "category": "Advanced",
     "file": "migration-before-after-report.md",
-    "chars": 30648,
-    "lines": 737
+    "chars": 32878,
+    "lines": 756
   },
   {
     "slug": "icp-filing-launch-check",
     "title": "Post-ICP Filing Nationwide Reachability Acceptance: DNS, Certs, and Compliance",
     "category": "Advanced",
     "file": "icp-filing-launch-check.md",
-    "chars": 30828,
-    "lines": 737
+    "chars": 33058,
+    "lines": 756
   },
   {
     "slug": "new-domain-cold-start",
     "title": "New Domain Cold Start 72 Hours: Registration, DNS, Certs, and Map Acceptance Rhythm",
     "category": "Advanced",
     "file": "new-domain-cold-start.md",
-    "chars": 30546,
-    "lines": 737
+    "chars": 32776,
+    "lines": 756
   },
   {
     "slug": "spring-festival-traffic",
     "title": "Spring Festival Traffic Assurance: Three-Carrier Checkpoint Before Mobile Surge",
     "category": "Advanced",
     "file": "spring-festival-traffic.md",
-    "chars": 30576,
-    "lines": 737
+    "chars": 32806,
+    "lines": 756
   },
   {
     "slug": "double11-618-prep",
     "title": "Double-11/618 Sale Speed Test Timeline: T-7 to T+0 Complete Rhythm",
     "category": "Advanced",
     "file": "double11-618-prep.md",
-    "chars": 30623,
-    "lines": 737
+    "chars": 32853,
+    "lines": 756
   },
   {
     "slug": "ultimate-toolbar-2026",
     "title": "2026 Ultimate Site Owner Browser Toolbar: Speed, Monitor, Performance 12 Links",
     "category": "Advanced",
     "file": "ultimate-toolbar-2026.md",
-    "chars": 30673,
-    "lines": 737
+    "chars": 32903,
+    "lines": 756
   },
   {
     "slug": "xinjiang-tibet-access-guide",
     "title": "Xinjiang/Tibet/Northwest Access Optimization: Map Acceptance and CDN Strategy",
     "category": "Advanced",
     "file": "xinjiang-tibet-access-guide.md",
-    "chars": 30747,
-    "lines": 737
+    "chars": 32977,
+    "lines": 756
   },
   {
     "slug": "northeast-china-access-guide",
     "title": "Northeast China Access Quality: Cold-Region Routes and CDN Node Coverage",
     "category": "Advanced",
     "file": "northeast-china-access-guide.md",
-    "chars": 30509,
-    "lines": 737
+    "chars": 32739,
+    "lines": 756
   },
   {
     "slug": "guangdong-zhejiang-baseline",
     "title": "Guangdong/Zhejiang/Shanghai/Beijing Baseline Latency: Map Targets for Coastal Economies",
     "category": "Advanced",
     "file": "guangdong-zhejiang-baseline.md",
-    "chars": 30864,
-    "lines": 737
+    "chars": 33094,
+    "lines": 756
   },
   {
     "slug": "change-management-speedtest",
     "title": "Change Management Speed Test Gate: Mandatory Probe After DNS/Cert/Nginx Changes",
     "category": "Advanced",
     "file": "change-management-speedtest.md",
-    "chars": 30578,
-    "lines": 737
+    "chars": 32808,
+    "lines": 756
   },
   {
     "slug": "mysql-connection-timeout",
     "title": "MySQL Connection Timeout vs Site Timeout: Full Layered Triage When Network Is Green",
     "category": "Troubleshooting",
     "file": "mysql-connection-timeout.md",
-    "chars": 31319,
-    "lines": 739
+    "chars": 33549,
+    "lines": 758
   },
   {
     "slug": "redis-connection-issues",
     "title": "Redis Connection Failures: When to Test Network Before Cache Layer",
     "category": "Troubleshooting",
     "file": "redis-connection-issues.md",
-    "chars": 31070,
-    "lines": 739
+    "chars": 33300,
+    "lines": 758
   },
   {
     "slug": "docker-port-mapping",
     "title": "Docker Port Mapping Errors: Container OK Inside, Nationwide Users Can't Connect",
     "category": "Troubleshooting",
     "file": "docker-port-mapping.md",
-    "chars": 31123,
-    "lines": 739
+    "chars": 33353,
+    "lines": 758
   },
   {
     "slug": "k8s-ingress-troubleshoot",
     "title": "Kubernetes Ingress Failures: Cluster Internal OK, Public Domain Red",
     "category": "Troubleshooting",
     "file": "k8s-ingress-troubleshoot.md",
-    "chars": 31135,
-    "lines": 739
+    "chars": 33365,
+    "lines": 758
   },
   {
     "slug": "lets-encrypt-rate-limit",
     "title": "Let's Encrypt Rate Limits and Renewal Failures: When HTTPS Suddenly Goes Red Nationwide",
     "category": "Troubleshooting",
     "file": "lets-encrypt-rate-limit.md",
-    "chars": 31415,
-    "lines": 739
+    "chars": 33645,
+    "lines": 758
   },
   {
     "slug": "sni-mismatch-error",
     "title": "SNI Mismatch: Partial HTTPS Failures with Multiple Certs on One IP",
     "category": "Troubleshooting",
     "file": "sni-mismatch-error.md",
-    "chars": 30890,
-    "lines": 739
+    "chars": 33120,
+    "lines": 758
   },
   {
     "slug": "tls-version-too-low",
     "title": "TLS Version Too Low: Regional HTTPS Failures on Old Clients vs New Security Policy",
     "category": "Troubleshooting",
     "file": "tls-version-too-low.md",
-    "chars": 31006,
-    "lines": 739
+    "chars": 33236,
+    "lines": 758
   },
   {
     "slug": "gzip-brotli-compression",
     "title": "Compression and Timeouts: Reachable but Extremely Slow on Large Responses",
     "category": "Troubleshooting",
     "file": "gzip-brotli-compression.md",
-    "chars": 31065,
-    "lines": 739
+    "chars": 33295,
+    "lines": 758
   },
   {
     "slug": "vultr-line-guide",
     "title": "Vultr DC Route Acceptance: Picking Tokyo/Singapore/LA by Workload Maps",
     "category": "VPS Routing",
     "file": "vultr-line-guide.md",
-    "chars": 30775,
-    "lines": 739
+    "chars": 33005,
+    "lines": 758
   },
   {
     "slug": "bandwagonhost-guide",
     "title": "BandwagonHost CN2/GIA Package Acceptance: Classic Vendor Map Method",
     "category": "VPS Routing",
     "file": "bandwagonhost-guide.md",
-    "chars": 31003,
-    "lines": 739
+    "chars": 33233,
+    "lines": 758
   },
   {
     "slug": "racknerd-dmit-guide",
     "title": "RackNerd / DMIT and Hot Vendors: Refund-Period Map Acceptance Template",
     "category": "VPS Routing",
     "file": "racknerd-dmit-guide.md",
-    "chars": 30883,
-    "lines": 739
+    "chars": 33113,
+    "lines": 758
   },
   {
     "slug": "aws-lightsail-china",
     "title": "AWS Lightsail China Access: Global Green, China Slow Common Pattern",
     "category": "VPS Routing",
     "file": "aws-lightsail-china.md",
-    "chars": 30825,
-    "lines": 739
+    "chars": 33055,
+    "lines": 758
   },
   {
     "slug": "oracle-cloud-free",
     "title": "Oracle Cloud Free Tier Acceptance: Zero-Cost Machine Map Standards",
     "category": "VPS Routing",
     "file": "oracle-cloud-free.md",
-    "chars": 30897,
-    "lines": 739
+    "chars": 33127,
+    "lines": 758
   },
   {
     "slug": "gcp-azure-china-access",
     "title": "GCP/Azure China Access: Enterprise Cloud Map Assessment for Domestic Teams",
     "category": "VPS Routing",
     "file": "gcp-azure-china-access.md",
-    "chars": 30743,
-    "lines": 739
+    "chars": 32973,
+    "lines": 758
   },
   {
     "slug": "aws-cloudfront-china",
     "title": "AWS CloudFront China Access: Global Distribution vs Domestic Experience",
     "category": "CDN",
     "file": "aws-cloudfront-china.md",
-    "chars": 30799,
-    "lines": 739
+    "chars": 33029,
+    "lines": 758
   },
   {
     "slug": "fastly-cdn-guide",
     "title": "Fastly CDN Acceptance: Edge Rules and Origin Comparative Speed Tests",
     "category": "CDN",
     "file": "fastly-cdn-guide.md",
-    "chars": 30678,
-    "lines": 739
+    "chars": 32908,
+    "lines": 758
   },
   {
     "slug": "bunny-cdn-guide",
     "title": "Bunny CDN Value Routes: Global Node Map Acceptance",
     "category": "CDN",
     "file": "bunny-cdn-guide.md",
-    "chars": 30667,
-    "lines": 739
+    "chars": 32897,
+    "lines": 758
   },
   {
     "slug": "qiniu-cdn-guide",
     "title": "Qiniu CDN Onboarding: Domestic Site Speed Acceptance Checklist",
     "category": "CDN",
     "file": "qiniu-cdn-guide.md",
-    "chars": 30655,
-    "lines": 739
+    "chars": 32885,
+    "lines": 758
   },
   {
     "slug": "upyun-cdn-guide",
     "title": "Upyun CDN Acceptance: Image Sites and Static Acceleration Map Standards",
     "category": "CDN",
     "file": "upyun-cdn-guide.md",
-    "chars": 30658,
-    "lines": 739
+    "chars": 32888,
+    "lines": 758
   },
   {
     "slug": "shopify-speedtest",
     "title": "Shopify Store Global Reachability: Theme, Payment, and App Domain Layered Tests",
     "category": "Global Expansion",
     "file": "shopify-speedtest.md",
-    "chars": 30974,
-    "lines": 739
+    "chars": 33204,
+    "lines": 758
   },
   {
     "slug": "woocommerce-global",
     "title": "WooCommerce Global Acceptance: Plugins, Payment Gateways, and Main Domain Checklist",
     "category": "Global Expansion",
     "file": "woocommerce-global.md",
-    "chars": 30932,
-    "lines": 739
+    "chars": 33162,
+    "lines": 758
   },
   {
     "slug": "notion-saas-availability",
     "title": "Self-Hosted Notion-Like Tools: Global Team Access Acceptance",
     "category": "Global Expansion",
     "file": "notion-saas-availability.md",
-    "chars": 30881,
-    "lines": 739
+    "chars": 33111,
+    "lines": 758
   },
   {
     "slug": "api-rate-limit-global",
     "title": "Global API Rate Limits and Geo Blocks: Green Map but 403 Responses",
     "category": "Global Expansion",
     "file": "api-rate-limit-global.md",
-    "chars": 31030,
-    "lines": 739
+    "chars": 33260,
+    "lines": 758
   },
   {
     "slug": "middle-east-africa-nodes",
     "title": "Middle East and Africa Node Acceptance: Emerging Market Map Targets",
     "category": "Global Expansion",
     "file": "middle-east-africa-nodes.md",
-    "chars": 31045,
-    "lines": 739
+    "chars": 33275,
+    "lines": 758
   },
   {
     "slug": "latin-america-nodes",
     "title": "Latin America Node Acceptance: Brazil and Mexico Priority Map Standards",
     "category": "Global Expansion",
     "file": "latin-america-nodes.md",
-    "chars": 30907,
-    "lines": 739
+    "chars": 33137,
+    "lines": 758
   },
   {
     "slug": "hexo-hugo-static-site",
     "title": "Hexo/Hugo Static Site Launch: GitHub Pages vs Self-Hosted Map Comparison",
     "category": "Industry",
     "file": "hexo-hugo-static-site.md",
-    "chars": 30519,
-    "lines": 737
+    "chars": 32749,
+    "lines": 756
   },
   {
     "slug": "nextjs-nuxt-ssr-deploy",
     "title": "Next.js/Nuxt SSR Deploy Acceptance: Node Service and CDN Layered Speed Tests",
     "category": "Industry",
     "file": "nextjs-nuxt-ssr-deploy.md",
-    "chars": 30583,
-    "lines": 737
+    "chars": 32813,
+    "lines": 756
   },
   {
     "slug": "laravel-php-deploy",
     "title": "Laravel/PHP Site Launch: FPM, Nginx, and Nationwide HTTPS Acceptance",
     "category": "Industry",
     "file": "laravel-php-deploy.md",
-    "chars": 30424,
-    "lines": 737
+    "chars": 32654,
+    "lines": 756
   },
   {
     "slug": "java-spring-boot-api",
     "title": "Spring Boot API Nationwide Acceptance: Gateway, Certificates, and Subdomain List",
     "category": "Industry",
     "file": "java-spring-boot-api.md",
-    "chars": 30640,
-    "lines": 737
+    "chars": 32870,
+    "lines": 756
   },
   {
     "slug": "python-django-flask",
     "title": "Django/Flask Deploy Speed Tests: WSGI and Application Layer Division",
     "category": "Industry",
     "file": "python-django-flask.md",
-    "chars": 30536,
-    "lines": 737
+    "chars": 32766,
+    "lines": 756
   },
   {
     "slug": "video-on-demand-site",
     "title": "VOD Site Acceptance: Playback Domain, CDN, and API Three-Domain Tests",
     "category": "Industry",
     "file": "video-on-demand-site.md",
-    "chars": 30368,
-    "lines": 737
+    "chars": 32598,
+    "lines": 756
   },
   {
     "slug": "recruitment-careers-site",
     "title": "Recruitment Site Peak Acceptance: Pre-Campus-Season Nationwide Checkpoint",
     "category": "Industry",
     "file": "recruitment-careers-site.md",
-    "chars": 30560,
-    "lines": 737
+    "chars": 32790,
+    "lines": 756
   },
   {
     "slug": "hospital-appointment-system",
     "title": "Hospital Appointment System Network Baseline: Peak and Mobile User Acceptance",
     "category": "Industry",
     "file": "hospital-appointment-system.md",
-    "chars": 30758,
-    "lines": 737
+    "chars": 32988,
+    "lines": 756
   },
   {
     "slug": "oncall-runbook-speedtest",
     "title": "On-Call Runbook Speed Test Chapter: 5-Minute SOP After Alerts",
     "category": "Methodology",
     "file": "oncall-runbook-speedtest.md",
-    "chars": 30609,
-    "lines": 737
+    "chars": 32839,
+    "lines": 756
   },
   {
     "slug": "postmortem-blameless",
     "title": "Blameless Postmortem Speed Evidence: Timelines and Maps in Writeups",
     "category": "Methodology",
     "file": "postmortem-blameless.md",
-    "chars": 30631,
-    "lines": 737
+    "chars": 32861,
+    "lines": 756
   },
   {
     "slug": "sla-report-monthly",
     "title": "Monthly SLA Report Template: Success Rate Data for Management",
     "category": "Methodology",
     "file": "sla-report-monthly.md",
-    "chars": 30504,
-    "lines": 737
+    "chars": 32734,
+    "lines": 756
   },
   {
     "slug": "vendor-ticket-evidence",
     "title": "Cloud/CDN Vendor Tickets: Screenshot Standards and Description Templates",
     "category": "Methodology",
     "file": "vendor-ticket-evidence.md",
-    "chars": 30480,
-    "lines": 737
+    "chars": 32710,
+    "lines": 756
   },
   {
     "slug": "team-onboarding-speedce",
     "title": "New Ops Hire Day One: SpeedCE and Toolchain Training Handbook",
     "category": "Methodology",
     "file": "team-onboarding-speedce.md",
-    "chars": 30390,
-    "lines": 737
+    "chars": 32620,
+    "lines": 756
   },
   {
     "slug": "cesu-vs-speedce",
     "title": "CESU.ai vs SpeedCE: Emerging Tool Site vs Map-First Probe Comparison",
     "category": "Comparison",
     "file": "cesu-vs-speedce.md",
-    "chars": 30371,
-    "lines": 737
+    "chars": 32601,
+    "lines": 756
   },
   {
     "slug": "chinaz-toolkit-review",
     "title": "Chinaz Toolkit Ecosystem vs SpeedCE: Ping/Speed/Whois Division of Labor",
     "category": "Comparison",
     "file": "chinaz-toolkit-review.md",
-    "chars": 30616,
-    "lines": 737
+    "chars": 32846,
+    "lines": 756
   },
   {
     "slug": "aliyun-boce-vs-speedce",
     "title": "Alibaba Cloud Synthetic Monitoring vs SpeedCE: How Aliyun Users Pair Both",
     "category": "Comparison",
     "file": "aliyun-boce-vs-speedce.md",
-    "chars": 30799,
-    "lines": 737
+    "chars": 33029,
+    "lines": 756
   },
   {
     "slug": "province-henan-hubei",
     "title": "Henan/Hubei Central China Access Optimization: Map Patterns and CDN Strategy",
     "category": "Advanced",
     "file": "province-henan-hubei.md",
-    "chars": 30739,
-    "lines": 737
+    "chars": 32969,
+    "lines": 756
   },
   {
     "slug": "province-sichuan-chongqing",
     "title": "Sichuan/Chongqing Access Acceptance: Southwest Nodes and Route Traits",
     "category": "Advanced",
     "file": "province-sichuan-chongqing.md",
-    "chars": 30582,
-    "lines": 737
+    "chars": 32812,
+    "lines": 756
   },
   {
     "slug": "province-fujian-taiwan-trade",
     "title": "Fujian/Guangdong Taiwan-Trade Sites: Southeast Coastal Map Acceptance",
     "category": "Advanced",
     "file": "province-fujian-taiwan-trade.md",
-    "chars": 30572,
-    "lines": 737
+    "chars": 32802,
+    "lines": 756
   },
   {
     "slug": "province-shandong-hebei",
     "title": "Beijing-Tianjin-Hebei/Shandong Baseline: North China Map Targets",
     "category": "Advanced",
     "file": "province-shandong-hebei.md",
-    "chars": 30638,
-    "lines": 737
+    "chars": 32868,
+    "lines": 756
   },
   {
     "slug": "province-yunnan-guizhou",
     "title": "Yunnan/Guizhou Access: Southwest Frontier Maps and Mobile Network",
     "category": "Advanced",
     "file": "province-yunnan-guizhou.md",
-    "chars": 30380,
-    "lines": 737
+    "chars": 32610,
+    "lines": 756
   },
   {
     "slug": "hainan-special-zone",
     "title": "Hainan Free Trade Zone Sites: Island Geography and Access Traits",
     "category": "Advanced",
     "file": "hainan-special-zone.md",
-    "chars": 30489,
-    "lines": 737
+    "chars": 32719,
+    "lines": 756
   },
   {
     "slug": "inner-mongolia-northeast",
     "title": "Inner Mongolia/Northeast: Cold-Region Routes and Winter Peak Traffic",
     "category": "Advanced",
     "file": "inner-mongolia-northeast.md",
-    "chars": 30425,
-    "lines": 737
+    "chars": 32655,
+    "lines": 756
   },
   {
     "slug": "cctv-news-peak",
     "title": "News Release Peak Traffic: 30-Minute Pre-Publish Checkpoint",
     "category": "Advanced",
     "file": "cctv-news-peak.md",
-    "chars": 30415,
-    "lines": 737
+    "chars": 32645,
+    "lines": 756
   },
   {
     "slug": "school-start-september",
     "title": "September School Season: Education Site Traffic Assurance Speed Tests",
     "category": "Advanced",
     "file": "school-start-september.md",
-    "chars": 30404,
-    "lines": 737
+    "chars": 32634,
+    "lines": 756
   },
   {
     "slug": "national-holiday-golden-week",
     "title": "National Holiday Golden Week: Pre-Surge Mobile User Checkpoint",
     "category": "Advanced",
     "file": "national-holiday-golden-week.md",
-    "chars": 30472,
-    "lines": 737
+    "chars": 32702,
+    "lines": 756
   },
   {
     "slug": "year-end-summary-report",
     "title": "Year-End Infrastructure Report: Summarizing 12 Months of Map Archives",
     "category": "Advanced",
     "file": "year-end-summary-report.md",
-    "chars": 30518,
-    "lines": 737
+    "chars": 32748,
+    "lines": 756
   },
   {
     "slug": "websocket-wss-check",
     "title": "WebSocket/WSS Long Connections: SpeedCE HTTPS Limits and Real-Time Business",
     "category": "Troubleshooting",
     "file": "websocket-wss-check.md",
-    "chars": 31152,
-    "lines": 739
+    "chars": 33382,
+    "lines": 758
   },
   {
     "slug": "grpc-gateway-check",
     "title": "gRPC/HTTP2 Gateway: REST Reachable vs gRPC Failure Division",
     "category": "Troubleshooting",
     "file": "grpc-gateway-check.md",
-    "chars": 30937,
-    "lines": 739
+    "chars": 33167,
+    "lines": 758
   },
   {
     "slug": "oauth-callback-domain",
     "title": "OAuth Callback Domain Verification: Network-Layer First for Login Failures",
     "category": "Troubleshooting",
     "file": "oauth-callback-domain.md",
-    "chars": 31196,
-    "lines": 739
+    "chars": 33426,
+    "lines": 758
   },
   {
     "slug": "payment-callback-url",
     "title": "Payment Callback URL Reachability: Nationwide Probes on Callback Domains",
     "category": "Troubleshooting",
     "file": "payment-callback-url.md",
-    "chars": 31215,
-    "lines": 739
+    "chars": 33445,
+    "lines": 758
   },
   {
     "slug": "email-link-tracking",
     "title": "Email Link Tracking Domains: Network Troubleshooting for Marketing Click Failures",
     "category": "Troubleshooting",
     "file": "email-link-tracking.md",
-    "chars": 31117,
-    "lines": 739
+    "chars": 33347,
+    "lines": 758
   },
   {
     "slug": "colocation-vs-cloud",
     "title": "Colocation vs Public Cloud: Map Acceptance Differences After Same Workload Choice",
     "category": "VPS Routing",
     "file": "colocation-vs-cloud.md",
-    "chars": 30806,
-    "lines": 739
+    "chars": 33036,
+    "lines": 758
   },
   {
     "slug": "bare-metal-dedicated-line",
     "title": "Bare Metal Dedicated Line: Enterprise Leased Line Map Acceptance",
     "category": "VPS Routing",
     "file": "bare-metal-dedicated-line.md",
-    "chars": 30789,
-    "lines": 739
+    "chars": 33019,
+    "lines": 758
   },
   {
     "slug": "image-cdn-webp-avif",
     "title": "Image CDN with WebP/AVIF: Static Domain Nationwide Acceptance",
     "category": "CDN",
     "file": "image-cdn-webp-avif.md",
-    "chars": 30717,
-    "lines": 739
+    "chars": 32947,
+    "lines": 758
   },
   {
     "slug": "font-cdn-google-china",
     "title": "Font CDN and Google Fonts: China Load Failure and Speed Test Division",
     "category": "CDN",
     "file": "font-cdn-google-china.md",
-    "chars": 30756,
-    "lines": 739
+    "chars": 32986,
+    "lines": 758
   },
   {
     "slug": "app-store-review-server",
     "title": "App Store Review Period Servers: Overseas Review Node Reachability",
     "category": "Global Expansion",
     "file": "app-store-review-server.md",
-    "chars": 30939,
-    "lines": 739
+    "chars": 33169,
+    "lines": 758
   },
   {
     "slug": "gdpr-cookie-wall",
     "title": "GDPR and Cookie Walls: European User Access Network Baseline",
     "category": "Global Expansion",
     "file": "gdpr-cookie-wall.md",
-    "chars": 30782,
-    "lines": 739
+    "chars": 33012,
+    "lines": 758
   },
   {
     "slug": "discuz-qzone-share",
     "title": "Discuz Share Links: Main Site vs Share Domain Layered Speed Tests",
     "category": "Industry",
     "file": "discuz-qzone-share.md",
-    "chars": 30347,
-    "lines": 737
+    "chars": 32577,
+    "lines": 756
   },
   {
     "slug": "typecho-emlog-blog",
     "title": "Typecho/Emlog Lightweight Blogs: Small Sites Still Need Nationwide Acceptance",
     "category": "Industry",
     "file": "typecho-emlog-blog.md",
-    "chars": 30551,
-    "lines": 737
+    "chars": 32781,
+    "lines": 756
   },
   {
     "slug": "ghost-blog-deploy",
     "title": "Ghost Blog Deploy: Headless and Theme Domain Speed Tests",
     "category": "Industry",
     "file": "ghost-blog-deploy.md",
-    "chars": 30294,
-    "lines": 737
+    "chars": 32524,
+    "lines": 756
   },
   {
     "slug": "regex-domain-inventory",
     "title": "Regex Subdomain Discovery: Automation Ideas for Missing Domain Inventory",
     "category": "Methodology",
     "file": "regex-domain-inventory.md",
-    "chars": 30481,
-    "lines": 737
+    "chars": 32711,
+    "lines": 756
   },
   {
     "slug": "calendar-reminder-inspect",
     "title": "Calendar Reminder Inspections: Embed Speed Tests in Google Calendar/Feishu",
     "category": "Methodology",
     "file": "calendar-reminder-inspect.md",
-    "chars": 30538,
-    "lines": 737
+    "chars": 32768,
+    "lines": 756
   },
   {
     "slug": "gtmetrix-vs-speedce",
     "title": "GTmetrix vs SpeedCE: Performance Testing vs Network Probing Division",
     "category": "Comparison",
     "file": "gtmetrix-vs-speedce.md",
-    "chars": 30382,
-    "lines": 737
+    "chars": 32612,
+    "lines": 756
   },
   {
     "slug": "webpagetest-vs-speedce",
     "title": "WebPageTest vs SpeedCE: When to Use Which Tool",
     "category": "Comparison",
     "file": "webpagetest-vs-speedce.md",
-    "chars": 30382,
-    "lines": 737
+    "chars": 32612,
+    "lines": 756
   },
   {
     "slug": "multi-team-handover",
     "title": "Ops Handover Speed Baselines: Map Archive Required Before Departure",
     "category": "Advanced",
     "file": "multi-team-handover.md",
-    "chars": 30475,
-    "lines": 737
+    "chars": 32705,
+    "lines": 756
   },
   {
     "slug": "acquisition-due-diligence",
     "title": "Acquisition Tech Due Diligence: Quick Nationwide Reachability Assessment",
     "category": "Advanced",
     "file": "acquisition-due-diligence.md",
-    "chars": 30519,
-    "lines": 737
+    "chars": 32749,
+    "lines": 756
   },
   {
     "slug": "penetration-test-prep",
     "title": "Pre-Pentest External Attack Surface: Public Domain Speed Test Inventory",
     "category": "Advanced",
     "file": "penetration-test-prep.md",
-    "chars": 30613,
-    "lines": 737
+    "chars": 32843,
+    "lines": 756
   },
   {
     "slug": "disaster-recovery-drill",
     "title": "Disaster Recovery Drill: Nationwide SpeedCE Checkpoint After DR Failover",
     "category": "Advanced",
     "file": "disaster-recovery-drill.md",
-    "chars": 30413,
-    "lines": 737
+    "chars": 32643,
+    "lines": 756
   },
   {
     "slug": "zero-downtime-deploy",
     "title": "Zero-Downtime Deploy: Blue/Green and Canary Map Comparison",
     "category": "Advanced",
     "file": "zero-downtime-deploy.md",
-    "chars": 30359,
-    "lines": 737
+    "chars": 32589,
+    "lines": 756
   },
   {
     "slug": "status-page-setup",
     "title": "Status Page Setup: How Probe Data Supports Public Status Pages",
     "category": "Advanced",
     "file": "status-page-setup.md",
-    "chars": 30319,
-    "lines": 737
+    "chars": 32549,
+    "lines": 756
   },
   {
     "slug": "client-report-quarterly",
     "title": "Quarterly Client Reports with Maps: B2B Provider Speed Test Reporting Template",
     "category": "Advanced",
     "file": "client-report-quarterly.md",
-    "chars": 30581,
-    "lines": 737
+    "chars": 32811,
+    "lines": 756
   },
   {
     "slug": "seo-crawl-baidu-google",
     "title": "Baidu/Google Crawlers and Site Reachability: SEO Angle on Speed Tests",
     "category": "Advanced",
     "file": "seo-crawl-baidu-google.md",
-    "chars": 30705,
-    "lines": 737
+    "chars": 32935,
+    "lines": 756
   },
   {
     "slug": "affiliate-tracking-domain",
     "title": "Affiliate Tracking Domains: Nationwide Reachability Impact on Conversion Chain",
     "category": "Advanced",
     "file": "affiliate-tracking-domain.md",
-    "chars": 30490,
-    "lines": 737
+    "chars": 32720,
+    "lines": 756
   },
   {
     "slug": "short-link-domain-check",
     "title": "Short Link Domain Acceptance: Nationwide Node Tests on Redirect Chains",
     "category": "Advanced",
     "file": "short-link-domain-check.md",
-    "chars": 30481,
-    "lines": 737
+    "chars": 32711,
+    "lines": 756
   },
   {
     "slug": "landing-page-campaign",
     "title": "Ad Landing Pages: 10-Minute Nationwide Checkpoint Before Campaign Launch",
     "category": "Advanced",
     "file": "landing-page-campaign.md",
-    "chars": 30312,
-    "lines": 737
+    "chars": 32542,
+    "lines": 756
   },
   {
     "slug": "ab-test-traffic-split",
     "title": "A/B Test Traffic Split Domains: Independent Map Acceptance per Experiment Arm",
     "category": "Advanced",
     "file": "ab-test-traffic-split.md",
-    "chars": 30533,
-    "lines": 737
+    "chars": 32763,
+    "lines": 756
   }
 ]

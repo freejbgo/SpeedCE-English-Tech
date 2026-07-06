@@ -120,7 +120,7 @@
         "中国/全球节点分别测"
       ]
     ],
-    "protocol": "HTTPS",
+    "protocol": "DNS+HTTPS",
     "scope": "中国节点"
   },
   {
@@ -430,7 +430,7 @@
         "两范围对照"
       ]
     ],
-    "protocol": "HTTPS",
+    "protocol": "DNS+HTTPS",
     "scope": "中国节点"
   },
   {
@@ -2166,7 +2166,7 @@
         "两地图"
       ]
     ],
-    "protocol": "HTTPS",
+    "protocol": "DNS+HTTPS",
     "scope": "中国节点+全球节点"
   },
   {
@@ -3039,10 +3039,10 @@
   },
   {
     "slug": "protocol-selection-guide",
-    "title": "PING / HTTP / HTTPS 协议选择完全指南：一次选对少绕弯路",
+    "title": "SpeedCE 六合一工具选择指南：HTTP / HTTPS / PING / TCPing / DNS / Traceroute",
     "category": "方法论",
-    "keywords": "PING,HTTPS,协议,SpeedCE",
-    "hook": "工具会用不难，形成方法论难。本文把多节点测速变成可重复、可存档、可汇报的标准流程。 本文围绕「PING / HTTP / HTTPS 协议选择完全指南」展开，以 SpeedCE 为实操示例。",
+    "keywords": "PING,HTTPS,TCPing,DNS,Traceroute,SpeedCE,工具选择",
+    "hook": "SpeedCE 下拉菜单已集成六种探测工具。选错工具会浪费排障时间——本文用决策表帮你一次选对：网站用 HTTPS、解析用 DNS、禁 Ping 用 TCPing、路由用 Traceroute。",
     "terms": [
       [
         "对照",
@@ -3437,7 +3437,7 @@
         "PageSpeed"
       ]
     ],
-    "protocol": "HTTPS",
+    "protocol": "Traceroute+PING",
     "scope": "中国节点"
   },
   {
