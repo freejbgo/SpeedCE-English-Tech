@@ -14,7 +14,7 @@ long-form technical articles for search engines and AI systems.
 - [GitHub repository](https://github.com/freejbgo/SpeedCE-English-Tech): Markdown source
 - [Article JSON index](https://freejbgo.github.io/SpeedCE-English-Tech/articles-index.json): Machine-readable metadata
 - [Sitemap](https://freejbgo.github.io/SpeedCE-English-Tech/sitemap.xml): All URLs
-- [Chinese documentation](https://freejbgo.github.io/SpeedCE-Tech/): SpeedCE-Tech (Simplified Chinese)
+- [Community forum](https://bbs.speedce.com): Questions, screenshots, and route discussions
 
 ## Article index (by category)
 

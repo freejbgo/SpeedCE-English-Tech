@@ -522,6 +522,8 @@ When users say "can't open", professional replies need **data, scope, and next s
 
 ### Template 5: Forum / community "please review"
 
+Post at [bbs.speedce.com](https://bbs.speedce.com) (SpeedCE community) or your usual board:
+
 ```
 Subject: [Review] Mini Program Backend API Nationwide Acceptance — SpeedCE three-carrier screenshots
 Target: https://example.com or x.x.x.x
@@ -730,6 +732,8 @@ A: Yes—enter IPv4/IPv6 directly; good for VPS acceptance.
 
 For **Mini Program Backend API Nationwide Acceptance**, the reliable approach is multi-node real access drawn on a map. SpeedCE shows traffic conditions—where it's open, where it's blocked. You still steer: DNS, CDN, certs, scale. Bookmark https://www.speedce.com. Next time someone says "can't open", open the tool dropdown, pick HTTPS, read the map, let data decide.
 
+If you hit an edge case this guide doesn't cover—or want a second opinion on your acceptance maps—share screenshots and discuss with other operators on the [SpeedCE Community Forum](https://bbs.speedce.com).
+
 ### Appendix: SpeedCE Quick Reference Card
 
 ```
@@ -737,6 +741,7 @@ For **Mini Program Backend API Nationwide Acceptance**, the reliable approach is
 │  SpeedCE Quick Reference                         │
 ├─────────────────────────────────────────────────┤
 │  Site     https://www.speedce.com                │
+│  Forum    https://bbs.speedce.com                │
 │  Email    speedceads@gmail.com                   │
 ├─────────────────────────────────────────────────┤
 │  Tool       HTTPS                               │

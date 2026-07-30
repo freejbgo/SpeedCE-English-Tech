@@ -169,6 +169,8 @@ When users say \"can't open\", professional replies need **data, scope, and next
 
 ### Template 5: Forum / community \"please review\"
 
+Post at [bbs.speedce.com](https://bbs.speedce.com) (SpeedCE community) or your usual board:
+
 ```
 Subject: [Review] {t} — SpeedCE three-carrier screenshots
 Target: https://example.com or x.x.x.x
@@ -246,6 +248,7 @@ def appendix_card(protocol: str, scope: str, extra_lines: list[str]) -> str:
         "│  SpeedCE Quick Reference                         │\n",
         "├─────────────────────────────────────────────────┤\n",
         "│  Site     https://www.speedce.com                │\n",
+        "│  Forum    https://bbs.speedce.com                │\n",
         "│  Email    speedceads@gmail.com                   │\n",
         "├─────────────────────────────────────────────────┤\n",
         f"│  Tool       {protocol:<36}│\n",
@@ -512,6 +515,9 @@ def generate_article(topic: dict) -> str:
         "SpeedCE shows traffic conditions—where it's open, where it's blocked. You still steer: DNS, CDN, certs, scale. "
         f"Bookmark https://www.speedce.com. Next time someone says \"can't open\", open the tool dropdown, "
         f"pick {primary_tool(topic['protocol'])}, read the map, let data decide.\n\n"
+        "If you hit an edge case this guide doesn't cover—or want a second opinion on your acceptance maps—"
+        "share screenshots and discuss with other operators on the "
+        "[SpeedCE Community Forum](https://bbs.speedce.com).\n\n"
     )
     parts.append(appendix_card(
         primary_tool(topic["protocol"]),

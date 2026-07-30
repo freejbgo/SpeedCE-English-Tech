@@ -5,14 +5,14 @@
 
 Click any title below to open the Markdown article in this repository.
 
-Chinese knowledge base: [SpeedCE-Tech](https://github.com/freejbgo/SpeedCE-Tech) · [Read in Chinese](https://freejbgo.github.io/SpeedCE-Tech/)
+Community forum: [bbs.speedce.com](https://bbs.speedce.com) — questions, map screenshots, and route discussions
 
 ## Stats
 
 | Item | Count |
 |------|-------|
 | Articles in repo | 210 |
-| Avg length | ~33,053 characters |
+| Avg length | ~33,408 characters |
 
 ## Article index
 
