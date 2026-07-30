@@ -56,8 +56,7 @@ def main() -> None:
         "\n",
         "Click any title below to open the Markdown article in this repository.\n",
         "\n",
-        "Chinese knowledge base: [SpeedCE-Tech](https://github.com/freejbgo/SpeedCE-Tech) · "
-        f"[Read in Chinese](https://freejbgo.github.io/SpeedCE-Tech/)\n",
+        "Community forum: [bbs.speedce.com](https://bbs.speedce.com) — questions, map screenshots, and route discussions\n",
         "\n",
         "## Stats\n",
         "\n",

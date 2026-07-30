@@ -17,7 +17,7 @@ troubleshooting, VPS route verification, CDN acceptance, and global deployment.
 
 Machine-readable index: [articles-index.json](https://freejbgo.github.io/SpeedCE-English-Tech/articles-index.json) · [llms.txt](https://freejbgo.github.io/SpeedCE-English-Tech/llms.txt) · [sitemap.xml](https://freejbgo.github.io/SpeedCE-English-Tech/sitemap.xml)
 
-Chinese knowledge base: [SpeedCE-Tech](https://github.com/freejbgo/SpeedCE-Tech) · [Read in Chinese](https://freejbgo.github.io/SpeedCE-Tech/)
+Community forum: [bbs.speedce.com](https://bbs.speedce.com) — questions, map screenshots, and route discussions
 
 ## Troubleshooting (38 articles)
 

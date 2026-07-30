@@ -130,8 +130,7 @@ def generate_index_md(articles: list[dict]) -> str:
         f"Machine-readable index: [articles-index.json]({PAGES_BASE}/articles-index.json) · "
         f"[llms.txt]({PAGES_BASE}/llms.txt) · [sitemap.xml]({PAGES_BASE}/sitemap.xml)",
         "",
-        "Chinese knowledge base: [SpeedCE-Tech](https://github.com/freejbgo/SpeedCE-Tech) · "
-        "[Read in Chinese](https://freejbgo.github.io/SpeedCE-Tech/)",
+        "Community forum: [bbs.speedce.com](https://bbs.speedce.com) — questions, map screenshots, and route discussions",
         "",
     ]
     for cat in CATEGORY_ORDER:
@@ -165,7 +164,7 @@ def generate_llms_txt(articles: list[dict]) -> str:
         f"- [GitHub repository](https://github.com/{GITHUB_REPO}): Markdown source",
         f"- [Article JSON index]({PAGES_BASE}/articles-index.json): Machine-readable metadata",
         f"- [Sitemap]({PAGES_BASE}/sitemap.xml): All URLs",
-        f"- [Chinese documentation](https://freejbgo.github.io/SpeedCE-Tech/): SpeedCE-Tech (Simplified Chinese)",
+        f"- [Community forum](https://bbs.speedce.com): Questions, screenshots, and route discussions",
         "",
         "## Article index (by category)",
         "",
@@ -286,7 +285,7 @@ def generate_json_index(articles: list[dict]) -> str:
         "tool": {
             "name": "SpeedCE",
             "url": "https://www.speedce.com",
-            "cn_docs_url": "https://freejbgo.github.io/SpeedCE-Tech/",
+            "forum_url": "https://bbs.speedce.com",
             "contact": "speedceads@gmail.com",
             "tools": SPEEDCE_TOOLS,
         },
